@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF003C" />
+  <title>asuka 봇 · GitHub 저장소 대시보드</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-emoji">🔴</span>
+        <div>
+          <div class="brand-title">asuka 봇</div>
+          <div class="brand-sub">GitHub 저장소 대시보드</div>
+        </div>
+      </div>
+      <div class="brand-stats" id="brandStats">—</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="저장소 · 설명 · 태그 검색"
+          autocomplete="off"
+        />
+        <button id="clearSearch" class="clear-btn" aria-label="검색 지우기" hidden>✕</button>
+      </div>
+      <div class="sort-box">
+        <select id="sortSelect">
+          <option value="saved_desc">최근 저장순</option>
+          <option value="stars_desc">⭐ 별 많은순</option>
+          <option value="stars_asc">⭐ 별 적은순</option>
+          <option value="name_asc">이름순 (가나다)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="chip-row" id="categoryChips"></div>
+    </section>
+
+    <section class="result-info">
+      <span id="resultCount">—</span>
+    </section>
+
+    <section class="card-grid" id="cardGrid"></section>
+
+    <section class="empty-state" id="emptyState" hidden>
+      <div class="empty-emoji">🤔</div>
+      <div class="empty-title">검색 결과가 없어</div>
+      <div class="empty-sub">다른 키워드 또는 카테고리로 다시 시도해줘</div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>powered by</span>
+    <strong>asuka 봇</strong>
+    <span>·</span>
+    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

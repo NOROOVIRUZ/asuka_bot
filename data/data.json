@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-04T00:00:00Z",
+  "updated_at": "2026-05-05T06:39:32.878Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nomadamas/k-skill",
+      "owner": "NomaDamas",
+      "name": "k-skill",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "description": "한국인을 위한 스킬 모음집 - SRT, KTX, 카카오톡, 한글과컴퓨터, 날씨, 미세먼지, 법령, 주식정보, 조선왕조실록, KBO, K-리그, LCK, 특허 검색, 토스 증권, 맞춤법 검사, 중고차 가격, 쿠팡, 네이버 블로그, 다이소, 올리브영, 택배 송장 조회 등등...",
+      "language": "JavaScript",
+      "stars": 4461,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "한국어",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-05-05T06:39:32.878Z",
+      "stars_updated_at": "2026-05-05T06:39:32.878Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "opengeometry-io/opengeometry",
       "owner": "OpenGeometry-io",
@@ -35,7 +55,10 @@
       "license": null,
       "archived": false,
       "category": "디자인",
-      "tags": ["멀티-llm", "프로토타이핑"],
+      "tags": [
+        "멀티-llm",
+        "프로토타이핑"
+      ],
       "confidence": 0.95,
       "classified_by": "rule",
       "saved_at": "2026-05-02T04:31:53.219016+00:00",
@@ -55,7 +78,10 @@
       "license": null,
       "archived": false,
       "category": "개발도구",
-      "tags": ["터미널", "agentic"],
+      "tags": [
+        "터미널",
+        "agentic"
+      ],
       "confidence": 0.88,
       "classified_by": "rule",
       "saved_at": "2026-04-29T22:09:51.664021+00:00",
@@ -75,7 +101,11 @@
       "license": null,
       "archived": false,
       "category": "ai-생산성",
-      "tags": ["기타ai", "브라우저", "codex"],
+      "tags": [
+        "기타ai",
+        "브라우저",
+        "codex"
+      ],
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-04-29T22:06:53.721304+00:00",
@@ -95,7 +125,10 @@
       "license": null,
       "archived": false,
       "category": "ai-생산성",
-      "tags": ["코드검색", "에이전트"],
+      "tags": [
+        "코드검색",
+        "에이전트"
+      ],
       "confidence": 0.78,
       "classified_by": "rule",
       "saved_at": "2026-04-28T23:27:52.968021+00:00",
@@ -115,7 +148,11 @@
       "license": null,
       "archived": false,
       "category": "ai-문서",
-      "tags": ["한국어", "mcp", "hwp"],
+      "tags": [
+        "한국어",
+        "mcp",
+        "hwp"
+      ],
       "confidence": 0.94,
       "classified_by": "rule",
       "saved_at": "2026-04-27T15:57:27.14878+00:00",
@@ -155,7 +192,11 @@
       "license": null,
       "archived": false,
       "category": "ai-이미지",
-      "tags": ["비디오", "기타ai", "doubao"],
+      "tags": [
+        "비디오",
+        "기타ai",
+        "doubao"
+      ],
       "confidence": 0.5,
       "classified_by": "rule",
       "saved_at": "2026-04-27T13:38:46.610713+00:00",
@@ -175,7 +216,9 @@
       "license": null,
       "archived": false,
       "category": "ai-음성",
-      "tags": ["오픈소스"],
+      "tags": [
+        "오픈소스"
+      ],
       "confidence": 0.78,
       "classified_by": "rule",
       "saved_at": "2026-04-26T22:33:14.033774+00:00",
@@ -195,7 +238,9 @@
       "license": null,
       "archived": false,
       "category": "스크래핑",
-      "tags": ["프레임워크"],
+      "tags": [
+        "프레임워크"
+      ],
       "confidence": 0.93,
       "classified_by": "rule",
       "saved_at": "2026-04-26T22:31:15.659389+00:00",
@@ -215,7 +260,10 @@
       "license": null,
       "archived": false,
       "category": "claude-code",
-      "tags": ["검색", "차단우회"],
+      "tags": [
+        "검색",
+        "차단우회"
+      ],
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-04-25T22:57:36.52512+00:00",
@@ -235,7 +283,10 @@
       "license": null,
       "archived": false,
       "category": "ai-음성",
-      "tags": ["보이스클로닝", "오픈소스"],
+      "tags": [
+        "보이스클로닝",
+        "오픈소스"
+      ],
       "confidence": 0.72,
       "classified_by": "rule",
       "saved_at": "2026-04-25T21:46:14.535692+00:00",
@@ -255,7 +306,11 @@
       "license": null,
       "archived": false,
       "category": "ai-텍스트",
-      "tags": ["한국어", "claude-code-skill", "윤문"],
+      "tags": [
+        "한국어",
+        "claude-code-skill",
+        "윤문"
+      ],
       "confidence": 0.7,
       "classified_by": "rule",
       "saved_at": "2026-04-25T21:34:03.184603+00:00",
@@ -275,7 +330,9 @@
       "license": null,
       "archived": false,
       "category": "claude-code",
-      "tags": ["캐시"],
+      "tags": [
+        "캐시"
+      ],
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:21:10.052741+00:00",
@@ -295,7 +352,9 @@
       "license": null,
       "archived": false,
       "category": "claude-code",
-      "tags": ["토큰분석"],
+      "tags": [
+        "토큰분석"
+      ],
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:19:24.89276+00:00",
@@ -315,7 +374,9 @@
       "license": null,
       "archived": false,
       "category": "ai-3d",
-      "tags": ["오픈소스"],
+      "tags": [
+        "오픈소스"
+      ],
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:18:19.276204+00:00",
@@ -335,7 +396,11 @@
       "license": null,
       "archived": false,
       "category": "mcp",
-      "tags": ["한국어", "법령", "환각방지"],
+      "tags": [
+        "한국어",
+        "법령",
+        "환각방지"
+      ],
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:09:43.280533+00:00",
@@ -355,7 +420,10 @@
       "license": null,
       "archived": false,
       "category": "기타ai",
-      "tags": ["codex", "rust"],
+      "tags": [
+        "codex",
+        "rust"
+      ],
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:06:27.460513+00:00",
@@ -375,7 +443,10 @@
       "license": null,
       "archived": false,
       "category": "ai-문서",
-      "tags": ["변환", "오피스"],
+      "tags": [
+        "변환",
+        "오피스"
+      ],
       "confidence": 0.87,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:03:37.166156+00:00",
@@ -395,7 +466,12 @@
       "license": null,
       "archived": false,
       "category": "claude-code",
-      "tags": ["기타ai", "이미지", "codex", "한국어"],
+      "tags": [
+        "기타ai",
+        "이미지",
+        "codex",
+        "한국어"
+      ],
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:01:37.636138+00:00",

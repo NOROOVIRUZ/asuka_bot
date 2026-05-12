@@ -76,8 +76,8 @@ async function handleUpdate(update: any, env: Env): Promise<void> {
 }
 
 function extractGithubUrls(text: string): string[] {
-  const re = /https?:\/\/github\.com\/[\w.-]+\/[\w.-]+(?=[\s?#)]|$)/g;
-  return [...text.matchAll(re)].map((m) => m[0]);
+  const re = /https?:\/\/github\.com\/([\w.-]+)\/([\w.-]+)/g;
+  return [...text.matchAll(re)].map((m) => `https://github.com/${m[1]}/${m[2]}`);
 }
 
 async function addRepoFlow(

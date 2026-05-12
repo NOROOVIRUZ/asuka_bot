@@ -1,8 +1,32 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T08:22:46.194Z",
+  "updated_at": "2026-05-12T09:25:51.092Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": null,
+      "stars": 7166,
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T09:25:51.092Z",
+      "stars_updated_at": "2026-05-12T09:25:51.092Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "chrisryugj/docufinder",
       "owner": "chrisryugj",

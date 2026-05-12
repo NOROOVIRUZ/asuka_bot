@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T09:25:51.092Z",
+  "updated_at": "2026-05-12T11:19:08.504Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "forrestchang/andrej-karpathy-skills",
+      "owner": "forrestchang",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": null,
+      "stars": 126299,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T11:19:08.504Z",
+      "stars_updated_at": "2026-05-12T11:19:08.504Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "google/skills",
       "owner": "google",

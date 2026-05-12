@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T11:19:08.504Z",
+  "updated_at": "2026-05-12T11:20:09.851Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "karpathy/autoresearch",
+      "owner": "karpathy",
+      "name": "autoresearch",
+      "url": "https://github.com/karpathy/autoresearch",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "language": "Python",
+      "stars": 80594,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T11:20:09.851Z",
+      "stars_updated_at": "2026-05-12T11:20:09.851Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "forrestchang/andrej-karpathy-skills",
       "owner": "forrestchang",

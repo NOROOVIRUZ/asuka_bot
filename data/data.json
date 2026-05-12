@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-05-05T06:39:32.878Z",
+  "updated_at": "2026-05-12T08:22:46.194Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "chrisryugj/docufinder",
+      "owner": "chrisryugj",
+      "name": "Docufinder",
+      "url": "https://github.com/chrisryugj/Docufinder",
+      "description": "Anything — 파일을 찾지 말고, 내용을 찾으세요. HWPX · PDF · Office 수천 건의 본문을 1초 만에. 100% 로컬 · 완전 오프라인. (Tauri · React · Rust)",
+      "language": "Rust",
+      "stars": 321,
+      "topics": [
+        "desktop-app",
+        "document-search",
+        "fts5",
+        "hwpx",
+        "korean",
+        "korean-nlp",
+        "offline-first",
+        "onnx",
+        "rag",
+        "react",
+        "rust",
+        "tauri"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-문서",
+      "tags": [],
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T08:22:46.194Z",
+      "stars_updated_at": "2026-05-12T08:22:46.194Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "nomadamas/k-skill",
       "owner": "NomaDamas",

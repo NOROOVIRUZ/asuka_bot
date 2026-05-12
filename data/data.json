@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T11:55:39.215Z",
+  "updated_at": "2026-05-12T11:56:54.195Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "alchaincyf/huashu-design",
+      "owner": "alchaincyf",
+      "name": "huashu-design",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "description": "Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic",
+      "language": "HTML",
+      "stars": 13345,
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T11:56:54.195Z",
+      "stars_updated_at": "2026-05-12T11:56:54.195Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "yusang-park/codex-for-claude-code",
       "owner": "Yusang-park",

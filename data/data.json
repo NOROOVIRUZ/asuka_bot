@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T11:20:09.851Z",
+  "updated_at": "2026-05-12T11:53:26.625Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "phuryn/pm-skills",
+      "owner": "phuryn",
+      "name": "pm-skills",
+      "url": "https://github.com/phuryn/pm-skills",
+      "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+      "language": null,
+      "stars": 11126,
+      "topics": [
+        "agent-skill-repository",
+        "agent-skills",
+        "agentic-skills",
+        "claude-code-marketplace",
+        "claude-code-plugins",
+        "claude-cowork-plugin",
+        "product-management"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.15,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T11:53:26.625Z",
+      "stars_updated_at": "2026-05-12T11:53:26.625Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "karpathy/autoresearch",
       "owner": "karpathy",

@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T11:53:26.625Z",
+  "updated_at": "2026-05-12T11:55:39.215Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yusang-park/codex-for-claude-code",
+      "owner": "Yusang-park",
+      "name": "codex-for-claude-code",
+      "url": "https://github.com/Yusang-park/codex-for-claude-code",
+      "description": "",
+      "language": "JavaScript",
+      "stars": 9,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-05-12T11:55:39.215Z",
+      "stars_updated_at": "2026-05-12T11:55:39.215Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "phuryn/pm-skills",
       "owner": "phuryn",

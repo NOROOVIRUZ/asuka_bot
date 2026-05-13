@@ -5,7 +5,7 @@ compatibility_date = "2026-05-04"
 [vars]
 GITHUB_OWNER = "NOROOVIRUZ"
 GITHUB_REPO = "asuka_bot"
-DATA_PATH = "data/data.json"
+DATA_PATH = "docs/data.json"
 CATEGORIES_PATH = "data/categories.json"
 
 # 시크릿은 wrangler secret put 으로 등록:

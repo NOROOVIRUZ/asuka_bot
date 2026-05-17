@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-05-12T13:30:31.732Z",
+  "updated_at": "2026-05-17T03:46:25.695Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lidge-jun/ima2-gen",
+      "owner": "lidge-jun",
+      "name": "ima2-gen",
+      "url": "https://github.com/lidge-jun/ima2-gen",
+      "description": "Minimal CLI + web UI for OpenAI GPT Image 2 generation. Dual auth: API Key (paid) or OAuth via ChatGPT (free). Text-to-image, image-to-image, parallel gen, custom sizes.",
+      "language": "TypeScript",
+      "stars": 232,
+      "topics": [
+        "chatgpt",
+        "cli",
+        "express",
+        "gpt-image-2",
+        "image-generation",
+        "nodejs",
+        "oauth",
+        "openai"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-05-17T03:46:25.695Z",
+      "stars_updated_at": "2026-05-17T03:46:25.695Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "decolua/9router",
       "owner": "decolua",

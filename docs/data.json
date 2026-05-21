@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-17T03:46:25.695Z",
+  "updated_at": "2026-05-21T13:05:26.983Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "koomook/data-go-mcp-servers",
+      "owner": "Koomook",
+      "name": "data-go-mcp-servers",
+      "url": "https://github.com/Koomook/data-go-mcp-servers",
+      "description": "Korea public data portal (data.go.kr) API MCP servers",
+      "language": "Python",
+      "stars": 264,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "mcp",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-05-21T13:05:26.983Z",
+      "stars_updated_at": "2026-05-21T13:05:26.983Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "lidge-jun/ima2-gen",
       "owner": "lidge-jun",

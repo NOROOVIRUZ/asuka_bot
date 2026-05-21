@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-21T13:05:26.983Z",
+  "updated_at": "2026-05-21T16:00:01.206Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "msitarzewski/agency-agents",
+      "owner": "msitarzewski",
+      "name": "agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "language": "Shell",
+      "stars": 103464,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.7,
+      "classified_by": "rule",
+      "saved_at": "2026-05-21T16:00:01.206Z",
+      "stars_updated_at": "2026-05-21T16:00:01.206Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "koomook/data-go-mcp-servers",
       "owner": "Koomook",

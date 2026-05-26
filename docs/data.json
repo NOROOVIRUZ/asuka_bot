@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-21T16:00:01.206Z",
+  "updated_at": "2026-05-26T21:59:35.024Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": 16603,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-05-26T21:59:35.024Z",
+      "stars_updated_at": "2026-05-26T21:59:35.024Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "msitarzewski/agency-agents",
       "owner": "msitarzewski",

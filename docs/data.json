@@ -1,8 +1,33 @@
 {
   "version": 1,
-  "updated_at": "2026-05-27T14:01:54.266Z",
+  "updated_at": "2026-05-27T14:02:18.312Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "revfactory/harness",
+      "owner": "revfactory",
+      "name": "harness",
+      "url": "https://github.com/revfactory/harness",
+      "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+      "language": "HTML",
+      "stars": 3636,
+      "topics": [
+        "claude-code",
+        "claude-code-plugin",
+        "harness",
+        "harness-engineering"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.15,
+      "classified_by": "rule",
+      "saved_at": "2026-05-27T14:02:18.312Z",
+      "stars_updated_at": "2026-05-27T14:02:18.312Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "calmtiger86/non-dev-token-saver",
       "owner": "calmtiger86",

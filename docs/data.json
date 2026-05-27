@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-05-26T21:59:35.024Z",
+  "updated_at": "2026-05-27T14:01:54.266Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "calmtiger86/non-dev-token-saver",
+      "owner": "calmtiger86",
+      "name": "non-dev-token-saver",
+      "url": "https://github.com/calmtiger86/non-dev-token-saver",
+      "description": "5-layer token optimization plugin for Claude Code. Saves 30-60% on token costs through automatic model routing, read dedup, command rewrite, hook caching, and session analytics.",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-05-27T14:01:54.266Z",
+      "stars_updated_at": "2026-05-27T14:01:54.266Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "anthropics/knowledge-work-plugins",
       "owner": "anthropics",

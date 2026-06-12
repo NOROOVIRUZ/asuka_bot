@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-06-09T22:47:51.392Z",
+  "updated_at": "2026-06-12T05:18:34.026Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "sodam-ai/hermes-agent_one-click_kit",
+      "owner": "sodam-ai",
+      "name": "Hermes-Agent_One-Click_Kit",
+      "url": "https://github.com/sodam-ai/Hermes-Agent_One-Click_Kit",
+      "description": "One-click Windows .bat kit to install/run Nous Research Hermes Agent and connect messengers — beginner-friendly, KO/EN docs",
+      "language": "Batchfile",
+      "stars": 18,
+      "topics": [
+        "ai-agent",
+        "batch-script",
+        "beginner-friendly",
+        "cli-tool",
+        "hermes-agent",
+        "nous-research",
+        "one-click-installer",
+        "powershell",
+        "telegram-bot",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-06-12T05:18:34.026Z",
+      "stars_updated_at": "2026-06-12T05:18:34.026Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "inulute/unlim-cloud",
       "owner": "inulute",

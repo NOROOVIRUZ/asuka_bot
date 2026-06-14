@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-06-14T15:08:13.611Z",
+  "updated_at": "2026-06-14T15:34:44.878Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "gykim80/perfectpixel-studio",
+      "owner": "gykim80",
+      "name": "perfectpixel-studio",
+      "url": "https://github.com/gykim80/perfectpixel-studio",
+      "description": "AI-powered animation sprite studio — generate character sprite sheets with 8 directions and 100+ actions from a single text prompt (Wails + Go + React)",
+      "language": "Go",
+      "stars": 17,
+      "topics": [
+        "ai",
+        "game-development",
+        "golang",
+        "pixel-art",
+        "sprite",
+        "spritesheet",
+        "wails"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-비디오",
+      "tags": [],
+      "confidence": 0.15,
+      "classified_by": "rule",
+      "saved_at": "2026-06-14T15:34:44.878Z",
+      "stars_updated_at": "2026-06-14T15:34:44.878Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "chrisryugj/fable-ish",
       "owner": "chrisryugj",

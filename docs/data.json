@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-06-12T05:18:34.026Z",
+  "updated_at": "2026-06-14T10:05:07.474Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "fivetaku/fablize",
+      "owner": "fivetaku",
+      "name": "fablize",
+      "url": "https://github.com/fivetaku/fablize",
+      "description": "A Claude Code plugin that makes Opus behave like Fable — completion, evidence, and verification enforced as procedure. Ships only what a Fable-vs-Opus comparison proved transferable.",
+      "language": "Shell",
+      "stars": 60,
+      "topics": [
+        "agentic",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "fable",
+        "harness",
+        "opus"
+      ],
+      "license": null,
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-06-14T10:05:07.474Z",
+      "stars_updated_at": "2026-06-14T10:05:07.474Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "sodam-ai/hermes-agent_one-click_kit",
       "owner": "sodam-ai",

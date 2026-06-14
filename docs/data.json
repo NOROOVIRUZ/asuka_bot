@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-06-14T10:05:07.474Z",
+  "updated_at": "2026-06-14T15:08:13.611Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "chrisryugj/fable-ish",
+      "owner": "chrisryugj",
+      "name": "fable-ish",
+      "url": "https://github.com/chrisryugj/fable-ish",
+      "description": "Fable-style verification gate for Claude Code: don't say done until it's verified. Port of the Codex plugin by Agent Korea (플라잉따릉이).",
+      "language": "Python",
+      "stars": 1,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "codex",
+        "developer-tools",
+        "fable",
+        "hooks",
+        "verification"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-06-14T15:08:13.611Z",
+      "stars_updated_at": "2026-06-14T15:08:13.611Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "fivetaku/fablize",
       "owner": "fivetaku",

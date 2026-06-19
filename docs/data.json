@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T09:34:45.508Z",
+  "updated_at": "2026-06-19T11:51:31.150Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "fivetaku/llm-wiki",
+      "owner": "fivetaku",
+      "name": "llm-wiki",
+      "url": "https://github.com/fivetaku/llm-wiki",
+      "description": "raw 소스를 Claude Code가 위키로 합성·유지하는 영구 마크다운 지식베이스 템플릿 (LLM Wiki, Karpathy 패턴)",
+      "language": "Shell",
+      "stars": 11,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-06-19T11:51:31.150Z",
+      "stars_updated_at": "2026-06-19T11:51:31.150Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "makeplane/plane",
       "owner": "makeplane",

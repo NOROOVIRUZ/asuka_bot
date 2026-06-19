@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T09:33:14.409Z",
+  "updated_at": "2026-06-19T09:34:12.551Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "openclaw/openclaw",
+      "owner": "openclaw",
+      "name": "openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "language": "TypeScript",
+      "stars": 379452,
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-06-19T09:34:12.551Z",
+      "stars_updated_at": "2026-06-19T09:34:12.551Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "langgenius/dify",
       "owner": "langgenius",

@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-14T15:34:44.878Z",
+  "updated_at": "2026-06-19T06:37:34.378Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "zai-org/scail-2",
+      "owner": "zai-org",
+      "name": "SCAIL-2",
+      "url": "https://github.com/zai-org/SCAIL-2",
+      "description": "Official Implementation of SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning",
+      "language": "Python",
+      "stars": 639,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-비디오",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-06-19T06:37:34.378Z",
+      "stars_updated_at": "2026-06-19T06:37:34.378Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "gykim80/perfectpixel-studio",
       "owner": "gykim80",

@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T11:51:31.150Z",
+  "updated_at": "2026-06-20T22:50:30.403Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "itssosunny/im-not-strange-ai",
+      "owner": "itssosunny",
+      "name": "im-not-strange-ai",
+      "url": "https://github.com/itssosunny/im-not-strange-ai",
+      "description": "",
+      "language": "Python",
+      "stars": 72,
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-06-20T22:50:30.403Z",
+      "stars_updated_at": "2026-06-20T22:50:30.403Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "fivetaku/llm-wiki",
       "owner": "fivetaku",

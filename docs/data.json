@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-06-20T22:50:30.403Z",
+  "updated_at": "2026-06-22T22:52:26.575Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "dietrichgebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 49590,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-06-22T22:52:26.575Z",
+      "stars_updated_at": "2026-06-22T22:52:26.575Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "itssosunny/im-not-strange-ai",
       "owner": "itssosunny",

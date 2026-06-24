@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-22T22:52:26.575Z",
+  "updated_at": "2026-06-24T22:05:17.445Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "vibeworkers/geo-rewrite",
+      "owner": "vibeworkers",
+      "name": "geo-rewrite",
+      "url": "https://github.com/vibeworkers/geo-rewrite",
+      "description": "원본 콘텐츠(URL·첨부·붙여넣기)를 SEO/GEO 최적화 원고로 **분석·재작성**하는 순수 프롬프트 스킬. Claude Desktop / claude.ai용.",
+      "language": null,
+      "stars": 11,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-텍스트",
+      "tags": [],
+      "confidence": 0.15,
+      "classified_by": "rule",
+      "saved_at": "2026-06-24T22:05:17.445Z",
+      "stars_updated_at": "2026-06-24T22:05:17.445Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "dietrichgebert/ponytail",
       "owner": "DietrichGebert",

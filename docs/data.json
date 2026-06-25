@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-24T22:05:17.445Z",
+  "updated_at": "2026-06-25T06:20:52.428Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "google-labs-code/design.md",
+      "owner": "google-labs-code",
+      "name": "design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+      "language": "TypeScript",
+      "stars": 17654,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-06-25T06:20:52.428Z",
+      "stars_updated_at": "2026-06-25T06:20:52.428Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "vibeworkers/geo-rewrite",
       "owner": "vibeworkers",

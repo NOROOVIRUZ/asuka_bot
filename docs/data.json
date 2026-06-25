@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "updated_at": "2026-06-25T06:20:52.428Z",
+  "updated_at": "2026-06-25T15:25:11.595Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lottiefiles/motion-design-skill",
+      "owner": "LottieFiles",
+      "name": "motion-design-skill",
+      "url": "https://github.com/LottieFiles/motion-design-skill",
+      "description": "Universal motion design principles for AI agents — timing, easing, choreography, and Disney animation principles adapted for UI",
+      "language": null,
+      "stars": 443,
+      "topics": [
+        "agent-skills",
+        "animation",
+        "lottie",
+        "motion-design",
+        "ui"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-06-25T15:25:11.595Z",
+      "stars_updated_at": "2026-06-25T15:25:11.595Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "google-labs-code/design.md",
       "owner": "google-labs-code",

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated": "2026-05-28",
+  "workspaces": {
+    "cc-tools": {
+      "label": "Claude Code 도구",
+      "emoji": "🤖",
+      "color": "#FF003C",
+      "description": "노루군 개인 CC 환경 강화 도구 모음"
+    },
+    "noroopm": {
+      "label": "소싱 / 시장조사",
+      "emoji": "🌐",
+      "color": "#00B894",
+      "description": "norooPM · 글로벌 이커머스 리서치 자동화"
+    },
+    "newproduct": {
+      "label": "신제품 / 크리에이티브",
+      "emoji": "✨",
+      "color": "#FDCB6E",
+      "description": "OA 신제품팀 · AI 이미지·비디오·3D·디자인"
+    },
+    "tools": {
+      "label": "공통 업무 도구",
+      "emoji": "🔧",
+      "color": "#6C5CE7",
+      "description": "문서·MCP·한국어 처리 등 팀 공통 도구"
+    },
+    "infra": {
+      "label": "인프라 / 개발 환경",
+      "emoji": "⚙️",
+      "color": "#636E72",
+      "description": "터미널·CLI·개발 환경 기반 도구"
+    }
+  }
+}

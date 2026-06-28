@@ -7,6 +7,10 @@ GITHUB_OWNER = "NOROOVIRUZ"
 GITHUB_REPO = "asuka_bot"
 DATA_PATH = "docs/data.json"
 CATEGORIES_PATH = "data/categories.json"
+PROMPTS_PATH = "docs/prompts.json"
+
+[ai]
+binding = "AI"
 
 # 시크릿은 wrangler secret put 으로 등록:
 #   wrangler secret put TELEGRAM_BOT_TOKEN

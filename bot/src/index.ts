@@ -1,6 +1,6 @@
-import type { Env, RepoEntry } from './types';
+import type { Env, RepoEntry, PromptEntry } from './types';
 import { TelegramAPI } from './telegram';
-import { fetchRepoMeta, getDataFile, putDataFile, getCategories, parseGithubUrl } from './github';
+import { fetchRepoMeta, getDataFile, putDataFile, getCategories, parseGithubUrl, getPromptsFile, putPromptsFile } from './github';
 import { classify } from './classifier';
 import { msg } from './i18n';
 
@@ -8,8 +8,14 @@ export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
 
-    // 헬스체크 / 루트
-    if (req.method === 'GET' || !url.pathname.startsWith('/webhook/')) {
+    // 헬스체크 / 루트 / API
+    if (req.method === 'GET') {
+      if (url.pathname === '/api/prompt/delete') {
+        return handlePromptDeleteApi(url, env);
+      }
+      return new Response('asuka_bot online 🔴', { status: 200 });
+    }
+    if (!url.pathname.startsWith('/webhook/')) {
       return new Response('asuka_bot online 🔴', { status: 200 });
     }
 
@@ -66,12 +72,34 @@ async function handleUpdate(update: any, env: Env): Promise<void> {
 
   const urls = extractGithubUrls(text);
   if (urls.length === 0) {
-    await tg.sendMessage(chatId, msg.helpHint());
+    await addPromptFlow(text, chatId, userId, tg, env);
     return;
   }
 
   for (const u of urls) {
     await addRepoFlow(u, chatId, userId, tg, env);
+  }
+}
+
+async function handlePromptDeleteApi(url: URL, env: Env): Promise<Response> {
+  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
+  const secret = url.searchParams.get('secret');
+  const id = url.searchParams.get('id');
+  if (!secret || secret !== env.WEBHOOK_SECRET || !id) {
+    return new Response(JSON.stringify({ ok: false, error: 'forbidden' }), { status: 401, headers: cors });
+  }
+  try {
+    const { data, sha } = await getPromptsFile(env);
+    const idx = data.prompts.findIndex((p) => p.id === id);
+    if (idx < 0) {
+      return new Response(JSON.stringify({ ok: false, error: 'not found' }), { status: 404, headers: cors });
+    }
+    data.prompts.splice(idx, 1);
+    data.updated_at = new Date().toISOString();
+    await putPromptsFile(env, data, sha, `delete prompt ${id}`);
+    return new Response(JSON.stringify({ ok: true }), { headers: cors });
+  } catch (e: any) {
+    return new Response(JSON.stringify({ ok: false, error: e.message }), { status: 500, headers: cors });
   }
 }
 
@@ -144,6 +172,68 @@ async function addRepoFlow(
   }
 }
 
+async function addPromptFlow(
+  content: string,
+  chatId: number,
+  userId: number,
+  tg: TelegramAPI,
+  env: Env
+): Promise<void> {
+  try {
+    // Workers AI로 한글 제목 + 카테고리 생성
+    let title = content.split('\n')[0].slice(0, 40);
+    let category = '기타';
+    try {
+      const aiRes = await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
+        messages: [
+          {
+            role: 'system',
+            content: `다음 프롬프트를 분석해서 아래 JSON 형식으로만 응답해. 다른 텍스트 없이 JSON만:\n{"title":"한글 20자 이내 제목","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타 중 하나"}`,
+          },
+          { role: 'user', content: content.slice(0, 500) },
+        ],
+      }) as { response: string };
+      const parsed = JSON.parse(aiRes.response.trim());
+      if (parsed.title) title = String(parsed.title).slice(0, 40);
+      if (parsed.category) category = String(parsed.category);
+    } catch (aiErr: any) {
+      console.error('AI classify failed:', aiErr?.message || aiErr);
+    }
+
+    const { data, sha } = await getPromptsFile(env);
+
+    // 중복 체크 — content.trim() 완전 일치
+    const trimmed = content.trim();
+    const dup = data.prompts.find((p) => p.content.trim() === trimmed);
+    if (dup) {
+      await tg.sendMessage(chatId, msg.promptDuplicate(dup.title));
+      return;
+    }
+
+    const now = new Date().toISOString();
+    const id = `p_${Date.now()}`;
+
+    const entry: PromptEntry = {
+      id,
+      title,
+      content,
+      category,
+      saved_at: now,
+      added_by: `telegram:${userId}`,
+      notes: null,
+    };
+
+    data.prompts.unshift(entry);
+    data.updated_at = now;
+    await putPromptsFile(env, data, sha, `add prompt ${id}`);
+
+    await tg.sendMessage(chatId, msg.promptSaved(title, category));
+  } catch (e: any) {
+    console.error('addPromptFlow error', e?.message || e);
+    await tg.sendMessage(chatId, msg.error());
+  }
+}
+
 async function handleCommand(
   text: string,
   chatId: number,
@@ -163,6 +253,7 @@ async function handleCommand(
         return;
 
       case '/dashboard':
+      case '/대쉬보드':
         await tg.sendMessage(
           chatId,
           msg.dashboard(`https://${env.GITHUB_OWNER.toLowerCase()}.github.io/${env.GITHUB_REPO}/`)
@@ -276,6 +367,46 @@ async function handleCommand(
         data.updated_at = new Date().toISOString();
         await putDataFile(env, data, sha, `delete ${id}`);
         await tg.sendMessage(chatId, msg.deleted(id));
+        return;
+      }
+
+      case '/prompt':
+      case '/p': {
+        const promptText = args.join(' ').trim();
+        if (!promptText) {
+          await tg.sendMessage(chatId, `사용법: \`/prompt 내용\``);
+          return;
+        }
+        await addPromptFlow(promptText, chatId, userId, tg, env);
+        return;
+      }
+
+      case '/plist': {
+        const { data } = await getPromptsFile(env);
+        if (data.prompts.length === 0) {
+          await tg.sendMessage(chatId, msg.promptListEmpty());
+          return;
+        }
+        await tg.sendMessage(chatId, msg.promptList(data.prompts));
+        return;
+      }
+
+      case '/pdelete': {
+        const pid = args[0];
+        if (!pid) {
+          await tg.sendMessage(chatId, msg.promptDeleteUsage());
+          return;
+        }
+        const { data, sha } = await getPromptsFile(env);
+        const idx = data.prompts.findIndex((p) => p.id === pid);
+        if (idx < 0) {
+          await tg.sendMessage(chatId, msg.promptNotFound(pid));
+          return;
+        }
+        data.prompts.splice(idx, 1);
+        data.updated_at = new Date().toISOString();
+        await putPromptsFile(env, data, sha, `delete prompt ${pid}`);
+        await tg.sendMessage(chatId, msg.promptDeleted(pid));
         return;
       }
 

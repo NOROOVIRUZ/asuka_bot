@@ -7,6 +7,8 @@ export interface Env {
   GITHUB_REPO: string;
   DATA_PATH: string;
   CATEGORIES_PATH: string;
+  PROMPTS_PATH: string;
+  AI: Ai;
 }
 
 export interface RepoEntry {
@@ -66,4 +68,20 @@ export interface ClassifyResult {
   category: string;
   confidence: number;
   top3: { category: string; score: number }[];
+}
+
+export interface PromptEntry {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  saved_at: string;
+  added_by: string;
+  notes: string | null;
+}
+
+export interface PromptsFile {
+  version: number;
+  updated_at: string;
+  prompts: PromptEntry[];
 }

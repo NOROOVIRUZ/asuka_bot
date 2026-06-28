@@ -1,4 +1,4 @@
-import type { RepoEntry } from './types';
+import type { RepoEntry, PromptEntry } from './types';
 
 const fmtStars = (n: number) => n.toLocaleString();
 const fmtConf = (c: number) => `${(c * 100).toFixed(0)}%`;
@@ -7,15 +7,21 @@ export const msg = {
   help: () =>
     `🔴 *asuka 봇* — 사용법
 
-GitHub URL 그냥 던지면 알아서 저장해줘. 그게 다야.
+GitHub URL 아니면 프롬프트로 저장해. GitHub URL 그냥 던지면 알아서 저장해줘.
 
-*명령어:*
+*저장소 명령어:*
 \`/add <url>\` — URL 명시적 추가
 \`/list [카테고리]\` — 저장 목록
 \`/search <키워드>\` — 검색
 \`/retag <repo> <카테고리>\` — 분류 변경
 \`/delete <repo>\` — 삭제
-\`/dashboard\` — 대시보드 URL
+\`/dashboard\` \`/대쉬보드\` — 대시보드 URL
+
+*프롬프트 명령어:*
+\`/prompt 내용\` — 프롬프트 저장
+\`/plist\` — 프롬프트 목록
+\`/pdelete <id>\` — 프롬프트 삭제
+
 \`/help\` — 이 메시지
 
 흥, 어렵지도 않잖아.`,
@@ -111,4 +117,28 @@ ${oldCat} → *${newCat}*`,
 
   addUsage: () =>
     `사용법: \`/add https://github.com/owner/repo\``,
+
+  promptSaved: (title: string, category: string) =>
+    `✅ *프롬프트 저장 완료*\n\n📝 ${title}\n📂 *${category}*\n\n— asuka 🔴`,
+
+  promptAlreadyHint: () =>
+    `흥, 이미 GitHub URL이면 저장소로, 아니면 프롬프트로 저장돼. 그게 다야.`,
+
+  promptList: (items: PromptEntry[]) => {
+    const lines = items.slice(0, 10).map((p, i) =>
+      `${i + 1}. \`${p.id}\` *${p.title}* _[${p.category}]_`
+    );
+    return `📝 *최근 프롬프트* (${items.length}개)\n\n${lines.join('\n')}`;
+  },
+
+  promptListEmpty: () => `📭 저장된 프롬프트 없어.`,
+
+  promptDeleted: (id: string) => `🗑 \`${id}\` 삭제했어.`,
+
+  promptNotFound: (id: string) => `\`${id}\` 못 찾았어.`,
+
+  promptDeleteUsage: () => `사용법: \`/pdelete p_<id>\``,
+
+  promptDuplicate: (title: string) =>
+    `흥, 이미 저장된 프롬프트야.\n\n📝 *${title}*\n\n똑같은 거 두 번 넣지 마.`,
 };

@@ -1,4 +1,4 @@
-import type { Env, DataFile, CategoriesFile, RepoMeta } from './types';
+import type { Env, DataFile, CategoriesFile, RepoMeta, PromptsFile } from './types';
 
 const GH_API = 'https://api.github.com';
 
@@ -85,6 +85,58 @@ export async function putDataFile(
   if (!res.ok) {
     const errText = await res.text();
     throw new Error(`commit failed: ${res.status} ${errText}`);
+  }
+}
+
+export async function getPromptsFile(env: Env): Promise<{ data: PromptsFile; sha: string }> {
+  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.PROMPTS_PATH}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'User-Agent': 'asuka-bot',
+    },
+  });
+  if (res.status === 404) {
+    return {
+      data: { version: 1, updated_at: new Date().toISOString(), prompts: [] },
+      sha: '',
+    };
+  }
+  if (!res.ok) throw new Error(`prompts fetch failed: ${res.status}`);
+  const r = (await res.json()) as { content: string; sha: string };
+  const decoded = decodeBase64(r.content);
+  return { data: JSON.parse(decoded) as PromptsFile, sha: r.sha };
+}
+
+export async function putPromptsFile(
+  env: Env,
+  data: PromptsFile,
+  sha: string,
+  message: string
+): Promise<void> {
+  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.PROMPTS_PATH}`;
+  const content = encodeBase64(JSON.stringify(data, null, 2) + '\n');
+  const body: Record<string, unknown> = {
+    message,
+    content,
+    branch: 'main',
+    committer: { name: 'asuka-bot', email: 'bot@asuka.local' },
+  };
+  if (sha) body.sha = sha;
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'User-Agent': 'asuka-bot',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`prompts commit failed: ${res.status} ${errText}`);
   }
 }
 

@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-28T10:15:30.660Z",
+  "updated_at": "2026-06-28T16:00:28.700Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "datalab-to/surya",
+      "owner": "datalab-to",
+      "name": "surya",
+      "url": "https://github.com/datalab-to/surya",
+      "description": "OCR, layout analysis, reading order, table recognition in 90+ languages",
+      "language": "Python",
+      "stars": 20986,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-06-28T16:00:28.700Z",
+      "stars_updated_at": "2026-06-28T16:00:28.700Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "aldegad/sprite-gen",
       "owner": "aldegad",

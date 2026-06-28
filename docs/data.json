@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-06-28T08:03:32.314Z",
+  "updated_at": "2026-06-28T10:15:30.660Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "aldegad/sprite-gen",
+      "owner": "aldegad",
+      "name": "sprite-gen",
+      "url": "https://github.com/aldegad/sprite-gen",
+      "description": "Generate clean 2D game sprites & animation atlases — component-row pipeline: state rows, alpha cleanup, frame extraction, runtime atlases. Codex/Claude skill.",
+      "language": "Python",
+      "stars": 385,
+      "topics": [
+        "2d-game",
+        "ai-tools",
+        "claude-code",
+        "codex",
+        "game-dev",
+        "gamedev",
+        "pixel-art",
+        "sprite-generation",
+        "sprite-sheet"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-06-28T10:15:30.660Z",
+      "stars_updated_at": "2026-06-28T10:15:30.660Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "alisa0808/vibe-creating-skill",
       "owner": "Alisa0808",

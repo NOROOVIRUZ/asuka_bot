@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-28T15:54:48.499Z",
+  "prompts": [
+    {
+      "id": "p_1782662088499",
+      "title": "Create a product photography image only.",
+      "content": "Create a product photography image only. Use the uploaded product as the exact product reference. Position the uploaded product accurately and fully inside a thick translucent ice block, preserving its exact logo, packaging shape, proportions, and visible front-facing identity. Adapt the ice block’s overall shape and contours to naturally fit the product’s form and silhouette, so the ice appears custom-frozen around the product while still remaining thick, sculptural, and premium. Use a vertical close-up front view composition. Keep the product and ice block slightly tilted 15 degrees as one unified floating object, with clear top, bottom, left, and right margins, centered in the frame. The logo should remain visible through frosty distortion, trapped air bubbles, and bright frozen texture. Remove all shadows completely. Use a #091E3A to #2F80ED to #2D9EE0 vertical gradient studio background with cold crisp lighting, icy rim highlights, and a clean futuristic beauty campaign finish. Make the image feel cold, fresh, sculptural, and premium. Do not add extra text.",
+      "category": "기타",
+      "saved_at": "2026-06-28T15:54:48.499Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    }
+  ]
+}

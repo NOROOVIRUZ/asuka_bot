@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF003C" />
-  <title>noroovirus · GitHub 저장소 대시보드</title>
+  <title>noroovirus · 대시보드</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./styles.css" />
@@ -45,6 +45,13 @@
       </div>
     </section>
 
+    <nav class="mode-tabs" id="modeTabs">
+      <button class="mode-tab active" data-mode="repos">📦 저장소</button>
+      <button class="mode-tab" data-mode="prompts">✍️ 프롬프트</button>
+    </nav>
+
+    <nav class="workspace-tabs" id="workspaceTabs"></nav>
+
     <section class="filter-section">
       <div class="chip-row" id="categoryChips"></div>
     </section>
@@ -53,7 +60,7 @@
       <span id="resultCount">—</span>
     </section>
 
-    <section class="card-grid" id="cardGrid"></section>
+    <div id="mainContent"></div>
 
     <section class="empty-state" id="emptyState" hidden>
       <div class="empty-emoji">🤔</div>

@@ -200,12 +200,13 @@ async function addPromptFlow(
     const firstLine = content.split('\n').find((l) => l.trim()) || '';
     let title = firstLine.slice(0, 40) || content.slice(0, 40);
     let category = '기타';
+    let description: string | null = null;
     try {
       const aiRes = await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
         messages: [
           {
             role: 'system',
-            content: 'Respond with ONLY valid JSON, no other text:\n{"title":"<Korean title max 20 chars>","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타"}',
+            content: 'Respond with ONLY valid JSON, no other text:\n{"title":"<Korean title max 20 chars>","description":"<Korean one-sentence description of what image/result this prompt creates, max 40 chars>","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타"}',
           },
           { role: 'user', content: `Classify this prompt:\n${content.slice(0, 500)}` },
         ],
@@ -215,6 +216,7 @@ async function addPromptFlow(
       const parsed = JSON.parse(jsonStr);
       if (parsed.title) title = String(parsed.title).slice(0, 40);
       if (parsed.category) category = String(parsed.category);
+      if (parsed.description) description = String(parsed.description).slice(0, 60);
     } catch (aiErr: any) {
       console.error('AI classify failed:', aiErr?.message || aiErr);
     }
@@ -235,6 +237,7 @@ async function addPromptFlow(
     const entry: PromptEntry = {
       id,
       title,
+      description,
       content,
       category,
       saved_at: now,

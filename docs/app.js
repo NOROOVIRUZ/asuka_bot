@@ -161,6 +161,7 @@ function renderPromptCardHtml(p) {
         <span class="card-stars" style="font-size:0.75rem;opacity:0.6">${formatRelativeKo(p.saved_at)}</span>
       </div>
       <div class="card-name">${escapeHtml(p.title)}</div>
+      ${p.description ? `<div class="card-desc" style="color:#e03131;font-size:0.78rem;font-weight:600;margin-bottom:2px">${escapeHtml(p.description)}</div>` : ''}
       <div class="card-desc prompt-preview">${preview}</div>
       <div class="card-meta">
         <span class="card-copy-btn" style="background:#f1f3f5;color:#6b7684;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;cursor:pointer">복사하기</span>

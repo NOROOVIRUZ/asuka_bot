@@ -1,7 +1,16 @@
 {
   "version": 1,
-  "updated_at": "2026-06-28T22:53:11.657Z",
+  "updated_at": "2026-06-29T12:43:42.232Z",
   "prompts": [
+    {
+      "id": "p_1782737022232",
+      "title": "A 1:1 square format photograph presented",
+      "content": "A 1:1 square format photograph presented within a uniform, thin solid white border (approx. 3px relative width) framing all four sides of the entire composition. Containing within this white frame is a colossal, overstuffed sculpture of the [image 1], brutally deformed and sadistically crammed into the confining square space. The figure is constructed from clean, high gloss nylon padding big head segments, The obejct is heavy a swollen shape, pressing intensely against the inner edges of the white border, with facial features smushed and limbs awkwardly crushed to fit, emphasizing a painful sense of extreme pressurized distortion. Do not overly crush, smear, or distort the eyes, nose, or mouth. Keep the facial features readable, balanced, and appealing, with the expression still intact. The form is bursting at the seams like an overinflated balloon, completely eliminating any negative space or background within the frame. Soft, dramatic lighting grazes the sleek, premium nylon surfaces, highlighting the deep, exaggerated bulbous folds, immense pillowy textures, and the surreal, overwhelming tension of the trapped character.",
+      "category": "기타",
+      "saved_at": "2026-06-29T12:43:42.232Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1782687191657",
       "title": "ate a product photography image only. Us",

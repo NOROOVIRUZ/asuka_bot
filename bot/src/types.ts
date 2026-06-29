@@ -73,6 +73,7 @@ export interface ClassifyResult {
 export interface PromptEntry {
   id: string;
   title: string;
+  description: string | null;
   content: string;
   category: string;
   saved_at: string;

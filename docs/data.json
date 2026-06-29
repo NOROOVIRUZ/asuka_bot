@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-28T16:00:28.700Z",
+  "updated_at": "2026-06-29T22:46:08.577Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "revfactory/webtoon-harness",
+      "owner": "revfactory",
+      "name": "webtoon-harness",
+      "url": "https://github.com/revfactory/webtoon-harness",
+      "description": "트렌드 조사부터 세로 스크롤 뷰어 완성까지, 웹툰 한 회차를 27개 AI 에이전트 팀이 만들어내는 Claude Code 하네스",
+      "language": "HTML",
+      "stars": 128,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-06-29T22:46:08.577Z",
+      "stars_updated_at": "2026-06-29T22:46:08.577Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "datalab-to/surya",
       "owner": "datalab-to",

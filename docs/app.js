@@ -74,20 +74,35 @@ function escapeHtml(s) {
 
 async function loadData() {
   try {
-    const [dataRes, catRes, teamsRes, promptsRes] = await Promise.all([
+    const wurl = localStorage.getItem('asuka_workers_url');
+    const [dataRes, catRes, teamsRes] = await Promise.all([
       fetch(`./data.json?v=${Date.now()}`),
       fetch(`./categories.json?v=${Date.now()}`),
       fetch(`./teams.json?v=${Date.now()}`),
-      fetch(`./prompts.json?v=${Date.now()}`),
     ]);
+
+    // Workers URL이 있으면 실시간 API, 없으면 정적 파일 fallback
+    let promptsData = { prompts: [] };
+    if (wurl) {
+      try {
+        const res = await fetch(`${wurl}/api/prompts`);
+        if (res.ok) promptsData = await res.json();
+      } catch (_) {}
+    }
+    if (!promptsData.prompts?.length) {
+      try {
+        const res = await fetch(`./prompts.json?v=${Date.now()}`);
+        if (res.ok) promptsData = await res.json();
+      } catch (_) {}
+    }
+
     const data = await dataRes.json();
     const cats = await catRes.json();
     const teams = await teamsRes.json();
-    const prompts = await promptsRes.json();
     state.repos = data.repos || [];
     state.categories = cats.categories || {};
     state.teams = teams || { workspaces: {} };
-    state.prompts = prompts.prompts || [];
+    state.prompts = promptsData.prompts || [];
   } catch (e) {
     console.error('데이터 로드 실패', e);
     document.getElementById('mainContent').innerHTML =
@@ -224,6 +239,19 @@ function renderPromptSections() {
       const title = btn.closest('.prompt-card').querySelector('.card-name').textContent;
       if (!confirm(`"${title}" 삭제할까?`)) return;
       deletePrompt(btn.dataset.id);
+    });
+  });
+
+  // 카드 클릭 → 전체 내용 복사
+  main.querySelectorAll('.prompt-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.prompt-delete-btn, .card-copy-btn')) return;
+      navigator.clipboard.writeText(card.dataset.content).then(() => {
+        const nameEl = card.querySelector('.card-name');
+        const orig = nameEl.textContent;
+        nameEl.textContent = '✓ 복사됨!';
+        setTimeout(() => { nameEl.textContent = orig; }, 1500);
+      }).catch(() => {});
     });
   });
 }

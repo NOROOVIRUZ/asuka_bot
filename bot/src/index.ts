@@ -13,7 +13,13 @@ export default {
       if (url.pathname === '/api/prompt/delete') {
         return handlePromptDeleteApi(url, env);
       }
+      if (url.pathname === '/api/prompts') {
+        return handlePromptsApi(env);
+      }
       return new Response('asuka_bot online 🔴', { status: 200 });
+    }
+    if (req.method === 'OPTIONS') {
+      return new Response(null, { headers: { 'Access-Control-Allow-Origin': '*' } });
     }
     if (!url.pathname.startsWith('/webhook/')) {
       return new Response('asuka_bot online 🔴', { status: 200 });
@@ -78,6 +84,16 @@ async function handleUpdate(update: any, env: Env): Promise<void> {
 
   for (const u of urls) {
     await addRepoFlow(u, chatId, userId, tg, env);
+  }
+}
+
+async function handlePromptsApi(env: Env): Promise<Response> {
+  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
+  try {
+    const { data } = await getPromptsFile(env);
+    return new Response(JSON.stringify(data), { headers: cors });
+  } catch (e: any) {
+    return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: cors });
   }
 }
 
@@ -181,19 +197,22 @@ async function addPromptFlow(
 ): Promise<void> {
   try {
     // Workers AI로 한글 제목 + 카테고리 생성
-    let title = content.split('\n')[0].slice(0, 40);
+    const firstLine = content.split('\n').find((l) => l.trim()) || '';
+    let title = firstLine.slice(0, 40) || content.slice(0, 40);
     let category = '기타';
     try {
       const aiRes = await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
         messages: [
           {
             role: 'system',
-            content: `다음 프롬프트를 분석해서 아래 JSON 형식으로만 응답해. 다른 텍스트 없이 JSON만:\n{"title":"한글 20자 이내 제목","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타 중 하나"}`,
+            content: 'Respond with ONLY valid JSON, no other text:\n{"title":"<Korean title max 20 chars>","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타"}',
           },
-          { role: 'user', content: content.slice(0, 500) },
+          { role: 'user', content: `Classify this prompt:\n${content.slice(0, 500)}` },
         ],
       }) as { response: string };
-      const parsed = JSON.parse(aiRes.response.trim());
+      const raw = aiRes.response || '';
+      const jsonStr = raw.match(/\{[\s\S]*?\}/)?.[0] ?? raw.trim();
+      const parsed = JSON.parse(jsonStr);
       if (parsed.title) title = String(parsed.title).slice(0, 40);
       if (parsed.category) category = String(parsed.category);
     } catch (aiErr: any) {
@@ -225,7 +244,21 @@ async function addPromptFlow(
 
     data.prompts.unshift(entry);
     data.updated_at = now;
-    await putPromptsFile(env, data, sha, `add prompt ${id}`);
+    try {
+      await putPromptsFile(env, data, sha, `add prompt ${id}`);
+    } catch (putErr: any) {
+      // sha 충돌(race condition) → 최신 파일 다시 읽어서 재시도
+      if (putErr.message.includes('422') || putErr.message.includes('409')) {
+        const { data: fresh, sha: freshSha } = await getPromptsFile(env);
+        if (!fresh.prompts.find((p) => p.id === id)) {
+          fresh.prompts.unshift(entry);
+          fresh.updated_at = now;
+          await putPromptsFile(env, fresh, freshSha, `add prompt ${id}`);
+        }
+      } else {
+        throw putErr;
+      }
+    }
 
     await tg.sendMessage(chatId, msg.promptSaved(title, category));
   } catch (e: any) {

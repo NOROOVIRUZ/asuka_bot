@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-29T22:46:08.577Z",
+  "updated_at": "2026-06-30T22:09:38.508Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "koul777/clickguide-local-private",
+      "owner": "koul777",
+      "name": "clickguide-local-private",
+      "url": "https://github.com/koul777/clickguide-local-private",
+      "description": "ClickGuide Local private MVP",
+      "language": "TypeScript",
+      "stars": 15,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-06-30T22:09:38.508Z",
+      "stars_updated_at": "2026-06-30T22:09:38.508Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "revfactory/webtoon-harness",
       "owner": "revfactory",

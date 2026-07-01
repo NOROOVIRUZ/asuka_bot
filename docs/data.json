@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-06-30T22:09:38.508Z",
+  "updated_at": "2026-07-01T22:36:24.155Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lunapsy/kdrug-client",
+      "owner": "lunapsy",
+      "name": "kdrug-client",
+      "url": "https://github.com/lunapsy/kdrug-client",
+      "description": "",
+      "language": "Python",
+      "stars": 10,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-api",
+      "tags": [],
+      "confidence": 0.35,
+      "classified_by": "rule",
+      "saved_at": "2026-07-01T22:36:24.155Z",
+      "stars_updated_at": "2026-07-01T22:36:24.155Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "koul777/clickguide-local-private",
       "owner": "koul777",

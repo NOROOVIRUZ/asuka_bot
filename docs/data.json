@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-07-02T22:05:43.675Z",
+  "updated_at": "2026-07-02T22:07:22.384Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lycorp-jp/sim-use",
+      "owner": "lycorp-jp",
+      "name": "sim-use",
+      "url": "https://github.com/lycorp-jp/sim-use",
+      "description": "Give your AI agent eyes and hands on iOS Simulator and Android emulator/devices.",
+      "language": "Swift",
+      "stars": 453,
+      "topics": [
+        "accessibility",
+        "ai-agents",
+        "ai-development",
+        "android-emulator",
+        "ios-simulator",
+        "mobile-automation"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-07-02T22:07:22.384Z",
+      "stars_updated_at": "2026-07-02T22:07:22.384Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "kimsh-1/gongnyang-prompt-kit",
       "owner": "kimsh-1",

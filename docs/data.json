@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-07-01T22:36:24.155Z",
+  "updated_at": "2026-07-02T22:05:43.675Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "kimsh-1/gongnyang-prompt-kit",
+      "owner": "kimsh-1",
+      "name": "gongnyang-prompt-kit",
+      "url": "https://github.com/kimsh-1/gongnyang-prompt-kit",
+      "description": "막연한 요청을 gpt-image-2 완성 프롬프트로 컴파일하는 Claude Code 스킬 — 네거티브 금지·결과 기반 서술·검증 스크립트·C1~C10",
+      "language": "JavaScript",
+      "stars": 50,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-07-02T22:05:43.675Z",
+      "stars_updated_at": "2026-07-02T22:05:43.675Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "lunapsy/kdrug-client",
       "owner": "lunapsy",

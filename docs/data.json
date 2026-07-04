@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-07-02T22:07:22.384Z",
+  "updated_at": "2026-07-04T00:34:23.804Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nomadamas/katok",
+      "owner": "NomaDamas",
+      "name": "katok",
+      "url": "https://github.com/NomaDamas/katok",
+      "description": "에이전트도 카카오톡을 보고 검색할 권리가 있다 - BM25 + Vector Search까지",
+      "language": "Rust",
+      "stars": 108,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.1,
+      "classified_by": "rule",
+      "saved_at": "2026-07-04T00:34:23.804Z",
+      "stars_updated_at": "2026-07-04T00:34:23.804Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "lycorp-jp/sim-use",
       "owner": "lycorp-jp",

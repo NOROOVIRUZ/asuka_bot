@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-07-04T02:42:32.590Z",
+  "updated_at": "2026-07-04T15:41:41.176Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yeachan-heo/gajae-code",
+      "owner": "Yeachan-Heo",
+      "name": "gajae-code",
+      "url": "https://github.com/Yeachan-Heo/gajae-code",
+      "description": "Gajae Code MVP",
+      "language": "TypeScript",
+      "stars": 1504,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-07-04T15:41:41.176Z",
+      "stars_updated_at": "2026-07-04T15:41:41.176Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "koul777/vhlookup",
       "owner": "koul777",

@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-07-04T00:34:23.804Z",
+  "updated_at": "2026-07-04T02:42:32.590Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "koul777/vhlookup",
+      "owner": "koul777",
+      "name": "VHLookup",
+      "url": "https://github.com/koul777/VHLookup",
+      "description": "Local-only Excel automation tool for public admin workflows",
+      "language": "Python",
+      "stars": 21,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-07-04T02:42:32.590Z",
+      "stars_updated_at": "2026-07-04T02:42:32.590Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "nomadamas/katok",
       "owner": "NomaDamas",

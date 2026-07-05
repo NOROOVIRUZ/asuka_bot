@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-07-04T15:41:41.176Z",
+  "updated_at": "2026-07-05T14:39:44.993Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "altic-dev/fluidvoice",
+      "owner": "altic-dev",
+      "name": "FluidVoice",
+      "url": "https://github.com/altic-dev/FluidVoice",
+      "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
+      "language": "Swift",
+      "stars": 6163,
+      "topics": [
+        "ai",
+        "dictation",
+        "ios",
+        "llama-cpp",
+        "macos",
+        "swift"
+      ],
+      "license": "GPL-3.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-07-05T14:39:44.993Z",
+      "stars_updated_at": "2026-07-05T14:39:44.993Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "yeachan-heo/gajae-code",
       "owner": "Yeachan-Heo",

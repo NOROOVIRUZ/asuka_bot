@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-07-05T14:39:44.993Z",
+  "updated_at": "2026-07-06T11:57:24.039Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "juliusbrussee/caveman",
+      "owner": "JuliusBrussee",
+      "name": "caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+      "language": "JavaScript",
+      "stars": 85398,
+      "topics": [
+        "ai",
+        "anthropic",
+        "caveman",
+        "claude",
+        "claude-code",
+        "llm",
+        "meme",
+        "prompt-engineering",
+        "skill",
+        "tokens"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "claude-code",
+      "tags": [],
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-07-06T11:57:24.039Z",
+      "stars_updated_at": "2026-07-06T11:57:24.039Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "altic-dev/fluidvoice",
       "owner": "altic-dev",

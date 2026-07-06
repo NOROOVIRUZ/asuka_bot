@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T11:57:24.039Z",
+  "updated_at": "2026-07-06T14:57:45.300Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -10,7 +10,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
       "language": "JavaScript",
-      "stars": 85398,
+      "stars": 85514,
       "topics": [
         "ai",
         "anthropic",
@@ -30,9 +30,10 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-07-06T11:57:24.039Z",
-      "stars_updated_at": "2026-07-06T11:57:24.039Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v1.9.1"
     },
     {
       "id": "altic-dev/fluidvoice",
@@ -41,7 +42,7 @@
       "url": "https://github.com/altic-dev/FluidVoice",
       "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
       "language": "Swift",
-      "stars": 6163,
+      "stars": 6289,
       "topics": [
         "ai",
         "dictation",
@@ -57,9 +58,10 @@
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-07-05T14:39:44.993Z",
-      "stars_updated_at": "2026-07-05T14:39:44.993Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v1.6.2"
     },
     {
       "id": "yeachan-heo/gajae-code",
@@ -68,7 +70,7 @@
       "url": "https://github.com/Yeachan-Heo/gajae-code",
       "description": "Gajae Code MVP",
       "language": "TypeScript",
-      "stars": 1504,
+      "stars": 1634,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -77,9 +79,10 @@
       "confidence": 0.05,
       "classified_by": "rule",
       "saved_at": "2026-07-04T15:41:41.176Z",
-      "stars_updated_at": "2026-07-04T15:41:41.176Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.8.2"
     },
     {
       "id": "koul777/vhlookup",
@@ -88,7 +91,7 @@
       "url": "https://github.com/koul777/VHLookup",
       "description": "Local-only Excel automation tool for public admin workflows",
       "language": "Python",
-      "stars": 21,
+      "stars": 30,
       "topics": [],
       "license": null,
       "archived": false,
@@ -97,9 +100,10 @@
       "confidence": 0.05,
       "classified_by": "rule",
       "saved_at": "2026-07-04T02:42:32.590Z",
-      "stars_updated_at": "2026-07-04T02:42:32.590Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v1.3"
     },
     {
       "id": "nomadamas/katok",
@@ -108,7 +112,7 @@
       "url": "https://github.com/NomaDamas/katok",
       "description": "에이전트도 카카오톡을 보고 검색할 권리가 있다 - BM25 + Vector Search까지",
       "language": "Rust",
-      "stars": 108,
+      "stars": 113,
       "topics": [],
       "license": null,
       "archived": false,
@@ -117,9 +121,10 @@
       "confidence": 0.1,
       "classified_by": "rule",
       "saved_at": "2026-07-04T00:34:23.804Z",
-      "stars_updated_at": "2026-07-04T00:34:23.804Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.1.2"
     },
     {
       "id": "lycorp-jp/sim-use",
@@ -128,7 +133,7 @@
       "url": "https://github.com/lycorp-jp/sim-use",
       "description": "Give your AI agent eyes and hands on iOS Simulator and Android emulator/devices.",
       "language": "Swift",
-      "stars": 453,
+      "stars": 595,
       "topics": [
         "accessibility",
         "ai-agents",
@@ -144,9 +149,10 @@
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-07-02T22:07:22.384Z",
-      "stars_updated_at": "2026-07-02T22:07:22.384Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.9.0"
     },
     {
       "id": "kimsh-1/gongnyang-prompt-kit",
@@ -155,7 +161,7 @@
       "url": "https://github.com/kimsh-1/gongnyang-prompt-kit",
       "description": "막연한 요청을 gpt-image-2 완성 프롬프트로 컴파일하는 Claude Code 스킬 — 네거티브 금지·결과 기반 서술·검증 스크립트·C1~C10",
       "language": "JavaScript",
-      "stars": 50,
+      "stars": 157,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -164,7 +170,7 @@
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-07-02T22:05:43.675Z",
-      "stars_updated_at": "2026-07-02T22:05:43.675Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -175,7 +181,7 @@
       "url": "https://github.com/lunapsy/kdrug-client",
       "description": "",
       "language": "Python",
-      "stars": 10,
+      "stars": 16,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -184,7 +190,7 @@
       "confidence": 0.35,
       "classified_by": "rule",
       "saved_at": "2026-07-01T22:36:24.155Z",
-      "stars_updated_at": "2026-07-01T22:36:24.155Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -195,7 +201,7 @@
       "url": "https://github.com/koul777/clickguide-local-private",
       "description": "ClickGuide Local private MVP",
       "language": "TypeScript",
-      "stars": 15,
+      "stars": 37,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -204,9 +210,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-30T22:09:38.508Z",
-      "stars_updated_at": "2026-06-30T22:09:38.508Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.1.1"
     },
     {
       "id": "revfactory/webtoon-harness",
@@ -215,7 +222,7 @@
       "url": "https://github.com/revfactory/webtoon-harness",
       "description": "트렌드 조사부터 세로 스크롤 뷰어 완성까지, 웹툰 한 회차를 27개 AI 에이전트 팀이 만들어내는 Claude Code 하네스",
       "language": "HTML",
-      "stars": 128,
+      "stars": 258,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -224,7 +231,7 @@
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-06-29T22:46:08.577Z",
-      "stars_updated_at": "2026-06-29T22:46:08.577Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -235,7 +242,7 @@
       "url": "https://github.com/datalab-to/surya",
       "description": "OCR, layout analysis, reading order, table recognition in 90+ languages",
       "language": "Python",
-      "stars": 20986,
+      "stars": 21044,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -244,9 +251,10 @@
       "confidence": 0.05,
       "classified_by": "rule",
       "saved_at": "2026-06-28T16:00:28.700Z",
-      "stars_updated_at": "2026-06-28T16:00:28.700Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.20.0"
     },
     {
       "id": "aldegad/sprite-gen",
@@ -255,7 +263,7 @@
       "url": "https://github.com/aldegad/sprite-gen",
       "description": "Generate clean 2D game sprites & animation atlases — component-row pipeline: state rows, alpha cleanup, frame extraction, runtime atlases. Codex/Claude skill.",
       "language": "Python",
-      "stars": 385,
+      "stars": 441,
       "topics": [
         "2d-game",
         "ai-tools",
@@ -274,9 +282,10 @@
       "confidence": 0.4,
       "classified_by": "rule",
       "saved_at": "2026-06-28T10:15:30.660Z",
-      "stars_updated_at": "2026-06-28T10:15:30.660Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v1.9.2"
     },
     {
       "id": "alisa0808/vibe-creating-skill",
@@ -285,7 +294,7 @@
       "url": "https://github.com/Alisa0808/vibe-creating-skill",
       "description": "Open-source, bilingual AI video-prompt skill — rewrite ideas into model-ready text-to-video prompts. A portable Agent Skill (Claude Code, Codex, OpenClaw, Hermes); generate via Atlas Cloud — Seedance 2.0, Kling, Veo, Hailuo, Wan, Vidu, Gemini Omni, Grok Imagine.",
       "language": "JavaScript",
-      "stars": 41,
+      "stars": 95,
       "topics": [
         "agent-skill",
         "agent-skills",
@@ -315,7 +324,7 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-28T08:03:32.314Z",
-      "stars_updated_at": "2026-06-28T08:03:32.314Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -326,7 +335,7 @@
       "url": "https://github.com/opendataloader-project/opendataloader-pdf",
       "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
       "language": "Java",
-      "stars": 25986,
+      "stars": 26339,
       "topics": [
         "a11y",
         "accessibility",
@@ -356,9 +365,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-26T10:01:10.311Z",
-      "stars_updated_at": "2026-06-26T10:01:10.311Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.4.7"
     },
     {
       "id": "docling-project/docling",
@@ -367,7 +377,7 @@
       "url": "https://github.com/docling-project/docling",
       "description": "Get your documents ready for gen AI",
       "language": "Python",
-      "stars": 62159,
+      "stars": 62745,
       "topics": [
         "ai",
         "convert",
@@ -392,9 +402,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-26T06:36:51.526Z",
-      "stars_updated_at": "2026-06-26T06:36:51.526Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.110.0"
     },
     {
       "id": "lottiefiles/motion-design-skill",
@@ -403,7 +414,7 @@
       "url": "https://github.com/LottieFiles/motion-design-skill",
       "description": "Universal motion design principles for AI agents — timing, easing, choreography, and Disney animation principles adapted for UI",
       "language": null,
-      "stars": 443,
+      "stars": 578,
       "topics": [
         "agent-skills",
         "animation",
@@ -418,7 +429,7 @@
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-06-25T15:25:11.595Z",
-      "stars_updated_at": "2026-06-25T15:25:11.595Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -429,7 +440,7 @@
       "url": "https://github.com/google-labs-code/design.md",
       "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
       "language": "TypeScript",
-      "stars": 17654,
+      "stars": 25132,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -438,9 +449,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-25T06:20:52.428Z",
-      "stars_updated_at": "2026-06-25T06:20:52.428Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "0.3.0"
     },
     {
       "id": "vibeworkers/geo-rewrite",
@@ -449,7 +461,7 @@
       "url": "https://github.com/vibeworkers/geo-rewrite",
       "description": "원본 콘텐츠(URL·첨부·붙여넣기)를 SEO/GEO 최적화 원고로 **분석·재작성**하는 순수 프롬프트 스킬. Claude Desktop / claude.ai용.",
       "language": null,
-      "stars": 11,
+      "stars": 14,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -458,7 +470,7 @@
       "confidence": 0.15,
       "classified_by": "rule",
       "saved_at": "2026-06-24T22:05:17.445Z",
-      "stars_updated_at": "2026-06-24T22:05:17.445Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -469,7 +481,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "language": "JavaScript",
-      "stars": 49590,
+      "stars": 75649,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -489,9 +501,10 @@
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-06-22T22:52:26.575Z",
-      "stars_updated_at": "2026-06-22T22:52:26.575Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v4.8.4"
     },
     {
       "id": "itssosunny/im-not-strange-ai",
@@ -500,7 +513,7 @@
       "url": "https://github.com/itssosunny/im-not-strange-ai",
       "description": "",
       "language": "Python",
-      "stars": 72,
+      "stars": 133,
       "topics": [],
       "license": "NOASSERTION",
       "archived": false,
@@ -509,7 +522,7 @@
       "confidence": 0.05,
       "classified_by": "rule",
       "saved_at": "2026-06-20T22:50:30.403Z",
-      "stars_updated_at": "2026-06-20T22:50:30.403Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -520,7 +533,7 @@
       "url": "https://github.com/fivetaku/llm-wiki",
       "description": "raw 소스를 Claude Code가 위키로 합성·유지하는 영구 마크다운 지식베이스 템플릿 (LLM Wiki, Karpathy 패턴)",
       "language": "Shell",
-      "stars": 11,
+      "stars": 72,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -529,7 +542,7 @@
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-06-19T11:51:31.150Z",
-      "stars_updated_at": "2026-06-19T11:51:31.150Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -540,7 +553,7 @@
       "url": "https://github.com/makeplane/plane",
       "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
       "language": "TypeScript",
-      "stars": 51971,
+      "stars": 53940,
       "topics": [
         "boards",
         "bug-tracker",
@@ -570,9 +583,10 @@
       "confidence": 0.35,
       "classified_by": "rule",
       "saved_at": "2026-06-19T09:34:45.508Z",
-      "stars_updated_at": "2026-06-19T09:34:45.508Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v1.3.1"
     },
     {
       "id": "openclaw/openclaw",
@@ -581,7 +595,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
       "language": "TypeScript",
-      "stars": 379452,
+      "stars": 381929,
       "topics": [
         "ai",
         "assistant",
@@ -598,9 +612,10 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-06-19T09:34:12.551Z",
-      "stars_updated_at": "2026-06-19T09:34:12.551Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2026.6.11"
     },
     {
       "id": "langgenius/dify",
@@ -609,7 +624,7 @@
       "url": "https://github.com/langgenius/dify",
       "description": "Production-ready platform for agentic workflow development.",
       "language": "TypeScript",
-      "stars": 145799,
+      "stars": 147902,
       "topics": [
         "agent",
         "agentic-ai",
@@ -639,9 +654,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-19T09:33:14.409Z",
-      "stars_updated_at": "2026-06-19T09:33:14.409Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "1.15.0"
     },
     {
       "id": "zai-org/scail-2",
@@ -650,7 +666,7 @@
       "url": "https://github.com/zai-org/SCAIL-2",
       "description": "Official Implementation of SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning",
       "language": "Python",
-      "stars": 639,
+      "stars": 890,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -659,7 +675,7 @@
       "confidence": 0.25,
       "classified_by": "rule",
       "saved_at": "2026-06-19T06:37:34.378Z",
-      "stars_updated_at": "2026-06-19T06:37:34.378Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -670,7 +686,7 @@
       "url": "https://github.com/gykim80/perfectpixel-studio",
       "description": "AI-powered animation sprite studio — generate character sprite sheets with 8 directions and 100+ actions from a single text prompt (Wails + Go + React)",
       "language": "Go",
-      "stars": 17,
+      "stars": 421,
       "topics": [
         "ai",
         "game-development",
@@ -687,7 +703,7 @@
       "confidence": 0.15,
       "classified_by": "rule",
       "saved_at": "2026-06-14T15:34:44.878Z",
-      "stars_updated_at": "2026-06-14T15:34:44.878Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -698,7 +714,7 @@
       "url": "https://github.com/chrisryugj/fable-ish",
       "description": "Fable-style verification gate for Claude Code: don't say done until it's verified. Port of the Codex plugin by Agent Korea (플라잉따릉이).",
       "language": "Python",
-      "stars": 1,
+      "stars": 38,
       "topics": [
         "ai-agents",
         "anthropic",
@@ -718,7 +734,7 @@
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-06-14T15:08:13.611Z",
-      "stars_updated_at": "2026-06-14T15:08:13.611Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -729,7 +745,7 @@
       "url": "https://github.com/fivetaku/fablize",
       "description": "A Claude Code plugin that makes Opus behave like Fable — completion, evidence, and verification enforced as procedure. Ships only what a Fable-vs-Opus comparison proved transferable.",
       "language": "Shell",
-      "stars": 60,
+      "stars": 775,
       "topics": [
         "agentic",
         "anthropic",
@@ -746,9 +762,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-14T10:05:07.474Z",
-      "stars_updated_at": "2026-06-14T10:05:07.474Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.1.0"
     },
     {
       "id": "sodam-ai/hermes-agent_one-click_kit",
@@ -788,7 +805,7 @@
       "url": "https://github.com/inulute/unlim-cloud",
       "description": "UnlimCloud provides unlimited cloud storage for your files, utilizing Telegram as the storage solution. Simply log in using your Telegram ID, and you are good to go.",
       "language": "HTML",
-      "stars": 692,
+      "stars": 885,
       "topics": [
         "cloud",
         "cloud-storage",
@@ -812,9 +829,10 @@
       "confidence": 0.45,
       "classified_by": "rule",
       "saved_at": "2026-06-09T22:47:51.392Z",
-      "stars_updated_at": "2026-06-09T22:47:51.392Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.0.0"
     },
     {
       "id": "revfactory/harness",
@@ -823,7 +841,7 @@
       "url": "https://github.com/revfactory/harness",
       "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
       "language": "HTML",
-      "stars": 3636,
+      "stars": 8221,
       "topics": [
         "claude-code",
         "claude-code-plugin",
@@ -837,7 +855,7 @@
       "confidence": 0.15,
       "classified_by": "rule",
       "saved_at": "2026-05-27T14:02:18.312Z",
-      "stars_updated_at": "2026-05-27T14:02:18.312Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -848,7 +866,7 @@
       "url": "https://github.com/calmtiger86/non-dev-token-saver",
       "description": "5-layer token optimization plugin for Claude Code. Saves 30-60% on token costs through automatic model routing, read dedup, command rewrite, hook caching, and session analytics.",
       "language": "JavaScript",
-      "stars": 0,
+      "stars": 1,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -857,7 +875,7 @@
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-05-27T14:01:54.266Z",
-      "stars_updated_at": "2026-05-27T14:01:54.266Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -868,7 +886,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "language": "Python",
-      "stars": 16603,
+      "stars": 22401,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -877,7 +895,7 @@
       "confidence": 0.25,
       "classified_by": "rule",
       "saved_at": "2026-05-26T21:59:35.024Z",
-      "stars_updated_at": "2026-05-26T21:59:35.024Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -888,7 +906,7 @@
       "url": "https://github.com/msitarzewski/agency-agents",
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "language": "Shell",
-      "stars": 103464,
+      "stars": 127935,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -897,7 +915,7 @@
       "confidence": 0.7,
       "classified_by": "rule",
       "saved_at": "2026-05-21T16:00:01.206Z",
-      "stars_updated_at": "2026-05-21T16:00:01.206Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -908,7 +926,7 @@
       "url": "https://github.com/Koomook/data-go-mcp-servers",
       "description": "Korea public data portal (data.go.kr) API MCP servers",
       "language": "Python",
-      "stars": 264,
+      "stars": 288,
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
@@ -917,7 +935,7 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-05-21T13:05:26.983Z",
-      "stars_updated_at": "2026-05-21T13:05:26.983Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -928,7 +946,7 @@
       "url": "https://github.com/lidge-jun/ima2-gen",
       "description": "Minimal CLI + web UI for OpenAI GPT Image 2 generation. Dual auth: API Key (paid) or OAuth via ChatGPT (free). Text-to-image, image-to-image, parallel gen, custom sizes.",
       "language": "TypeScript",
-      "stars": 232,
+      "stars": 488,
       "topics": [
         "chatgpt",
         "cli",
@@ -946,9 +964,10 @@
       "confidence": 0.45,
       "classified_by": "rule",
       "saved_at": "2026-05-17T03:46:25.695Z",
-      "stars_updated_at": "2026-05-17T03:46:25.695Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.0.5"
     },
     {
       "id": "decolua/9router",
@@ -957,7 +976,7 @@
       "url": "https://github.com/decolua/9router",
       "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "stars": 9049,
+      "stars": 20189,
       "topics": [
         "ai-agents",
         "ai-gateway",
@@ -987,9 +1006,10 @@
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-05-12T13:30:31.732Z",
-      "stars_updated_at": "2026-05-12T13:30:31.732Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.5.18"
     },
     {
       "id": "alchaincyf/huashu-design",
@@ -998,7 +1018,7 @@
       "url": "https://github.com/alchaincyf/huashu-design",
       "description": "Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic",
       "language": "HTML",
-      "stars": 13345,
+      "stars": 20973,
       "topics": [],
       "license": "NOASSERTION",
       "archived": false,
@@ -1007,9 +1027,10 @@
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:56:54.195Z",
-      "stars_updated_at": "2026-05-12T11:56:54.195Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.0"
     },
     {
       "id": "yusang-park/codex-for-claude-code",
@@ -1018,7 +1039,7 @@
       "url": "https://github.com/Yusang-park/codex-for-claude-code",
       "description": "",
       "language": "JavaScript",
-      "stars": 9,
+      "stars": 15,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -1027,9 +1048,10 @@
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:55:39.215Z",
-      "stars_updated_at": "2026-05-12T11:55:39.215Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.2.6"
     },
     {
       "id": "phuryn/pm-skills",
@@ -1038,7 +1060,7 @@
       "url": "https://github.com/phuryn/pm-skills",
       "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
       "language": null,
-      "stars": 11126,
+      "stars": 22732,
       "topics": [
         "agent-skill-repository",
         "agent-skills",
@@ -1055,9 +1077,10 @@
       "confidence": 0.15,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:53:26.625Z",
-      "stars_updated_at": "2026-05-12T11:53:26.625Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v2.1.0"
     },
     {
       "id": "karpathy/autoresearch",
@@ -1066,7 +1089,7 @@
       "url": "https://github.com/karpathy/autoresearch",
       "description": "AI agents running research on single-GPU nanochat training automatically",
       "language": "Python",
-      "stars": 80594,
+      "stars": 90030,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1075,7 +1098,7 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:20:09.851Z",
-      "stars_updated_at": "2026-05-12T11:20:09.851Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -1086,7 +1109,7 @@
       "url": "https://github.com/forrestchang/andrej-karpathy-skills",
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "language": null,
-      "stars": 126299,
+      "stars": 188401,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1095,7 +1118,7 @@
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:19:08.504Z",
-      "stars_updated_at": "2026-05-12T11:19:08.504Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -1106,7 +1129,7 @@
       "url": "https://github.com/google/skills",
       "description": "Agent Skills for Google products and technologies",
       "language": null,
-      "stars": 7166,
+      "stars": 14411,
       "topics": [
         "google",
         "googlecloud",
@@ -1119,7 +1142,7 @@
       "confidence": 0.3,
       "classified_by": "rule",
       "saved_at": "2026-05-12T09:25:51.092Z",
-      "stars_updated_at": "2026-05-12T09:25:51.092Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -1130,7 +1153,7 @@
       "url": "https://github.com/chrisryugj/Docufinder",
       "description": "Anything — 파일을 찾지 말고, 내용을 찾으세요. HWPX · PDF · Office 수천 건의 본문을 1초 만에. 100% 로컬 · 완전 오프라인. (Tauri · React · Rust)",
       "language": "Rust",
-      "stars": 321,
+      "stars": 414,
       "topics": [
         "desktop-app",
         "document-search",
@@ -1152,9 +1175,10 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-05-12T08:22:46.194Z",
-      "stars_updated_at": "2026-05-12T08:22:46.194Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "last_release": "v3.2.2"
     },
     {
       "id": "nomadamas/k-skill",
@@ -1163,7 +1187,7 @@
       "url": "https://github.com/NomaDamas/k-skill",
       "description": "한국인을 위한 스킬 모음집 - SRT, KTX, 카카오톡, 한글과컴퓨터, 날씨, 미세먼지, 법령, 주식정보, 조선왕조실록, KBO, K-리그, LCK, 특허 검색, 토스 증권, 맞춤법 검사, 중고차 가격, 쿠팡, 네이버 블로그, 다이소, 올리브영, 택배 송장 조회 등등...",
       "language": "JavaScript",
-      "stars": 4461,
+      "stars": 6079,
       "topics": [],
       "license": "MIT",
       "archived": false,
@@ -1172,7 +1196,7 @@
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-05-05T06:39:32.878Z",
-      "stars_updated_at": "2026-05-05T06:39:32.878Z",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "telegram:8176674830",
       "notes": null
     },
@@ -1183,7 +1207,7 @@
       "url": "https://github.com/OpenGeometry-io/OpenGeometry",
       "description": "웹용 강력한 CAD 커널",
       "language": "Rust",
-      "stars": 224,
+      "stars": 445,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1192,9 +1216,10 @@
       "confidence": 0.92,
       "classified_by": "rule",
       "saved_at": "2026-05-02T14:22:25.651181+00:00",
-      "stars_updated_at": "2026-05-02T14:22:25.651181+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.0.7"
     },
     {
       "id": "nexu-io/open-design",
@@ -1203,7 +1228,7 @@
       "url": "https://github.com/nexu-io/open-design",
       "description": "로컬 우선·오픈소스 Anthropic Claude Design 대안. 19개 스킬, 71개 브랜드급 디자인 시스템. 웹·데스크탑·모바일 프로토타입, 슬라이드, 이미지, 비디오, HyperFrame 생성. 샌드박스 미리보기, HTML/PDF/PPTX/MP4 export. Claude Code·Codex·Cursor·Gemini·OpenCode·Qwen·Copilot·Hermes·Kimi CLI 지원.",
       "language": "TypeScript",
-      "stars": 12385,
+      "stars": 75483,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1215,9 +1240,10 @@
       "confidence": 0.95,
       "classified_by": "rule",
       "saved_at": "2026-05-02T04:31:53.219016+00:00",
-      "stars_updated_at": "2026-05-02T04:31:53.219016+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "open-design-v0.13.0"
     },
     {
       "id": "warpdotdev/warp",
@@ -1226,7 +1252,7 @@
       "url": "https://github.com/warpdotdev/warp",
       "description": "터미널에서 태어난 에이전틱 개발 환경",
       "language": "Rust",
-      "stars": 43236,
+      "stars": 62862,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1238,9 +1264,10 @@
       "confidence": 0.88,
       "classified_by": "rule",
       "saved_at": "2026-04-29T22:09:51.664021+00:00",
-      "stars_updated_at": "2026-04-29T22:09:51.664021+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.2026.06.03.09.49.stable_00"
     },
     {
       "id": "genexis-ai/chromex",
@@ -1249,7 +1276,7 @@
       "url": "https://github.com/GENEXIS-AI/chromex",
       "description": "Codex 기반 크롬 사이드 패널 어시스턴트. 페이지 컨텍스트·탭·음성·이미지 워크플로우 지원",
       "language": "TypeScript",
-      "stars": 328,
+      "stars": 1139,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1262,9 +1289,10 @@
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-04-29T22:06:53.721304+00:00",
-      "stars_updated_at": "2026-04-29T22:06:53.721304+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.1.8"
     },
     {
       "id": "minishlab/semble",
@@ -1273,7 +1301,7 @@
       "url": "https://github.com/MinishLab/semble",
       "description": "에이전트용 빠르고 정확한 코드 검색",
       "language": "Python",
-      "stars": 166,
+      "stars": 5525,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1285,9 +1313,10 @@
       "confidence": 0.78,
       "classified_by": "rule",
       "saved_at": "2026-04-28T23:27:52.968021+00:00",
-      "stars_updated_at": "2026-04-28T23:27:52.968021+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.4.2"
     },
     {
       "id": "chrisryugj/kordoc",
@@ -1296,7 +1325,7 @@
       "url": "https://github.com/chrisryugj/kordoc",
       "description": "모두 파싱해버리겠다 — HWP, HWPX, PDF, XLSX, DOCX → Markdown. CLI + MCP Server",
       "language": "TypeScript",
-      "stars": 856,
+      "stars": 1346,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1309,9 +1338,10 @@
       "confidence": 0.94,
       "classified_by": "rule",
       "saved_at": "2026-04-27T15:57:27.14878+00:00",
-      "stars_updated_at": "2026-04-27T15:57:27.14878+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v3.17.0"
     },
     {
       "id": "public-apis/public-apis",
@@ -1320,7 +1350,7 @@
       "url": "https://github.com/public-apis/public-apis",
       "description": "무료 API 모음 리스트",
       "language": "Python",
-      "stars": 427038,
+      "stars": 447109,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1329,7 +1359,7 @@
       "confidence": 0.95,
       "classified_by": "rule",
       "saved_at": "2026-04-27T15:56:52.844166+00:00",
-      "stars_updated_at": "2026-04-27T15:56:52.844166+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1340,7 +1370,7 @@
       "url": "https://github.com/AllenWriter/doubao-image-and-video-generator",
       "description": "",
       "language": "Python",
-      "stars": 21,
+      "stars": 23,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1353,7 +1383,7 @@
       "confidence": 0.5,
       "classified_by": "rule",
       "saved_at": "2026-04-27T13:38:46.610713+00:00",
-      "stars_updated_at": "2026-04-27T13:38:46.610713+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": "설명 없음. 이름 기반 분류"
     },
@@ -1364,7 +1394,7 @@
       "url": "https://github.com/microsoft/VibeVoice",
       "description": "오픈소스 프론티어 음성 AI",
       "language": "Python",
-      "stars": 41982,
+      "stars": 49952,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1375,7 +1405,7 @@
       "confidence": 0.78,
       "classified_by": "rule",
       "saved_at": "2026-04-26T22:33:14.033774+00:00",
-      "stars_updated_at": "2026-04-26T22:33:14.033774+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1386,7 +1416,7 @@
       "url": "https://github.com/D4Vinci/Scrapling",
       "description": "단일 요청부터 풀스케일 크롤링까지 처리하는 적응형 웹 스크래핑 프레임워크",
       "language": "Python",
-      "stars": 38852,
+      "stars": 68375,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1397,9 +1427,10 @@
       "confidence": 0.93,
       "classified_by": "rule",
       "saved_at": "2026-04-26T22:31:15.659389+00:00",
-      "stars_updated_at": "2026-04-26T22:31:15.659389+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.4.10"
     },
     {
       "id": "fivetaku/insane-search",
@@ -1408,7 +1439,7 @@
       "url": "https://github.com/fivetaku/insane-search",
       "description": "Claude Code 차단 웹사이트 자동 우회 — Phase 0→3 적응형 스케줄러, API 키 불필요",
       "language": "Python",
-      "stars": 549,
+      "stars": 1816,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1420,9 +1451,10 @@
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-04-25T22:57:36.52512+00:00",
-      "stars_updated_at": "2026-04-25T22:57:36.52512+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.9.1"
     },
     {
       "id": "jamiepine/voicebox",
@@ -1431,7 +1463,7 @@
       "url": "https://github.com/jamiepine/voicebox",
       "description": "오픈소스 AI 음성 스튜디오. 클론·받아쓰기·창작",
       "language": "TypeScript",
-      "stars": 23307,
+      "stars": 38172,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1443,9 +1475,10 @@
       "confidence": 0.72,
       "classified_by": "rule",
       "saved_at": "2026-04-25T21:46:14.535692+00:00",
-      "stars_updated_at": "2026-04-25T21:46:14.535692+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.5.0"
     },
     {
       "id": "epoko77-ai/im-not-ai",
@@ -1454,7 +1487,7 @@
       "url": "https://github.com/epoko77-ai/im-not-ai",
       "description": "AI가 쓴 글이 아닌 것처럼 윤문해주는 스킬",
       "language": "Python",
-      "stars": 205,
+      "stars": 3589,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1467,9 +1500,10 @@
       "confidence": 0.7,
       "classified_by": "rule",
       "saved_at": "2026-04-25T21:34:03.184603+00:00",
-      "stars_updated_at": "2026-04-25T21:34:03.184603+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": "설명에 \"스킬\" 명시 — Claude Code skill 가능성"
+      "notes": "설명에 \"스킬\" 명시 — Claude Code skill 가능성",
+      "last_release": "v2.0.0"
     },
     {
       "id": "rangizingo/cc-cache-fix",
@@ -1478,7 +1512,7 @@
       "url": "https://github.com/Rangizingo/cc-cache-fix",
       "description": "",
       "language": "Python",
-      "stars": 560,
+      "stars": 564,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1489,7 +1523,7 @@
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:21:10.052741+00:00",
-      "stars_updated_at": "2026-04-25T14:21:10.052741+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": "설명 없음. 이름 cc- 접두사 기반"
     },
@@ -1500,7 +1534,7 @@
       "url": "https://github.com/jjoa68/claude-token-diet",
       "description": "질문 1개 = 세션의 1%. Claude Code 토큰을 잡아먹는 원인을 찾아 5분 만에 수정",
       "language": "Shell",
-      "stars": 9,
+      "stars": 10,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1511,7 +1545,7 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:19:24.89276+00:00",
-      "stars_updated_at": "2026-04-25T14:19:24.89276+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1522,7 +1556,7 @@
       "url": "https://github.com/microsoft/TRELLIS.2",
       "description": "3D 생성을 위한 네이티브·컴팩트 구조화 잠재 표현",
       "language": "Python",
-      "stars": 5600,
+      "stars": 8599,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1533,7 +1567,7 @@
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:18:19.276204+00:00",
-      "stars_updated_at": "2026-04-25T14:18:19.276204+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1544,7 +1578,7 @@
       "url": "https://github.com/chrisryugj/korean-law-mcp",
       "description": "국가법령정보 MCP | 법제처 41개 API → 16개 MCP 도구. 법령·판례·조례·조약을 AI로 검색·조회·분석 + LLM 환각 방지 인용 검증",
       "language": "TypeScript",
-      "stars": 1585,
+      "stars": 2136,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1557,7 +1591,7 @@
       "confidence": 0.65,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:09:43.280533+00:00",
-      "stars_updated_at": "2026-04-25T14:09:43.280533+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1568,7 +1602,7 @@
       "url": "https://github.com/ultraworkers/claw-code",
       "description": "드디어 잠금 해제된 저장소! 역사상 가장 빨리 10만 별을 넘긴 저장소. Rust + oh-my-codex로 제작",
       "language": "Rust",
-      "stars": 188696,
+      "stars": 194616,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1580,7 +1614,7 @@
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:06:27.460513+00:00",
-      "stars_updated_at": "2026-04-25T14:06:27.460513+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     },
@@ -1591,7 +1625,7 @@
       "url": "https://github.com/microsoft/markitdown",
       "description": "파일·오피스 문서를 마크다운으로 변환하는 파이썬 도구",
       "language": "Python",
-      "stars": 116808,
+      "stars": 163370,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1603,9 +1637,10 @@
       "confidence": 0.87,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:03:37.166156+00:00",
-      "stars_updated_at": "2026-04-25T14:03:37.166156+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "last_release": "v0.1.6"
     },
     {
       "id": "wjb127/codex-image",
@@ -1614,7 +1649,7 @@
       "url": "https://github.com/wjb127/codex-image",
       "description": "Codex CLI OAuth(gpt-image-2)를 통한 AI 이미지 생성 Claude Code 스킬",
       "language": null,
-      "stars": 26,
+      "stars": 39,
       "topics": [],
       "license": null,
       "archived": false,
@@ -1628,7 +1663,7 @@
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-04-25T14:01:37.636138+00:00",
-      "stars_updated_at": "2026-04-25T14:01:37.636138+00:00",
+      "stars_updated_at": "2026-07-06T14:57:45.300Z",
       "added_by": "migration",
       "notes": null
     }

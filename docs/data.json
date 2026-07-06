@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:06:10.786Z",
+  "updated_at": "2026-07-06T15:06:16.455Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "tigicion/dao-code",
+      "owner": "tigicion",
+      "name": "dao-code",
+      "url": "https://github.com/tigicion/dao-code",
+      "description": "Open-source TypeScript terminal coding agent for DeepSeek-V4 — builds on DeepSeek's strong price-performance and ultra-cheap cache pricing, engineering byte-stable prefixes and cache-reusing forks so cross-session memory and a continuous self-correction layer add almost no token cost; 1M context, Skills/MCP/Hooks, Claude Code config compatible.",
+      "language": "TypeScript",
+      "stars": 1608,
+      "topics": [
+        "ai-agent",
+        "cli",
+        "coding-agent",
+        "deepseek",
+        "llm",
+        "terminal",
+        "typescript"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-07-06T15:06:16.455Z",
+      "stars_updated_at": "2026-07-06T15:06:16.455Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "jimliu/baoyu-design",
       "owner": "JimLiu",

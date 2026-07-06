@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:07:50.113Z",
+  "updated_at": "2026-07-06T15:11:41.956Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -30,7 +30,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.4.0"
+      "last_release": "v0.4.0",
+      "desc_ko": "이 프로젝트는 컴퓨터와 대화할 수 있는 인공지능 에이전트를 만들기 위한 코드인데, 컴퓨터 터미널에서 작업할 때 도움을 주는 프로그램이야. 이 에이전트는 가격이 저렴하고 성능이 좋은 인공지능 기술을 사용해서, 개발자들이 코드를 작성할 때 도와줄 수 있어."
     },
     {
       "id": "jimliu/baoyu-design",
@@ -60,7 +61,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v1.1.1"
+      "last_release": "v1.1.1",
+      "desc_ko": "이 프로젝트는 Claude Design을 로컬에서 실행하여 예쁜 사용자 인터페이스 디자인을 만들 수 있게 해주며, HTML 파일로 결과물을 내보낼 수 있다. Claude Design을 클라우드가 아닌 로컬에서 사용하고 싶은 사람들에게 유용하다."
     },
     {
       "id": "juliusbrussee/caveman",
@@ -92,7 +94,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v1.9.1"
+      "last_release": "v1.9.1",
+      "desc_ko": "이 프로젝트는 인공지능이 더 간단하게 말하는 방법을 연구하는 곳으로, 인공지능이 더 적은 단어로도 같은 뜻을 전달할 수 있도록 도와준다. 이 프로젝트는 인공지능과 언어 모델을 연구하는 곳에서 유용하게 사용될 수 있다."
     },
     {
       "id": "altic-dev/fluidvoice",
@@ -120,7 +123,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v1.6.2"
+      "last_release": "v1.6.2",
+      "desc_ko": "이 프로젝트는 macOS에서 사용할 수 있는 음성 인식.Dictation 앱으로, 기기 내에서 음성 인식을 수행하고 사용자 지정으로 학습된 AI 모델을 사용하여 음성 인식의 정확도를 높여준다."
     },
     {
       "id": "yeachan-heo/gajae-code",
@@ -141,7 +145,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.8.2"
+      "last_release": "v0.8.2",
+      "desc_ko": "이 프로젝트는 '가재 코드'라는 이름의 최소 가용 제품(MVP)을 위한 저장소로, 가재 코드의 기본적인 기능을 구현한 코드가 포함되어 있습니다. 이 저장소를 사용하면 가재 코드의 기능을 쉽게 이해하고, 자신의 프로젝트에 적용할 수 있습니다."
     },
     {
       "id": "koul777/vhlookup",
@@ -162,7 +167,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v1.3"
+      "last_release": "v1.3",
+      "desc_ko": "이 프로젝트는 엑셀에서 자동화 작업을 도와주는 도구로, 주로 공공 행정 업무에서 사용하기 좋다. 이 도구는 인터넷에 연결하지 않고도 엑셀 작업을 자동화할 수 있다."
     },
     {
       "id": "nomadamas/katok",
@@ -183,7 +189,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.1.2"
+      "last_release": "v0.1.2",
+      "desc_ko": "카카오톡 대화 내용을 쉽게 검색할 수 있게 해주는 프로그램으로, 키워드를 입력하면 대화 내용에서 관련된 문장을 찾을 수 있다. 이 프로그램은 카카오톡 메시지에서 특정 단어나 문장을 빠르게 찾을 수 있게 해주므로 대화 내용을 효율적으로 관리하고 검색할 때 유용하다."
     },
     {
       "id": "lycorp-jp/sim-use",
@@ -211,7 +218,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.9.0"
+      "last_release": "v0.9.0",
+      "desc_ko": "이 프로젝트는 인공지능이 아이폰이나 안드로이드 기기를 제어할 수 있게 해주는 도구로, 인공지능 개발에 유용하다."
     },
     {
       "id": "kimsh-1/gongnyang-prompt-kit",
@@ -231,7 +239,8 @@
       "saved_at": "2026-07-02T22:05:43.675Z",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사용자가 입력한 요청을 인공지능 이미지 생성 모델인 gpt-image-2가 이해할 수 있는 명령어로 변환해 주는 도구입니다. 이는 사용자가 원하는 이미지를 더 정확하게 생성할 수 있도록 도와줍니다."
     },
     {
       "id": "lunapsy/kdrug-client",
@@ -251,7 +260,8 @@
       "saved_at": "2026-07-01T22:36:24.155Z",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 약물 정보를 관리하고 제공하는 클라이언트 프로그램입니다. 이 프로그램은 의료 관련 업무에서 약물 정보를 쉽게 관리하고 조회할 수 있도록 도와줍니다."
     },
     {
       "id": "koul777/clickguide-local-private",
@@ -272,7 +282,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.1.1"
+      "last_release": "v0.1.1",
+      "desc_ko": "이 프로젝트는 사용자들이 쉽게 클릭하여 사용할 수 있는 가이드를 만들 수 있는 도구를 개발한 것으로, 주로 소규모 프로젝트나 개인용으로 사용할 수 있다."
     },
     {
       "id": "revfactory/webtoon-harness",
@@ -292,7 +303,8 @@
       "saved_at": "2026-06-29T22:46:08.577Z",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 웹툰을 자동으로 제작하는 시스템을 개발하는 곳으로, 여러 개의 인공지능이 함께合作하여 웹툰 한 회차를 만들어낸다. 이 시스템은 웹툰 제작에 필요한 모든 단계를 자동화하여 웹툰 제작을 더 효율적으로 만들 수 있다."
     },
     {
       "id": "datalab-to/surya",
@@ -313,7 +325,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v0.20.0"
+      "last_release": "v0.20.0",
+      "desc_ko": "이 프로젝트는 90가지 이상의 언어로 된 문서의 글자를 인식하고, 문서의 구조를 분석하며, 읽기 순서를 파악하고, 표를 인식하는 기능을 제공합니다. 문서의 내용을 컴퓨터가 이해할 수 있도록 해주는 기술입니다."
     },
     {
       "id": "aldegad/sprite-gen",
@@ -344,7 +357,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v1.9.2"
+      "last_release": "v1.9.2",
+      "desc_ko": "이 프로젝트는 2D 게임에서 사용할 수 있는 캐릭터 이미지와 애니메이션을 자동으로 생성해 주는 도구로, 게임 개발에 쓸모가 있다. 이 도구는 인공지능 기술을 사용하여 깨끗한 이미지와 애니메이션을 만들어 준다."
     },
     {
       "id": "alisa0808/vibe-creating-skill",
@@ -385,7 +399,8 @@
       "saved_at": "2026-06-28T08:03:32.314Z",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 영상을 만들기 위한 글을 작성하는 기술입니다. 이 기술을 이용하면 영상을 만들고 싶은 생각을 적으면 인공지능이 그에 맞는 영상을 자동으로 생성할 수 있습니다."
     },
     {
       "id": "opendataloader-project/opendataloader-pdf",

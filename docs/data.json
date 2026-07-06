@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:13:04.990Z",
+  "updated_at": "2026-07-06T15:13:31.109Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -1282,7 +1282,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "last_release": "v3.2.2"
+      "last_release": "v3.2.2",
+      "desc_ko": "이 프로젝트는 문서 내용을 빠르게 찾을 수 있는 데스크톱 애플리케이션으로, 수천 건의 문서를 1초 만에 검색할 수 있으며 완전한 오프라인 환경에서 동작한다. 특히 HWPX, PDF, Office 파일을 지원하며, 한국어 자연어 처리를 지원한다."
     },
     {
       "id": "nomadamas/k-skill",
@@ -1302,7 +1303,8 @@
       "saved_at": "2026-05-05T06:39:32.878Z",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "telegram:8176674830",
-      "notes": null
+      "notes": null,
+      "desc_ko": "한국인들이 자주 사용하는 여러 가지 서비스나 정보를 쉽게 활용할 수 있는 스킬 모음집으로, 여러 가지 정보나 서비스를 한 곳에서 쉽게 사용할 수 있습니다."
     },
     {
       "id": "opengeometry-io/opengeometry",
@@ -1323,7 +1325,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.0.7"
+      "last_release": "v0.0.7",
+      "desc_ko": "이 프로젝트는 컴퓨터로 3차원 도형을 만들고 편집할 수 있는 강력한 도구를 웹에서 사용할 수 있도록 해주는 것입니다. 이 도구를 사용하면 웹 브라우저에서 직접 3차원 모델링을 할 수 있기 때문에, 다양한 웹 애플리케이션에서 활용할 수 있습니다."
     },
     {
       "id": "nexu-io/open-design",
@@ -1347,7 +1350,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "open-design-v0.13.0"
+      "last_release": "open-design-v0.13.0",
+      "desc_ko": "이 프로젝트는 로컬 우선·오픈소스 디자인 도구로, 사용자가 웹, 데스크탑, 모바일 프로토타입을 쉽게 만들고 편집할 수 있게 해줍니다. 이 도구는 다양한 파일 형식으로 내보내기와 미리보기를 지원하며, 여러 코드 에디터와 통합됩니다."
     },
     {
       "id": "warpdotdev/warp",
@@ -1371,7 +1375,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.2026.06.03.09.49.stable_00"
+      "last_release": "v0.2026.06.03.09.49.stable_00",
+      "desc_ko": "이 프로젝트는 개발자들이 코드를 더 빠르고 쉽게 작성할 수 있도록 도와주는 개발 환경을 제공하는 것입니다. 터미널에서 사용할 수 있어 개발자들이 편리하게 코드를 작성하고 관리할 수 있습니다."
     },
     {
       "id": "genexis-ai/chromex",
@@ -1396,7 +1401,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.1.8"
+      "last_release": "v0.1.8",
+      "desc_ko": "이 프로젝트는 크롬 브라우저의 사이드 패널에 인공지능 어시스턴트를 추가해 페이지 내용, 탭, 음성, 이미지와의 상호작용을 지원하는 도구입니다. 이 도구를 사용하면 브라우저에서 다양한 작업을 보다 쉽고 편리하게 수행할 수 있습니다."
     },
     {
       "id": "minishlab/semble",
@@ -1420,7 +1426,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.4.2"
+      "last_release": "v0.4.2",
+      "desc_ko": "semble은 에이전트가 코드를 빠르고 정확하게 검색할 수 있게 해주는 도구로, 개발자들이 코드를 관리하고 찾을 때 유용합니다."
     },
     {
       "id": "chrisryugj/kordoc",
@@ -1445,7 +1452,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v3.17.0"
+      "last_release": "v3.17.0",
+      "desc_ko": "이 프로젝트는 여러 문서 파일 형식(HWP, PDF, 엑셀, 워드 등)을 마크다운 형식으로 바꾸는 도구로, 명령어 입력 방식과 마인크래프트 서버에서 사용할 수 있다. 문서 파일을 쉽게 변환하여 사용할 수 있는 도구로 유용하다."
     },
     {
       "id": "public-apis/public-apis",
@@ -1465,7 +1473,8 @@
       "saved_at": "2026-04-27T15:56:52.844166+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 무료로 사용할 수 있는 다양한 API를 모아둔 목록입니다. 개발자들이 자신의 프로젝트에서 사용할 수 있는 무료 API를 쉽게 찾을 수 있도록 도와줍니다."
     },
     {
       "id": "allenwriter/doubao-image-and-video-generator",
@@ -1489,7 +1498,8 @@
       "saved_at": "2026-04-27T13:38:46.610713+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": "설명 없음. 이름 기반 분류"
+      "notes": "설명 없음. 이름 기반 분류",
+      "desc_ko": "이 프로젝트는 인공지능을 이용하여 자동으로 이미지와 비디오를 생성해 주는 도구입니다. 이 도구를 사용하면 텍스트를 입력하면 그에 맞는 이미지를 생성할 수 있습니다."
     },
     {
       "id": "microsoft/vibevoice",
@@ -1511,7 +1521,8 @@
       "saved_at": "2026-04-26T22:33:14.033774+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사람의 목소리를 인식하고 처리하는 인공지능 기술을 개발하는 것입니다. 이 기술은 다양한 음성 관련 서비스나 애플리케이션에서 사용할 수 있습니다."
     },
     {
       "id": "d4vinci/scrapling",
@@ -1534,7 +1545,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.4.10"
+      "last_release": "v0.4.10",
+      "desc_ko": "이 프로젝트는 웹사이트의 정보를 수집할 때 쓸 수 있는 도구로, 한 번에 하나씩 요청하는 것부터 대규모 데이터 수집까지 자동으로 처리해주는 프레임워크입니다. 웹사이트에서 필요한 데이터를 쉽게 수집할 수 있도록 도와줍니다."
     },
     {
       "id": "fivetaku/insane-search",
@@ -1558,7 +1570,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.9.1"
+      "last_release": "v0.9.1",
+      "desc_ko": "이 프로젝트는 인터넷에서 특정 웹사이트에 접근할 때 발생하는 차단을 우회하여 접근할 수 있게 도와주는 툴입니다. 이 툴을 사용하면 특정 웹사이트에 접근할 때 발생하는 제한을 피할 수 있습니다."
     },
     {
       "id": "jamiepine/voicebox",
@@ -1582,7 +1595,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.5.0"
+      "last_release": "v0.5.0",
+      "desc_ko": "이 프로젝트는 사람의 목소리를 컴퓨터가 따라할 수 있게 해주는 오픈소스 음성 스튜디오로, 사람의 목소리를 복사하거나 새로운 목소리를 만들 수 있다. 이 기술은 다양한 곳에서 활용될 수 있다."
     },
     {
       "id": "epoko77-ai/im-not-ai",
@@ -1607,7 +1621,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": "설명에 \"스킬\" 명시 — Claude Code skill 가능성",
-      "last_release": "v2.0.0"
+      "last_release": "v2.0.0",
+      "desc_ko": "이 프로젝트는 인공지능이 쓴 글이 아닌 것처럼 보이게 해주는 기술을 제공한다. 이는 기존의 인공지능 생성 글을 더 자연스럽고 인간다운 글로 바꿔주는 역할을 한다."
     },
     {
       "id": "rangizingo/cc-cache-fix",

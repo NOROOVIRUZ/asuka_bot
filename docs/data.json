@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:13:50.448Z",
+  "updated_at": "2026-07-06T15:15:38.211Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "verisworks-ai/prompt-ops-maker",
+      "owner": "verisworks-ai",
+      "name": "prompt-ops-maker",
+      "url": "https://github.com/verisworks-ai/prompt-ops-maker",
+      "description": "Generate verification-focused operating prompts for AI agents.",
+      "language": "Python",
+      "stars": 22,
+      "topics": [
+        "agent-ops",
+        "ai-agents",
+        "claude",
+        "codex",
+        "mcp",
+        "prompt-engineering"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-07-06T15:15:38.211Z",
+      "stars_updated_at": "2026-07-06T15:15:38.211Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 정확한 작업을 수행할 수 있도록 하는 지시 문장을 자동으로 생성해 주는 도구입니다. 이 도구는 인공지능 에이전트가 특정 작업을 수행할 때 오류를 최소화하고 정확성을 높이는 데 도움이 됩니다."
+    },
     {
       "id": "tigicion/dao-code",
       "owner": "tigicion",

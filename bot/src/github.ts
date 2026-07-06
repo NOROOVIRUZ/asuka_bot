@@ -6,8 +6,15 @@ let cachedCategories: CategoriesFile | null = null;
 
 export async function getCategories(env: Env): Promise<CategoriesFile> {
   if (cachedCategories) return cachedCategories;
-  const url = `https://raw.githubusercontent.com/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/main/${env.CATEGORIES_PATH}`;
-  const res = await fetch(url, { headers: { 'User-Agent': 'asuka-bot' } });
+  // raw.githubusercontent.com은 무인증이라 Cloudflare 공유 IP에서 429 잘 맞음 → 토큰 인증 API 사용
+  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.CATEGORIES_PATH}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Accept: 'application/vnd.github.raw+json',
+      'User-Agent': 'asuka-bot',
+    },
+  });
   if (!res.ok) throw new Error(`categories fetch failed: ${res.status}`);
   cachedCategories = (await res.json()) as CategoriesFile;
   return cachedCategories;
@@ -138,6 +145,84 @@ export async function putPromptsFile(
     const errText = await res.text();
     throw new Error(`prompts commit failed: ${res.status} ${errText}`);
   }
+}
+
+export interface RepoSnapshot {
+  stars: number;
+  releaseTag: string | null;
+  releaseName: string | null;
+  releaseUrl: string | null;
+}
+
+// 저장된 repo 전체의 최신 릴리즈+스타를 GraphQL 요청 1번으로 조회
+// (Workers 무료 플랜 subrequest 50개 제한 때문에 repo당 REST 호출은 불가)
+export async function fetchReleasesBatch(
+  env: Env,
+  repos: { id: string; owner: string; name: string }[]
+): Promise<Record<string, RepoSnapshot>> {
+  const fields = repos
+    .map(
+      (r, i) =>
+        `r${i}: repository(owner: ${JSON.stringify(r.owner)}, name: ${JSON.stringify(r.name)}) { stargazerCount latestRelease { tagName name url } }`
+    )
+    .join('\n');
+  const res = await fetch(`${GH_API}/graphql`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      'User-Agent': 'asuka-bot',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query: `query {\n${fields}\n}` }),
+  });
+  if (!res.ok) throw new Error(`graphql failed: ${res.status}`);
+  const body = (await res.json()) as { data?: Record<string, any> };
+  const out: Record<string, RepoSnapshot> = {};
+  repos.forEach((r, i) => {
+    const node = body.data?.[`r${i}`];
+    if (!node) return; // 삭제/이동된 repo는 null로 옴
+    out[r.id] = {
+      stars: node.stargazerCount ?? 0,
+      releaseTag: node.latestRelease?.tagName ?? null,
+      releaseName: node.latestRelease?.name ?? null,
+      releaseUrl: node.latestRelease?.url ?? null,
+    };
+  });
+  return out;
+}
+
+export interface SearchHit {
+  id: string;
+  owner: string;
+  name: string;
+  url: string;
+  description: string;
+  stars: number;
+}
+
+// 최근 N일 내 생성된 repo 중 keyword 매칭 상위 검색 (레이더용)
+export async function searchNewRepos(env: Env, keyword: string, days: number): Promise<SearchHit[]> {
+  const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+  const q = encodeURIComponent(`${keyword} created:>${since} stars:>50`);
+  const res = await fetch(`${GH_API}/search/repositories?q=${q}&sort=stars&order=desc&per_page=5`, {
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'User-Agent': 'asuka-bot',
+    },
+  });
+  if (!res.ok) throw new Error(`search failed: ${res.status}`);
+  const body = (await res.json()) as { items?: any[] };
+  return (body.items || [])
+    .filter((it) => !it.archived)
+    .map((it) => ({
+      id: `${it.owner.login.toLowerCase()}/${it.name.toLowerCase()}`,
+      owner: it.owner.login,
+      name: it.name,
+      url: it.html_url,
+      description: it.description || '',
+      stars: it.stargazers_count,
+    }));
 }
 
 function decodeBase64(b64: string): string {

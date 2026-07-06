@@ -273,6 +273,7 @@ function applyFilter(repos) {
       r.name,
       r.owner,
       r.description || '',
+      r.desc_ko || '',
       r.category,
       r.workspace || '',
       ...(r.tags || []),
@@ -320,7 +321,7 @@ function renderCardHtml(r) {
         <div class="card-name">${escapeHtml(r.name)}</div>
         <div class="card-owner">${escapeHtml(r.owner)}</div>
       </div>
-      <div class="card-desc">${escapeHtml(r.description) || '설명 없음'}</div>
+      <div class="card-desc">${escapeHtml(r.desc_ko || r.description) || '설명 없음'}</div>
       ${tags ? `<div class="card-tags">${tags}</div>` : ''}
       <div class="card-meta">
         ${r.language ? `<span class="card-language" data-lang="${escapeHtml(r.language)}">${escapeHtml(r.language)}</span>` : '<span></span>'}

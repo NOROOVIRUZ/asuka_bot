@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:04:55.416Z",
+  "updated_at": "2026-07-06T15:06:10.786Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "jimliu/baoyu-design",
+      "owner": "JimLiu",
+      "name": "baoyu-design",
+      "url": "https://github.com/JimLiu/baoyu-design",
+      "description": "Run Claude Design locally as an Agent Skill — Cursor, Claude Code & more. Produce polished UI mockups, prototypes, decks & wireframes as self-contained HTML, without claude.ai/design. Best with Opus 4.8.",
+      "language": "JavaScript",
+      "stars": 2435,
+      "topics": [
+        "agent-skills",
+        "claude",
+        "claude-code",
+        "claude-design",
+        "cursor",
+        "design",
+        "prototyping",
+        "ui-design"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-07-06T15:06:10.786Z",
+      "stars_updated_at": "2026-07-06T15:06:10.786Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "juliusbrussee/caveman",
       "owner": "JuliusBrussee",

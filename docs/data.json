@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-06T15:13:31.109Z",
+  "updated_at": "2026-07-06T15:13:50.448Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -1644,7 +1644,8 @@
       "saved_at": "2026-04-25T14:21:10.052741+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": "설명 없음. 이름 cc- 접두사 기반"
+      "notes": "설명 없음. 이름 cc- 접두사 기반",
+      "desc_ko": "이 프로젝트는 캐시 관련 오류를 수정하는 코드를 제공하며, 캐시가 제대로 작동하지 않는 문제를 해결하는 데 도움이 됩니다. 주로 캐시 관련 문제가 있는 시스템이나 애플리케이션에서 사용할 수 있습니다."
     },
     {
       "id": "jjoa68/claude-token-diet",
@@ -1666,7 +1667,8 @@
       "saved_at": "2026-04-25T14:19:24.89276+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 너무 많은 자원을 사용하는 문제를 해결하는 방법을 제공하며, 개발자들이 코드를 효율적으로 개선하는 데 도움이 됩니다. 이 프로젝트는 Claude Code 토큰을 분석하여 불필요한 자원 사용을 줄이는 데 사용할 수 있습니다."
     },
     {
       "id": "microsoft/trellis.2",
@@ -1688,7 +1690,8 @@
       "saved_at": "2026-04-25T14:18:19.276204+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 컴퓨터 그래픽스에서 3차원 물체를 만들기 위한 기술을 제공한다. 이 기술은 3차원 물체의 구조를 효율적으로 표현하여, 컴퓨터 그래픽스나 게임 개발에서 유용하게 사용될 수 있다."
     },
     {
       "id": "chrisryugj/korean-law-mcp",
@@ -1712,7 +1715,8 @@
       "saved_at": "2026-04-25T14:09:43.280533+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 법률 관련 정보를 쉽게 찾고 분석할 수 있는 도구를 제공하며, 특히 인공지능을 이용해 법령, 판례, 조례, 조약 등을 검색하고 분석하는 기능을 가지고 있다. 법률 전문가나 학생들이 법률 정보를 효율적으로 이용할 수 있도록 도와준다."
     },
     {
       "id": "ultraworkers/claw-code",
@@ -1735,7 +1739,8 @@
       "saved_at": "2026-04-25T14:06:27.460513+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 저장소는 Rust 프로그래밍 언어와 oh-my-codex 라이브러리를 사용하여 만들어진 프로젝트로, 빠른 속도로 많은 사람들의 관심을 받은 저장소입니다. 이 저장소는 특정한 주제나 목적에 대한 코드를 포함하고 있습니다."
     },
     {
       "id": "microsoft/markitdown",
@@ -1759,7 +1764,8 @@
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
       "notes": null,
-      "last_release": "v0.1.6"
+      "last_release": "v0.1.6",
+      "desc_ko": "이 프로젝트는 문서 파일을 마크다운 형식으로 바꾸어 주는 도구로, 문서 작업을 쉽게 해주는 파이썬 프로그램입니다. 문서 작업을 쉽게 하거나 문서를 다른 형식으로 변환해야 하는 경우에 유용합니다."
     },
     {
       "id": "wjb127/codex-image",
@@ -1784,7 +1790,8 @@
       "saved_at": "2026-04-25T14:01:37.636138+00:00",
       "stars_updated_at": "2026-07-06T15:07:50.113Z",
       "added_by": "migration",
-      "notes": null
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능을 이용해 그림을 만들어내는 도구로, 사용자가 원하는 이미지를 만들 수 있는 코드를 제공한다. 이 도구는 Claude Code라는 인공지능 기술을 사용하여 사용자의 입력을 받아서 이미지를 생성한다."
     }
   ]
 }

@@ -3,6 +3,12 @@ import { TelegramAPI } from './telegram';
 import { fetchRepoMeta, getDataFile, putDataFile, getCategories, parseGithubUrl, getPromptsFile, putPromptsFile } from './github';
 import { classify } from './classifier';
 import { msg } from './i18n';
+import { runDigest, explainKo } from './digest';
+
+// cron에는 채팅 컨텍스트가 없으니 허용 유저 1번(노루군)에게 보냄 (1:1 챗은 chat_id == user_id)
+function ownerChatId(env: Env): number {
+  return Number(env.ALLOWED_USER_IDS.split(',')[0].trim());
+}
 
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
@@ -15,6 +21,15 @@ export default {
       }
       if (url.pathname === '/api/prompts') {
         return handlePromptsApi(env);
+      }
+      if (url.pathname === '/api/mindmap/summarize') {
+        return handleMindmapSummarize(url, env);
+      }
+      if (url.pathname === '/api/digest/run') {
+        return handleDigestApi(url, env);
+      }
+      if (url.pathname === '/api/translate/backfill') {
+        return handleBackfillApi(url, env);
       }
       return new Response('asuka_bot online 🔴', { status: 200 });
     }
@@ -59,10 +74,24 @@ export default {
     );
     return new Response('ok');
   },
+
+  // 매주 월요일 09:00 KST (wrangler.toml crons) — 주간 다이제스트
+  async scheduled(_event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
+    ctx.waitUntil(
+      runDigest(env, ownerChatId(env)).catch((e) => console.error('digest error', e))
+    );
+  },
 };
 
 async function handleUpdate(update: any, env: Env): Promise<void> {
   const tg = new TelegramAPI(env);
+
+  // 인라인 버튼 콜백 (다이제스트 추천 repo 저장)
+  if (update.callback_query) {
+    await handleCallback(update.callback_query, tg, env);
+    return;
+  }
+
   if (!update.message) return;
 
   const m = update.message;
@@ -119,6 +148,140 @@ async function handlePromptDeleteApi(url: URL, env: Env): Promise<Response> {
   }
 }
 
+async function handleMindmapSummarize(url: URL, env: Env): Promise<Response> {
+  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
+  const secret = url.searchParams.get('secret');
+  if (!secret || secret !== env.WEBHOOK_SECRET) {
+    return new Response(JSON.stringify({ ok: false, error: 'forbidden' }), { status: 401, headers: cors });
+  }
+  const text = (url.searchParams.get('text') || '').trim().slice(0, 1500);
+  if (!text) {
+    return new Response(JSON.stringify({ ok: false, error: 'text required' }), { status: 400, headers: cors });
+  }
+  try {
+    const aiRes = await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
+      messages: [
+        {
+          role: 'system',
+          content: '당신은 마인드맵 보조 AI입니다. 입력된 텍스트에서 핵심 개념들을 추출하세요.\n반드시 아래 JSON 형식으로만 응답하세요:\n{"summary":"<한국어 2문장 요약>","nodes":[{"label":"<한국어 개념명 최대 5글자>","type":"project|concept|tool|idea"}]}\n최대 8개 노드 추출.',
+        },
+        { role: 'user', content: text },
+      ],
+    }) as { response: string };
+    const raw = aiRes.response || '';
+    const jsonStr = raw.match(/\{[\s\S]*\}/)?.[0] ?? raw.trim();
+    try {
+      const parsed = JSON.parse(jsonStr);
+      const summary = String(parsed.summary || '');
+      const nodes = Array.isArray(parsed.nodes) ? parsed.nodes.slice(0, 8) : [];
+      return new Response(JSON.stringify({ ok: true, summary, nodes }), { headers: cors });
+    } catch {
+      return new Response(JSON.stringify({ ok: true, summary: raw.slice(0, 200), nodes: [{ label: '요약', type: 'concept' }] }), { headers: cors });
+    }
+  } catch (e: any) {
+    return new Response(JSON.stringify({ ok: false, error: e.message }), { status: 500, headers: cors });
+  }
+}
+
+async function handleCallback(cq: any, tg: TelegramAPI, env: Env): Promise<void> {
+  const data = String(cq.data || '');
+  const chatId = cq.message?.chat?.id ?? ownerChatId(env);
+  try {
+    if (data.startsWith('add:')) {
+      const id = data.slice(4);
+      await tg.answerCallbackQuery(cq.id, `${id} 저장 중...`);
+      await addRepoFlow(`https://github.com/${id}`, chatId, cq.from.id, tg, env);
+      return;
+    }
+    await tg.answerCallbackQuery(cq.id);
+  } catch (e: any) {
+    console.error('callback error', e?.message || e);
+    await tg.answerCallbackQuery(cq.id, '⚠️ 실패했어');
+  }
+}
+
+async function handleDigestApi(url: URL, env: Env): Promise<Response> {
+  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
+  const secret = url.searchParams.get('secret');
+  if (!secret || secret !== env.WEBHOOK_SECRET) {
+    return new Response(JSON.stringify({ ok: false, error: 'forbidden' }), { status: 401, headers: cors });
+  }
+  try {
+    const dry = url.searchParams.get('dry') === '1';
+    const summary = await runDigest(env, ownerChatId(env), dry);
+    return new Response(JSON.stringify({ ok: true, ...summary }), { headers: cors });
+  } catch (e: any) {
+    return new Response(JSON.stringify({ ok: false, error: e.message }), { status: 500, headers: cors });
+  }
+}
+
+// 기존 저장분 한글 설명 일괄 생성 — 한 번에 최대 15개씩 (Workers 무료 플랜 subrequest 50개 제한)
+async function handleBackfillApi(url: URL, env: Env): Promise<Response> {
+  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
+  const secret = url.searchParams.get('secret');
+  if (!secret || secret !== env.WEBHOOK_SECRET) {
+    return new Response(JSON.stringify({ ok: false, error: 'forbidden' }), { status: 401, headers: cors });
+  }
+  try {
+    const limit = Math.min(Number(url.searchParams.get('limit')) || 10, 15);
+    const { data, sha } = await getDataFile(env);
+    const targets = data.repos.filter((r) => !r.desc_ko).slice(0, limit);
+    for (const r of targets) {
+      r.desc_ko = await explainKo(env, r.id, r.description, r.topics);
+    }
+    if (targets.length) {
+      data.updated_at = new Date().toISOString();
+      await putDataFile(env, data, sha, `translate ${targets.length} descriptions to Korean`);
+    }
+    const remaining = data.repos.filter((r) => !r.desc_ko).length;
+    return new Response(JSON.stringify({ ok: true, translated: targets.length, remaining }), { headers: cors });
+  } catch (e: any) {
+    return new Response(JSON.stringify({ ok: false, error: e.message }), { status: 500, headers: cors });
+  }
+}
+
+// /find — 저장된 repo 중에서 자연어로 찾기 (Workers AI)
+async function findFlow(question: string, chatId: number, tg: TelegramAPI, env: Env): Promise<void> {
+  try {
+    const { data } = await getDataFile(env);
+    if (data.repos.length === 0) {
+      await tg.sendMessage(chatId, msg.listEmpty());
+      return;
+    }
+    const catalog = data.repos.map((r) => ({
+      id: r.id,
+      d: (r.description || '').slice(0, 120),
+      c: r.category,
+      l: r.language,
+    }));
+    const aiRes = (await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
+      messages: [
+        {
+          role: 'system',
+          content:
+            'You match a user question to saved GitHub repos. Given a JSON catalog and a question, pick up to 3 best matching repos. Respond with ONLY valid JSON: {"matches":[{"id":"<exact id from catalog>","reason":"<한국어 한 문장 이유>"}]}. No match → {"matches":[]}.',
+        },
+        { role: 'user', content: `catalog: ${JSON.stringify(catalog)}\n\nquestion: ${question}` },
+      ],
+    })) as { response: string };
+    const jsonStr = (aiRes.response || '').match(/\{[\s\S]*\}/)?.[0] ?? '{}';
+    let matches: { id: string; reason: string }[] = [];
+    try {
+      const parsed = JSON.parse(jsonStr);
+      if (Array.isArray(parsed.matches)) matches = parsed.matches;
+    } catch { /* AI가 JSON 약속을 어기면 결과 없음으로 처리 */ }
+
+    const found = matches
+      .map((m) => ({ repo: data.repos.find((r) => r.id === String(m.id).toLowerCase()), reason: String(m.reason || '') }))
+      .filter((m): m is { repo: RepoEntry; reason: string } => !!m.repo);
+
+    await tg.sendMessage(chatId, msg.findResult(question, found));
+  } catch (e: any) {
+    console.error('findFlow error', e?.message || e);
+    await tg.sendMessage(chatId, msg.error());
+  }
+}
+
 function extractGithubUrls(text: string): string[] {
   const re = /https?:\/\/github\.com\/([\w.-]+)\/([\w.-]+)/g;
   return [...text.matchAll(re)].map((m) => `https://github.com/${m[1]}/${m[2]}`);
@@ -170,6 +333,8 @@ async function addRepoFlow(
       stars_updated_at: now,
       added_by: `telegram:${userId}`,
       notes: null,
+      // 저장 순간 비전공자용 한글 설명 생성 (대시보드 카드용)
+      desc_ko: await explainKo(env, id, meta.description, meta.topics),
     };
 
     data.repos.unshift(entry);
@@ -403,6 +568,24 @@ async function handleCommand(
         data.updated_at = new Date().toISOString();
         await putDataFile(env, data, sha, `delete ${id}`);
         await tg.sendMessage(chatId, msg.deleted(id));
+        return;
+      }
+
+      case '/find':
+      case '/찾아': {
+        const q = args.join(' ').trim();
+        if (!q) {
+          await tg.sendMessage(chatId, msg.findUsage());
+          return;
+        }
+        await findFlow(q, chatId, tg, env);
+        return;
+      }
+
+      case '/digest':
+      case '/보고': {
+        await tg.sendMessage(chatId, msg.digestStarting());
+        await runDigest(env, chatId);
         return;
       }
 

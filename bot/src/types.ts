@@ -30,6 +30,8 @@ export interface RepoEntry {
   stars_updated_at: string;
   added_by: string;
   notes: string | null;
+  last_release?: string | null; // 주간 다이제스트가 마지막으로 본 릴리즈 태그
+  desc_ko?: string | null; // AI가 만든 비전공자용 한글 설명 (한 번 만들면 캐시)
 }
 
 export interface DataFile {

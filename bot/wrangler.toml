@@ -12,6 +12,10 @@ PROMPTS_PATH = "docs/prompts.json"
 [ai]
 binding = "AI"
 
+# 주간 다이제스트 — 월요일 00:00 UTC = 월요일 09:00 KST
+[triggers]
+crons = ["0 0 * * 1"]
+
 # 시크릿은 wrangler secret put 으로 등록:
 #   wrangler secret put TELEGRAM_BOT_TOKEN
 #   wrangler secret put GITHUB_TOKEN

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-08T10:40:26.580Z",
+  "updated_at": "2026-07-08T12:52:26.712Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "eisenjimmy/quant",
+      "owner": "eisenjimmy",
+      "name": "Quant",
+      "url": "https://github.com/eisenjimmy/Quant",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 77,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-07-08T12:52:26.712Z",
+      "stars_updated_at": "2026-07-08T12:52:26.712Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 금융 데이터를 분석하고 예측하는 데 사용할 수 있는 코드와 도구를 제공하는 것으로 보입니다. 금융 관련된 데이터를 다루거나 분석해야 하는 곳에서 유용하게 사용할 수 있습니다."
+    },
     {
       "id": "nomadamas/slides-grab",
       "owner": "NomaDamas",

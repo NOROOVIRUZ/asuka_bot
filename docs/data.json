@@ -1,8 +1,33 @@
 {
   "version": 1,
-  "updated_at": "2026-07-07T09:33:58.036Z",
+  "updated_at": "2026-07-08T10:40:26.580Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nomadamas/slides-grab",
+      "owner": "NomaDamas",
+      "name": "slides-grab",
+      "url": "https://github.com/NomaDamas/slides-grab",
+      "description": "Best harness + editor + linter for generating slides in Claude Code / Codex - Claude Design Open Source Alternative ",
+      "language": "HTML",
+      "stars": 1054,
+      "topics": [
+        "ppt",
+        "slides",
+        "slideshow"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-07-08T10:40:26.580Z",
+      "stars_updated_at": "2026-07-08T10:40:26.580Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 프레젠테이션용 슬라이드를 쉽게 만들 수 있는 도구를 제공하며, 코드 편집기와 오류 검사 기능을 포함하여 슬라이드를 생성하고 관리하는 것을 더 쉽게 해줍니다. 이것은 프레젠테이션 슬라이드 제작을 위한 오픈소스 도구로, 코드 기반으로 슬라이드를 만들고 편집할 수 있습니다."
+    },
     {
       "id": "devswha/patina",
       "owner": "devswha",

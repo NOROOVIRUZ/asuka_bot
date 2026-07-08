@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-08T12:52:26.712Z",
+  "updated_at": "2026-07-08T13:02:17.594Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "mengto/skills",
+      "owner": "MengTo",
+      "name": "Skills",
+      "url": "https://github.com/MengTo/Skills",
+      "description": "Agent skills for designers and builders using Codex, Claude, Cursor, and other AI coding agents",
+      "language": "Python",
+      "stars": 776,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-07-08T13:02:17.594Z",
+      "stars_updated_at": "2026-07-08T13:02:17.594Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 디자인과 빌드를 위해 인공지능 코딩 에이전트를 사용하는 사람들을 위한 에이전트의 기능을 제공합니다. 이 기능은 코덱스, 클로드, 커서 등의 인공지능 코딩 에이전트와 함께 사용하면 유용합니다."
+    },
     {
       "id": "eisenjimmy/quant",
       "owner": "eisenjimmy",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-09T09:31:37.376Z",
+  "updated_at": "2026-07-10T23:21:40.988Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "browser-use/video-use",
+      "owner": "browser-use",
+      "name": "video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "description": "Edit videos with coding agents",
+      "language": "Python",
+      "stars": 16476,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-비디오",
+      "tags": [],
+      "confidence": 0.5,
+      "classified_by": "rule",
+      "saved_at": "2026-07-10T23:21:40.988Z",
+      "stars_updated_at": "2026-07-10T23:21:40.988Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 코드를 이용해 비디오를 편집할 수 있는 도구를 제공합니다. 이 도구를 사용하면 코드를 작성하여 비디오의 효과, 필터, 자르기 등 다양한 편집 작업을 자동화할 수 있습니다."
+    },
     {
       "id": "revfactory/font-harness",
       "owner": "revfactory",

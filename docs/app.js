@@ -243,8 +243,9 @@ function renderPromptSections() {
     });
   });
 
-  // 카드 클릭 → 전체 내용 복사
-  main.querySelectorAll('.prompt-card').forEach(card => {
+  // 카드 클릭 → 전체 내용 복사 + 진입 스태거
+  main.querySelectorAll('.prompt-card').forEach((card, i) => {
+    card.style.setProperty('--i', Math.min(i, 12));
     card.addEventListener('click', (e) => {
       if (e.target.closest('.prompt-delete-btn, .card-copy-btn')) return;
       navigator.clipboard.writeText(card.dataset.content).then(() => {
@@ -472,8 +473,9 @@ function renderSections(filtered) {
     main.innerHTML = `<div class="card-grid">${filtered.map(renderCardHtml).join('')}</div>`;
   }
 
-  // 카드 클릭 이벤트
-  main.querySelectorAll('.card').forEach(el => {
+  // 카드 클릭 이벤트 + 진입 스태거 (상한 12 → 총 500ms 이내)
+  main.querySelectorAll('.card').forEach((el, i) => {
+    el.style.setProperty('--i', Math.min(i, 12));
     el.addEventListener('click', () => {
       window.open(el.dataset.url, '_blank', 'noopener');
     });

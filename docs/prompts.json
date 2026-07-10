@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-06-29T12:43:42.232Z",
+  "updated_at": "2026-07-10T13:48:43.569Z",
   "prompts": [
+    {
+      "id": "p_1783691323569",
+      "title": "* Framing: Half-body portrait, cropped j",
+      "description": null,
+      "content": "* Framing: Half-body portrait, cropped just below the chest.\n* Focal length feel: Portrait lens (around 85mm) with flattering compression and no distortion.\n* Lighting type: Studio softbox lighting.\n* Light direction: Frontal, slightly angled to the left to create soft, seamless transitions.\n* Light quality: Extremely diffused, soft, and shadowless, minimizing harsh lines.\n* Shadows & highlights: Very soft, subtle shadows beneath the chin and collarbones to define the model's structure.\n\n8. OVERALL MOOD & ATMOSPHERE:\n\n* Emotional tone: Ethereal, pure, and tranquil.\n* Photographic style: High-end beauty editorial and commercial fashion portrait.\n* Color grading: Soft, bright, and clean with cool-toned background elements and warm, delicate skin tones.\n* Color palette: Ivory, cream, soft pink, rose, and light gray-blue.\n* Overall visual impact: A clean, high-fashion aesthetic that emphasizes delicate textures, soft lighting, and serene beauty.\n\n---\n\n[ASPECT RATIO]\nAspect ratio: 2:3\n\n[QUALITY]\n8k, highly realistic, professional portrait photography, clean elegant lighting, ultra-detailed skin textures.",
+      "category": "기타",
+      "saved_at": "2026-07-10T13:48:43.569Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1782737022232",
       "title": "나일론 풍선 캐릭터 조각 사진 프롬프트",

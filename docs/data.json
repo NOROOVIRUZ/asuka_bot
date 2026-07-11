@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-11T13:05:37.409Z",
+  "updated_at": "2026-07-11T21:54:58.959Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "langchain-ai/openwiki",
+      "owner": "langchain-ai",
+      "name": "openwiki",
+      "url": "https://github.com/langchain-ai/openwiki",
+      "description": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
+      "language": "TypeScript",
+      "stars": 10558,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-11T21:54:58.959Z",
+      "stars_updated_at": "2026-07-11T21:54:58.959Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 코드를 설명하는 문서를 자동으로 작성하고 관리해 주는 도구다. 코드를 작성할 때 이 도구를 사용하면 코드에 대한 설명을 쉽게 관리할 수 있다."
+    },
     {
       "id": "emilkowalski/skills",
       "owner": "emilkowalski",

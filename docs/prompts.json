@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-07-10T13:48:43.579Z",
+  "updated_at": "2026-07-11T21:53:47.469Z",
   "prompts": [
+    {
+      "id": "p_1783806827469",
+      "title": "https://gist.github.com/karpathy/442a6bf",
+      "description": null,
+      "content": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "category": "기타",
+      "saved_at": "2026-07-11T21:53:47.469Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1783691323579",
       "title": "### Professional Portfolio Reference Ima",

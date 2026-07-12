@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-07-12T00:01:00.455Z",
+  "updated_at": "2026-07-12T02:04:43.307Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "q00/ouroboros",
+      "owner": "Q00",
+      "name": "ouroboros",
+      "url": "https://github.com/Q00/ouroboros",
+      "description": "Agent OS: Stop prompting. Start specifying.",
+      "language": "Python",
+      "stars": 4866,
+      "topics": [
+        "agent-os",
+        "ai-agent",
+        "llm-orchestration",
+        "llm-runtime",
+        "python"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-12T02:04:43.307Z",
+      "stars_updated_at": "2026-07-12T02:04:43.307Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 작업을 수행할 때 사람과 컴퓨터가 더 쉽게 소통할 수 있도록 도와주는 시스템을 제공합니다. 이 시스템을 사용하면 인공지능이 사람의 지시를 더 효율적으로 이해하고 수행할 수 있습니다."
+    },
     {
       "id": "langchain-ai/openwiki",
       "owner": "langchain-ai",

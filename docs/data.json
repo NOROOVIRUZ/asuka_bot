@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-07-12T02:04:43.307Z",
+  "updated_at": "2026-07-13T03:24:03.550Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "upscayl/upscayl",
+      "owner": "upscayl",
+      "name": "upscayl",
+      "url": "https://github.com/upscayl/upscayl",
+      "description": "🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",
+      "language": "TypeScript",
+      "stars": 46941,
+      "topics": [
+        "ai",
+        "electron",
+        "esrgan",
+        "gigapixel",
+        "gigapixel-images",
+        "image",
+        "image-upscaling",
+        "topaz",
+        "upscale",
+        "upscalerimage",
+        "upscayl"
+      ],
+      "license": "AGPL-3.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.2,
+      "classified_by": "rule",
+      "saved_at": "2026-07-13T03:24:03.550Z",
+      "stars_updated_at": "2026-07-13T03:24:03.550Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능을 이용하여 사진이나 이미지의 크기를 키우는 무료 소프트웨어다. 컴퓨터에서 사용할 수 있으며, 특히 사진을 확대할 때 유용하다."
+    },
     {
       "id": "q00/ouroboros",
       "owner": "Q00",

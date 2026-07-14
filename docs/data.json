@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-07-14T00:25:13.025Z",
+  "updated_at": "2026-07-14T22:31:08.218Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "sudo-ai-3d/zero123plus",
+      "owner": "SUDO-AI-3D",
+      "name": "zero123plus",
+      "url": "https://github.com/SUDO-AI-3D/zero123plus",
+      "description": "Code repository for Zero123++: a Single Image to Consistent Multi-view Diffusion Base Model.",
+      "language": "Python",
+      "stars": 2045,
+      "topics": [
+        "3d",
+        "3d-graphics",
+        "aigc",
+        "diffusers",
+        "diffusion-models",
+        "image-to-3d",
+        "research-project",
+        "text-to-3d"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-3d",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-07-14T22:31:08.218Z",
+      "stars_updated_at": "2026-07-14T22:31:08.218Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 하나의 사진을 3차원 그래픽으로 바꿔주는 인공지능 모델을 만들기 위한 코드를 모아놓은 곳이다. 이 모델을 사용하면 사진을 3차원으로 변환하여 다양한 각도에서 볼 수 있다."
+    },
     {
       "id": "xiaomimimo/mimo-code",
       "owner": "XiaomiMiMo",

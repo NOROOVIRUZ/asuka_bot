@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-07-13T03:24:03.550Z",
+  "updated_at": "2026-07-14T00:25:13.025Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "xiaomimimo/mimo-code",
+      "owner": "XiaomiMiMo",
+      "name": "MiMo-Code",
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "description": "MiMo Code: Where Models and Agents Co-Evolve",
+      "language": "TypeScript",
+      "stars": 11964,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "cli",
+        "mimo",
+        "mimo-code"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-14T00:25:13.025Z",
+      "stars_updated_at": "2026-07-14T00:25:13.025Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 모델과 에이전트가 함께 진화하는 코드를 제공하며, 인공지능과 에이전트 개발에 활용할 수 있다."
+    },
     {
       "id": "upscayl/upscayl",
       "owner": "upscayl",

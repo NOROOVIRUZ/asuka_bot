@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-07-11T21:53:47.469Z",
+  "updated_at": "2026-07-14T22:39:50.664Z",
   "prompts": [
+    {
+      "id": "p_1784068790664",
+      "title": "Create a premium editorial typography po",
+      "description": null,
+      "content": "Create a premium editorial typography poster using the exact title:\n\n\"{TITLE}\"\n\nBackground color: {BACKGROUND_COLOR}\n\nTransform the title into bespoke custom lettering instead of using a standard font. Combine elegant high-contrast Didone serif typography with luxurious italic calligraphic script, creating dramatic contrast between thick stems and ultra-thin hairlines. Design oversized initials, refined ligatures, elongated ascenders and descenders, sweeping swashes, graceful terminals, elegant curves, optical kerning, and handcrafted letterforms that feel like an iconic luxury wordmark.\n\nThe first line should use refined Didone serif lettering, while the second line should become an expressive flowing calligraphic script with oversized flourishes. Create a harmonious visual hierarchy with varying scale, rhythm, spacing, and overlapping interactions while maintaining excellent readability.\n\nGenerate a smooth solid background using the exact color:\n{BACKGROUND_COLOR}\n\nAutomatically select the typography color with high visual contrast against the background while maintaining a premium editorial aesthetic. Use warm ivory, cream, white, charcoal, deep black, dark brown, muted gold, soft silver, or another elegant contrasting color depending on the background. Prioritize readability and sophisticated color harmony rather than pure black or white.\n\nThe typography should occupy approximately 60–70% of the composition. Add one small elegant supporting tagline beneath the title.\n\nMinimal composition, generous negative space, luxury magazine art direction, contemporary branding aesthetics, museum poster design, premium fashion campaign, sophisticated typography, perfectly balanced layout, ultra-clean, print quality, ultra sharp, 8K.\n\nAvoid:\ngeneric fonts, default fonts, Canva style, decorative display fonts, bubble lettering, graffiti, childish typography, warped letters, distorted glyphs, poor kerning, low contrast text, cluttered composition, excessive ornaments, unreadable script, AI gibberish, low quality.",
+      "category": "기타",
+      "saved_at": "2026-07-14T22:39:50.664Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1783806827469",
       "title": "https://gist.github.com/karpathy/442a6bf",

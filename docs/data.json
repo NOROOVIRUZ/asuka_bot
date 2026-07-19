@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-19T00:00:55.969Z",
+  "updated_at": "2026-07-19T14:32:51.345Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "robbyant/lingbot-map",
+      "owner": "Robbyant",
+      "name": "lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+      "language": "Python",
+      "stars": 13437,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-3d",
+      "tags": [],
+      "confidence": 0.35,
+      "classified_by": "rule",
+      "saved_at": "2026-07-19T14:32:51.345Z",
+      "stars_updated_at": "2026-07-19T14:32:51.345Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 3D 공간의 장면을 재구성하는 인공지능 모델을 만드는 것으로, 스트리밍 데이터에서 장면을 재구성하는 데 사용할 수 있다. 이 모델은 데이터를 받아서 3D 공간의 모습을 예측하는 역할을 한다."
+    },
     {
       "id": "sudo-ai-3d/zero123plus",
       "owner": "SUDO-AI-3D",

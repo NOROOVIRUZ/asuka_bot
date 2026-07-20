@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-20T01:03:12.841Z",
+  "updated_at": "2026-07-20T11:25:57.484Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "oso95/scroll-world",
+      "owner": "oso95",
+      "name": "scroll-world",
+      "url": "https://github.com/oso95/scroll-world",
+      "description": "A skill that turn any brand into a scrollable 3D world",
+      "language": "JavaScript",
+      "stars": 4093,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-3d",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-20T11:25:57.484Z",
+      "stars_updated_at": "2026-07-20T11:25:57.484Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 어떤 브랜드를 3차원으로 볼 수 있게 해주며, 그 안을 스크롤하면서 탐험할 수 있게 해주는 기술입니다. 이 기술을 사용하면 브랜드의 제품이나 서비스를 더 생동감 있게 소개할 수 있습니다."
+    },
     {
       "id": "robbyant/lingbot-map",
       "owner": "Robbyant",

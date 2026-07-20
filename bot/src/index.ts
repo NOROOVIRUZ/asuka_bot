@@ -78,7 +78,11 @@ export default {
   // 매주 월요일 09:00 KST (wrangler.toml crons) — 주간 다이제스트
   async scheduled(_event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
     ctx.waitUntil(
-      runDigest(env, ownerChatId(env)).catch((e) => console.error('digest error', e))
+      (async () => {
+        // /알람끔 상태(공유 KV)면 주간 다이제스트도 침묵
+        if (await env.ALARM_KV.get('alarm_muted')) return;
+        await runDigest(env, ownerChatId(env));
+      })().catch((e) => console.error('digest error', e))
     );
   },
 };
@@ -448,6 +452,16 @@ async function handleCommand(
 
   try {
     switch (cmd) {
+      case '/알람끔':
+        await env.ALARM_KV.put('alarm_muted', '1');
+        await tg.sendMessage(chatId, '🔕 알람 전부 껐어. 다시 들으려면 /알람켬');
+        return;
+
+      case '/알람켬':
+        await env.ALARM_KV.delete('alarm_muted');
+        await tg.sendMessage(chatId, '🔔 알람 켰어. 이제 다 알려줄게.');
+        return;
+
       case '/start':
       case '/help':
         await tg.sendMessage(chatId, msg.help());

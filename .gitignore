@@ -26,3 +26,7 @@ build/
 
 # Logs
 *.log
+
+# 시크릿 백업·세션 상태 (커밋 금지)
+.dev.vars.*
+.fablize/

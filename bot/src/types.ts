@@ -9,6 +9,7 @@ export interface Env {
   CATEGORIES_PATH: string;
   PROMPTS_PATH: string;
   AI: Ai;
+  ALARM_KV: KVNamespace;
 }
 
 export interface RepoEntry {

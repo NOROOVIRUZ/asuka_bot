@@ -29,15 +29,6 @@ export class TelegramAPI {
     });
   }
 
-  // txt 등 파일 첨부 전송
-  async sendDocument(chatId: number, filename: string, content: string, caption?: string): Promise<Response> {
-    const form = new FormData();
-    form.append('chat_id', String(chatId));
-    form.append('document', new File([content], filename, { type: 'text/plain' }));
-    if (caption) form.append('caption', caption);
-    return fetch(`${this.base}/sendDocument`, { method: 'POST', body: form });
-  }
-
   // 인라인 버튼 눌렀을 때 로딩 스피너 해제 (안 하면 버튼이 계속 빙글빙글 돎)
   async answerCallbackQuery(callbackQueryId: string, text?: string): Promise<Response> {
     return fetch(`${this.base}/answerCallbackQuery`, {

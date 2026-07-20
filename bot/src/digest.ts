@@ -116,16 +116,11 @@ export async function runDigest(env: Env, chatId: number, dry = false): Promise<
     await tg.sendMessage(chatId, text, { replyMarkup, parseMode: null });
   }
 
-  // 5) 한글 설명 다 담은 상세 보고서 txt 첨부
+  // 5) 상세 보고서 — txt 첨부는 수신측 뷰어가 인코딩을 깨뜨려서 폐기(v3), 메시지 본문으로 나눠 보낸다
   const report = renderReportTxt(date, releases, movers, recs);
-  const docRes = await tg.sendDocument(
-    chatId,
-    `asuka_주간보고_${date}.txt`,
-    report,
-    '📎 상세 보고서야. 한글 설명 다 써놨으니까 천천히 읽어봐.'
-  );
-  if (!docRes.ok) {
-    errors.push(`doc send: ${docRes.status} ${await docRes.text().catch(() => '')}`);
+  for (const chunk of chunkText(report, 3900)) {
+    const r = await tg.sendMessage(chatId, chunk, { parseMode: null });
+    if (!r.ok) errors.push(`report send: ${r.status}`);
   }
 
   return { releases: releases.length, starMovers: movers.length, recs: recs.length, errors };
@@ -172,8 +167,23 @@ function renderReportTxt(
     L.push(`   구경하기: ${r.url}`);
   });
   L.push('');
-  L.push('— asuka 🔴');
+  L.push('— asuka 🔴 · asuka_bot v3');
   return L.join('\n');
+}
+
+// Telegram 메시지 4096자 제한 대비 줄 단위 분할 (보고서 줄은 전부 짧아서 줄 하나가 max를 넘는 경우는 없음)
+function chunkText(s: string, max: number): string[] {
+  const out: string[] = [];
+  let cur = '';
+  for (const line of s.split('\n')) {
+    if (cur && cur.length + line.length + 1 > max) {
+      out.push(cur);
+      cur = '';
+    }
+    cur = cur ? `${cur}\n${line}` : line;
+  }
+  if (cur) out.push(cur);
+  return out;
 }
 
 function topCategories(repos: RepoEntry[], n: number): string[] {

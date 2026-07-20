@@ -12,6 +12,11 @@ PROMPTS_PATH = "docs/prompts.json"
 [ai]
 binding = "AI"
 
+# 알람 전역 스위치 — ayanami 워커(VUUI_KV)와 같은 네임스페이스 공유, 키: alarm_muted
+[[kv_namespaces]]
+binding = "ALARM_KV"
+id = "600bbb5294b547e9bb3084d4f1f184d4"
+
 # 주간 다이제스트 — 월요일 00:00 UTC = 월요일 09:00 KST
 [triggers]
 crons = ["0 0 * * 1"]

@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-07-14T22:39:50.664Z",
+  "updated_at": "2026-07-23T03:52:37.240Z",
   "prompts": [
+    {
+      "id": "p_1784778757240",
+      "title": "https://orbs.jakubantalik.com/",
+      "description": null,
+      "content": "https://orbs.jakubantalik.com/",
+      "category": "기타",
+      "saved_at": "2026-07-23T03:52:37.240Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1784068790664",
       "title": "Create a premium editorial typography po",

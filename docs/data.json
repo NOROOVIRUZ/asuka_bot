@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T09:17:59.228Z",
+  "updated_at": "2026-07-23T09:49:14.545Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "kwakseongjae/oh-my-design",
+      "owner": "kwakseongjae",
+      "name": "oh-my-design",
+      "url": "https://github.com/kwakseongjae/oh-my-design",
+      "description": "Give your AI coding agent a design system. One command installs 400+ quality-graded company DESIGN.md references + skills into Claude Code, Codex, Cursor, and OpenCode. Free, MIT, zero AI calls.",
+      "language": "HTML",
+      "stars": 371,
+      "topics": [
+        "cli",
+        "design-md",
+        "design-system",
+        "design-tokens",
+        "google-stitch",
+        "nextjs",
+        "open-source",
+        "react",
+        "shadcn-ui",
+        "tailwindcss",
+        "typescript",
+        "vibe-coding"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-07-23T09:49:14.545Z",
+      "stars_updated_at": "2026-07-23T09:49:14.545Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 코딩 도구에 디자인 시스템을 제공하는 것으로, 단 하나의 명령어로 400개 이상의 회사 디자인 가이드를 설치해준다. 이 프로젝트를 사용하면 인공지능 코딩 도구가 더 일관된 디자인을 생성할 수 있다."
+    },
     {
       "id": "dqev/reicon",
       "owner": "dqev",

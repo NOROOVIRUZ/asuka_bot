@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T03:52:37.240Z",
+  "updated_at": "2026-07-23T09:49:01.347Z",
   "prompts": [
+    {
+      "id": "p_1784800141347",
+      "title": "https://oh-my-design.kr/",
+      "description": null,
+      "content": "https://oh-my-design.kr/",
+      "category": "기타",
+      "saved_at": "2026-07-23T09:49:01.347Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1784778757240",
       "title": "https://orbs.jakubantalik.com/",

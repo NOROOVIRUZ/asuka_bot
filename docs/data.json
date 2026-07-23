@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-07-22T09:35:19.408Z",
+  "updated_at": "2026-07-23T09:17:59.228Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "dqev/reicon",
+      "owner": "dqev",
+      "name": "reicon",
+      "url": "https://github.com/dqev/reicon",
+      "description": "Reicon — Open-Source Icon Library for Designers & Developers",
+      "language": "HTML",
+      "stars": 1081,
+      "topics": [
+        "animated",
+        "design",
+        "designer",
+        "icons",
+        "open-source",
+        "react",
+        "svg",
+        "svg-icons",
+        "ui"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-07-23T09:17:59.228Z",
+      "stars_updated_at": "2026-07-23T09:17:59.228Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 개발자와 디자이너를 위한 무료 아이콘 라이브러리입니다. 디자인에 필요한 다양한 아이콘을 쉽게 사용할 수 있도록 해줍니다."
+    },
     {
       "id": "youmind-openlab/awesome-gpt-image-2",
       "owner": "YouMind-OpenLab",

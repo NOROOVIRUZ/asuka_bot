@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T22:14:01.022Z",
+  "updated_at": "2026-07-23T22:35:02.143Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nyrahealth/crisperwhisper",
+      "owner": "nyrahealth",
+      "name": "CrisperWhisper",
+      "url": "https://github.com/nyrahealth/CrisperWhisper",
+      "description": "Verbatim Automatic Speech Recognition with improved word-level timestamps and filler detection",
+      "language": "Python",
+      "stars": 975,
+      "topics": [
+        "asr",
+        "audio",
+        "detection",
+        "filler",
+        "recognition",
+        "speech",
+        "speech-processing",
+        "speech-recognition",
+        "timestamps",
+        "transcription",
+        "verbatim",
+        "whisper"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-음성",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-07-23T22:35:02.143Z",
+      "stars_updated_at": "2026-07-23T22:35:02.143Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사람의 음성을 정확하게 글자로 바꾸는 기술을 개선한 것으로, 특히 말하는 도중 나오는 불필요한 단어나 소리도 잘 감지할 수 있다. 이 기술은 음성 인식 시스템이나 음성 데이터 분석에 유용하게 사용될 수 있다."
+    },
     {
       "id": "unclecode/crawl4ai",
       "owner": "unclecode",

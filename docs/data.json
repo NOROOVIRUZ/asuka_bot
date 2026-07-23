@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T09:49:14.545Z",
+  "updated_at": "2026-07-23T22:14:01.022Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "unclecode/crawl4ai",
+      "owner": "unclecode",
+      "name": "crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "language": "Python",
+      "stars": 74611,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "스크래핑",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-07-23T22:14:01.022Z",
+      "stars_updated_at": "2026-07-23T22:14:01.022Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "인공지능이 인터넷에서 데이터를 수집할 수 있도록 도와주는 웹 크롤러와 스크레이퍼를 제공하는 프로젝트로, 개발자들이 쉽게 데이터를 수집하여 인공지능 모델을 학습시킬 수 있도록 지원한다. 이 프로젝트는 오픈소스로 제공되어 누구나 사용하고 참여할 수 있다."
+    },
     {
       "id": "kwakseongjae/oh-my-design",
       "owner": "kwakseongjae",

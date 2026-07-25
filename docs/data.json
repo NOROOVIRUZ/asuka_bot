@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T22:35:02.143Z",
+  "updated_at": "2026-07-25T06:44:02.071Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yetone/kill-ai-slop",
+      "owner": "yetone",
+      "name": "kill-ai-slop",
+      "url": "https://github.com/yetone/kill-ai-slop",
+      "description": "A field guide to the visual & copy tics of AI-generated products — and an Agent Skill that scans your project and strips them out. https://killaislop.com",
+      "language": "TypeScript",
+      "stars": 741,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.5,
+      "classified_by": "rule",
+      "saved_at": "2026-07-25T06:44:02.071Z",
+      "stars_updated_at": "2026-07-25T06:44:02.071Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 만든 결과물에서 나타나는 특징적인 패턴이나 스타일을 식별하고 제거하는 방법을 제공하며, 이를 위한 도구도 함께 제공한다. 이 도구를 사용하면 인공지능이 생성한 결과물에서 사람의 손길이 덜 묻어나도록 수정할 수 있다."
+    },
     {
       "id": "nyrahealth/crisperwhisper",
       "owner": "nyrahealth",

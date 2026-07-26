@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-07-26T05:21:14.259Z",
+  "updated_at": "2026-07-26T06:05:46.446Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "heygen-com/hyperframes",
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": 37679,
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-07-26T06:05:46.446Z",
+      "stars_updated_at": "2026-07-26T06:05:46.446Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 HTML을 사용하여 비디오를 생성하고 렌더링하는 프레임워크로, 인공지능 에이전트를 위한 도구입니다. 예를 들어 애니메이션 효과를 가진 동영상이나 그래픽을 쉽게 만들 수 있습니다."
+    },
     {
       "id": "jakubkrehel/skills",
       "owner": "jakubkrehel",

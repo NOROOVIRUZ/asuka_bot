@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-26T00:00:57.310Z",
+  "updated_at": "2026-07-26T05:21:14.259Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "jakubkrehel/skills",
+      "owner": "jakubkrehel",
+      "name": "skills",
+      "url": "https://github.com/jakubkrehel/skills",
+      "description": "A collection of agent skills that help with various parts of building a great interface. From animation and UI polish to accessibility and product writing.",
+      "language": null,
+      "stars": 891,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-텍스트",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-07-26T05:21:14.259Z",
+      "stars_updated_at": "2026-07-26T05:21:14.259Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사용자 인터페이스를 더 좋게 만드는 데 도움이 되는 에이전트 기능들을 모아둔 것입니다. 애니메이션, 사용자 인터페이스 미세한 설정, 접근성, 제품 설명 작성 등 다양한 부분을 개선하는 데 사용할 수 있습니다."
+    },
     {
       "id": "harinjin/kez-productpage-skill",
       "owner": "HarinJin",

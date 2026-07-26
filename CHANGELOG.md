@@ -1,5 +1,11 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
+## v3.1 — 2026-07-26
+- `claude-code` 카테고리(15개)를 2개로 분리: **cc-스킬**(Claude Code에 설치해 에이전트에 붙여 쓰는 스킬·플러그인·CLAUDE.md, 11개) / **cc-저장소**(클론·설치해 독립 실행하는 툴·템플릿·하네스, 4개 — claude-codex-battery, webtoon-harness, llm-wiki, cc-cache-fix).
+- `data/categories.json`(봇용)·`docs/categories.json`(대시보드용) 동시 갱신, 분류 규칙에 cc_skill_vs_repo 기준 추가, 신규 저장 시 "skill/plugin" 키워드 유무로 자동 구분.
+- 대시보드 이모지: cc-스킬 🧩 / cc-저장소 🤖, 푸터에 버전 표기(v3.1) 추가.
+- 키워드: 카테고리 분리, claude-code, cc-스킬, cc-저장소, 스킬 분류, 재분류
+
 ## v3 — 2026-07-20
 - 주간 보고서 txt 첨부 방식 폐기 → 텔레그램 메시지 본문 분할 전송으로 교체. 채팅 메시지는 파일 뷰어를 안 거치므로 인코딩 문제 원천 제거.
 - 사후 확인: BOM 붙인 txt(v2 수정본)도 정상 표시됨을 실기기로 확인. v2 배포 직후 깨진 채 온 보고서는 배포 전파 전에 트리거되어 옛 코드가 만든 파일이었음. 교훈: deploy 직후 바로 트리거하지 말고 대기 후 dry 모드로 새 코드 확인.

@@ -167,7 +167,7 @@ function renderReportTxt(
     L.push(`   구경하기: ${r.url}`);
   });
   L.push('');
-  L.push('— asuka 🔴 · asuka_bot v3');
+  L.push('— asuka 🔴 · asuka_bot v3.1');
   return L.join('\n');
 }
 

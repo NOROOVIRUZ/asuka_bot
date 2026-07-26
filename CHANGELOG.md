@@ -1,5 +1,11 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
+## v3.2 — 2026-07-26
+- 대시보드 즐겨찾기 기능 추가: 카드마다 ☆ 별 버튼(클릭 시 ★ 토글, localStorage `asuka_favs`에 저장 — 보는 브라우저별로 유지), 툴바에 "☆ 즐겨찾기" 필터 버튼(즐겨찾기만 보기).
+- 기본 정렬은 기존대로 최근 저장순(`saved_desc`) 확정 — 코드상 이미 기본값이었음을 확인.
+- 헤드리스 브라우저로 실동작 검증: 토글·저장·새로고침 유지·별 클릭 시 저장소 새 탭 안 열림.
+- 키워드: 즐겨찾기, favorites, 별 버튼, localStorage, 최신순 정렬, favToggle
+
 ## v3.1 — 2026-07-26
 - `claude-code` 카테고리(15개)를 2개로 분리: **cc-스킬**(Claude Code에 설치해 에이전트에 붙여 쓰는 스킬·플러그인·CLAUDE.md, 11개) / **cc-저장소**(클론·설치해 독립 실행하는 툴·템플릿·하네스, 4개 — claude-codex-battery, webtoon-harness, llm-wiki, cc-cache-fix).
 - `data/categories.json`(봇용)·`docs/categories.json`(대시보드용) 동시 갱신, 분류 규칙에 cc_skill_vs_repo 기준 추가, 신규 저장 시 "skill/plugin" 키워드 유무로 자동 구분.

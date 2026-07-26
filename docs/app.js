@@ -27,13 +27,23 @@ const state = {
   repos: [],
   categories: {},
   teams: { workspaces: {} },
-  filter: { search: '', category: 'all', workspace: 'all' },
+  filter: { search: '', category: 'all', workspace: 'all', favOnly: false },
   sort: 'saved_desc',
   collapsed: {},
   mode: 'repos',
   prompts: [],
   promptFilter: { search: '', category: 'all' },
 };
+
+// ===== Favorites (localStorage — 이 브라우저에만 저장) =====
+
+const FAVS_KEY = 'asuka_favs';
+const favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || '[]'));
+
+function toggleFav(id) {
+  favs.has(id) ? favs.delete(id) : favs.add(id);
+  localStorage.setItem(FAVS_KEY, JSON.stringify([...favs]));
+}
 
 // ===== Utilities =====
 
@@ -267,6 +277,7 @@ function applyFilter(repos) {
   const ws = state.filter.workspace;
 
   let result = repos.filter(r => {
+    if (state.filter.favOnly && !favs.has(r.id)) return false;
     if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
     if (cat !== 'all' && r.category !== cat) return false;
     if (!q) return true;
@@ -317,7 +328,10 @@ function renderCardHtml(r) {
     <article class="card" data-url="${escapeHtml(r.url)}">
       <div class="card-top">
         <span class="card-category">${emoji} ${escapeHtml(r.category)}</span>
-        <span class="card-stars">⭐ ${formatStars(r.stars)}</span>
+        <span class="card-top-right">
+          <span class="card-stars">⭐ ${formatStars(r.stars)}</span>
+          <button class="card-fav ${favs.has(r.id) ? 'active' : ''}" data-id="${escapeHtml(r.id)}" aria-label="즐겨찾기" aria-pressed="${favs.has(r.id)}">${favs.has(r.id) ? '★' : '☆'}</button>
+        </span>
       </div>
       <div>
         <div class="card-name">${escapeHtml(r.name)}</div>
@@ -477,8 +491,22 @@ function renderSections(filtered) {
   // 카드 클릭 이벤트 + 진입 스태거 (상한 12 → 총 500ms 이내)
   main.querySelectorAll('.card').forEach((el, i) => {
     el.style.setProperty('--i', Math.min(i, 12));
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
+      if (e.target.closest('.card-fav')) return;
       window.open(el.dataset.url, '_blank', 'noopener');
+    });
+  });
+
+  // 즐겨찾기 토글 (재렌더 없이 버튼만 갱신 — 카드 위치 유지)
+  main.querySelectorAll('.card-fav').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFav(btn.dataset.id);
+      const on = favs.has(btn.dataset.id);
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', String(on));
+      btn.textContent = on ? '★' : '☆';
+      if (state.filter.favOnly && !on) render();
     });
   });
 
@@ -570,6 +598,15 @@ function bindEvents() {
 
   sort.addEventListener('change', () => {
     state.sort = sort.value;
+    render();
+  });
+
+  const favBtn = document.getElementById('favToggle');
+  favBtn.addEventListener('click', () => {
+    state.filter.favOnly = !state.filter.favOnly;
+    favBtn.classList.toggle('active', state.filter.favOnly);
+    favBtn.setAttribute('aria-pressed', String(state.filter.favOnly));
+    favBtn.textContent = state.filter.favOnly ? '★ 즐겨찾기' : '☆ 즐겨찾기';
     render();
   });
 }

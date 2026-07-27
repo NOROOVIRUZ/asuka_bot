@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-07-27T13:06:02.851Z",
+  "updated_at": "2026-07-27T23:02:41.730Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "affaan-m/ecc",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 234133,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-07-27T23:02:41.730Z",
+      "stars_updated_at": "2026-07-27T23:02:41.730Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 에이전트의 성능을 최적화하는 시스템으로, 클라우드 코드나 오픈코드 같은 인공지능 개발 도구의 효율성을 높여줍니다. 이 시스템은 에이전트의 지식, 본능, 기억, 보안, 연구를 최우선으로 개발하여 인공지능의 능력을 강화합니다."
+    },
     {
       "id": "img2threejs/img2threejs",
       "owner": "img2threejs",

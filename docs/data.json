@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-07-26T16:19:32.777Z",
+  "updated_at": "2026-07-27T13:06:02.851Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "img2threejs/img2threejs",
+      "owner": "img2threejs",
+      "name": "img2threejs",
+      "url": "https://github.com/img2threejs/img2threejs",
+      "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
+      "language": "Python",
+      "stars": 6543,
+      "topics": [
+        "3d",
+        "ai-agents",
+        "claude-code",
+        "computer-graphics",
+        "generative",
+        "image-to-3d",
+        "procedural-generation",
+        "threejs",
+        "typescript",
+        "webgl"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.5,
+      "classified_by": "rule",
+      "saved_at": "2026-07-27T13:06:02.851Z",
+      "stars_updated_at": "2026-07-27T13:06:02.851Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사진 속 물체를 3차원으로 바꾸고, 컴퓨터 그래픽스에서 사용할 수 있는 코드로 만드는 도구입니다. 이 도구를 사용하면 사진 속 물체를 3차원으로 재구성하여 애니메이션에도 쓸 수 있습니다."
+    },
     {
       "id": "bitjaru/styleseed",
       "owner": "bitjaru",

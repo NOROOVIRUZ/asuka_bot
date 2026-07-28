@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-07-28T15:30:03.593Z",
+  "updated_at": "2026-07-28T22:25:12.255Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "feyninc/chonkie",
+      "owner": "feyninc",
+      "name": "chonkie",
+      "url": "https://github.com/feyninc/chonkie",
+      "description": "🦛 CHONK docs with Chonkie ✨ — The lightweight ingestion library for fast, efficient and robust RAG pipelines",
+      "language": "Python",
+      "stars": 4599,
+      "topics": [
+        "ai",
+        "chonkie",
+        "chunker",
+        "chunking-algorithm",
+        "llms",
+        "rag",
+        "retrieval-systems",
+        "semantic-chunker",
+        "similarity-search",
+        "splitting-algorithms",
+        "text-splitter"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-텍스트",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-28T22:25:12.255Z",
+      "stars_updated_at": "2026-07-28T22:25:12.255Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 데이터를 빠르고 효율적으로 처리할 수 있도록 도와주는 도구입니다. 특히 대량의 데이터를 작은 조각으로 나누어 인공지능이 더 쉽게 이해할 수 있도록 해주는 알고리즘을 제공합니다."
+    },
     {
       "id": "eisenjimmy/autothreads",
       "owner": "eisenjimmy",

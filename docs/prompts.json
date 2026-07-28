@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T09:49:01.347Z",
+  "updated_at": "2026-07-28T12:46:13.622Z",
   "prompts": [
+    {
+      "id": "p_1785242773622",
+      "title": "https://github.com/ashishpatel26",
+      "description": null,
+      "content": "https://github.com/ashishpatel26",
+      "category": "기타",
+      "saved_at": "2026-07-28T12:46:13.622Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1784800141347",
       "title": "https://oh-my-design.kr/",

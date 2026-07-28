@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-07-27T23:02:41.730Z",
+  "updated_at": "2026-07-28T11:57:54.188Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "moeru-ai/airi",
+      "owner": "moeru-ai",
+      "name": "airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "language": "TypeScript",
+      "stars": 44475,
+      "topics": [
+        "ai-companion",
+        "ai-vtuber",
+        "airi",
+        "digital-life",
+        "grok-companion",
+        "live2d",
+        "neuro-sama",
+        "neurosama",
+        "openclaw",
+        "vrm",
+        "vtuber"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-음성",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-07-28T11:57:54.188Z",
+      "stars_updated_at": "2026-07-28T11:57:54.188Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 가상 인공지능 친구를 만들 수 있는 도구로, 실시간으로 음성 채팅이나 게임을 함께 할 수 있으며, 웹, 맥, 윈도우에서 사용할 수 있다. 이 친구는 사용자가 직접 만들고 소유할 수 있는 가상 인물로, 다양한 활동을 함께 즐길 수 있다."
+    },
     {
       "id": "affaan-m/ecc",
       "owner": "affaan-m",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-28T11:57:54.188Z",
+  "updated_at": "2026-07-28T15:25:42.662Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "stars": 52113,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-07-28T15:25:42.662Z",
+      "stars_updated_at": "2026-07-28T15:25:42.662Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 디자인을 더 잘 할 수 있도록 도와주는 디자인 언어입니다. 이 언어를 사용하면 인공지능이 더 좋은 디자인을 만들 수 있습니다."
+    },
     {
       "id": "moeru-ai/airi",
       "owner": "moeru-ai",

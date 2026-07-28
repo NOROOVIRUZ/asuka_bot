@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-07-28T15:25:42.662Z",
+  "updated_at": "2026-07-28T15:28:24.406Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 15396,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-07-28T15:28:24.406Z",
+      "stars_updated_at": "2026-07-28T15:28:24.406Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 코드 리뷰를 자동화하는 도구로, 개발자들이 코드를 작성할 때 실수를 줄이고 보안을 강화하는 데 도움을 주며, 특히 대규모 프로젝트에서 유용하다. 이 도구는 코드의 특정 부분에 대한 정밀한 코멘트와 내장된 규칙을 통해 개발자들에게 코드 개선에 대한 피드백을 제공한다."
+    },
     {
       "id": "pbakaus/impeccable",
       "owner": "pbakaus",

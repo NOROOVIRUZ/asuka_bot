@@ -1,5 +1,11 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
+
+## v3.34 — 2026-07-30
+
+- 검색엔진 색인 차단(noindex 메타) 적용 — docs/index.html `<head>` 최상단에 `<meta name="robots" content="noindex, nofollow">` 삽입 (구글·네이버 등 검색 노출 방지, robots.txt 방식은 noindex 미전달 문제로 미사용)
+- 버전 표기·캐시 버스터 v3.33 → v3.34 동기화 (styles.css / app.js 쿼리스트링 포함)
+
 ## v3.33 — 2026-07-30 (캐시 버스터 + 칩 줄 상단 고정)
 
 - **캐시 버스터 도입**: app.js·styles.css를 `?v=3.33` 쿼리로 로드 — GitHub Pages 10분 캐시 때문에 배포해도 사용자 브라우저가 옛 코드를 물고 있던 문제 근절 (v3.32가 "안 바뀐 것처럼" 보였던 원인). **앞으로 버전 올릴 때 이 쿼리도 반드시 같이 올린다**

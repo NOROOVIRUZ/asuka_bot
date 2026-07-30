@@ -1,16 +1,15 @@
 {
-  "version": 1,
-  "updated": "2026-07-26",
+  "version": 2,
+  "updated": "2026-07-30",
   "model": {
-    "category": "단일 카테고리 (필수)",
-    "tags": "보조 태그 배열 (0~N개, cross-cutting tag 포함)"
+    "category": "단일 카테고리 (필수) — 용도 중심 8종",
+    "tags": "보조 태그 배열. \"cc\" = Claude Code에 설치해 쓰는 것(구 cc-스킬/cc-저장소 축은 태그로 보존)"
   },
   "rules": {
-    "claude_code_priority": "Claude Code 스킬/플러그인인데 내부에서 다른 AI 호출 → cc-스킬 카테고리 + 기타ai 태그",
-    "multi_llm_neutral": "멀티 LLM 지원 (Claude 포함) → 원래 카테고리 유지 (기타ai 아님)",
-    "other_ai_dependency": "도구 본체가 Claude 외 AI(GPT/Codex/Gemini 등)에 의존 → 기타ai 카테고리",
-    "ambiguous_fallback": "어디에도 안 맞으면 기타. 새 카테고리 만들기 애매할 때만 사용",
-    "cc_skill_vs_repo": "Claude Code에 설치해 붙여 쓰면(스킬·플러그인·CLAUDE.md) cc-스킬, 클론·설치해 독립 실행하면(툴·템플릿·하네스) cc-저장소"
+    "domain_first": "용도(도메인)가 명확하면 도메인 카테고리 + 필요 시 태그 cc. 예: better-* UI 스킬 → 디자인·UI + cc",
+    "cc_ops": "도메인이 없고 Claude Code 자체 운영(토큰·훅·검증·마켓플레이스)이면 클로드코드 운영",
+    "no_junk_drawer": "기타/기타ai/한국어 같은 잡동사니 금지 — 가장 가까운 용도로 배치",
+    "ambiguous_fallback": "정말 애매하면 개발도구"
   },
   "auto_classification": {
     "confidence_threshold": 0.7,
@@ -25,475 +24,193 @@
     }
   },
   "categories": {
-    "디자인": {
-      "label": "디자인",
-      "description": "UI/UX, 디자인 시스템, 프로토타이핑 도구",
+    "디자인·UI": {
+      "label": "디자인·UI",
+      "description": "디자인 시스템·UI/UX·피그마·아이콘·폰트·프로토타입·디슬롭",
       "keywords": {
         "strong": [
           "figma",
           "design system",
-          "prototyp",
           "ui kit",
-          "wireframe"
+          "icon",
+          "wireframe",
+          "prototyp",
+          "design"
         ],
         "medium": [
-          "design",
-          "ui",
-          "ux",
           "css",
-          "tailwind"
+          "tailwind",
+          "font",
+          "ui"
         ],
-        "weak": [
-          "component",
-          "style"
+        "name_pattern": [
+          "design",
+          "icon",
+          "font"
         ]
-      },
-      "name_patterns": [
-        "design",
-        "ui",
-        "kit"
-      ],
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ]
+      }
     },
-    "ai-이미지": {
-      "label": "AI 이미지",
-      "description": "이미지 생성/편집 AI 모델·도구",
+    "글쓰기·카피": {
+      "label": "글쓰기·카피",
+      "description": "휴머나이즈·윤문·카피라이팅·SEO 텍스트",
       "keywords": {
         "strong": [
-          "text-to-image",
+          "humanize",
+          "copywriting",
+          "rewrite",
+          "seo",
+          "writing style"
+        ],
+        "medium": [
+          "tone",
+          "text"
+        ],
+        "name_pattern": [
+          "im-not",
+          "patina"
+        ]
+      }
+    },
+    "미디어 생성": {
+      "label": "미디어 생성",
+      "description": "이미지·영상·음성·3D 생성과 편집(업스케일·스프라이트·TTS·STT 포함)",
+      "keywords": {
+        "strong": [
           "image generation",
-          "stable diffusion",
-          "flux",
-          "sdxl",
-          "이미지 생성"
-        ],
-        "medium": [
-          "diffusion",
-          "image",
-          "img2img",
-          "controlnet",
-          "lora"
-        ],
-        "weak": [
-          "gan",
-          "vision"
-        ]
-      },
-      "name_patterns": [
-        "image",
-        "img",
-        "diffusion",
-        "sd-",
-        "flux"
-      ],
-      "languages": [
-        "Python"
-      ]
-    },
-    "ai-비디오": {
-      "label": "AI 비디오",
-      "description": "비디오 생성/편집 AI",
-      "keywords": {
-        "strong": [
-          "text-to-video",
-          "video generation",
-          "비디오 생성",
-          "video diffusion",
-          "wan",
-          "sora",
-          "veo"
-        ],
-        "medium": [
           "video",
-          "animat"
-        ],
-        "weak": [
-          "motion"
-        ]
-      },
-      "name_patterns": [
-        "video",
-        "vid-"
-      ],
-      "languages": [
-        "Python"
-      ]
-    },
-    "ai-음성": {
-      "label": "AI 음성",
-      "description": "TTS, 음성 합성, 보이스 클로닝",
-      "keywords": {
-        "strong": [
-          "tts",
-          "text-to-speech",
-          "voice cloning",
-          "speech synthesis",
-          "음성 합성",
-          "보이스 클로닝"
-        ],
-        "medium": [
           "voice",
+          "tts",
           "speech",
-          "audio"
-        ],
-        "weak": [
-          "sound"
-        ]
-      },
-      "name_patterns": [
-        "voice",
-        "tts",
-        "speech"
-      ],
-      "languages": [
-        "Python"
-      ]
-    },
-    "ai-3d": {
-      "label": "AI 3D",
-      "description": "3D AI 생성 (텍스트→3D, 메시 생성 등)",
-      "keywords": {
-        "strong": [
-          "text-to-3d",
-          "3d generation",
-          "mesh generation",
-          "trellis",
-          "nerf",
-          "gaussian splatting"
-        ],
-        "medium": [
           "3d",
-          "mesh"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "3d",
-        "trellis",
-        "nerf"
-      ],
-      "languages": [
-        "Python"
-      ]
-    },
-    "ai-텍스트": {
-      "label": "AI 텍스트",
-      "description": "글 생성/윤문/번역 AI",
-      "keywords": {
-        "strong": [
-          "text generation",
-          "writing",
-          "윤문",
-          "번역",
-          "translation",
-          "paraphrase"
+          "sprite",
+          "diffusion",
+          "upscale"
         ],
         "medium": [
-          "text",
-          "write"
+          "animation",
+          "render",
+          "pixel"
         ],
-        "weak": []
-      },
-      "name_patterns": [
-        "writer",
-        "text",
-        "translate"
-      ]
+        "name_pattern": [
+          "gen",
+          "image",
+          "video",
+          "voice"
+        ]
+      }
     },
-    "ai-문서": {
-      "label": "AI 문서",
-      "description": "문서 파싱·변환 (PDF/HWP/Markdown)",
+    "문서·데이터": {
+      "label": "문서·데이터",
+      "description": "PDF/HWP/엑셀 변환·OCR·청킹·데이터 추출·공공데이터",
       "keywords": {
         "strong": [
-          "pdf to markdown",
-          "markitdown",
-          "document parse",
+          "pdf",
+          "ocr",
+          "markdown convert",
           "hwp",
-          "hwpx",
-          "docx",
-          "office to markdown"
+          "excel",
+          "document",
+          "chunk",
+          "dataset"
         ],
         "medium": [
           "parser",
-          "convert",
-          "markdown"
+          "extract",
+          "table"
         ],
-        "weak": []
-      },
-      "name_patterns": [
-        "doc",
-        "pdf",
-        "md",
-        "kordoc",
-        "markitdown"
-      ]
+        "name_pattern": [
+          "doc",
+          "data"
+        ]
+      }
     },
-    "ai-생산성": {
-      "label": "AI 생산성",
-      "description": "에이전트 도구, 코드 검색, 어시스턴트",
+    "리서치·수집": {
+      "label": "리서치·수집",
+      "description": "딥리서치·검색·크롤링·스크래핑·차단 우회",
       "keywords": {
         "strong": [
-          "agent framework",
-          "code search for agents",
-          "ai assistant",
-          "ai agent"
+          "research",
+          "crawl",
+          "scrap",
+          "search",
+          "spider"
         ],
         "medium": [
+          "fetch",
+          "bypass",
+          "collector"
+        ],
+        "name_pattern": [
+          "search",
+          "research",
+          "crawl"
+        ]
+      }
+    },
+    "에이전트·자동화": {
+      "label": "에이전트·자동화",
+      "description": "멀티에이전트·AI 비서·브라우저/기기 제어·LLM 라우터·워크플로",
+      "keywords": {
+        "strong": [
           "agent",
+          "multi-agent",
+          "orchestr",
+          "workflow",
+          "automation",
           "assistant",
-          "productivity"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "agent",
-        "assistant"
-      ]
-    },
-    "ai-api": {
-      "label": "AI API",
-      "description": "LLM API 클라이언트·래퍼·SDK",
-      "keywords": {
-        "strong": [
-          "llm api",
-          "openai client",
-          "sdk",
-          "wrapper",
-          "api client"
+          "router",
+          "gateway"
         ],
         "medium": [
-          "api",
-          "client",
-          "sdk"
+          "browser use",
+          "computer use",
+          "bot"
         ],
-        "weak": []
-      },
-      "name_patterns": [
-        "sdk",
-        "client",
-        "api"
-      ]
+        "name_pattern": [
+          "agent",
+          "auto"
+        ]
+      }
     },
-    "cc-스킬": {
-      "label": "CC 스킬",
-      "description": "Claude Code에 설치해 에이전트에 붙여 쓰는 스킬·플러그인·CLAUDE.md",
-      "keywords": {
-        "strong": [
-          "claude code skill",
-          "claude-code skill",
-          "claude code plugin",
-          "claude code 스킬",
-          "claude code 플러그인",
-          "claude skill",
-          "claude plugin",
-          "claude.md"
-        ],
-        "medium": [
-          "skill",
-          "plugin",
-          "claude"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "skill",
-        "plugin",
-        "claude",
-        "cc-"
-      ]
-    },
-    "cc-저장소": {
-      "label": "CC 저장소",
-      "description": "클론·설치해서 독립 실행하는 Claude Code 관련 저장소·툴·템플릿",
+    "클로드코드 운영": {
+      "label": "클로드코드 운영",
+      "description": "Claude Code 자체를 굴리는 것 — 스킬·플러그인·토큰 절감·검증 훅·위키·사용량",
       "keywords": {
         "strong": [
           "claude code",
-          ".claude",
-          "claude-code"
+          "plugin",
+          "skill",
+          "marketplace",
+          "token",
+          "hook"
         ],
         "medium": [
-          "claude"
+          "claude",
+          "anthropic"
         ],
-        "weak": []
-      },
-      "name_patterns": [
-        "claude",
-        "cc-"
-      ]
-    },
-    "mcp": {
-      "label": "MCP 서버",
-      "description": "MCP(Model Context Protocol) 서버",
-      "keywords": {
-        "strong": [
-          "mcp server",
-          "model context protocol"
-        ],
-        "medium": [
-          "mcp"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "mcp",
-        "-mcp",
-        "mcp-"
-      ]
+        "name_pattern": [
+          "claude",
+          "cc-",
+          "skill"
+        ]
+      }
     },
     "개발도구": {
       "label": "개발도구",
-      "description": "터미널, IDE, 에디터, 개발 환경",
+      "description": "터미널·IDE·프로젝트 관리·코드리뷰·범용 개발 유틸",
       "keywords": {
         "strong": [
           "terminal",
           "ide",
-          "editor",
-          "shell",
-          "agentic development environment"
+          "code review",
+          "project management",
+          "cli",
+          "devtool"
         ],
         "medium": [
-          "dev tool",
-          "cli"
-        ],
-        "weak": [
-          "tool"
+          "developer",
+          "build"
         ]
-      },
-      "name_patterns": [
-        "term",
-        "shell",
-        "cli"
-      ],
-      "languages": [
-        "Rust",
-        "Go",
-        "TypeScript"
-      ]
-    },
-    "스크래핑": {
-      "label": "스크래핑",
-      "description": "웹 크롤링·스크래핑 프레임워크",
-      "keywords": {
-        "strong": [
-          "web scraping",
-          "crawler",
-          "scraping framework",
-          "scrapling",
-          "scrapy"
-        ],
-        "medium": [
-          "scrap",
-          "crawl"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "scrap",
-        "crawl"
-      ]
-    },
-    "3d-cad": {
-      "label": "3D CAD",
-      "description": "CAD 커널·지오메트리 엔진 (생성형 AI 아님)",
-      "keywords": {
-        "strong": [
-          "cad kernel",
-          "geometry kernel",
-          "parametric cad",
-          "opengeometry"
-        ],
-        "medium": [
-          "cad",
-          "geometry"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "cad",
-        "geom"
-      ],
-      "exclude_keywords": [
-        "text-to-3d",
-        "3d generation"
-      ]
-    },
-    "한국어": {
-      "label": "한국어",
-      "description": "한국어 특화 단독 도구 (cross-cutting tag로도 사용)",
-      "keywords": {
-        "strong": [
-          "한국어",
-          "korean",
-          "법령",
-          "한국법",
-          "hwp"
-        ],
-        "medium": [
-          "ko-",
-          "kor"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "korean",
-        "kor-",
-        "ko-"
-      ]
-    },
-    "api리소스": {
-      "label": "API 리소스",
-      "description": "API 모음·리스트·디렉토리",
-      "keywords": {
-        "strong": [
-          "public apis",
-          "api list",
-          "free apis",
-          "api directory",
-          "list of apis"
-        ],
-        "medium": [],
-        "weak": []
-      },
-      "name_patterns": [
-        "public-apis",
-        "awesome-api"
-      ]
-    },
-    "기타ai": {
-      "label": "기타 AI",
-      "description": "Claude 제외 다른 AI(GPT/Codex/Gemini/Llama 등) 의존 도구",
-      "keywords": {
-        "strong": [
-          "gpt-",
-          "codex",
-          "gemini",
-          "llama",
-          "mistral",
-          "oh-my-codex"
-        ],
-        "medium": [
-          "openai"
-        ],
-        "weak": []
-      },
-      "name_patterns": [
-        "gpt",
-        "codex",
-        "gemini",
-        "llama"
-      ]
-    },
-    "기타": {
-      "label": "기타",
-      "description": "어디에도 안 맞고 분류 모호한 것",
-      "keywords": {
-        "strong": [],
-        "medium": [],
-        "weak": []
       }
     }
   }

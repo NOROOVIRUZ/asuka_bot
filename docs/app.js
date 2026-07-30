@@ -281,7 +281,7 @@ function renderPromptSections() {
 
 // ===== Filter & Sort =====
 
-function applyFilter(repos) {
+function applyFilter(repos, ignoreCategory = false) {
   const q = state.filter.search.trim().toLowerCase();
   const cat = state.filter.category;
   const ws = state.filter.workspace;
@@ -289,7 +289,7 @@ function applyFilter(repos) {
   let result = repos.filter(r => {
     if (state.filter.favOnly && !favs.has(r.id)) return false;
     if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
-    if (cat !== 'all' && r.category !== cat) return false;
+    if (!ignoreCategory && cat !== 'all' && r.category !== cat) return false;
     if (!q) return true;
     const hay = [
       r.id,
@@ -552,8 +552,9 @@ function render() {
   // 워크스페이스 탭 (전체 기준 카운트)
   renderWorkspaceTabs();
 
-  // 카테고리 칩 (현재 워크스페이스 내 기준)
-  renderChips(wsFiltered);
+  // 카테고리 칩 — 카테고리 필터는 무시하고 그린다 (v3.32: 칩은 항상 전 카테고리 유지,
+  // 선택은 하이라이트만 → '전체' 안 거치고 칩끼리 바로바로 이동)
+  renderChips(applyFilter(state.repos, true));
 
   // 카드 섹션
   renderSections(wsFiltered);

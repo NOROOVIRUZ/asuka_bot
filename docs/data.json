@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-29T07:41:55.305Z",
+  "updated_at": "2026-07-30T09:25:25.646Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "fivetaku/insane-research",
+      "owner": "fivetaku",
+      "name": "insane-research",
+      "url": "https://github.com/fivetaku/insane-research",
+      "description": "Multi-agent deep research for Claude Code — 7-phase pipeline with source triangulation and quality ratings",
+      "language": "Python",
+      "stars": 163,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-07-30T09:25:25.646Z",
+      "stars_updated_at": "2026-07-30T09:25:25.646Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능을 여러 대가 함께 일할 수 있도록 해주는 연구를 위한 도구를 만들었습니다. 이 도구는 여러 대의 인공지능이 함께 작업할 때 더 나은 성과를 내도록 도와줍니다."
+    },
     {
       "id": "tinyhumansai/openhuman",
       "owner": "tinyhumansai",

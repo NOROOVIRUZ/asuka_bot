@@ -14,15 +14,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "리서치·수집",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-07-30T09:25:25.646Z",
       "stars_updated_at": "2026-07-30T09:25:25.646Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능을 여러 대가 함께 일할 수 있도록 해주는 연구를 위한 도구를 만들었습니다. 이 도구는 여러 대의 인공지능이 함께 작업할 때 더 나은 성과를 내도록 도와줍니다."
+      "desc_ko": "이 프로젝트는 인공지능을 여러 대가 함께 일할 수 있도록 해주는 연구를 위한 도구를 만들었습니다. 이 도구는 여러 대의 인공지능이 함께 작업할 때 더 나은 성과를 내도록 도와줍니다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "tinyhumansai/openhuman",
@@ -35,7 +38,7 @@
       "topics": [],
       "license": "GPL-3.0",
       "archived": false,
-      "category": "디자인",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.15,
       "classified_by": "rule",
@@ -43,7 +46,8 @@
       "stars_updated_at": "2026-07-29T07:41:55.305Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 개인용 인공지능을 만드는 것으로, 사용자의 일상을 기록하고 관리하며 다양한 작업을 자동화해주는 역할을 합니다. 이는 개인의 일상 생활을 더 효율적으로 관리하고 지원해주는 도구로 활용될 수 있습니다."
+      "desc_ko": "이 프로젝트는 개인용 인공지능을 만드는 것으로, 사용자의 일상을 기록하고 관리하며 다양한 작업을 자동화해주는 역할을 합니다. 이는 개인의 일상 생활을 더 효율적으로 관리하고 지원해주는 도구로 활용될 수 있습니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "feyninc/chonkie",
@@ -68,7 +72,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-텍스트",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.25,
       "classified_by": "rule",
@@ -76,7 +80,8 @@
       "stars_updated_at": "2026-07-28T22:25:12.255Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 데이터를 빠르고 효율적으로 처리할 수 있도록 도와주는 도구입니다. 특히 대량의 데이터를 작은 조각으로 나누어 인공지능이 더 쉽게 이해할 수 있도록 해주는 알고리즘을 제공합니다."
+      "desc_ko": "이 프로젝트는 인공지능이 데이터를 빠르고 효율적으로 처리할 수 있도록 도와주는 도구입니다. 특히 대량의 데이터를 작은 조각으로 나누어 인공지능이 더 쉽게 이해할 수 있도록 해주는 알고리즘을 제공합니다.",
+      "category_v1": "ai-텍스트"
     },
     {
       "id": "eisenjimmy/autothreads",
@@ -89,7 +94,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
+      "category": "개발도구",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -97,7 +102,8 @@
       "stars_updated_at": "2026-07-28T15:30:03.593Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 모델이 자동으로 여러 가지 작업을 동시에 처리할 수 있도록 도와주는 코드 모음입니다. 예를 들어, 여러 가지 계산이나 데이터 처리를 동시에 할 수 있게 해주어 작업을 더 빠르게 완료할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능 모델이 자동으로 여러 가지 작업을 동시에 처리할 수 있도록 도와주는 코드 모음입니다. 예를 들어, 여러 가지 계산이나 데이터 처리를 동시에 할 수 있게 해주어 작업을 더 빠르게 완료할 수 있습니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "alibaba/open-code-review",
@@ -117,7 +123,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "개발도구",
       "tags": [],
       "confidence": 0.45,
       "classified_by": "rule",
@@ -125,7 +131,8 @@
       "stars_updated_at": "2026-07-28T15:28:24.406Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 코드 리뷰를 자동화하는 도구로, 개발자들이 코드를 작성할 때 실수를 줄이고 보안을 강화하는 데 도움을 주며, 특히 대규모 프로젝트에서 유용하다. 이 도구는 코드의 특정 부분에 대한 정밀한 코멘트와 내장된 규칙을 통해 개발자들에게 코드 개선에 대한 피드백을 제공한다."
+      "desc_ko": "이 프로젝트는 코드 리뷰를 자동화하는 도구로, 개발자들이 코드를 작성할 때 실수를 줄이고 보안을 강화하는 데 도움을 주며, 특히 대규모 프로젝트에서 유용하다. 이 도구는 코드의 특정 부분에 대한 정밀한 코멘트와 내장된 규칙을 통해 개발자들에게 코드 개선에 대한 피드백을 제공한다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "pbakaus/impeccable",
@@ -138,15 +145,18 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.4,
       "classified_by": "rule",
       "saved_at": "2026-07-28T15:25:42.662Z",
       "stars_updated_at": "2026-07-28T15:25:42.662Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 디자인을 더 잘 할 수 있도록 도와주는 디자인 언어입니다. 이 언어를 사용하면 인공지능이 더 좋은 디자인을 만들 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능이 디자인을 더 잘 할 수 있도록 도와주는 디자인 언어입니다. 이 언어를 사용하면 인공지능이 더 좋은 디자인을 만들 수 있습니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "moeru-ai/airi",
@@ -171,7 +181,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-음성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.25,
       "classified_by": "rule",
@@ -179,7 +189,8 @@
       "stars_updated_at": "2026-07-28T11:57:54.188Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 가상 인공지능 친구를 만들 수 있는 도구로, 실시간으로 음성 채팅이나 게임을 함께 할 수 있으며, 웹, 맥, 윈도우에서 사용할 수 있다. 이 친구는 사용자가 직접 만들고 소유할 수 있는 가상 인물로, 다양한 활동을 함께 즐길 수 있다."
+      "desc_ko": "이 프로젝트는 가상 인공지능 친구를 만들 수 있는 도구로, 실시간으로 음성 채팅이나 게임을 함께 할 수 있으며, 웹, 맥, 윈도우에서 사용할 수 있다. 이 친구는 사용자가 직접 만들고 소유할 수 있는 가상 인물로, 다양한 활동을 함께 즐길 수 있다.",
+      "category_v1": "ai-음성"
     },
     {
       "id": "affaan-m/ecc",
@@ -201,15 +212,18 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-07-27T23:02:41.730Z",
       "stars_updated_at": "2026-07-27T23:02:41.730Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 에이전트의 성능을 최적화하는 시스템으로, 클라우드 코드나 오픈코드 같은 인공지능 개발 도구의 효율성을 높여줍니다. 이 시스템은 에이전트의 지식, 본능, 기억, 보안, 연구를 최우선으로 개발하여 인공지능의 능력을 강화합니다."
+      "desc_ko": "이 프로젝트는 인공지능 에이전트의 성능을 최적화하는 시스템으로, 클라우드 코드나 오픈코드 같은 인공지능 개발 도구의 효율성을 높여줍니다. 이 시스템은 에이전트의 지식, 본능, 기억, 보안, 연구를 최우선으로 개발하여 인공지능의 능력을 강화합니다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "img2threejs/img2threejs",
@@ -233,15 +247,18 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "미디어 생성",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.5,
       "classified_by": "rule",
       "saved_at": "2026-07-27T13:06:02.851Z",
       "stars_updated_at": "2026-07-27T13:06:02.851Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 사진 속 물체를 3차원으로 바꾸고, 컴퓨터 그래픽스에서 사용할 수 있는 코드로 만드는 도구입니다. 이 도구를 사용하면 사진 속 물체를 3차원으로 재구성하여 애니메이션에도 쓸 수 있습니다."
+      "desc_ko": "이 프로젝트는 사진 속 물체를 3차원으로 바꾸고, 컴퓨터 그래픽스에서 사용할 수 있는 코드로 만드는 도구입니다. 이 도구를 사용하면 사진 속 물체를 3차원으로 재구성하여 애니메이션에도 쓸 수 있습니다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "bitjaru/styleseed",
@@ -275,15 +292,18 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.8,
       "classified_by": "rule",
       "saved_at": "2026-07-26T16:19:32.777Z",
       "stars_updated_at": "2026-07-26T16:19:32.777Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 코드를 작성할 때 일관된 디자인을 유지하도록 도와주는 도구로, 인공지능이 다양한 디자인을 참조하여 적절한 코드를 생성하고 검증하는 데 사용됩니다."
+      "desc_ko": "이 프로젝트는 인공지능이 코드를 작성할 때 일관된 디자인을 유지하도록 도와주는 도구로, 인공지능이 다양한 디자인을 참조하여 적절한 코드를 생성하고 검증하는 데 사용됩니다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "heygen-com/hyperframes",
@@ -308,7 +328,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "개발도구",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.4,
       "classified_by": "rule",
@@ -316,7 +336,8 @@
       "stars_updated_at": "2026-07-26T06:05:46.446Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 HTML을 사용하여 비디오를 생성하고 렌더링하는 프레임워크로, 인공지능 에이전트를 위한 도구입니다. 예를 들어 애니메이션 효과를 가진 동영상이나 그래픽을 쉽게 만들 수 있습니다."
+      "desc_ko": "이 프로젝트는 HTML을 사용하여 비디오를 생성하고 렌더링하는 프레임워크로, 인공지능 에이전트를 위한 도구입니다. 예를 들어 애니메이션 효과를 가진 동영상이나 그래픽을 쉽게 만들 수 있습니다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "jakubkrehel/skills",
@@ -329,15 +350,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "ai-텍스트",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.45,
       "classified_by": "rule",
       "saved_at": "2026-07-26T05:21:14.259Z",
       "stars_updated_at": "2026-07-26T05:21:14.259Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 사용자 인터페이스를 더 좋게 만드는 데 도움이 되는 에이전트 기능들을 모아둔 것입니다. 애니메이션, 사용자 인터페이스 미세한 설정, 접근성, 제품 설명 작성 등 다양한 부분을 개선하는 데 사용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 사용자 인터페이스를 더 좋게 만드는 데 도움이 되는 에이전트 기능들을 모아둔 것입니다. 애니메이션, 사용자 인터페이스 미세한 설정, 접근성, 제품 설명 작성 등 다양한 부분을 개선하는 데 사용할 수 있습니다.",
+      "category_v1": "ai-텍스트"
     },
     {
       "id": "harinjin/kez-productpage-skill",
@@ -356,15 +380,18 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.45,
       "classified_by": "rule",
       "saved_at": "2026-07-25T07:59:32.654Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 온라인 쇼핑몰의 제품 상세 페이지를 쉽게 만들 수 있는 도구입니다. 이 도구를 사용하면 제품 상세 페이지를 디자인하는 툴인 피그마에서 직접 페이지를 만들 수 있습니다."
+      "desc_ko": "이 프로젝트는 온라인 쇼핑몰의 제품 상세 페이지를 쉽게 만들 수 있는 도구입니다. 이 도구를 사용하면 제품 상세 페이지를 디자인하는 툴인 피그마에서 직접 페이지를 만들 수 있습니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "yetone/kill-ai-slop",
@@ -377,15 +404,18 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "개발도구",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.5,
       "classified_by": "rule",
       "saved_at": "2026-07-25T06:44:02.071Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 만든 결과물에서 나타나는 특징적인 패턴이나 스타일을 식별하고 제거하는 방법을 제공하며, 이를 위한 도구도 함께 제공한다. 이 도구를 사용하면 인공지능이 생성한 결과물에서 사람의 손길이 덜 묻어나도록 수정할 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능이 만든 결과물에서 나타나는 특징적인 패턴이나 스타일을 식별하고 제거하는 방법을 제공하며, 이를 위한 도구도 함께 제공한다. 이 도구를 사용하면 인공지능이 생성한 결과물에서 사람의 손길이 덜 묻어나도록 수정할 수 있다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "nyrahealth/crisperwhisper",
@@ -411,7 +441,7 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "ai-음성",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.65,
       "classified_by": "rule",
@@ -420,7 +450,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 사람의 음성을 정확하게 글자로 바꾸는 기술을 개선한 것으로, 특히 말하는 도중 나오는 불필요한 단어나 소리도 잘 감지할 수 있다. 이 기술은 음성 인식 시스템이나 음성 데이터 분석에 유용하게 사용될 수 있다.",
-      "last_release": "v2.0.1"
+      "last_release": "v2.0.1",
+      "category_v1": "ai-음성"
     },
     {
       "id": "unclecode/crawl4ai",
@@ -433,7 +464,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "스크래핑",
+      "category": "리서치·수집",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -442,7 +473,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "인공지능이 인터넷에서 데이터를 수집할 수 있도록 도와주는 웹 크롤러와 스크레이퍼를 제공하는 프로젝트로, 개발자들이 쉽게 데이터를 수집하여 인공지능 모델을 학습시킬 수 있도록 지원한다. 이 프로젝트는 오픈소스로 제공되어 누구나 사용하고 참여할 수 있다.",
-      "last_release": "v0.9.2"
+      "last_release": "v0.9.2",
+      "category_v1": "스크래핑"
     },
     {
       "id": "kwakseongjae/oh-my-design",
@@ -468,15 +500,18 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-07-23T09:49:14.545Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 코딩 도구에 디자인 시스템을 제공하는 것으로, 단 하나의 명령어로 400개 이상의 회사 디자인 가이드를 설치해준다. 이 프로젝트를 사용하면 인공지능 코딩 도구가 더 일관된 디자인을 생성할 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능 코딩 도구에 디자인 시스템을 제공하는 것으로, 단 하나의 명령어로 400개 이상의 회사 디자인 가이드를 설치해준다. 이 프로젝트를 사용하면 인공지능 코딩 도구가 더 일관된 디자인을 생성할 수 있다.",
+      "category_v1": "디자인"
     },
     {
       "id": "dqev/reicon",
@@ -499,7 +534,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
+      "category": "디자인·UI",
       "tags": [],
       "confidence": 0.45,
       "classified_by": "rule",
@@ -508,7 +543,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 개발자와 디자이너를 위한 무료 아이콘 라이브러리입니다. 디자인에 필요한 다양한 아이콘을 쉽게 사용할 수 있도록 해줍니다.",
-      "last_release": "v1.1.1"
+      "last_release": "v1.1.1",
+      "category_v1": "디자인"
     },
     {
       "id": "youmind-openlab/awesome-gpt-image-2",
@@ -538,7 +574,7 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "기타ai",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.95,
       "classified_by": "rule",
@@ -546,7 +582,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 그림을 그리는데 사용할 수 있는 문장 예시를 모아놓은 곳으로, 다양한 언어와 이미지 미리보기가 포함되어 있으며, 상업용 일러스트레이션을 생성하는 데 사용할 수 있다. 이 프로젝트는 무료이고 공개되어 있기 때문에 누구나 사용하고 기여할 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능이 그림을 그리는데 사용할 수 있는 문장 예시를 모아놓은 곳으로, 다양한 언어와 이미지 미리보기가 포함되어 있으며, 상업용 일러스트레이션을 생성하는 데 사용할 수 있다. 이 프로젝트는 무료이고 공개되어 있기 때문에 누구나 사용하고 기여할 수 있다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "oso95/scroll-world",
@@ -559,7 +596,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "ai-3d",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.25,
       "classified_by": "rule",
@@ -567,7 +604,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 어떤 브랜드를 3차원으로 볼 수 있게 해주며, 그 안을 스크롤하면서 탐험할 수 있게 해주는 기술입니다. 이 기술을 사용하면 브랜드의 제품이나 서비스를 더 생동감 있게 소개할 수 있습니다."
+      "desc_ko": "이 프로젝트는 어떤 브랜드를 3차원으로 볼 수 있게 해주며, 그 안을 스크롤하면서 탐험할 수 있게 해주는 기술입니다. 이 기술을 사용하면 브랜드의 제품이나 서비스를 더 생동감 있게 소개할 수 있습니다.",
+      "category_v1": "ai-3d"
     },
     {
       "id": "robbyant/lingbot-map",
@@ -580,7 +618,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-3d",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.35,
       "classified_by": "rule",
@@ -588,7 +626,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 3D 공간의 장면을 재구성하는 인공지능 모델을 만드는 것으로, 스트리밍 데이터에서 장면을 재구성하는 데 사용할 수 있다. 이 모델은 데이터를 받아서 3D 공간의 모습을 예측하는 역할을 한다."
+      "desc_ko": "이 프로젝트는 3D 공간의 장면을 재구성하는 인공지능 모델을 만드는 것으로, 스트리밍 데이터에서 장면을 재구성하는 데 사용할 수 있다. 이 모델은 데이터를 받아서 3D 공간의 모습을 예측하는 역할을 한다.",
+      "category_v1": "ai-3d"
     },
     {
       "id": "sudo-ai-3d/zero123plus",
@@ -610,7 +649,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-3d",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.65,
       "classified_by": "rule",
@@ -618,7 +657,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 하나의 사진을 3차원 그래픽으로 바꿔주는 인공지능 모델을 만들기 위한 코드를 모아놓은 곳이다. 이 모델을 사용하면 사진을 3차원으로 변환하여 다양한 각도에서 볼 수 있다."
+      "desc_ko": "이 프로젝트는 하나의 사진을 3차원 그래픽으로 바꿔주는 인공지능 모델을 만들기 위한 코드를 모아놓은 곳이다. 이 모델을 사용하면 사진을 3차원으로 변환하여 다양한 각도에서 볼 수 있다.",
+      "category_v1": "ai-3d"
     },
     {
       "id": "xiaomimimo/mimo-code",
@@ -646,7 +686,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능 모델과 에이전트가 함께 진화하는 코드를 제공하며, 인공지능과 에이전트 개발에 활용할 수 있다.",
-      "last_release": "v0.1.9"
+      "last_release": "v0.1.9",
+      "category_v1": "개발도구"
     },
     {
       "id": "upscayl/upscayl",
@@ -671,7 +712,7 @@
       ],
       "license": "AGPL-3.0",
       "archived": false,
-      "category": "디자인",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.2,
       "classified_by": "rule",
@@ -680,7 +721,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능을 이용하여 사진이나 이미지의 크기를 키우는 무료 소프트웨어다. 컴퓨터에서 사용할 수 있으며, 특히 사진을 확대할 때 유용하다.",
-      "last_release": "v2.15.0"
+      "last_release": "v2.15.0",
+      "category_v1": "디자인"
     },
     {
       "id": "q00/ouroboros",
@@ -699,7 +741,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.25,
       "classified_by": "rule",
@@ -708,7 +750,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능이 작업을 수행할 때 사람과 컴퓨터가 더 쉽게 소통할 수 있도록 도와주는 시스템을 제공합니다. 이 시스템을 사용하면 인공지능이 사람의 지시를 더 효율적으로 이해하고 수행할 수 있습니다.",
-      "last_release": "v0.50.6"
+      "last_release": "v0.50.6",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "langchain-ai/openwiki",
@@ -730,7 +773,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 코드를 설명하는 문서를 자동으로 작성하고 관리해 주는 도구다. 코드를 작성할 때 이 도구를 사용하면 코드에 대한 설명을 쉽게 관리할 수 있다.",
-      "last_release": "0.2.3"
+      "last_release": "0.2.3",
+      "category_v1": "개발도구"
     },
     {
       "id": "emilkowalski/skills",
@@ -743,15 +787,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.3,
       "classified_by": "rule",
       "saved_at": "2026-07-11T13:05:37.409Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "디자인 엔지니어들이 사용하는 기술들을 모아둔 저장소로, 디자인 엔지니어링에 필요한 다양한 기술과 정보를 제공한다. 디자인 엔지니어들이 자신의 기술을 개발하고 공유하는데 사용할 수 있다."
+      "desc_ko": "디자인 엔지니어들이 사용하는 기술들을 모아둔 저장소로, 디자인 엔지니어링에 필요한 다양한 기술과 정보를 제공한다. 디자인 엔지니어들이 자신의 기술을 개발하고 공유하는데 사용할 수 있다.",
+      "category_v1": "디자인"
     },
     {
       "id": "browser-use/video-use",
@@ -764,7 +811,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "ai-비디오",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.5,
       "classified_by": "rule",
@@ -772,7 +819,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 코드를 이용해 비디오를 편집할 수 있는 도구를 제공합니다. 이 도구를 사용하면 코드를 작성하여 비디오의 효과, 필터, 자르기 등 다양한 편집 작업을 자동화할 수 있습니다."
+      "desc_ko": "이 프로젝트는 코드를 이용해 비디오를 편집할 수 있는 도구를 제공합니다. 이 도구를 사용하면 코드를 작성하여 비디오의 효과, 필터, 자르기 등 다양한 편집 작업을 자동화할 수 있습니다.",
+      "category_v1": "ai-비디오"
     },
     {
       "id": "revfactory/font-harness",
@@ -785,7 +833,7 @@
       "topics": [],
       "license": "OFL-1.1",
       "archived": false,
-      "category": "기타",
+      "category": "디자인·UI",
       "tags": [],
       "confidence": 0.3,
       "classified_by": "rule",
@@ -793,7 +841,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 다양한 폰트를 쉽게 관리하고 테스트할 수 있는 도구를 제공한다. 이 도구를 사용하면 폰트의 모양과 느낌을 쉽게 비교하고 선택할 수 있다."
+      "desc_ko": "이 프로젝트는 다양한 폰트를 쉽게 관리하고 테스트할 수 있는 도구를 제공한다. 이 도구를 사용하면 폰트의 모양과 느낌을 쉽게 비교하고 선택할 수 있다.",
+      "category_v1": "기타"
     },
     {
       "id": "dennykim123/claude-codex-battery",
@@ -817,8 +866,10 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.8,
       "classified_by": "rule",
       "saved_at": "2026-07-09T04:59:41.143Z",
@@ -826,7 +877,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 macOS의 메뉴 바에 위젯을 추가해 Claude Code와 Codex의 사용량을 배터리 아이콘으로 표시해 주는 것입니다. 개발자들이 자신의 코드 사용량을 쉽게 확인할 수 있도록 도와주는 도구입니다.",
-      "last_release": "v2.6.1"
+      "last_release": "v2.6.1",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "diegosouzapw/omniroute",
@@ -860,7 +912,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "기타ai",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -869,7 +921,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능을 이용하여 다양한 서비스를 하나의入口으로 쉽게 연결해주는 게이트웨이입니다. 이를 통해 개발자가 코드를 작성할 때 인공지능을 무료로 사용할 수 있게 해주며, 여러 가지 인공지능 서비스를 한 곳에서 관리할 수 있습니다.",
-      "last_release": "v3.8.48"
+      "last_release": "v3.8.48",
+      "category_v1": "기타ai"
     },
     {
       "id": "mengto/skills",
@@ -882,15 +935,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.3,
       "classified_by": "rule",
       "saved_at": "2026-07-08T13:02:17.594Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 디자인과 빌드를 위해 인공지능 코딩 에이전트를 사용하는 사람들을 위한 에이전트의 기능을 제공합니다. 이 기능은 코덱스, 클로드, 커서 등의 인공지능 코딩 에이전트와 함께 사용하면 유용합니다."
+      "desc_ko": "이 프로젝트는 디자인과 빌드를 위해 인공지능 코딩 에이전트를 사용하는 사람들을 위한 에이전트의 기능을 제공합니다. 이 기능은 코덱스, 클로드, 커서 등의 인공지능 코딩 에이전트와 함께 사용하면 유용합니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "eisenjimmy/quant",
@@ -903,7 +959,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -912,7 +968,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 금융 데이터를 분석하고 예측하는 데 사용할 수 있는 코드와 도구를 제공하는 것으로 보입니다. 금융 관련된 데이터를 다루거나 분석해야 하는 곳에서 유용하게 사용할 수 있습니다.",
-      "last_release": "v1.5.0"
+      "last_release": "v1.5.0",
+      "category_v1": "디자인"
     },
     {
       "id": "nomadamas/slides-grab",
@@ -929,7 +986,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.75,
       "classified_by": "rule",
@@ -938,7 +995,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 프레젠테이션용 슬라이드를 쉽게 만들 수 있는 도구를 제공하며, 코드 편집기와 오류 검사 기능을 포함하여 슬라이드를 생성하고 관리하는 것을 더 쉽게 해줍니다. 이것은 프레젠테이션 슬라이드 제작을 위한 오픈소스 도구로, 코드 기반으로 슬라이드를 만들고 편집할 수 있습니다.",
-      "last_release": "v1.5.0"
+      "last_release": "v1.5.0",
+      "category_v1": "개발도구"
     },
     {
       "id": "devswha/patina",
@@ -972,7 +1030,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-텍스트",
+      "category": "글쓰기·카피",
       "tags": [],
       "confidence": 0.45,
       "classified_by": "rule",
@@ -981,7 +1039,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능이 작성한 글을 사람이 쓴 것처럼 보이게 만들어 주는 도구로, 한국어, 영어, 중국어, 일본어를 지원한다. 이 도구는 인공지능이 작성한 글이 사람의 글과 구별되지 않도록 도와준다.",
-      "last_release": "v6.3.1"
+      "last_release": "v6.3.1",
+      "category_v1": "ai-텍스트"
     },
     {
       "id": "verisworks-ai/prompt-ops-maker",
@@ -1001,7 +1060,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.45,
       "classified_by": "rule",
@@ -1009,7 +1068,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 정확한 작업을 수행할 수 있도록 하는 지시 문장을 자동으로 생성해 주는 도구입니다. 이 도구는 인공지능 에이전트가 특정 작업을 수행할 때 오류를 최소화하고 정확성을 높이는 데 도움이 됩니다."
+      "desc_ko": "이 프로젝트는 인공지능이 정확한 작업을 수행할 수 있도록 하는 지시 문장을 자동으로 생성해 주는 도구입니다. 이 도구는 인공지능 에이전트가 특정 작업을 수행할 때 오류를 최소화하고 정확성을 높이는 데 도움이 됩니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "tigicion/dao-code",
@@ -1030,7 +1090,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.55,
       "classified_by": "rule",
@@ -1039,7 +1099,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.4.7",
-      "desc_ko": "이 프로젝트는 컴퓨터와 대화할 수 있는 인공지능 에이전트를 만들기 위한 코드인데, 컴퓨터 터미널에서 작업할 때 도움을 주는 프로그램이야. 이 에이전트는 가격이 저렴하고 성능이 좋은 인공지능 기술을 사용해서, 개발자들이 코드를 작성할 때 도와줄 수 있어."
+      "desc_ko": "이 프로젝트는 컴퓨터와 대화할 수 있는 인공지능 에이전트를 만들기 위한 코드인데, 컴퓨터 터미널에서 작업할 때 도움을 주는 프로그램이야. 이 에이전트는 가격이 저렴하고 성능이 좋은 인공지능 기술을 사용해서, 개발자들이 코드를 작성할 때 도와줄 수 있어.",
+      "category_v1": "개발도구"
     },
     {
       "id": "jimliu/baoyu-design",
@@ -1061,8 +1122,10 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-07-06T15:06:10.786Z",
@@ -1070,7 +1133,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.1.1",
-      "desc_ko": "이 프로젝트는 Claude Design을 로컬에서 실행하여 예쁜 사용자 인터페이스 디자인을 만들 수 있게 해주며, HTML 파일로 결과물을 내보낼 수 있다. Claude Design을 클라우드가 아닌 로컬에서 사용하고 싶은 사람들에게 유용하다."
+      "desc_ko": "이 프로젝트는 Claude Design을 로컬에서 실행하여 예쁜 사용자 인터페이스 디자인을 만들 수 있게 해주며, HTML 파일로 결과물을 내보낼 수 있다. Claude Design을 클라우드가 아닌 로컬에서 사용하고 싶은 사람들에게 유용하다.",
+      "category_v1": "디자인"
     },
     {
       "id": "juliusbrussee/caveman",
@@ -1094,8 +1158,10 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.85,
       "classified_by": "rule",
       "saved_at": "2026-07-06T11:57:24.039Z",
@@ -1103,7 +1169,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.9.1",
-      "desc_ko": "이 프로젝트는 인공지능이 더 간단하게 말하는 방법을 연구하는 곳으로, 인공지능이 더 적은 단어로도 같은 뜻을 전달할 수 있도록 도와준다. 이 프로젝트는 인공지능과 언어 모델을 연구하는 곳에서 유용하게 사용될 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능이 더 간단하게 말하는 방법을 연구하는 곳으로, 인공지능이 더 적은 단어로도 같은 뜻을 전달할 수 있도록 도와준다. 이 프로젝트는 인공지능과 언어 모델을 연구하는 곳에서 유용하게 사용될 수 있다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "altic-dev/fluidvoice",
@@ -1123,7 +1190,7 @@
       ],
       "license": "GPL-3.0",
       "archived": false,
-      "category": "디자인",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.65,
       "classified_by": "rule",
@@ -1132,7 +1199,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.6.5",
-      "desc_ko": "이 프로젝트는 macOS에서 사용할 수 있는 음성 인식.Dictation 앱으로, 기기 내에서 음성 인식을 수행하고 사용자 지정으로 학습된 AI 모델을 사용하여 음성 인식의 정확도를 높여준다."
+      "desc_ko": "이 프로젝트는 macOS에서 사용할 수 있는 음성 인식.Dictation 앱으로, 기기 내에서 음성 인식을 수행하고 사용자 지정으로 학습된 AI 모델을 사용하여 음성 인식의 정확도를 높여준다.",
+      "category_v1": "디자인"
     },
     {
       "id": "yeachan-heo/gajae-code",
@@ -1145,7 +1213,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
+      "category": "개발도구",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -1154,7 +1222,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.11.10",
-      "desc_ko": "이 프로젝트는 '가재 코드'라는 이름의 최소 가용 제품(MVP)을 위한 저장소로, 가재 코드의 기본적인 기능을 구현한 코드가 포함되어 있습니다. 이 저장소를 사용하면 가재 코드의 기능을 쉽게 이해하고, 자신의 프로젝트에 적용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 '가재 코드'라는 이름의 최소 가용 제품(MVP)을 위한 저장소로, 가재 코드의 기본적인 기능을 구현한 코드가 포함되어 있습니다. 이 저장소를 사용하면 가재 코드의 기능을 쉽게 이해하고, 자신의 프로젝트에 적용할 수 있습니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "koul777/vhlookup",
@@ -1167,7 +1236,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-이미지",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -1176,7 +1245,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.4",
-      "desc_ko": "이 프로젝트는 엑셀에서 자동화 작업을 도와주는 도구로, 주로 공공 행정 업무에서 사용하기 좋다. 이 도구는 인터넷에 연결하지 않고도 엑셀 작업을 자동화할 수 있다."
+      "desc_ko": "이 프로젝트는 엑셀에서 자동화 작업을 도와주는 도구로, 주로 공공 행정 업무에서 사용하기 좋다. 이 도구는 인터넷에 연결하지 않고도 엑셀 작업을 자동화할 수 있다.",
+      "category_v1": "ai-이미지"
     },
     {
       "id": "nomadamas/katok",
@@ -1189,7 +1259,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "개발도구",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.1,
       "classified_by": "rule",
@@ -1198,7 +1268,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.1.3",
-      "desc_ko": "카카오톡 대화 내용을 쉽게 검색할 수 있게 해주는 프로그램으로, 키워드를 입력하면 대화 내용에서 관련된 문장을 찾을 수 있다. 이 프로그램은 카카오톡 메시지에서 특정 단어나 문장을 빠르게 찾을 수 있게 해주므로 대화 내용을 효율적으로 관리하고 검색할 때 유용하다."
+      "desc_ko": "카카오톡 대화 내용을 쉽게 검색할 수 있게 해주는 프로그램으로, 키워드를 입력하면 대화 내용에서 관련된 문장을 찾을 수 있다. 이 프로그램은 카카오톡 메시지에서 특정 단어나 문장을 빠르게 찾을 수 있게 해주므로 대화 내용을 효율적으로 관리하고 검색할 때 유용하다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "lycorp-jp/sim-use",
@@ -1218,7 +1289,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.9,
       "classified_by": "rule",
@@ -1227,7 +1298,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.11.0",
-      "desc_ko": "이 프로젝트는 인공지능이 아이폰이나 안드로이드 기기를 제어할 수 있게 해주는 도구로, 인공지능 개발에 유용하다."
+      "desc_ko": "이 프로젝트는 인공지능이 아이폰이나 안드로이드 기기를 제어할 수 있게 해주는 도구로, 인공지능 개발에 유용하다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "kimsh-1/gongnyang-prompt-kit",
@@ -1240,8 +1312,10 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "미디어 생성",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-07-02T22:05:43.675Z",
@@ -1249,7 +1323,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 사용자가 입력한 요청을 인공지능 이미지 생성 모델인 gpt-image-2가 이해할 수 있는 명령어로 변환해 주는 도구입니다. 이는 사용자가 원하는 이미지를 더 정확하게 생성할 수 있도록 도와줍니다.",
-      "last_release": "v3.0.0"
+      "last_release": "v3.0.0",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "lunapsy/kdrug-client",
@@ -1262,7 +1337,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "ai-api",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.35,
       "classified_by": "rule",
@@ -1270,7 +1345,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 약물 정보를 관리하고 제공하는 클라이언트 프로그램입니다. 이 프로그램은 의료 관련 업무에서 약물 정보를 쉽게 관리하고 조회할 수 있도록 도와줍니다."
+      "desc_ko": "이 프로젝트는 약물 정보를 관리하고 제공하는 클라이언트 프로그램입니다. 이 프로그램은 의료 관련 업무에서 약물 정보를 쉽게 관리하고 조회할 수 있도록 도와줍니다.",
+      "category_v1": "ai-api"
     },
     {
       "id": "koul777/clickguide-local-private",
@@ -1283,7 +1359,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -1292,7 +1368,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.1.1",
-      "desc_ko": "이 프로젝트는 사용자들이 쉽게 클릭하여 사용할 수 있는 가이드를 만들 수 있는 도구를 개발한 것으로, 주로 소규모 프로젝트나 개인용으로 사용할 수 있다."
+      "desc_ko": "이 프로젝트는 사용자들이 쉽게 클릭하여 사용할 수 있는 가이드를 만들 수 있는 도구를 개발한 것으로, 주로 소규모 프로젝트나 개인용으로 사용할 수 있다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "revfactory/webtoon-harness",
@@ -1305,15 +1382,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "미디어 생성",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-06-29T22:46:08.577Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 웹툰을 자동으로 제작하는 시스템을 개발하는 곳으로, 여러 개의 인공지능이 함께合作하여 웹툰 한 회차를 만들어낸다. 이 시스템은 웹툰 제작에 필요한 모든 단계를 자동화하여 웹툰 제작을 더 효율적으로 만들 수 있다."
+      "desc_ko": "이 프로젝트는 웹툰을 자동으로 제작하는 시스템을 개발하는 곳으로, 여러 개의 인공지능이 함께合作하여 웹툰 한 회차를 만들어낸다. 이 시스템은 웹툰 제작에 필요한 모든 단계를 자동화하여 웹툰 제작을 더 효율적으로 만들 수 있다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "datalab-to/surya",
@@ -1326,7 +1406,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-이미지",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -1335,7 +1415,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.22.1",
-      "desc_ko": "이 프로젝트는 90가지 이상의 언어로 된 문서의 글자를 인식하고, 문서의 구조를 분석하며, 읽기 순서를 파악하고, 표를 인식하는 기능을 제공합니다. 문서의 내용을 컴퓨터가 이해할 수 있도록 해주는 기술입니다."
+      "desc_ko": "이 프로젝트는 90가지 이상의 언어로 된 문서의 글자를 인식하고, 문서의 구조를 분석하며, 읽기 순서를 파악하고, 표를 인식하는 기능을 제공합니다. 문서의 내용을 컴퓨터가 이해할 수 있도록 해주는 기술입니다.",
+      "category_v1": "ai-이미지"
     },
     {
       "id": "aldegad/sprite-gen",
@@ -1358,7 +1439,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "기타ai",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.4,
       "classified_by": "rule",
@@ -1367,7 +1448,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.56.16",
-      "desc_ko": "이 프로젝트는 2D 게임에서 사용할 수 있는 캐릭터 이미지와 애니메이션을 자동으로 생성해 주는 도구로, 게임 개발에 쓸모가 있다. 이 도구는 인공지능 기술을 사용하여 깨끗한 이미지와 애니메이션을 만들어 준다."
+      "desc_ko": "이 프로젝트는 2D 게임에서 사용할 수 있는 캐릭터 이미지와 애니메이션을 자동으로 생성해 주는 도구로, 게임 개발에 쓸모가 있다. 이 도구는 인공지능 기술을 사용하여 깨끗한 이미지와 애니메이션을 만들어 준다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "alisa0808/vibe-creating-skill",
@@ -1401,15 +1483,18 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "ai-비디오",
-      "tags": [],
+      "category": "미디어 생성",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-28T08:03:32.314Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 영상을 만들기 위한 글을 작성하는 기술입니다. 이 기술을 이용하면 영상을 만들고 싶은 생각을 적으면 인공지능이 그에 맞는 영상을 자동으로 생성할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능이 영상을 만들기 위한 글을 작성하는 기술입니다. 이 기술을 이용하면 영상을 만들고 싶은 생각을 적으면 인공지능이 그에 맞는 영상을 자동으로 생성할 수 있습니다.",
+      "category_v1": "ai-비디오"
     },
     {
       "id": "opendataloader-project/opendataloader-pdf",
@@ -1443,7 +1528,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-문서",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -1452,7 +1537,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.5.0",
-      "desc_ko": "이 프로젝트는 인공지능이 이해할 수 있는 데이터를 PDF 파일에서 쉽게 추출할 수 있게 해주며, PDF 파일의 접근성을 자동으로 높여주는 오픈소스 도구입니다. 문서의 내용을 인공지능이 분석할 수 있도록 도와주고, 문서의 접근성을 개선하여 모두가 쉽게 사용할 수 있게 합니다."
+      "desc_ko": "이 프로젝트는 인공지능이 이해할 수 있는 데이터를 PDF 파일에서 쉽게 추출할 수 있게 해주며, PDF 파일의 접근성을 자동으로 높여주는 오픈소스 도구입니다. 문서의 내용을 인공지능이 분석할 수 있도록 도와주고, 문서의 접근성을 개선하여 모두가 쉽게 사용할 수 있게 합니다.",
+      "category_v1": "ai-문서"
     },
     {
       "id": "docling-project/docling",
@@ -1481,7 +1567,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-문서",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -1490,7 +1576,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.115.0",
-      "desc_ko": "이 프로젝트는 문서를 인공지능이 이해할 수 있는 형태로 바꾸는 일을 합니다. 문서를 쉽게 변환하여 인공지능이 분석할 수 있도록 도와주는 도구입니다."
+      "desc_ko": "이 프로젝트는 문서를 인공지능이 이해할 수 있는 형태로 바꾸는 일을 합니다. 문서를 쉽게 변환하여 인공지능이 분석할 수 있도록 도와주는 도구입니다.",
+      "category_v1": "ai-문서"
     },
     {
       "id": "lottiefiles/motion-design-skill",
@@ -1509,15 +1596,18 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-06-25T15:25:11.595Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 사용자 인터페이스에서 자연스럽게 움직일 수 있도록 도와주는 디자인 원칙들을 모아둔 곳이다. 예를 들어 로봇이나 컴퓨터 프로그램이 사용자와 상호작용할 때 더 자연스럽고 편안하게 보이도록 만들어 준다."
+      "desc_ko": "이 프로젝트는 인공지능이 사용자 인터페이스에서 자연스럽게 움직일 수 있도록 도와주는 디자인 원칙들을 모아둔 곳이다. 예를 들어 로봇이나 컴퓨터 프로그램이 사용자와 상호작용할 때 더 자연스럽고 편안하게 보이도록 만들어 준다.",
+      "category_v1": "디자인"
     },
     {
       "id": "google-labs-code/design.md",
@@ -1530,8 +1620,10 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "디자인",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-25T06:20:52.428Z",
@@ -1539,7 +1631,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "0.3.0",
-      "desc_ko": "이 프로젝트는 코드를 작성하는 프로그램이 디자인 요소를 이해할 수 있도록 도와주는 규칙을 정의하는 것입니다. DESIGN.md 파일은 디자인 시스템을 구조적으로 설명하여 프로그램이 디자인을 일관되게 이해하고 적용할 수 있도록 합니다."
+      "desc_ko": "이 프로젝트는 코드를 작성하는 프로그램이 디자인 요소를 이해할 수 있도록 도와주는 규칙을 정의하는 것입니다. DESIGN.md 파일은 디자인 시스템을 구조적으로 설명하여 프로그램이 디자인을 일관되게 이해하고 적용할 수 있도록 합니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "vibeworkers/geo-rewrite",
@@ -1552,7 +1645,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-텍스트",
+      "category": "글쓰기·카피",
       "tags": [],
       "confidence": 0.15,
       "classified_by": "rule",
@@ -1560,7 +1653,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인터넷에 올릴 글을 검색 엔진이나 지역에 맞게 자동으로 고쳐주는 도구로, Claude Desktop이나 claude.ai와 함께 사용하면 편리하다."
+      "desc_ko": "이 프로젝트는 인터넷에 올릴 글을 검색 엔진이나 지역에 맞게 자동으로 고쳐주는 도구로, Claude Desktop이나 claude.ai와 함께 사용하면 편리하다.",
+      "category_v1": "ai-텍스트"
     },
     {
       "id": "dietrichgebert/ponytail",
@@ -1584,7 +1678,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "클로드코드 운영",
       "tags": [],
       "confidence": 0.75,
       "classified_by": "rule",
@@ -1593,7 +1687,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v4.8.4",
-      "desc_ko": "이 프로젝트는 인공지능이 가장 게을러하는 개발자처럼 생각하도록 도와주는 도구로, 불필요한 코드를 작성하지 않도록 해줍니다. 이는 인공지능이 더 효율적이고 간단한 코드를 생성하도록 도와줌으로써 코드 작성 시간을 절약할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능이 가장 게을러하는 개발자처럼 생각하도록 도와주는 도구로, 불필요한 코드를 작성하지 않도록 해줍니다. 이는 인공지능이 더 효율적이고 간단한 코드를 생성하도록 도와줌으로써 코드 작성 시간을 절약할 수 있습니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "itssosunny/im-not-strange-ai",
@@ -1606,7 +1701,7 @@
       "topics": [],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "ai-이미지",
+      "category": "글쓰기·카피",
       "tags": [],
       "confidence": 0.05,
       "classified_by": "rule",
@@ -1614,7 +1709,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 관련된 코드를 모아둔 저장소로, 인공지능 기술을 공부하거나 개발하는 사람들에게 도움이 될 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능 관련된 코드를 모아둔 저장소로, 인공지능 기술을 공부하거나 개발하는 사람들에게 도움이 될 수 있습니다.",
+      "category_v1": "ai-이미지"
     },
     {
       "id": "fivetaku/llm-wiki",
@@ -1627,15 +1723,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "cc-저장소",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-06-19T11:51:31.150Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 Claude Code라는 도구가 코드를 위키 형식으로 자동으로 바꾸고 관리하는 템플릿을 제공하는 것으로, 개발자들이 코드를 쉽게 문서화하고 관리할 수 있도록 도와준다. 개발자들이 코드와 관련된 지식을 효율적으로 관리하고 공유하는 데 유용하다."
+      "desc_ko": "이 프로젝트는 Claude Code라는 도구가 코드를 위키 형식으로 자동으로 바꾸고 관리하는 템플릿을 제공하는 것으로, 개발자들이 코드를 쉽게 문서화하고 관리할 수 있도록 도와준다. 개발자들이 코드와 관련된 지식을 효율적으로 관리하고 공유하는 데 유용하다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "makeplane/plane",
@@ -1678,7 +1777,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v1.3.1",
-      "desc_ko": "이 프로젝트는 팀 프로젝트를 관리하기 위한 플랫폼을 제공하며, 작업 관리, 문서 관리, 문제 해결 등을 지원한다. 예를 들어, 여러 사람이 함께 프로젝트를 진행할 때 작업을 할당하고 관리하거나, 문제가 발생했을 때 이를 추적하고 해결하는 데 사용할 수 있다."
+      "desc_ko": "이 프로젝트는 팀 프로젝트를 관리하기 위한 플랫폼을 제공하며, 작업 관리, 문서 관리, 문제 해결 등을 지원한다. 예를 들어, 여러 사람이 함께 프로젝트를 진행할 때 작업을 할당하고 관리하거나, 문제가 발생했을 때 이를 추적하고 해결하는 데 사용할 수 있다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "openclaw/openclaw",
@@ -1699,7 +1799,7 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.85,
       "classified_by": "rule",
@@ -1708,7 +1808,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2026.7.1",
-      "desc_ko": "개인용 인공지능 비서로, 모든 운영체제와 플랫폼에서 사용할 수 있으며, 데이터의 주권을 사용자에게 주는 것을 목표로 한다."
+      "desc_ko": "개인용 인공지능 비서로, 모든 운영체제와 플랫폼에서 사용할 수 있으며, 데이터의 주권을 사용자에게 주는 것을 목표로 한다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "langgenius/dify",
@@ -1742,7 +1843,7 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "기타ai",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -1751,7 +1852,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "1.16.0",
-      "desc_ko": "이 프로젝트는 인공지능을 활용한 자동화 시스템을 만들기 위한 플랫폼으로, 작업을 자동으로 처리하고 관리하는 에이전트를 개발하는 데 사용됩니다. 이 플랫폼은 실제 업무 환경에서 사용할 수 있도록 설계되어 있기 때문에, 실제로 업무 자동화를 구현하는 데 도움이 될 것입니다."
+      "desc_ko": "이 프로젝트는 인공지능을 활용한 자동화 시스템을 만들기 위한 플랫폼으로, 작업을 자동으로 처리하고 관리하는 에이전트를 개발하는 데 사용됩니다. 이 플랫폼은 실제 업무 환경에서 사용할 수 있도록 설계되어 있기 때문에, 실제로 업무 자동화를 구현하는 데 도움이 될 것입니다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "zai-org/scail-2",
@@ -1764,7 +1866,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-비디오",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.25,
       "classified_by": "rule",
@@ -1772,7 +1874,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 캐릭터를 조작하고 애니메이션을 만드는 것을 더 쉽고 정교하게 해주는 기술을 개발한 곳이다. 이 기술은 게임, 애니메이션, 가상현실 등 다양한 곳에서 캐릭터를 더 현실적으로 움직이게 하는 데 사용될 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능이 캐릭터를 조작하고 애니메이션을 만드는 것을 더 쉽고 정교하게 해주는 기술을 개발한 곳이다. 이 기술은 게임, 애니메이션, 가상현실 등 다양한 곳에서 캐릭터를 더 현실적으로 움직이게 하는 데 사용될 수 있다.",
+      "category_v1": "ai-비디오"
     },
     {
       "id": "gykim80/perfectpixel-studio",
@@ -1793,7 +1896,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-비디오",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.15,
       "classified_by": "rule",
@@ -1801,7 +1904,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는一个人의 그림을 8가지 방향과 100가지 이상의 행동으로 자동으로 만들어 주는 도구로, 게임 개발에 유용하며 인공지능 기술을 사용하여 픽셀 아트 스프라이트 시트를 생성한다."
+      "desc_ko": "이 프로젝트는一个人의 그림을 8가지 방향과 100가지 이상의 행동으로 자동으로 만들어 주는 도구로, 게임 개발에 유용하며 인공지능 기술을 사용하여 픽셀 아트 스프라이트 시트를 생성한다.",
+      "category_v1": "ai-비디오"
     },
     {
       "id": "chrisryugj/fable-ish",
@@ -1825,15 +1929,18 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.6,
       "classified_by": "rule",
       "saved_at": "2026-06-14T15:08:13.611Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "인공지능이 코드를 작성할 때 검증 단계를 추가해 코드가 제대로 작동하는지 확인하는 도구로, Claude Code와 같은 인공지능 코드 작성 도구에서 사용할 수 있다."
+      "desc_ko": "인공지능이 코드를 작성할 때 검증 단계를 추가해 코드가 제대로 작동하는지 확인하는 도구로, Claude Code와 같은 인공지능 코드 작성 도구에서 사용할 수 있다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "fivetaku/fablize",
@@ -1854,8 +1961,10 @@
       ],
       "license": null,
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 1,
       "classified_by": "rule",
       "saved_at": "2026-06-14T10:05:07.474Z",
@@ -1863,7 +1972,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.1.0",
-      "desc_ko": "이 프로젝트는 Claude Code 플러그인으로, Opus를 Fable처럼 작동시키는 도구입니다. 이는 완성, 증거, 검증 등을 절차에 따라 강제하는 것을 의미합니다. Fable과 Opus의 비교를 통해 어떤 기능이 잘 작동하는지 테스트하여 필요한 기능만 제공합니다."
+      "desc_ko": "이 프로젝트는 Claude Code 플러그인으로, Opus를 Fable처럼 작동시키는 도구입니다. 이는 완성, 증거, 검증 등을 절차에 따라 강제하는 것을 의미합니다. Fable과 Opus의 비교를 통해 어떤 기능이 잘 작동하는지 테스트하여 필요한 기능만 제공합니다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "sodam-ai/hermes-agent_one-click_kit",
@@ -1887,7 +1997,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "개발도구",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -1895,7 +2005,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 에이전트인 헤르메스 에이전트를 쉽게 설치하고 실행할 수 있는 도구를 제공하며, 초보자에게 친절한 한국어와 영어 설명서를 포함하고 있습니다. 이 도구는 윈도우에서 사용할 수 있는 배치 스크립트로, 여러 메신저를 연결할 수 있는 기능을 제공합니다."
+      "desc_ko": "이 프로젝트는 인공지능 에이전트인 헤르메스 에이전트를 쉽게 설치하고 실행할 수 있는 도구를 제공하며, 초보자에게 친절한 한국어와 영어 설명서를 포함하고 있습니다. 이 도구는 윈도우에서 사용할 수 있는 배치 스크립트로, 여러 메신저를 연결할 수 있는 기능을 제공합니다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "inulute/unlim-cloud",
@@ -1932,7 +2043,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.0.0",
-      "desc_ko": "이 프로젝트는 텔레그램을 이용하여 파일을 저장할 수 있는 클라우드 저장소 서비스를 제공하며, 사용자는 텔레그램 아이디로 로그인하면 바로 사용할 수 있다. 이 서비스는 파일을 저장할 수 있는 공간이 무제한이라는 특징이 있다."
+      "desc_ko": "이 프로젝트는 텔레그램을 이용하여 파일을 저장할 수 있는 클라우드 저장소 서비스를 제공하며, 사용자는 텔레그램 아이디로 로그인하면 바로 사용할 수 있다. 이 서비스는 파일을 저장할 수 있는 공간이 무제한이라는 특징이 있다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "revfactory/harness",
@@ -1950,7 +2062,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "디자인",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.15,
       "classified_by": "rule",
@@ -1958,7 +2070,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 특정 분야에 맞는 인공지능 에이전트 팀을 설계하고, 에이전트의 특별한 기능을 정의하며, 이 에이전트들이 사용하는 기술을 생성하는 메타 기술입니다. 이는 인공지능과 자동화 시스템을 개발하고 구축하는 데 유용합니다."
+      "desc_ko": "이 프로젝트는 특정 분야에 맞는 인공지능 에이전트 팀을 설계하고, 에이전트의 특별한 기능을 정의하며, 이 에이전트들이 사용하는 기술을 생성하는 메타 기술입니다. 이는 인공지능과 자동화 시스템을 개발하고 구축하는 데 유용합니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "calmtiger86/non-dev-token-saver",
@@ -1971,15 +2084,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.75,
       "classified_by": "rule",
       "saved_at": "2026-05-27T14:01:54.266Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 Claude Code라는 코드 작성 도구에서 사용하는 토큰을 효율적으로 관리하여 비용을 30-60% 절약할 수 있는 플러그인입니다. 이 플러그인은 자동 모델 라우팅, 중복된 읽기 제거, 명령어 재작성, 캐싱, 세션 분석 등 다양한 기능을 통해 토큰 비용을 절약합니다."
+      "desc_ko": "이 프로젝트는 Claude Code라는 코드 작성 도구에서 사용하는 토큰을 효율적으로 관리하여 비용을 30-60% 절약할 수 있는 플러그인입니다. 이 플러그인은 자동 모델 라우팅, 중복된 읽기 제거, 명령어 재작성, 캐싱, 세션 분석 등 다양한 기능을 통해 토큰 비용을 절약합니다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "anthropics/knowledge-work-plugins",
@@ -1992,15 +2108,18 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.25,
       "classified_by": "rule",
       "saved_at": "2026-05-26T21:59:35.024Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "클라우드 코워크라는 도구에서 지식을 다루는 사람들에게 도움이 되는 플러그인들을 모아둔 저장소로, 주로 지식 노동자들이 사용하기 위해 만든 플러그인들이 들어있다. 이 플러그인들은 클라우드 코워크에서 작업할 때 편리함을 제공하는 기능들을 추가해준다."
+      "desc_ko": "클라우드 코워크라는 도구에서 지식을 다루는 사람들에게 도움이 되는 플러그인들을 모아둔 저장소로, 주로 지식 노동자들이 사용하기 위해 만든 플러그인들이 들어있다. 이 플러그인들은 클라우드 코워크에서 작업할 때 편리함을 제공하는 기능들을 추가해준다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "msitarzewski/agency-agents",
@@ -2013,7 +2132,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.7,
       "classified_by": "rule",
@@ -2021,7 +2140,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능을 이용해 각기 전문 분야가 있는 에이전트들을 만들어서 사용할 수 있게 해주는데, 예를 들어 프로그래밍을 전문으로 하는 에이전트나 리얼리티 체커가 있는 에이전트 등이 있습니다. 이 에이전트들은 각기 고유한 성격과 능력을 가지고 있어서 실제 업무에 활용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능을 이용해 각기 전문 분야가 있는 에이전트들을 만들어서 사용할 수 있게 해주는데, 예를 들어 프로그래밍을 전문으로 하는 에이전트나 리얼리티 체커가 있는 에이전트 등이 있습니다. 이 에이전트들은 각기 고유한 성격과 능력을 가지고 있어서 실제 업무에 활용할 수 있습니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "koomook/data-go-mcp-servers",
@@ -2034,7 +2154,7 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "mcp",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -2042,7 +2162,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "한국 정부가 공개한 데이터를 쉽게 이용할 수 있게 해주는 서버 프로그램입니다. 이 서버를 이용하면 정부에서 제공하는 데이터를 쉽게 가져와서 사용할 수 있습니다."
+      "desc_ko": "한국 정부가 공개한 데이터를 쉽게 이용할 수 있게 해주는 서버 프로그램입니다. 이 서버를 이용하면 정부에서 제공하는 데이터를 쉽게 가져와서 사용할 수 있습니다.",
+      "category_v1": "mcp"
     },
     {
       "id": "lidge-jun/ima2-gen",
@@ -2064,7 +2185,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-이미지",
+      "category": "미디어 생성",
       "tags": [],
       "confidence": 0.45,
       "classified_by": "rule",
@@ -2073,7 +2194,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v3.0.2",
-      "desc_ko": "이 프로젝트는 텍스트나 이미지를 입력으로 받아서 새로운 이미지를 생성하는 도구로, 무료 및 유료 두 가지 방법으로 이용할 수 있다. 이 도구는 컴퓨터 터미널에서 명령어를 입력해서 사용할 수도 있고, 웹 브라우저에서 사용할 수도 있다."
+      "desc_ko": "이 프로젝트는 텍스트나 이미지를 입력으로 받아서 새로운 이미지를 생성하는 도구로, 무료 및 유료 두 가지 방법으로 이용할 수 있다. 이 도구는 컴퓨터 터미널에서 명령어를 입력해서 사용할 수도 있고, 웹 브라우저에서 사용할 수도 있다.",
+      "category_v1": "ai-이미지"
     },
     {
       "id": "decolua/9router",
@@ -2107,7 +2229,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "기타ai",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 1,
       "classified_by": "rule",
@@ -2116,7 +2238,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.5.35",
-      "desc_ko": "이 프로젝트는 인공지능 코딩을 무료로 사용할 수 있게 해주는 도구로, 여러 가지 인공지능 서비스를 하나의 플랫폼에서 사용할 수 있도록 연결해 준다. 이 프로젝트를 사용하면 무료로 인공지능 코딩을 할 수 있고, 여러 가지 제한 없이 사용할 수 있다."
+      "desc_ko": "이 프로젝트는 인공지능 코딩을 무료로 사용할 수 있게 해주는 도구로, 여러 가지 인공지능 서비스를 하나의 플랫폼에서 사용할 수 있도록 연결해 준다. 이 프로젝트를 사용하면 무료로 인공지능 코딩을 할 수 있고, 여러 가지 제한 없이 사용할 수 있다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "alchaincyf/huashu-design",
@@ -2129,8 +2252,10 @@
       "topics": [],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "디자인·UI",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:56:54.195Z",
@@ -2138,7 +2263,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.0",
-      "desc_ko": "이 프로젝트는 Claude Code에서 사용할 수 있는 HTML 기반의 디자인 스킬을 제공하는 것으로, 높은 수준의 프로토타입, 슬라이드, 애니메이션 등을 만들 수 있고 디자인 철학과 평가 기능도 포함되어 있다. 이 프로젝트는 Agent-agnostic 즉, 특정 에이전트나 플랫폼에 종속되지 않아 다양한 곳에서 사용할 수 있다."
+      "desc_ko": "이 프로젝트는 Claude Code에서 사용할 수 있는 HTML 기반의 디자인 스킬을 제공하는 것으로, 높은 수준의 프로토타입, 슬라이드, 애니메이션 등을 만들 수 있고 디자인 철학과 평가 기능도 포함되어 있다. 이 프로젝트는 Agent-agnostic 즉, 특정 에이전트나 플랫폼에 종속되지 않아 다양한 곳에서 사용할 수 있다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "yusang-park/codex-for-claude-code",
@@ -2151,7 +2277,7 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "기타ai",
+      "category": "클로드코드 운영",
       "tags": [],
       "confidence": 0.65,
       "classified_by": "rule",
@@ -2160,7 +2286,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v0.2.6",
-      "desc_ko": "이 프로젝트는 Claude AI와 같은 인공지능 모델을 위한 코드 데이터셋을 제공하는 저장소입니다. 이 저장소를 활용하면 인공지능 모델의 학습 데이터를 쉽게 관리하고 확장할 수 있습니다."
+      "desc_ko": "이 프로젝트는 Claude AI와 같은 인공지능 모델을 위한 코드 데이터셋을 제공하는 저장소입니다. 이 저장소를 활용하면 인공지능 모델의 학습 데이터를 쉽게 관리하고 확장할 수 있습니다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "phuryn/pm-skills",
@@ -2181,7 +2308,7 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "클로드코드 운영",
       "tags": [],
       "confidence": 0.15,
       "classified_by": "rule",
@@ -2190,7 +2317,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v2.1.0",
-      "desc_ko": "이 프로젝트는 프로젝트 관리에 필요한 100가지 이상의 다양한 기술과 기능을 모아둔 곳으로, 프로젝트를 기획하고 실행하고 성장시키는 데 필요한 여러 가지 도구와 플러그인을 제공한다. 이곳에 있는 도구들은 프로젝트를 발견하고 전략을 수립하고 실행하고 출시하고 성장시키는 데 사용할 수 있다."
+      "desc_ko": "이 프로젝트는 프로젝트 관리에 필요한 100가지 이상의 다양한 기술과 기능을 모아둔 곳으로, 프로젝트를 기획하고 실행하고 성장시키는 데 필요한 여러 가지 도구와 플러그인을 제공한다. 이곳에 있는 도구들은 프로젝트를 발견하고 전략을 수립하고 실행하고 출시하고 성장시키는 데 사용할 수 있다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "karpathy/autoresearch",
@@ -2203,7 +2331,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-생산성",
+      "category": "리서치·수집",
       "tags": [],
       "confidence": 0.85,
       "classified_by": "rule",
@@ -2211,7 +2339,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "인공지능이 자동으로 연구를 수행하는 프로젝트로, 단일 그래픽 카드를 사용하여 작은 챗봇을 학습시킵니다. 이 프로젝트는 인공지능이 스스로 연구를 진행하고 결과를 도출해내는 것을 목표로 합니다."
+      "desc_ko": "인공지능이 자동으로 연구를 수행하는 프로젝트로, 단일 그래픽 카드를 사용하여 작은 챗봇을 학습시킵니다. 이 프로젝트는 인공지능이 스스로 연구를 진행하고 결과를 도출해내는 것을 목표로 합니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "forrestchang/andrej-karpathy-skills",
@@ -2224,15 +2353,18 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "cc-스킬",
-      "tags": [],
+      "category": "클로드코드 운영",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.9,
       "classified_by": "rule",
       "saved_at": "2026-05-12T11:19:08.504Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능 코드 작성 도우미인 Claude의 성능을 개선하는 방법을 기록한 문서입니다. Claude가 코드를 작성할 때 발생할 수 있는 문제점을 해결하기 위한 팁을 제공합니다."
+      "desc_ko": "이 프로젝트는 인공지능 코드 작성 도우미인 Claude의 성능을 개선하는 방법을 기록한 문서입니다. Claude가 코드를 작성할 때 발생할 수 있는 문제점을 해결하기 위한 팁을 제공합니다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "google/skills",
@@ -2249,7 +2381,7 @@
       ],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [],
       "confidence": 0.3,
       "classified_by": "rule",
@@ -2257,7 +2389,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "구글의 제품과 기술을 더 잘 활용할 수 있도록 도와주는 에이전트 기능을 모아둔 곳으로, 구글 관련 기술을 더 쉽게 사용할 수 있게 해준다. 구글 클라우드 같은 서비스와 함께 사용하면 더 좋은 결과를 얻을 수 있다."
+      "desc_ko": "구글의 제품과 기술을 더 잘 활용할 수 있도록 도와주는 에이전트 기능을 모아둔 곳으로, 구글 관련 기술을 더 쉽게 사용할 수 있게 해준다. 구글 클라우드 같은 서비스와 함께 사용하면 더 좋은 결과를 얻을 수 있다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "chrisryugj/docufinder",
@@ -2283,7 +2416,7 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "ai-문서",
+      "category": "문서·데이터",
       "tags": [],
       "confidence": 0.85,
       "classified_by": "rule",
@@ -2292,7 +2425,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "last_release": "v3.4.8",
-      "desc_ko": "이 프로젝트는 문서 내용을 빠르게 찾을 수 있는 데스크톱 애플리케이션으로, 수천 건의 문서를 1초 만에 검색할 수 있으며 완전한 오프라인 환경에서 동작한다. 특히 HWPX, PDF, Office 파일을 지원하며, 한국어 자연어 처리를 지원한다."
+      "desc_ko": "이 프로젝트는 문서 내용을 빠르게 찾을 수 있는 데스크톱 애플리케이션으로, 수천 건의 문서를 1초 만에 검색할 수 있으며 완전한 오프라인 환경에서 동작한다. 특히 HWPX, PDF, Office 파일을 지원하며, 한국어 자연어 처리를 지원한다.",
+      "category_v1": "ai-문서"
     },
     {
       "id": "nomadamas/k-skill",
@@ -2305,15 +2439,18 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "한국어",
-      "tags": [],
+      "category": "리서치·수집",
+      "tags": [
+        "cc"
+      ],
       "confidence": 0.55,
       "classified_by": "rule",
       "saved_at": "2026-05-05T06:39:32.878Z",
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "한국인들이 자주 사용하는 여러 가지 서비스나 정보를 쉽게 활용할 수 있는 스킬 모음집으로, 여러 가지 정보나 서비스를 한 곳에서 쉽게 사용할 수 있습니다."
+      "desc_ko": "한국인들이 자주 사용하는 여러 가지 서비스나 정보를 쉽게 활용할 수 있는 스킬 모음집으로, 여러 가지 정보나 서비스를 한 곳에서 쉽게 사용할 수 있습니다.",
+      "category_v1": "한국어"
     },
     {
       "id": "opengeometry-io/opengeometry",
@@ -2326,7 +2463,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "3d-cad",
+      "category": "디자인·UI",
       "tags": [],
       "confidence": 0.92,
       "classified_by": "rule",
@@ -2335,7 +2472,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.0.7",
-      "desc_ko": "이 프로젝트는 컴퓨터로 3차원 도형을 만들고 편집할 수 있는 강력한 도구를 웹에서 사용할 수 있도록 해주는 것입니다. 이 도구를 사용하면 웹 브라우저에서 직접 3차원 모델링을 할 수 있기 때문에, 다양한 웹 애플리케이션에서 활용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 컴퓨터로 3차원 도형을 만들고 편집할 수 있는 강력한 도구를 웹에서 사용할 수 있도록 해주는 것입니다. 이 도구를 사용하면 웹 브라우저에서 직접 3차원 모델링을 할 수 있기 때문에, 다양한 웹 애플리케이션에서 활용할 수 있습니다.",
+      "category_v1": "3d-cad"
     },
     {
       "id": "nexu-io/open-design",
@@ -2348,7 +2486,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "디자인",
+      "category": "디자인·UI",
       "tags": [
         "멀티-llm",
         "프로토타이핑"
@@ -2360,7 +2498,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "open-design-v0.16.1",
-      "desc_ko": "이 프로젝트는 로컬 우선·오픈소스 디자인 도구로, 사용자가 웹, 데스크탑, 모바일 프로토타입을 쉽게 만들고 편집할 수 있게 해줍니다. 이 도구는 다양한 파일 형식으로 내보내기와 미리보기를 지원하며, 여러 코드 에디터와 통합됩니다."
+      "desc_ko": "이 프로젝트는 로컬 우선·오픈소스 디자인 도구로, 사용자가 웹, 데스크탑, 모바일 프로토타입을 쉽게 만들고 편집할 수 있게 해줍니다. 이 도구는 다양한 파일 형식으로 내보내기와 미리보기를 지원하며, 여러 코드 에디터와 통합됩니다.",
+      "category_v1": "디자인"
     },
     {
       "id": "warpdotdev/warp",
@@ -2385,7 +2524,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.2026.06.03.09.49.stable_00",
-      "desc_ko": "이 프로젝트는 개발자들이 코드를 더 빠르고 쉽게 작성할 수 있도록 도와주는 개발 환경을 제공하는 것입니다. 터미널에서 사용할 수 있어 개발자들이 편리하게 코드를 작성하고 관리할 수 있습니다."
+      "desc_ko": "이 프로젝트는 개발자들이 코드를 더 빠르고 쉽게 작성할 수 있도록 도와주는 개발 환경을 제공하는 것입니다. 터미널에서 사용할 수 있어 개발자들이 편리하게 코드를 작성하고 관리할 수 있습니다.",
+      "category_v1": "개발도구"
     },
     {
       "id": "genexis-ai/chromex",
@@ -2398,7 +2538,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-생산성",
+      "category": "에이전트·자동화",
       "tags": [
         "기타ai",
         "브라우저",
@@ -2411,7 +2551,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.1.8",
-      "desc_ko": "이 프로젝트는 크롬 브라우저의 사이드 패널에 인공지능 어시스턴트를 추가해 페이지 내용, 탭, 음성, 이미지와의 상호작용을 지원하는 도구입니다. 이 도구를 사용하면 브라우저에서 다양한 작업을 보다 쉽고 편리하게 수행할 수 있습니다."
+      "desc_ko": "이 프로젝트는 크롬 브라우저의 사이드 패널에 인공지능 어시스턴트를 추가해 페이지 내용, 탭, 음성, 이미지와의 상호작용을 지원하는 도구입니다. 이 도구를 사용하면 브라우저에서 다양한 작업을 보다 쉽고 편리하게 수행할 수 있습니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "minishlab/semble",
@@ -2424,7 +2565,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-생산성",
+      "category": "개발도구",
       "tags": [
         "코드검색",
         "에이전트"
@@ -2436,7 +2577,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.5.2",
-      "desc_ko": "semble은 에이전트가 코드를 빠르고 정확하게 검색할 수 있게 해주는 도구로, 개발자들이 코드를 관리하고 찾을 때 유용합니다."
+      "desc_ko": "semble은 에이전트가 코드를 빠르고 정확하게 검색할 수 있게 해주는 도구로, 개발자들이 코드를 관리하고 찾을 때 유용합니다.",
+      "category_v1": "ai-생산성"
     },
     {
       "id": "chrisryugj/kordoc",
@@ -2449,7 +2591,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-문서",
+      "category": "문서·데이터",
       "tags": [
         "한국어",
         "mcp",
@@ -2462,7 +2604,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v4.2.8",
-      "desc_ko": "이 프로젝트는 여러 문서 파일 형식(HWP, PDF, 엑셀, 워드 등)을 마크다운 형식으로 바꾸는 도구로, 명령어 입력 방식과 마인크래프트 서버에서 사용할 수 있다. 문서 파일을 쉽게 변환하여 사용할 수 있는 도구로 유용하다."
+      "desc_ko": "이 프로젝트는 여러 문서 파일 형식(HWP, PDF, 엑셀, 워드 등)을 마크다운 형식으로 바꾸는 도구로, 명령어 입력 방식과 마인크래프트 서버에서 사용할 수 있다. 문서 파일을 쉽게 변환하여 사용할 수 있는 도구로 유용하다.",
+      "category_v1": "ai-문서"
     },
     {
       "id": "public-apis/public-apis",
@@ -2475,7 +2618,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "api리소스",
+      "category": "개발도구",
       "tags": [],
       "confidence": 0.95,
       "classified_by": "rule",
@@ -2483,7 +2626,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 프로젝트는 무료로 사용할 수 있는 다양한 API를 모아둔 목록입니다. 개발자들이 자신의 프로젝트에서 사용할 수 있는 무료 API를 쉽게 찾을 수 있도록 도와줍니다."
+      "desc_ko": "이 프로젝트는 무료로 사용할 수 있는 다양한 API를 모아둔 목록입니다. 개발자들이 자신의 프로젝트에서 사용할 수 있는 무료 API를 쉽게 찾을 수 있도록 도와줍니다.",
+      "category_v1": "api리소스"
     },
     {
       "id": "allenwriter/doubao-image-and-video-generator",
@@ -2496,7 +2640,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-이미지",
+      "category": "미디어 생성",
       "tags": [
         "비디오",
         "기타ai",
@@ -2508,7 +2652,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": "설명 없음. 이름 기반 분류",
-      "desc_ko": "이 프로젝트는 인공지능을 이용하여 자동으로 이미지와 비디오를 생성해 주는 도구입니다. 이 도구를 사용하면 텍스트를 입력하면 그에 맞는 이미지를 생성할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능을 이용하여 자동으로 이미지와 비디오를 생성해 주는 도구입니다. 이 도구를 사용하면 텍스트를 입력하면 그에 맞는 이미지를 생성할 수 있습니다.",
+      "category_v1": "ai-이미지"
     },
     {
       "id": "microsoft/vibevoice",
@@ -2521,7 +2666,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-음성",
+      "category": "미디어 생성",
       "tags": [
         "오픈소스"
       ],
@@ -2531,7 +2676,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 프로젝트는 사람의 목소리를 인식하고 처리하는 인공지능 기술을 개발하는 것입니다. 이 기술은 다양한 음성 관련 서비스나 애플리케이션에서 사용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 사람의 목소리를 인식하고 처리하는 인공지능 기술을 개발하는 것입니다. 이 기술은 다양한 음성 관련 서비스나 애플리케이션에서 사용할 수 있습니다.",
+      "category_v1": "ai-음성"
     },
     {
       "id": "d4vinci/scrapling",
@@ -2544,7 +2690,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "스크래핑",
+      "category": "리서치·수집",
       "tags": [
         "프레임워크"
       ],
@@ -2555,7 +2701,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.4.11",
-      "desc_ko": "이 프로젝트는 웹사이트의 정보를 수집할 때 쓸 수 있는 도구로, 한 번에 하나씩 요청하는 것부터 대규모 데이터 수집까지 자동으로 처리해주는 프레임워크입니다. 웹사이트에서 필요한 데이터를 쉽게 수집할 수 있도록 도와줍니다."
+      "desc_ko": "이 프로젝트는 웹사이트의 정보를 수집할 때 쓸 수 있는 도구로, 한 번에 하나씩 요청하는 것부터 대규모 데이터 수집까지 자동으로 처리해주는 프레임워크입니다. 웹사이트에서 필요한 데이터를 쉽게 수집할 수 있도록 도와줍니다.",
+      "category_v1": "스크래핑"
     },
     {
       "id": "fivetaku/insane-search",
@@ -2568,10 +2715,11 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "cc-스킬",
+      "category": "리서치·수집",
       "tags": [
         "검색",
-        "차단우회"
+        "차단우회",
+        "cc"
       ],
       "confidence": 0.75,
       "classified_by": "rule",
@@ -2580,7 +2728,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.12.1",
-      "desc_ko": "이 프로젝트는 인터넷에서 특정 웹사이트에 접근할 때 발생하는 차단을 우회하여 접근할 수 있게 도와주는 툴입니다. 이 툴을 사용하면 특정 웹사이트에 접근할 때 발생하는 제한을 피할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인터넷에서 특정 웹사이트에 접근할 때 발생하는 차단을 우회하여 접근할 수 있게 도와주는 툴입니다. 이 툴을 사용하면 특정 웹사이트에 접근할 때 발생하는 제한을 피할 수 있습니다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "jamiepine/voicebox",
@@ -2593,7 +2742,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-음성",
+      "category": "미디어 생성",
       "tags": [
         "보이스클로닝",
         "오픈소스"
@@ -2605,7 +2754,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.5.0",
-      "desc_ko": "이 프로젝트는 사람의 목소리를 컴퓨터가 따라할 수 있게 해주는 오픈소스 음성 스튜디오로, 사람의 목소리를 복사하거나 새로운 목소리를 만들 수 있다. 이 기술은 다양한 곳에서 활용될 수 있다."
+      "desc_ko": "이 프로젝트는 사람의 목소리를 컴퓨터가 따라할 수 있게 해주는 오픈소스 음성 스튜디오로, 사람의 목소리를 복사하거나 새로운 목소리를 만들 수 있다. 이 기술은 다양한 곳에서 활용될 수 있다.",
+      "category_v1": "ai-음성"
     },
     {
       "id": "epoko77-ai/im-not-ai",
@@ -2618,7 +2768,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-텍스트",
+      "category": "글쓰기·카피",
       "tags": [
         "한국어",
         "claude-code-skill",
@@ -2631,7 +2781,8 @@
       "added_by": "migration",
       "notes": "설명에 \"스킬\" 명시 — Claude Code skill 가능성",
       "last_release": "v2.3.0",
-      "desc_ko": "이 프로젝트는 인공지능이 쓴 글이 아닌 것처럼 보이게 해주는 기술을 제공한다. 이는 기존의 인공지능 생성 글을 더 자연스럽고 인간다운 글로 바꿔주는 역할을 한다."
+      "desc_ko": "이 프로젝트는 인공지능이 쓴 글이 아닌 것처럼 보이게 해주는 기술을 제공한다. 이는 기존의 인공지능 생성 글을 더 자연스럽고 인간다운 글로 바꿔주는 역할을 한다.",
+      "category_v1": "ai-텍스트"
     },
     {
       "id": "rangizingo/cc-cache-fix",
@@ -2644,9 +2795,10 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "cc-저장소",
+      "category": "클로드코드 운영",
       "tags": [
-        "캐시"
+        "캐시",
+        "cc"
       ],
       "confidence": 0.55,
       "classified_by": "rule",
@@ -2654,7 +2806,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": "설명 없음. 이름 cc- 접두사 기반",
-      "desc_ko": "이 프로젝트는 캐시 관련 오류를 수정하는 코드를 제공하며, 캐시가 제대로 작동하지 않는 문제를 해결하는 데 도움이 됩니다. 주로 캐시 관련 문제가 있는 시스템이나 애플리케이션에서 사용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 캐시 관련 오류를 수정하는 코드를 제공하며, 캐시가 제대로 작동하지 않는 문제를 해결하는 데 도움이 됩니다. 주로 캐시 관련 문제가 있는 시스템이나 애플리케이션에서 사용할 수 있습니다.",
+      "category_v1": "cc-저장소"
     },
     {
       "id": "jjoa68/claude-token-diet",
@@ -2667,9 +2820,10 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "cc-스킬",
+      "category": "클로드코드 운영",
       "tags": [
-        "토큰분석"
+        "토큰분석",
+        "cc"
       ],
       "confidence": 0.85,
       "classified_by": "rule",
@@ -2677,7 +2831,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능이 너무 많은 자원을 사용하는 문제를 해결하는 방법을 제공하며, 개발자들이 코드를 효율적으로 개선하는 데 도움이 됩니다. 이 프로젝트는 Claude Code 토큰을 분석하여 불필요한 자원 사용을 줄이는 데 사용할 수 있습니다."
+      "desc_ko": "이 프로젝트는 인공지능이 너무 많은 자원을 사용하는 문제를 해결하는 방법을 제공하며, 개발자들이 코드를 효율적으로 개선하는 데 도움이 됩니다. 이 프로젝트는 Claude Code 토큰을 분석하여 불필요한 자원 사용을 줄이는 데 사용할 수 있습니다.",
+      "category_v1": "cc-스킬"
     },
     {
       "id": "microsoft/trellis.2",
@@ -2690,7 +2845,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-3d",
+      "category": "미디어 생성",
       "tags": [
         "오픈소스"
       ],
@@ -2700,7 +2855,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 프로젝트는 컴퓨터 그래픽스에서 3차원 물체를 만들기 위한 기술을 제공한다. 이 기술은 3차원 물체의 구조를 효율적으로 표현하여, 컴퓨터 그래픽스나 게임 개발에서 유용하게 사용될 수 있다."
+      "desc_ko": "이 프로젝트는 컴퓨터 그래픽스에서 3차원 물체를 만들기 위한 기술을 제공한다. 이 기술은 3차원 물체의 구조를 효율적으로 표현하여, 컴퓨터 그래픽스나 게임 개발에서 유용하게 사용될 수 있다.",
+      "category_v1": "ai-3d"
     },
     {
       "id": "chrisryugj/korean-law-mcp",
@@ -2713,7 +2869,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "mcp",
+      "category": "리서치·수집",
       "tags": [
         "한국어",
         "법령",
@@ -2726,7 +2882,8 @@
       "added_by": "migration",
       "notes": null,
       "desc_ko": "이 프로젝트는 법률 관련 정보를 쉽게 찾고 분석할 수 있는 도구를 제공하며, 특히 인공지능을 이용해 법령, 판례, 조례, 조약 등을 검색하고 분석하는 기능을 가지고 있다. 법률 전문가나 학생들이 법률 정보를 효율적으로 이용할 수 있도록 도와준다.",
-      "last_release": "v4.8.0"
+      "last_release": "v4.8.0",
+      "category_v1": "mcp"
     },
     {
       "id": "ultraworkers/claw-code",
@@ -2739,7 +2896,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "기타ai",
+      "category": "에이전트·자동화",
       "tags": [
         "codex",
         "rust"
@@ -2750,7 +2907,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 저장소는 Rust 프로그래밍 언어와 oh-my-codex 라이브러리를 사용하여 만들어진 프로젝트로, 빠른 속도로 많은 사람들의 관심을 받은 저장소입니다. 이 저장소는 특정한 주제나 목적에 대한 코드를 포함하고 있습니다."
+      "desc_ko": "이 저장소는 Rust 프로그래밍 언어와 oh-my-codex 라이브러리를 사용하여 만들어진 프로젝트로, 빠른 속도로 많은 사람들의 관심을 받은 저장소입니다. 이 저장소는 특정한 주제나 목적에 대한 코드를 포함하고 있습니다.",
+      "category_v1": "기타ai"
     },
     {
       "id": "microsoft/markitdown",
@@ -2763,7 +2921,7 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "ai-문서",
+      "category": "문서·데이터",
       "tags": [
         "변환",
         "오피스"
@@ -2775,7 +2933,8 @@
       "added_by": "migration",
       "notes": null,
       "last_release": "v0.1.6",
-      "desc_ko": "이 프로젝트는 문서 파일을 마크다운 형식으로 바꾸어 주는 도구로, 문서 작업을 쉽게 해주는 파이썬 프로그램입니다. 문서 작업을 쉽게 하거나 문서를 다른 형식으로 변환해야 하는 경우에 유용합니다."
+      "desc_ko": "이 프로젝트는 문서 파일을 마크다운 형식으로 바꾸어 주는 도구로, 문서 작업을 쉽게 해주는 파이썬 프로그램입니다. 문서 작업을 쉽게 하거나 문서를 다른 형식으로 변환해야 하는 경우에 유용합니다.",
+      "category_v1": "ai-문서"
     },
     {
       "id": "wjb127/codex-image",
@@ -2788,12 +2947,13 @@
       "topics": [],
       "license": null,
       "archived": false,
-      "category": "cc-스킬",
+      "category": "미디어 생성",
       "tags": [
         "기타ai",
         "이미지",
         "codex",
-        "한국어"
+        "한국어",
+        "cc"
       ],
       "confidence": 0.6,
       "classified_by": "rule",
@@ -2801,7 +2961,8 @@
       "stars_updated_at": "2026-07-26T00:00:57.310Z",
       "added_by": "migration",
       "notes": null,
-      "desc_ko": "이 프로젝트는 인공지능을 이용해 그림을 만들어내는 도구로, 사용자가 원하는 이미지를 만들 수 있는 코드를 제공한다. 이 도구는 Claude Code라는 인공지능 기술을 사용하여 사용자의 입력을 받아서 이미지를 생성한다."
+      "desc_ko": "이 프로젝트는 인공지능을 이용해 그림을 만들어내는 도구로, 사용자가 원하는 이미지를 만들 수 있는 코드를 제공한다. 이 도구는 Claude Code라는 인공지능 기술을 사용하여 사용자의 입력을 받아서 이미지를 생성한다.",
+      "category_v1": "cc-스킬"
     }
   ]
 }

@@ -267,6 +267,16 @@ a {
   justify-content: center;
 }
 
+/* v3.33: 칩 줄 화면 상단 고정 — 스크롤 내려가도 카테고리 즉시 전환 */
+.filter-section {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  padding: 10px 0 12px;
+  box-shadow: 0 8px 16px -12px rgba(22, 25, 31, 0.18);
+}
+
 .chip {
   display: inline-flex;
   align-items: center;

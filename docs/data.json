@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-30T09:25:25.646Z",
+  "updated_at": "2026-07-30T16:47:13.923Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "ericosiu/ai-marketing-skills",
+      "owner": "ericosiu",
+      "name": "ai-marketing-skills",
+      "url": "https://github.com/ericosiu/ai-marketing-skills",
+      "description": "Open-source AI marketing skills — growth experiments, sales pipeline, content ops, outbound, SEO, and finance automation",
+      "language": "Python",
+      "stars": 3179,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-07-30T16:47:13.923Z",
+      "stars_updated_at": "2026-07-30T16:47:13.923Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 마케팅 업무를 자동화하고 최적화하는 데 사용할 수 있는 인공지능(AI) 기술을 제공한다. 마케팅 성장 실험, 판매 파이프라인, 콘텐츠 운영, 아웃바운드, SEO, 재무 자동화 등 다양한 마케팅 업무를 지원한다."
+    },
     {
       "id": "fivetaku/insane-research",
       "owner": "fivetaku",

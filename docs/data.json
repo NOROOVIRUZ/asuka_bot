@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-01T00:11:26.117Z",
+  "updated_at": "2026-08-01T00:17:20.317Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "virgiliojr94/book-to-skill",
+      "owner": "virgiliojr94",
+      "name": "book-to-skill",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+      "language": "Python",
+      "stars": 14282,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-01T00:17:20.317Z",
+      "stars_updated_at": "2026-08-01T00:17:20.317Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 기술서를 PDF 형식에서 Claude Code 스킬로 변환해주는데, 이는 공부, 참조, 작업 중 사용하기 쉽게 만들어준다. 기술서를 더 쉽게 활용할 수 있게 해주는 도구라고 보면 된다."
+    },
     {
       "id": "virattt/ai-hedge-fund",
       "owner": "virattt",

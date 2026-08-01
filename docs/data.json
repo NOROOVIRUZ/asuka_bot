@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-01T00:17:20.317Z",
+  "updated_at": "2026-08-01T13:31:58.967Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -3067,6 +3067,26 @@
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능을 이용해 그림을 만들어내는 도구로, 사용자가 원하는 이미지를 만들 수 있는 코드를 제공한다. 이 도구는 Claude Code라는 인공지능 기술을 사용하여 사용자의 입력을 받아서 이미지를 생성한다.",
       "category_v1": "cc-스킬"
+    },
+    {
+      "id": "JungHoonGhae/smartstore-cli",
+      "owner": "JungHoonGhae",
+      "name": "smartstore-cli",
+      "url": "https://github.com/JungHoonGhae/smartstore-cli",
+      "description": "Naver Smart Store (스마트스토어) CLI for seller center data access",
+      "language": "Go",
+      "stars": 23,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "리서치·수집",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "asuka",
+      "saved_at": "2026-08-01T13:31:58.967Z",
+      "stars_updated_at": "2026-08-01T13:31:58.967Z",
+      "added_by": "asuka",
+      "notes": "스마트스토어 셀러센터 판매 데이터 자동수집 후보 — 원영 발굴 (2026-08-01)"
     }
   ]
 }

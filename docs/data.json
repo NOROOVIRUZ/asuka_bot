@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-07-31T15:06:08.911Z",
+  "updated_at": "2026-08-01T00:11:26.117Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "virattt/ai-hedge-fund",
+      "owner": "virattt",
+      "name": "ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "description": "An AI Hedge Fund Team",
+      "language": "Python",
+      "stars": 62545,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-08-01T00:11:26.117Z",
+      "stars_updated_at": "2026-08-01T00:11:26.117Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능을 사용하여 투자 결정을 내리는 헤지펀드 팀을 위한 플랫폼을 제공한다. 이 시스템은 데이터를 분석하고 투자 전략을 자동으로 생성하여 투자자에게 도움을 줄 수 있다."
+    },
     {
       "id": "graphify-labs/graphify",
       "owner": "Graphify-Labs",

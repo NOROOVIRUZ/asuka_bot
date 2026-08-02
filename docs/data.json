@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-08-02T00:00:02.579Z",
+  "updated_at": "2026-08-02T14:42:59.940Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "wassgha/rescript",
+      "owner": "wassgha",
+      "name": "rescript",
+      "url": "https://github.com/wassgha/rescript",
+      "description": "🎬 Open source, transcript-based video/audio editor that lives in the browser.",
+      "language": "TypeScript",
+      "stars": 544,
+      "topics": [
+        "audio",
+        "media",
+        "media-editing",
+        "media-editor",
+        "transcribe",
+        "transcription",
+        "video",
+        "video-editing",
+        "video-editor",
+        "video-processing"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-02T14:42:59.940Z",
+      "stars_updated_at": "2026-08-02T14:42:59.940Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인터넷 브라우저에서 동영상과 오디오 파일을 편집할 수 있는 무료 편집기입니다. 이 편집기는 원본 파일의 대본을 기반으로 편집을 하므로, 사용자가 원하는 부분을 쉽게 찾고 편집할 수 있습니다."
+    },
     {
       "id": "virgiliojr94/book-to-skill",
       "owner": "virgiliojr94",

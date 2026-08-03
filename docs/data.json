@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-02T14:42:59.940Z",
+  "updated_at": "2026-08-03T08:03:45.220Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "1mm-module/pngal",
+      "owner": "1mm-module",
+      "name": "PNGAL",
+      "url": "https://github.com/1mm-module/PNGAL",
+      "description": "",
+      "language": "Python",
+      "stars": 151,
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-08-03T08:03:45.220Z",
+      "stars_updated_at": "2026-08-03T08:03:45.220Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 PNG 이미지 파일을 다루는 라이브러리입니다. PNG 파일을 쉽게 생성, 편집, 변환할 수 있는 도구를 제공합니다."
+    },
     {
       "id": "wassgha/rescript",
       "owner": "wassgha",

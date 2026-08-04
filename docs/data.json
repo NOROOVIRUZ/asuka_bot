@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-08-04T13:27:32.991Z",
+  "updated_at": "2026-08-04T14:49:42.919Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "genspark-ai/genoffice",
+      "owner": "genspark-ai",
+      "name": "genoffice",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "description": "An AI-native office suite for macOS and Windows: word processor, spreadsheet, presentations, and PDF.",
+      "language": "TypeScript",
+      "stars": 1126,
+      "topics": [
+        "ai",
+        "docx",
+        "electron",
+        "office-suite",
+        "pdf",
+        "pptx",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-문서",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-08-04T14:49:42.919Z",
+      "stars_updated_at": "2026-08-04T14:49:42.919Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 기술을 이용하여 문서 편집, 스프레드시트, 프레젠테이션, PDF 파일을 편집할 수 있는 사무 프로그램을 만드는 것입니다. macOS와 Windows에서 사용할 수 있는 사무 프로그램입니다."
+    },
     {
       "id": "nutlope/logocreator",
       "owner": "Nutlope",

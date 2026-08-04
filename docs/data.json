@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-04T01:12:38.012Z",
+  "updated_at": "2026-08-04T13:27:32.991Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nutlope/logocreator",
+      "owner": "Nutlope",
+      "name": "logocreator",
+      "url": "https://github.com/Nutlope/logocreator",
+      "description": "A free + OSS logo generator powered by Flux on Together AI",
+      "language": "TypeScript",
+      "stars": 7321,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-08-04T13:27:32.991Z",
+      "stars_updated_at": "2026-08-04T13:27:32.991Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "로고를 자동으로 만들어주는 무료 소프트웨어로, 사용자가 원하는 로고를 쉽게 만들 수 있다. Together AI의 Flux 기술을 사용하여 로고를 생성한다."
+    },
     {
       "id": "kimlawtech/korean-privacy-terms",
       "owner": "kimlawtech",

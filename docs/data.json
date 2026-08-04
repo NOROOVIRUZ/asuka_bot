@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-08-03T23:50:21.155Z",
+  "updated_at": "2026-08-04T01:12:38.012Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "kimlawtech/korean-privacy-terms",
+      "owner": "kimlawtech",
+      "name": "korean-privacy-terms",
+      "url": "https://github.com/kimlawtech/korean-privacy-terms",
+      "description": "한국 법령 기반 개인정보처리방침·이용약관 자동 생성 Claude Code 스킬. 2025.4.21 작성지침 및 2026.3 개정 법령 반영.",
+      "language": "Go Template",
+      "stars": 321,
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-skill",
+        "korean-law",
+        "legal-tech",
+        "mdx",
+        "nextjs",
+        "privacy-policy",
+        "shadcn-ui",
+        "tailwindcss",
+        "terms-of-service"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "한국어",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-04T01:12:38.012Z",
+      "stars_updated_at": "2026-08-04T01:12:38.012Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 한국 법령을 바탕으로 개인정보 처리방침과 이용약관을 자동으로 만들어 주는 코드입니다. 이는 법률 관련 기술을 지원하는 도구로, 2025년과 2026년 법령 개정 내용을 반영하여 최신 한국 법령을 준수하는 문서를 생성할 수 있습니다."
+    },
     {
       "id": "iofficeai/officecli",
       "owner": "iOfficeAI",

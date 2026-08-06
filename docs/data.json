@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-08-04T14:49:42.919Z",
+  "updated_at": "2026-08-06T14:33:16.452Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "tencentcloud/tencentdb-agent-memory",
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "language": "TypeScript",
+      "stars": 15888,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "embedding",
+        "llm",
+        "local-first",
+        "long-term-memory",
+        "memory",
+        "openclaw-plugin",
+        "vector-search"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-06T14:33:16.452Z",
+      "stars_updated_at": "2026-08-06T14:33:16.452Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능聊天 프로그램들이 사용하는 공유 메모리 저장소를 구축하는 것이며, 여러聊天 기록, 문서, 코드들을 하나의 메모리 자산으로 변환하여 프로그램들끼리 공유하고 관리할 수 있게 해준다. 이를 통해 인공지능聊天 프로그램들이 서로의 지식을 공유하고, 재사용할 수 있게 해준다."
+    },
     {
       "id": "genspark-ai/genoffice",
       "owner": "genspark-ai",

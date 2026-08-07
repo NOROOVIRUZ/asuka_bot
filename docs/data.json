@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T15:11:18.191Z",
+  "updated_at": "2026-08-07T15:11:53.527Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Thirteen editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+      "language": "HTML",
+      "stars": 3300,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:11:53.527Z",
+      "stars_updated_at": "2026-08-07T15:11:53.527Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 Claude Code에서 사용할 수 있는 13가지 종류의 편집용 도형을 제공하며, HTML과 SVG 파일로 구성되어 있어 쉽게 사용할 수 있다. 이 도형들은 그림자나 불필요한 요소가 없이 깔끔하게 설계되어 있다."
+    },
     {
       "id": "cloudflare/vibesdk",
       "owner": "cloudflare",

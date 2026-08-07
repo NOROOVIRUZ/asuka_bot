@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T15:12:45.260Z",
+  "updated_at": "2026-08-07T15:14:29.312Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nutlope/hallmark",
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": 22513,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:14:29.312Z",
+      "stars_updated_at": "2026-08-07T15:14:29.312Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 코드를 더 효율적이고 정확하게 작성할 수 있도록 도와주는 도구입니다. 코드 작성을 더 쉽고 빠르게 해주는 기능을 제공합니다."
+    },
     {
       "id": "lcnine/almondyoung-server",
       "owner": "LCNINE",

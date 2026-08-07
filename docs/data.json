@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T15:14:29.312Z",
+  "updated_at": "2026-08-07T15:58:54.570Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "tashfeenahmed/freellmapi",
+      "owner": "tashfeenahmed",
+      "name": "freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "description": "OpenAI-compatible proxy that stacks the free tiers of 28 LLM providers (~4B tokens/month) behind one /v1 endpoint — plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "language": "TypeScript",
+      "stars": 18006,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-api",
+      "tags": [],
+      "confidence": 0.35,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:58:54.570Z",
+      "stars_updated_at": "2026-08-07T15:58:54.570Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 여러 무료 인공지능 언어 모델을 하나의入口으로 묶어주는 프록시 서버로, 개인 실험용으로 사용할 수 있다. 28개의 무료 언어 모델을 하나의 주소로 묶어주므로, 여러 모델을 따로따로 호출할 필요가 없다."
+    },
     {
       "id": "nutlope/hallmark",
       "owner": "Nutlope",

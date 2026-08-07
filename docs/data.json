@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T15:11:53.527Z",
+  "updated_at": "2026-08-07T15:12:45.260Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lcnine/almondyoung-server",
+      "owner": "LCNINE",
+      "name": "almondyoung-server",
+      "url": "https://github.com/LCNINE/almondyoung-server",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 18,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:12:45.260Z",
+      "stars_updated_at": "2026-08-07T15:12:45.260Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 '알몽영'이라는 서버를 위한 코드를 담고 있으며, 주로 온라인 게임이나 네트워크 서비스를 위한 서버 구축에 사용될 수 있다. 서버는 클라이언트와 데이터를 주고받는 컴퓨터 시스템으로, 이 프로젝트는 이러한 서버를 만들기 위한 소스 코드를 제공한다."
+    },
     {
       "id": "cathrynlavery/diagram-design",
       "owner": "cathrynlavery",

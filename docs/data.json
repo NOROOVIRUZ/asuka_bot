@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-08-06T14:33:16.452Z",
+  "updated_at": "2026-08-07T15:04:32.812Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "codecrafters-io/build-your-own-x",
+      "owner": "codecrafters-io",
+      "name": "build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "language": "Markdown",
+      "stars": 537356,
+      "topics": [
+        "awesome-list",
+        "free",
+        "programming",
+        "tutorial-code",
+        "tutorial-exercises",
+        "tutorials"
+      ],
+      "license": null,
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.7,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:04:32.812Z",
+      "stars_updated_at": "2026-08-07T15:04:32.812Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 좋아하는 기술이나 프로그램을 직접 만들어보면서 프로그래밍 실력을 키울 수 있는 튜토리얼과 연습 문제를 제공합니다. 직접 만들어보면서 프로그래밍을 배울 수 있는 좋은 자료입니다."
+    },
     {
       "id": "tencentcloud/tencentdb-agent-memory",
       "owner": "TencentCloud",

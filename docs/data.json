@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T15:04:32.812Z",
+  "updated_at": "2026-08-07T15:11:18.191Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "cloudflare/vibesdk",
+      "owner": "cloudflare",
+      "name": "vibesdk",
+      "url": "https://github.com/cloudflare/vibesdk",
+      "description": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack ",
+      "language": "TypeScript",
+      "stars": 5239,
+      "topics": [
+        "ai",
+        "cloudflare-workers",
+        "coding-agent",
+        "durable-objects",
+        "text-to-app",
+        "vibe-coding"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-api",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-07T15:11:18.191Z",
+      "stars_updated_at": "2026-08-07T15:11:18.191Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 클라우드플레어 기술을 이용하여 개인용 코드 생성 플랫폼을 만들 수 있는 오픈소스 플랫폼입니다. 이 플랫폼은 인공지능을 활용하여 텍스트를 코드로 변환하는 기능을 제공합니다."
+    },
     {
       "id": "codecrafters-io/build-your-own-x",
       "owner": "codecrafters-io",

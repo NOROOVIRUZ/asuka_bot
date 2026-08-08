@@ -1,6 +1,15 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.4 — 2026-08-08
+
+- 설치상태 추적 기능 신설 — data.json에 `status` 필드("설치"/"대기"/"탈락") 추가, 콤보 부품 프로젝트 실적 기준 14개 심기 (설치 10: hallmark·officecli·book-to-skill·graphify·ai-marketing-skills·insane-research·insane-search·img2threejs·oh-my-design·kordoc / 대기 1: smartstore-cli(TOS 승인 대기) / 탈락 3: tencentdb-agent-memory·scroll-world·airi)
+- 카드에 설치상태 뱃지 표시 (카테고리 필 안 구분선 형식, 상태별 색상)
+- 설치상태 필터 칩 줄 추가 (카테고리 칩 아래, 재클릭 시 해제, 전체 기준 카운트) — 검색어로도 "설치/대기/탈락" 검색 가능
+- 프롬프트 모드에서는 상태 칩 숨김 처리
+- 버전 표기·캐시 버스터 v3.34 → v3.4 동기화 (styles.css / app.js 쿼리스트링 포함)
+- 봇(워커)은 기존 항목 제자리 수정 방식이라 status 필드 보존 확인 완료 — 워커 재배포 불필요
+
 ## v3.34 — 2026-07-30
 
 - 검색엔진 색인 차단(noindex 메타) 적용 — docs/index.html `<head>` 최상단에 `<meta name="robots" content="noindex, nofollow">` 삽입 (구글·네이버 등 검색 노출 방지, robots.txt 방식은 noindex 미전달 문제로 미사용)

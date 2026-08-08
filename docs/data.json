@@ -47,7 +47,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "Claude Code·Cursor·Codex용 안티 AI-slop 디자인 스킬 — AI 티 나는 기본값 디자인(그라데이션·이모지 남발 등)을 걷어내고 완성도 있는 UI로 다듬는다.",
-      "category_v1": "cc-저장소"
+      "category_v1": "cc-저장소",
+      "status": "설치"
     },
     {
       "id": "lcnine/almondyoung-server",
@@ -183,7 +184,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "AI 에이전트들이 공유하는 장기 메모리 저장소 — 채팅 기록·문서·코드를 하나의 메모리 자산으로 변환해 에이전트끼리 공유·관리한다. 로컬 우선, 벡터 검색 내장.",
-      "category_v1": "ai-생산성"
+      "category_v1": "ai-생산성",
+      "status": "탈락"
     },
     {
       "id": "genspark-ai/genoffice",
@@ -310,7 +312,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "AI 에이전트가 워드·엑셀·PPT를 읽고 편집·자동화하는 CLI — MS오피스 설치 불필요, Claude Code 등 에이전트에서 무료 사용.",
-      "category_v1": "ai-생산성"
+      "category_v1": "ai-생산성",
+      "status": "설치"
     },
     {
       "id": "1mm-module/pngal",
@@ -390,7 +393,8 @@
       "notes": null,
       "desc_ko": "기술서 PDF를 Claude Code 스킬로 변환 — 책 내용을 공부·참조·작업 중 바로 쓸 수 있는 스킬로 만든다.",
       "last_release": "v1.3.0",
-      "category_v1": "cc-스킬"
+      "category_v1": "cc-스킬",
+      "status": "설치"
     },
     {
       "id": "virattt/ai-hedge-fund",
@@ -458,7 +462,8 @@
       "notes": null,
       "desc_ko": "코드베이스·문서를 지식 그래프로 변환해 grep 대신 그래프 질의로 탐색 — tree-sitter AST 기반, Claude Code 등 에이전트 연동.",
       "last_release": "v0.9.32",
-      "category_v1": "cc-저장소"
+      "category_v1": "cc-저장소",
+      "status": "설치"
     },
     {
       "id": "ericosiu/ai-marketing-skills",
@@ -482,7 +487,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "마케팅 업무 자동화 AI 스킬 모음 — 성장 실험·세일즈 파이프라인·콘텐츠 운영·아웃바운드·SEO·재무 자동화.",
-      "category_v1": "cc-스킬"
+      "category_v1": "cc-스킬",
+      "status": "설치"
     },
     {
       "id": "fivetaku/insane-research",
@@ -507,7 +513,8 @@
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능을 여러 대가 함께 일할 수 있도록 해주는 연구를 위한 도구를 만들었습니다. 이 도구는 여러 대의 인공지능이 함께 작업할 때 더 나은 성과를 내도록 도와줍니다.",
       "category_v1": "cc-저장소",
-      "last_release": "v2.8.2"
+      "last_release": "v2.8.2",
+      "status": "설치"
     },
     {
       "id": "tinyhumansai/openhuman",
@@ -678,7 +685,8 @@
       "notes": null,
       "desc_ko": "이 프로젝트는 가상 인공지능 친구를 만들 수 있는 도구로, 실시간으로 음성 채팅이나 게임을 함께 할 수 있으며, 웹, 맥, 윈도우에서 사용할 수 있다. 이 친구는 사용자가 직접 만들고 소유할 수 있는 가상 인물로, 다양한 활동을 함께 즐길 수 있다.",
       "category_v1": "ai-음성",
-      "last_release": "v0.11.3"
+      "last_release": "v0.11.3",
+      "status": "탈락"
     },
     {
       "id": "affaan-m/ecc",
@@ -748,7 +756,8 @@
       "notes": null,
       "desc_ko": "이 프로젝트는 사진 속 물체를 3차원으로 바꾸고, 컴퓨터 그래픽스에서 사용할 수 있는 코드로 만드는 도구입니다. 이 도구를 사용하면 사진 속 물체를 3차원으로 재구성하여 애니메이션에도 쓸 수 있습니다.",
       "category_v1": "cc-저장소",
-      "last_release": "v1.4.3"
+      "last_release": "v1.4.3",
+      "status": "설치"
     },
     {
       "id": "bitjaru/styleseed",
@@ -1003,7 +1012,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능 코딩 도구에 디자인 시스템을 제공하는 것으로, 단 하나의 명령어로 400개 이상의 회사 디자인 가이드를 설치해준다. 이 프로젝트를 사용하면 인공지능 코딩 도구가 더 일관된 디자인을 생성할 수 있다.",
-      "category_v1": "디자인"
+      "category_v1": "디자인",
+      "status": "설치"
     },
     {
       "id": "dqev/reicon",
@@ -1097,7 +1107,8 @@
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 어떤 브랜드를 3차원으로 볼 수 있게 해주며, 그 안을 스크롤하면서 탐험할 수 있게 해주는 기술입니다. 이 기술을 사용하면 브랜드의 제품이나 서비스를 더 생동감 있게 소개할 수 있습니다.",
-      "category_v1": "ai-3d"
+      "category_v1": "ai-3d",
+      "status": "탈락"
     },
     {
       "id": "robbyant/lingbot-map",
@@ -3097,7 +3108,8 @@
       "notes": null,
       "last_release": "v4.4.0",
       "desc_ko": "이 프로젝트는 여러 문서 파일 형식(HWP, PDF, 엑셀, 워드 등)을 마크다운 형식으로 바꾸는 도구로, 명령어 입력 방식과 마인크래프트 서버에서 사용할 수 있다. 문서 파일을 쉽게 변환하여 사용할 수 있는 도구로 유용하다.",
-      "category_v1": "ai-문서"
+      "category_v1": "ai-문서",
+      "status": "설치"
     },
     {
       "id": "public-apis/public-apis",
@@ -3221,7 +3233,8 @@
       "notes": null,
       "last_release": "v0.13.0",
       "desc_ko": "이 프로젝트는 인터넷에서 특정 웹사이트에 접근할 때 발생하는 차단을 우회하여 접근할 수 있게 도와주는 툴입니다. 이 툴을 사용하면 특정 웹사이트에 접근할 때 발생하는 제한을 피할 수 있습니다.",
-      "category_v1": "cc-스킬"
+      "category_v1": "cc-스킬",
+      "status": "설치"
     },
     {
       "id": "jamiepine/voicebox",
@@ -3475,7 +3488,8 @@
       "stars_updated_at": "2026-08-02T00:00:02.579Z",
       "added_by": "asuka",
       "notes": "스마트스토어 셀러센터 판매 데이터 자동수집 후보 — 원영 발굴 (2026-08-01)",
-      "last_release": "v0.1.0"
+      "last_release": "v0.1.0",
+      "status": "대기"
     }
   ]
 }

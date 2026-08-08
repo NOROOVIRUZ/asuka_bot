@@ -33,11 +33,18 @@ const CATEGORY_EMOJI = {
   '기타': '📦',
 };
 
+// v3.4: 설치상태 — data.json의 status 필드("설치"/"대기"/"탈락", 없으면 미표시)
+const STATUS_META = {
+  '설치': { emoji: '✅', label: '설치됨' },
+  '대기': { emoji: '⏳', label: '승인 대기' },
+  '탈락': { emoji: '🚫', label: '탈락' },
+};
+
 const state = {
   repos: [],
   categories: {},
   teams: { workspaces: {} },
-  filter: { search: '', category: 'all', workspace: 'all', favOnly: false },
+  filter: { search: '', category: 'all', workspace: 'all', favOnly: false, status: 'all' },
   sort: 'saved_desc',
   collapsed: {},
   mode: 'repos',
@@ -290,6 +297,7 @@ function applyFilter(repos, ignoreCategory = false) {
     if (state.filter.favOnly && !favs.has(r.id)) return false;
     if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
     if (!ignoreCategory && cat !== 'all' && r.category !== cat) return false;
+    if (state.filter.status !== 'all' && r.status !== state.filter.status) return false;
     if (!q) return true;
     const hay = [
       r.id,
@@ -301,6 +309,7 @@ function applyFilter(repos, ignoreCategory = false) {
       r.workspace || '',
       ...(r.tags || []),
       r.language || '',
+      r.status || '',
     ].join(' ').toLowerCase();
     return hay.includes(q);
   });
@@ -327,6 +336,10 @@ function applyFilter(repos, ignoreCategory = false) {
 
 function renderCardHtml(r) {
   const emoji = CATEGORY_EMOJI[r.category] || '📦';
+  const st = STATUS_META[r.status];
+  const statusBadge = st
+    ? `<span class="card-status st-${escapeHtml(r.status)}">${st.emoji} ${st.label}</span>`
+    : '';
   const tags = (r.tags || [])
     .slice(0, 5)
     .map(t => `<span class="card-tag">#${escapeHtml(t)}</span>`)
@@ -337,7 +350,7 @@ function renderCardHtml(r) {
   return `
     <article class="card" data-url="${escapeHtml(r.url)}">
       <div class="card-top">
-        <span class="card-category">${emoji} ${escapeHtml(r.category)}</span>
+        <span class="card-category">${emoji} ${escapeHtml(r.category)}${statusBadge}</span>
         <span class="card-top-right">
           <span class="card-stars">⭐ ${formatStars(r.stars)}</span>
           <button class="card-fav ${favs.has(r.id) ? 'active' : ''}" data-id="${escapeHtml(r.id)}" aria-label="즐겨찾기" aria-pressed="${favs.has(r.id)}">${favs.has(r.id) ? '★' : '☆'}</button>
@@ -442,6 +455,32 @@ function renderChips(repos) {
   });
 }
 
+// v3.4: 설치상태 칩 — 전체 저장소 기준 카운트, 재클릭 시 해제
+function renderStatusChips() {
+  const chipRow = document.getElementById('statusChips');
+  if (!chipRow) return;
+  const counts = {};
+  state.repos.forEach(r => {
+    if (r.status) counts[r.status] = (counts[r.status] || 0) + 1;
+  });
+  chipRow.innerHTML = Object.keys(STATUS_META)
+    .filter(k => counts[k])
+    .map(k => `
+      <button class="chip chip-status ${state.filter.status === k ? 'active' : ''}" data-status="${escapeHtml(k)}">
+        <span class="chip-emoji">${STATUS_META[k].emoji}</span>
+        <span>${STATUS_META[k].label}</span>
+        <span class="chip-count">${counts[k]}</span>
+      </button>
+    `)
+    .join('');
+  chipRow.querySelectorAll('.chip').forEach(el => {
+    el.addEventListener('click', () => {
+      state.filter.status = state.filter.status === el.dataset.status ? 'all' : el.dataset.status;
+      render();
+    });
+  });
+}
+
 // ===== Section Render =====
 
 function renderSections(filtered) {
@@ -540,12 +579,14 @@ function render() {
   if (state.mode === 'prompts') {
     document.getElementById('workspaceTabs').hidden = true;
     document.getElementById('sortSelect').closest('.sort-box').hidden = true;
+    document.getElementById('statusChips').hidden = true;
     renderPromptSections();
     return;
   }
 
   document.getElementById('workspaceTabs').hidden = false;
   document.getElementById('sortSelect').closest('.sort-box').hidden = false;
+  document.getElementById('statusChips').hidden = false;
 
   const wsFiltered = applyFilter(state.repos);
 
@@ -555,6 +596,9 @@ function render() {
   // 카테고리 칩 — 카테고리 필터는 무시하고 그린다 (v3.32: 칩은 항상 전 카테고리 유지,
   // 선택은 하이라이트만 → '전체' 안 거치고 칩끼리 바로바로 이동)
   renderChips(applyFilter(state.repos, true));
+
+  // 설치상태 칩 (v3.4)
+  renderStatusChips();
 
   // 카드 섹션
   renderSections(wsFiltered);

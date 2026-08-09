@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-09T00:00:27.460Z",
+  "updated_at": "2026-08-09T14:23:42.344Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "tygb99/claude-code-session-skills",
+      "owner": "Tygb99",
+      "name": "claude-code-session-skills",
+      "url": "https://github.com/Tygb99/claude-code-session-skills",
+      "description": "Claude Code 세션 스킬 3종 — 세션 간 핸드오프, 세션 이름→ID 조회(Claude·Codex·Aside), 세션 로그 이미지 복원",
+      "language": "Python",
+      "stars": 0,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-09T14:23:42.344Z",
+      "stars_updated_at": "2026-08-09T14:23:42.344Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 Claude Code라는 프로그램에서 세션을 관리하고 로그를 복원하는 기능을 제공하는 코드입니다. 이 기능을 사용하면 세션을 손쉽게 관리하고 로그를 복원할 수 있습니다."
+    },
     {
       "id": "tashfeenahmed/freellmapi",
       "owner": "tashfeenahmed",

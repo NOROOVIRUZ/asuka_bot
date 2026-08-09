@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-08-09T14:23:42.344Z",
+  "updated_at": "2026-08-09T22:11:19.651Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 85077,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-08-09T22:11:19.651Z",
+      "stars_updated_at": "2026-08-09T22:11:19.651Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "인공지능이 코드를 작성하는 데 도움이 되는 고급 기술을 제공하는 저장소로, 인공지능 코딩 에이전트의 능력을 향상시키는 데 사용된다."
+    },
     {
       "id": "tygb99/claude-code-session-skills",
       "owner": "Tygb99",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-10T11:42:27.940Z",
+  "updated_at": "2026-08-12T10:16:38.009Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "liamgvchi/gc-minimal-zine-poster",
+      "owner": "LiamGvchi",
+      "name": "gc-minimal-zine-poster",
+      "url": "https://github.com/LiamGvchi/gc-minimal-zine-poster",
+      "description": "Codex skill for generating quiet minimal zine-style editorial poster prompts and images.",
+      "language": null,
+      "stars": 5686,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-08-12T10:16:38.009Z",
+      "stars_updated_at": "2026-08-12T10:16:38.009Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 간단하고 조용한 스타일의 포스터를 자동으로 만들어주는 도구입니다. 포스터를 디자인할 때 아이디어가 필요하거나 간단하게 포스터를 만들고 싶을 때 유용합니다."
+    },
     {
       "id": "dohyun468/claw-hwp",
       "owner": "DoHyun468",

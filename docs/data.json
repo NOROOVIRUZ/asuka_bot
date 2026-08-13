@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T09:36:52.005Z",
+  "updated_at": "2026-08-13T12:49:20.151Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "changsol/dbspec",
+      "owner": "ChangSol",
+      "name": "dbspec",
+      "url": "https://github.com/ChangSol/dbspec",
+      "description": "DB 테이블 명세서 생성기",
+      "language": "Python",
+      "stars": 0,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-08-13T12:49:20.151Z",
+      "stars_updated_at": "2026-08-13T12:49:20.151Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 데이터베이스의 테이블 구조를 자동으로 문서화하여 쉽게 관리할 수 있게 해주는 도구입니다. 데이터베이스를 다루는 개발자들이 데이터베이스의 구조를 명확하게 파악하고 관리하기 위해 유용합니다."
+    },
     {
       "id": "primeintellect-ai/prime-agent",
       "owner": "PrimeIntellect-ai",

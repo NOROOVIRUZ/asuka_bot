@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T23:12:22.874Z",
+  "updated_at": "2026-08-13T09:09:57.383Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "guillaumemeyer/watermarks-remover",
+      "owner": "guillaumemeyer",
+      "name": "watermarks-remover",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "description": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+      "language": "Python",
+      "stars": 3458,
+      "topics": [
+        "agent-skill",
+        "ai",
+        "c2pa",
+        "claude",
+        "provenance",
+        "synthid",
+        "watermark"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-텍스트",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-08-13T09:09:57.383Z",
+      "stars_updated_at": "2026-08-13T09:09:57.383Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능이 만들어낸 문서나 이미지에서 인공지능의 흔적을 지워주는 툴이다. 문서나 이미지에서 인공지능이 남긴 특정 표시나 정보를 제거하여 원본 파일을 깨끗하게 유지하도록 도와준다."
+    },
     {
       "id": "had0yun/cozyclay",
       "owner": "HaD0Yun",

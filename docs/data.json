@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T12:49:20.151Z",
+  "updated_at": "2026-08-13T15:55:37.483Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "rayventura/shortgpt",
+      "owner": "RayVentura",
+      "name": "ShortGPT",
+      "url": "https://github.com/RayVentura/ShortGPT",
+      "description": "🚀🎬 ShortGPT - Experimental AI framework for youtube shorts / tiktok channel automation",
+      "language": "Python",
+      "stars": 7805,
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "autonomous-agents",
+        "content",
+        "gpt-4",
+        "openai",
+        "python",
+        "video",
+        "video-editing"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-13T15:55:37.483Z",
+      "stars_updated_at": "2026-08-13T15:55:37.483Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 기술을 이용해 유튜브 쇼츠나 틱톡 채널을 자동으로 관리해주는 도구입니다. 예를 들어, 자동으로 비디오를 편집하거나 글을 쓰는 작업을 도와줍니다."
+    },
     {
       "id": "changsol/dbspec",
       "owner": "ChangSol",

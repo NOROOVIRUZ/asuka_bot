@@ -36,6 +36,10 @@ export default {
     if (req.method === 'OPTIONS') {
       return new Response(null, { headers: { 'Access-Control-Allow-Origin': '*' } });
     }
+    // 로컬 잡(주간 위키 리포트 등)이 이 봇 명의로 임의 텍스트를 쏘는 입구 — body가 그대로 메시지
+    if (req.method === 'POST' && url.pathname === '/api/notify') {
+      return handleNotifyApi(req, url, env);
+    }
     if (!url.pathname.startsWith('/webhook/')) {
       return new Response('asuka_bot online 🔴', { status: 200 });
     }
@@ -202,6 +206,18 @@ async function handleCallback(cq: any, tg: TelegramAPI, env: Env): Promise<void>
     console.error('callback error', e?.message || e);
     await tg.answerCallbackQuery(cq.id, '⚠️ 실패했어');
   }
+}
+
+async function handleNotifyApi(req: Request, url: URL, env: Env): Promise<Response> {
+  if (url.searchParams.get('secret') !== env.WEBHOOK_SECRET) {
+    return new Response('forbidden', { status: 401 });
+  }
+  if (await env.ALARM_KV.get('alarm_muted')) return new Response('muted', { status: 200 });
+  const text = (await req.text()).trim();
+  if (!text) return new Response('empty', { status: 400 });
+  // parseMode null — 임의 텍스트라 마크다운 파싱 실패 방지. 텔레그램 응답을 그대로 반환(조용한 실패 금지)
+  const r = await new TelegramAPI(env).sendMessage(ownerChatId(env), text.slice(0, 4000), { parseMode: null });
+  return new Response(await r.text(), { status: r.ok ? 200 : 502 });
 }
 
 async function handleDigestApi(url: URL, env: Env): Promise<Response> {

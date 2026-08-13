@@ -1,6 +1,13 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.5 — 2026-08-14
+
+- 봇 워커에 `POST /api/notify?secret=<WEBHOOK_SECRET>` 신설 — 로컬 잡이 @asuka_noroobot 명의로 임의 텍스트를 보낼 수 있는 입구. body 원문이 곧 메시지, 수신자는 ALLOWED_USER_IDS 첫 번째(노루군), `alarm_muted` KV 스위치 존중, parseMode 없이 전송(임의 텍스트 마크다운 파싱 실패 방지), 4000자 컷
+- 첫 소비자: asuka-wiki 주간 리포트(launchd 매주 일 21:00, `~/projects/asuka-wiki/_meta/weekly_report.sh`) — 위키 한 주 활동 요약을 이 봇으로 발송
+- 시크릿 신규 발급 없음(기존 WEBHOOK_SECRET 재사용), 검증: 실발송 http=200
+- 검색 키워드: /api/notify, 임의 메시지 발송, 위키 주간 리포트, wiki-weekly, launchd
+
 ## v3.4 — 2026-08-08
 
 - 설치상태 추적 기능 신설 — data.json에 `status` 필드("설치"/"대기"/"탈락") 추가, 콤보 부품 프로젝트 실적 기준 14개 심기 (설치 10: hallmark·officecli·book-to-skill·graphify·ai-marketing-skills·insane-research·insane-search·img2threejs·oh-my-design·kordoc / 대기 1: smartstore-cli(TOS 승인 대기) / 탈락 3: tencentdb-agent-memory·scroll-world·airi)

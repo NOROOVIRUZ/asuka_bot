@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T09:09:57.383Z",
+  "updated_at": "2026-08-13T09:36:52.005Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "primeintellect-ai/prime-agent",
+      "owner": "PrimeIntellect-ai",
+      "name": "prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "language": "TypeScript",
+      "stars": 15168,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-생산성",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-08-13T09:36:52.005Z",
+      "stars_updated_at": "2026-08-13T09:36:52.005Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 컴퓨터 프로그램을 자동으로 개선하고, 장시간 자동으로 작동하는 작업을 도와주는 인공지능 에이전트를 만드는 것입니다. 이 에이전트는 코드 작성과 같은 작업을 더 효율적으로 수행하도록 설계되었습니다."
+    },
     {
       "id": "guillaumemeyer/watermarks-remover",
       "owner": "guillaumemeyer",

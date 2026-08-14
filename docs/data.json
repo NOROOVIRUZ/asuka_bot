@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T15:55:37.483Z",
+  "updated_at": "2026-08-14T10:05:37.109Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "geeklee/srt-whiteboard-animation",
+      "owner": "geeklee",
+      "name": "srt-whiteboard-animation",
+      "url": "https://github.com/geeklee/srt-whiteboard-animation",
+      "description": "将 SRT 字幕做成暖米黄纸张底的流式笔迹白板手绘动画 skill：mask 分区遮罩编排 + stream 连续笔迹（ink→color）。",
+      "language": "Python",
+      "stars": 464,
+      "topics": [
+        "ai-skill",
+        "hand-drawn",
+        "opencv",
+        "python",
+        "srt",
+        "subtitle",
+        "whiteboard-animation"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "ai-비디오",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-08-14T10:05:37.109Z",
+      "stars_updated_at": "2026-08-14T10:05:37.109Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 자막을 따뜻한 노란 종이 위에 손으로 그린 듯한 애니메이션으로 만들어 주는 것입니다. 자막을 애니메이션으로 변환할 때, 마치 손으로 글씨를 쓰는 것처럼 보이게 만들어 줍니다."
+    },
     {
       "id": "rayventura/shortgpt",
       "owner": "RayVentura",

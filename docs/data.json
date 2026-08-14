@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-14T10:05:37.109Z",
+  "updated_at": "2026-08-14T12:58:39.441Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "smontlouis/bible-strong-avatar-lab",
+      "owner": "smontlouis",
+      "name": "bible-strong-avatar-lab",
+      "url": "https://github.com/smontlouis/bible-strong-avatar-lab",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 127,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.35,
+      "classified_by": "rule",
+      "saved_at": "2026-08-14T12:58:39.441Z",
+      "stars_updated_at": "2026-08-14T12:58:39.441Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 성경을 기반으로 하는 강력한 아바타를 생성하는 실험실입니다. 성경과 관련된 아바타나 캐릭터를 만들고자 하는 사람들에게 유용할 수 있습니다."
+    },
     {
       "id": "geeklee/srt-whiteboard-animation",
       "owner": "geeklee",

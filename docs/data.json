@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-16T00:00:03.519Z",
+  "updated_at": "2026-08-16T03:38:51.120Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "iwantanid/seochobatang-font",
+      "owner": "iwantanid",
+      "name": "SeochoBatang-Font",
+      "url": "https://github.com/iwantanid/SeochoBatang-Font",
+      "description": "",
+      "language": null,
+      "stars": 9,
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-비디오",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-08-16T03:38:51.120Z",
+      "stars_updated_at": "2026-08-16T03:38:51.120Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 서초바탕이라는 이름의 글꼴을 제공합니다. 이 서초바탕 글꼴은 문서 작성, 디자인, 웹사이트 등의 다양한 곳에서 사용할 수 있습니다."
+    },
     {
       "id": "smontlouis/bible-strong-avatar-lab",
       "owner": "smontlouis",

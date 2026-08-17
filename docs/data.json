@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-08-16T03:38:51.120Z",
+  "updated_at": "2026-08-17T22:33:24.670Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "danilo-znamerovszkij/draw-your-font",
+      "owner": "danilo-znamerovszkij",
+      "name": "draw-your-font",
+      "url": "https://github.com/danilo-znamerovszkij/draw-your-font",
+      "description": "Turn a photo of your handwriting into a real font (TTF/WOFF/WOFF2) - free, open source, no uploads. Node CLI + Claude Code skill.",
+      "language": "JavaScript",
+      "stars": 589,
+      "topics": [
+        "claude-code",
+        "claude-skill",
+        "font",
+        "handwriting",
+        "handwriting-font",
+        "potrace",
+        "ttf",
+        "woff2"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-08-17T22:33:24.670Z",
+      "stars_updated_at": "2026-08-17T22:33:24.670Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 손글씨 사진을 실제 폰트로 바꿔주는 도구로, 무료이고 오픈 소스이며 업로드 없이 사용할 수 있다. 이 도구를 사용하면 손글씨를 컴퓨터에서 사용할 수 있는 폰트 파일로 변환할 수 있다."
+    },
     {
       "id": "iwantanid/seochobatang-font",
       "owner": "iwantanid",

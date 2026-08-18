@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-08-17T22:33:24.670Z",
+  "updated_at": "2026-08-18T14:07:15.798Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "ahujasid/blender-mcp",
+      "owner": "ahujasid",
+      "name": "blender-mcp",
+      "url": "https://github.com/ahujasid/blender-mcp",
+      "description": "Community plugin to control Blender 3D with any LLM of your choice",
+      "language": "Python",
+      "stars": 26001,
+      "topics": [
+        "3d-modeling",
+        "ai",
+        "blender",
+        "blender-addon",
+        "claude",
+        "generative-ai",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "python"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "mcp",
+      "tags": [],
+      "confidence": 0.8,
+      "classified_by": "rule",
+      "saved_at": "2026-08-18T14:07:15.798Z",
+      "stars_updated_at": "2026-08-18T14:07:15.798Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 블렌더 3D와 같은 그래픽 편집 프로그램을 인공지능을 이용해 제어하는 플러그인을 제공한다. 블렌더를 사용하는 그래픽 디자이너나 3D 모델러들이 인공지능 기술을 활용해 작업을 더 쉽고 효율적으로 할 수 있도록 도와준다."
+    },
     {
       "id": "danilo-znamerovszkij/draw-your-font",
       "owner": "danilo-znamerovszkij",

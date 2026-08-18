@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T14:07:15.798Z",
+  "updated_at": "2026-08-18T21:38:03.252Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "s1dashu/ip-as-logo-skill",
+      "owner": "s1dashu",
+      "name": "ip-as-logo-skill",
+      "url": "https://github.com/s1dashu/ip-as-logo-skill",
+      "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+      "language": null,
+      "stars": 377,
+      "topics": [
+        "codex",
+        "codex-skill",
+        "image-generation",
+        "logo-design",
+        "mascot-design"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.4,
+      "classified_by": "rule",
+      "saved_at": "2026-08-18T21:38:03.252Z",
+      "stars_updated_at": "2026-08-18T21:38:03.252Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 간단하고 예쁜 로고를 자동으로 만들어주는 소프트웨어다. 회사의 상징이나 캐릭터를 쉽고 빠르게 만들 때 쓸 수 있다."
+    },
     {
       "id": "ahujasid/blender-mcp",
       "owner": "ahujasid",

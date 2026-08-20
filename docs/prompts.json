@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-08-20T10:41:13.717Z",
+  "updated_at": "2026-08-20T23:02:30.131Z",
   "prompts": [
+    {
+      "id": "p_1787266950131",
+      "title": "No copied sports-brand identity.",
+      "description": null,
+      "content": "No copied sports-brand identity.\nNo existing brand logo.\nNo swoosh-like logo.\nNo trademarked slogan.\nNo photorealism.\nNo realistic fur detail.\nNo glossy 3D.\nNo smoke.\nNo fog.\nNo glitch.\nNo random particles.\nNo generic pet montage.\nNo crossfades.\nNo chaotic morphing.\nNo visual clutter.\nNo watermark.\n\nOVERALL FEELING\n\nOriginal, premium, athletic, playful, fast, funny, adorable, and scroll-stopping.\n\nThe viewer should feel that this tiny brown poodle belongs in a world-class sports campaign, powered by absurd confidence and unstoppable energy.",
+      "category": "기타",
+      "saved_at": "2026-08-20T23:02:30.131Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1787222473717",
       "title": "① 「SNS에 실존할 것 같은 20대 성인 한국인/일본인/미국인 여성의 ",

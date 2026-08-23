@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-08-21T08:40:28.915Z",
+  "updated_at": "2026-08-23T22:26:20.616Z",
   "prompts": [
+    {
+      "id": "p_1787523980616",
+      "title": "https://www.threads.com/share/BAcXZxA1hU",
+      "description": null,
+      "content": "https://www.threads.com/share/BAcXZxA1hU/",
+      "category": "기타",
+      "saved_at": "2026-08-23T22:26:20.616Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1787301628915",
       "title": "1. 기본 전제",

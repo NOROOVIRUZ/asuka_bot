@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-23T22:03:47.732Z",
+  "updated_at": "2026-08-25T09:27:17.156Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "b-nnett/grok-bot-0.18-reconstructed",
+      "owner": "b-nnett",
+      "name": "grok-bot-0.18-reconstructed",
+      "url": "https://github.com/b-nnett/grok-bot-0.18-reconstructed",
+      "description": "Unofficial source-oriented reconstruction and extension of Grok Bot 0.18.0 for macOS",
+      "language": "TypeScript",
+      "stars": 2236,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-08-25T09:27:17.156Z",
+      "stars_updated_at": "2026-08-25T09:27:17.156Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 'Grok Bot'이라는 프로그램의 구버전을 다시 만든 것으로, 맥 컴퓨터에서 사용할 수 있다. 이 프로그램은 사용자와 대화하며 정보를 제공하는 챗봇 역할을 한다."
+    },
     {
       "id": "nomadamas/cozyclay",
       "owner": "NomaDamas",

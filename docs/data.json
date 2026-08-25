@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-25T21:47:13.170Z",
+  "updated_at": "2026-08-25T22:00:07.435Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "gesso-build/skills",
+      "owner": "Gesso-Build",
+      "name": "skills",
+      "url": "https://github.com/Gesso-Build/skills",
+      "description": "Deterministic design critique for HTML/CSS: 73 slop guards from the rules professional designers use in production-grade designs. Exact detectors, idempotent auto-fixes, the anti-slop skill, and the /gesso-critique command. By Gesso, the AI creative team for builders.",
+      "language": "TypeScript",
+      "stars": 67,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.65,
+      "classified_by": "rule",
+      "saved_at": "2026-08-25T22:00:07.435Z",
+      "stars_updated_at": "2026-08-25T22:00:07.435Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 전문 디자이너들이 사용하는 규칙을 기반으로 HTML/CSS 디자인을 분석하고 문제점을 자동으로 수정해주는 도구입니다. 이를 통해 더 나은 디자인을 만들 수 있습니다."
+    },
     {
       "id": "chegom/soopbot",
       "owner": "chegom",

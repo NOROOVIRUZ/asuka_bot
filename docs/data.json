@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-08-26T10:27:39.066Z",
+  "updated_at": "2026-08-26T14:23:16.571Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "toktokhan-dev/agent-company",
+      "owner": "TOKTOKHAN-DEV",
+      "name": "agent-company",
+      "url": "https://github.com/TOKTOKHAN-DEV/agent-company",
+      "description": "AI Company로 자동화 조직을 만드세요",
+      "language": "HTML",
+      "stars": 37,
+      "topics": [
+        "agentic-workflow",
+        "ai-agents",
+        "anthropic",
+        "claude-code",
+        "codex",
+        "developer-tools",
+        "llm",
+        "monorepo",
+        "pnpm",
+        "template",
+        "turborepo",
+        "typescript"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-08-26T14:23:16.571Z",
+      "stars_updated_at": "2026-08-26T14:23:16.571Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능을 이용하여 자동화된 조직을 만들 수 있는 도구를 제공합니다. 자동화된 업무 처리를 원하는 곳에서 활용할 수 있습니다."
+    },
     {
       "id": "lilmgenius/paperthin",
       "owner": "LilMGenius",

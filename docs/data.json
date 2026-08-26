@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-08-25T22:09:42.175Z",
+  "updated_at": "2026-08-26T10:27:39.066Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lilmgenius/paperthin",
+      "owner": "LilMGenius",
+      "name": "paperthin",
+      "url": "https://github.com/LilMGenius/paperthin",
+      "description": "Low-level agentic design patterns. Turning old engineering wisdom into reflexes your agent reaches for on its own—on any agent.",
+      "language": "Shell",
+      "stars": 173,
+      "topics": [
+        "anti-slop",
+        "clean-code",
+        "design-patterns",
+        "docs",
+        "evals",
+        "fable",
+        "hygiene",
+        "markdown",
+        "plugin",
+        "skills",
+        "ssot"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-08-26T10:27:39.066Z",
+      "stars_updated_at": "2026-08-26T10:27:39.066Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 컴퓨터 프로그램이 스스로 더 나은 결정을 내릴 수 있도록 도와주는 설계 패턴을 제공하며, 이를 통해 프로그램이 더 효율적이고 안정적으로 작동할 수 있도록 합니다. 이것은 프로그램을 개발할 때 코드를 깔끔하게 유지하고, 오류를 줄이는 데 도움이 됩니다."
+    },
     {
       "id": "pipeshub-ai/pipeshub-ai",
       "owner": "pipeshub-ai",

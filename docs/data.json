@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-08-26T14:23:16.571Z",
+  "updated_at": "2026-08-26T14:26:07.548Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "genexis-ai/gpt-image-skill",
+      "owner": "GENEXIS-AI",
+      "name": "gpt-image-skill",
+      "url": "https://github.com/GENEXIS-AI/gpt-image-skill",
+      "description": "Generate GPT images from Codex or Claude Code using a ChatGPT subscription, without the Images API.",
+      "language": "JavaScript",
+      "stars": 30,
+      "topics": [
+        "agent-skills",
+        "chatgpt",
+        "claude-code",
+        "codex",
+        "gpt-image",
+        "image-generation"
+      ],
+      "license": null,
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-08-26T14:26:07.548Z",
+      "stars_updated_at": "2026-08-26T14:26:07.548Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 채팅bot이 코드를 이용해 사진을 만들어내는 기능을 제공하며, 이 기능은 챗GPT订阅을 통해 이미지 API 없이도 사용할 수 있다. 이 프로젝트는 인공지능이 코드를 해석해 사진을 생성하는 데 사용된다."
+    },
     {
       "id": "toktokhan-dev/agent-company",
       "owner": "TOKTOKHAN-DEV",

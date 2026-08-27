@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-08-27T22:05:42.765Z",
+  "updated_at": "2026-08-27T22:10:11.366Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "zenbu-labs/terminal-browser",
+      "owner": "zenbu-labs",
+      "name": "terminal-browser",
+      "url": "https://github.com/zenbu-labs/terminal-browser",
+      "description": "A browser inside your terminal",
+      "language": "Rust",
+      "stars": 2340,
+      "topics": [
+        "browser",
+        "claude-code",
+        "claude-skills",
+        "cli",
+        "codex",
+        "herdr-plugin",
+        "rust",
+        "terminal",
+        "web"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-27T22:10:11.366Z",
+      "stars_updated_at": "2026-08-27T22:10:11.366Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "터미널 안에서 작동하는 브라우저로, 컴퓨터 화면 안에서 인터넷을 구경할 수 있게 해주는 프로그램이다. 주로 개발자들이 코드를 작성하거나 테스트할 때 유용하게 쓸 수 있다."
+    },
     {
       "id": "mochidiffusion/mochidiffusion",
       "owner": "MochiDiffusion",

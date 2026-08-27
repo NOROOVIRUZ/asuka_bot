@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-08-27T22:25:15.414Z",
+  "updated_at": "2026-08-27T22:40:15.102Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "leopard627/fire-your-seo-agency",
+      "owner": "leopard627",
+      "name": "fire-your-seo-agency",
+      "url": "https://github.com/leopard627/fire-your-seo-agency",
+      "description": "Fire your SEO·GEO agency 🔥 A Claude Code skill that audits and optimizes SEO·AEO·GEO·LLMO·NEO(Naver) by itself — 월 50~350만 원짜리 'AI 검색 최적화' 대행, AI 에이전트가 대체합니다",
+      "language": null,
+      "stars": 219,
+      "topics": [
+        "aeo",
+        "ai-search",
+        "claude-code",
+        "claude-skills",
+        "geo",
+        "llmo",
+        "llms-txt",
+        "naver",
+        "seo"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-08-27T22:40:15.102Z",
+      "stars_updated_at": "2026-08-27T22:40:15.102Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 웹사이트의 검색 엔진 최적화를 자동으로 해주는 도구로, 기존의 대행사에 돈을 주고 맡기는 대신 인공지능이 직접 최적화를 해주는 것입니다."
+    },
     {
       "id": "audio8-ai/audio8_tts",
       "owner": "Audio8-AI",

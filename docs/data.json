@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-27T22:16:49.725Z",
+  "updated_at": "2026-08-27T22:25:15.414Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "audio8-ai/audio8_tts",
+      "owner": "Audio8-AI",
+      "name": "Audio8_TTS",
+      "url": "https://github.com/Audio8-AI/Audio8_TTS",
+      "description": "SOTA-Class TTS at Compact Scale",
+      "language": "Python",
+      "stars": 986,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "ai-음성",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-27T22:25:15.414Z",
+      "stars_updated_at": "2026-08-27T22:25:15.414Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 컴퓨터가 사람처럼 말할 수 있도록 해주는 인공지능 음성 합성 기술을 제공하며, 작은 용량으로도 최고 수준의 성능을 낼 수 있다. 이 기술은 다양한 음성 서비스나 애플리케이션에서 활용될 수 있다."
+    },
     {
       "id": "agentlas-ai/agentlas-os",
       "owner": "agentlas-ai",

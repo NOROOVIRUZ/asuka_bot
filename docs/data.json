@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-08-27T22:40:15.102Z",
+  "updated_at": "2026-08-28T12:05:40.993Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Pi, and OpenCode and more for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "stars": 51003,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-28T12:05:40.993Z",
+      "stars_updated_at": "2026-08-28T12:05:40.993Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 Claude Code와 같은 인공지능 코드 작성 도구를 무료로 사용할 수 있게 해주며, 터미널, 앱, 개발 환경, 또는 휴대폰에서 사용할 수 있고 음성 지원도 가능하다."
+    },
     {
       "id": "leopard627/fire-your-seo-agency",
       "owner": "leopard627",

@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-08-28T15:24:34.291Z",
+  "updated_at": "2026-08-28T15:32:02.126Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 10366,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-3d",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-08-28T15:32:02.126Z",
+      "stars_updated_at": "2026-08-28T15:32:02.126Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 실제 데이터를 기반으로 하는 3D 지구를 보여주는 브라우저용 간첩위성 시뮬레이터로, 실시간으로 개방형 공간 지능을 제공한다. 이 프로젝트는 3D 지구 상에서 비행 경로를 추적하고 공간 정보를 시각화하는 데 사용할 수 있다."
+    },
     {
       "id": "0xsline/openchatcut",
       "owner": "0xsline",

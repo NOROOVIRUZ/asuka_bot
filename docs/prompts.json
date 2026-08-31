@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T12:45:48.487Z",
+  "updated_at": "2026-08-31T14:50:01.127Z",
   "prompts": [
+    {
+      "id": "p_1788187801127",
+      "title": "https://ui.shadcn.com/",
+      "description": null,
+      "content": "https://ui.shadcn.com/",
+      "category": "기타",
+      "saved_at": "2026-08-31T14:50:01.127Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1788180348487",
       "title": "업로드한 반려동물 사진 한 장을 재해석해서, 그 아이 한 마리만으로 채운",

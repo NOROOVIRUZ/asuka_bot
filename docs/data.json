@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-08-30T00:00:04.474Z",
+  "updated_at": "2026-08-31T07:22:06.198Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "miuuyy/codex-chatgpt-web",
+      "owner": "miuuyy",
+      "name": "codex-chatgpt-web",
+      "url": "https://github.com/miuuyy/codex-chatgpt-web",
+      "description": "Use ChatGPT Web (including Pro) as a native model in the Codex app — with context, tools, streaming and images beyond Codex usage limits.",
+      "language": "TypeScript",
+      "stars": 2842,
+      "topics": [
+        "chatgpt",
+        "chatgpt-pro",
+        "codex",
+        "free-ai",
+        "mcp",
+        "openai",
+        "playwright",
+        "quickstart",
+        "responses-api",
+        "typescript"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-08-31T07:22:06.198Z",
+      "stars_updated_at": "2026-08-31T07:22:06.198Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 채팅봇인 ChatGPT를 코덱스 앱에서 사용할 수 있게 해주는 것이며, 무료와 유료 버전 모두를 지원한다."
+    },
     {
       "id": "tencent-hunyuan/hy-motion-1.0",
       "owner": "Tencent-Hunyuan",

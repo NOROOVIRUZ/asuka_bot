@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T14:50:01.127Z",
+  "updated_at": "2026-08-31T14:50:13.879Z",
   "prompts": [
+    {
+      "id": "p_1788187813879",
+      "title": "https://flowbite.com/",
+      "description": null,
+      "content": "https://flowbite.com/",
+      "category": "기타",
+      "saved_at": "2026-08-31T14:50:13.879Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1788187801127",
       "title": "https://ui.shadcn.com/",

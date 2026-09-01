@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T10:09:20.582Z",
+  "updated_at": "2026-09-01T11:13:12.364Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "pytorch/executorch",
+      "owner": "pytorch",
+      "name": "executorch",
+      "url": "https://github.com/pytorch/executorch",
+      "description": "On-device AI across mobile, embedded and edge for PyTorch",
+      "language": "Python",
+      "stars": 4976,
+      "topics": [
+        "deep-learning",
+        "embedded",
+        "gpu",
+        "machine-learning",
+        "mobile",
+        "neural-network",
+        "tensor"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "ai-이미지",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-09-01T11:13:12.364Z",
+      "stars_updated_at": "2026-09-01T11:13:12.364Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 휴대폰, 작은 컴퓨터, 혹은 네트워크 가장자리에서 인공지능을 사용할 수 있게 해주는 도구로, 특히 PyTorch라는 프레임워크에서 작동한다. 이 프로젝트를 사용하면 작은 기기에서도 인공지능을 효율적으로 사용할 수 있다."
+    },
     {
       "id": "coreyhaines31/marketingskills",
       "owner": "coreyhaines31",

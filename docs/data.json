@@ -1,8 +1,33 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T07:22:06.198Z",
+  "updated_at": "2026-09-01T10:09:20.582Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "coreyhaines31/marketingskills",
+      "owner": "coreyhaines31",
+      "name": "marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "language": "JavaScript",
+      "stars": 46391,
+      "topics": [
+        "claude",
+        "codex",
+        "marketing"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-09-01T10:09:20.582Z",
+      "stars_updated_at": "2026-09-01T10:09:20.582Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "클라우드나 인공지능과 같은 시스템을 마케팅하는 데 필요한 기술을 모아놓은 프로젝트로, 웹사이트 개선, 글쓰기, 검색 엔진 최적화, 데이터 분석, 성장 엔지니어링 등이 포함되어 있다."
+    },
     {
       "id": "miuuyy/codex-chatgpt-web",
       "owner": "miuuyy",

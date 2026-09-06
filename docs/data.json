@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-06T12:47:54.241Z",
+  "updated_at": "2026-09-06T13:59:18.967Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "marker-inc-korea/ko-jailbreak",
+      "owner": "Marker-Inc-Korea",
+      "name": "ko-jailbreak",
+      "url": "https://github.com/Marker-Inc-Korea/ko-jailbreak",
+      "description": "A Benchmark for Evaluating Jailbreak Vulnerabilities in Korean LLMs",
+      "language": "Python",
+      "stars": 6,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "한국어",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-09-06T13:59:18.967Z",
+      "stars_updated_at": "2026-09-06T13:59:18.967Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 한국어로 학습된 대형 언어 모델에서 탈옥 취약점을 평가하는 벤치마크입니다. 이는 한국어 언어 모델이 의도하지 않은 방식으로 동작하는 경우를 찾고 평가하는 데 사용됩니다."
+    },
     {
       "id": "missuo/herdrm",
       "owner": "missuo",

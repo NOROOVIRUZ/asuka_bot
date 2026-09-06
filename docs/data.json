@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-06T00:00:36.645Z",
+  "updated_at": "2026-09-06T12:47:54.241Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "missuo/herdrm",
+      "owner": "missuo",
+      "name": "herdrm",
+      "url": "https://github.com/missuo/herdrm",
+      "description": "Native macOS console for herdr — all your coding agents and their live terminals, across devices",
+      "language": "C",
+      "stars": 659,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-09-06T12:47:54.241Z",
+      "stars_updated_at": "2026-09-06T12:47:54.241Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 코딩 작업을 도와주는 에이전트들을 한 곳에서 관리할 수 있는 맥OS용 콘솔 프로그램입니다. 여러 기기에서 사용할 수 있는 에이전트들과 실시간 터미널을 제공합니다."
+    },
     {
       "id": "jub0t/concat",
       "owner": "jub0t",

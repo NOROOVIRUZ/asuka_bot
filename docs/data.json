@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-06T13:59:18.967Z",
+  "updated_at": "2026-09-08T15:32:03.986Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "youngchangjo/teamplay",
+      "owner": "youngchangjo",
+      "name": "teamplay",
+      "url": "https://github.com/youngchangjo/teamplay",
+      "description": "Adaptive multi-model engineering teams for OpenAI Codex",
+      "language": "Shell",
+      "stars": 23,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "기타ai",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-09-08T15:32:03.986Z",
+      "stars_updated_at": "2026-09-08T15:32:03.986Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 여러 개의 인공지능 모델을 하나로 묶어, 더 나은 성능을 내는 방법을 연구하는 곳이며, 인공지능 개발에 관심 있는 사람들에게 유용한 자료를 제공한다."
+    },
     {
       "id": "marker-inc-korea/ko-jailbreak",
       "owner": "Marker-Inc-Korea",

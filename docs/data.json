@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T21:54:54.067Z",
+  "updated_at": "2026-09-10T22:26:42.047Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yamang02/yamangdesign",
+      "owner": "Yamang02",
+      "name": "YamangDesign",
+      "url": "https://github.com/Yamang02/YamangDesign",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 1,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-09-10T22:26:42.047Z",
+      "stars_updated_at": "2026-09-10T22:26:42.047Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 yamang02라는 사람이 만든 디자인 관련 자료를 모아둔 저장소로, 다양한 디자인 요소나 아이디어를 찾는 데 도움이 될 수 있다. 이 저장소를 사용하면 디자인灵感을 얻거나 참고할 수 있는 자료들을 쉽게 찾을 수 있다."
+    },
     {
       "id": "bytedance/deer-flow",
       "owner": "bytedance",

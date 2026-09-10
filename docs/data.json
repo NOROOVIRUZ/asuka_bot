@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-09-10T22:26:42.047Z",
+  "updated_at": "2026-09-10T22:26:56.916Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "monglong0214/commitlore",
+      "owner": "MongLong0214",
+      "name": "commitlore",
+      "url": "https://github.com/MongLong0214/commitlore",
+      "description": "Git-native decision memory for Claude Code, Codex, Cursor and other coding agents. Preserve constraints and rejected alternatives; surface only the decisions still in force.",
+      "language": "TypeScript",
+      "stars": 11,
+      "topics": [
+        "agent-memory",
+        "ai-memory",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "context-engineering",
+        "decision-log",
+        "developer-tools",
+        "git",
+        "mcp"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-09-10T22:26:56.916Z",
+      "stars_updated_at": "2026-09-10T22:26:56.916Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 코딩 도구가 개발 과정에서 내린 결정과 선택을 기억하고 기록하는 기능을 제공하여, 개발자들이 코드를 더 효율적으로 관리하고 이해할 수 있도록 돕습니다. 특히 Claude Code, Codex, Cursor와 같은 인공지능 코딩 에이전트에서 유용하게 사용할 수 있습니다."
+    },
     {
       "id": "yamang02/yamangdesign",
       "owner": "Yamang02",

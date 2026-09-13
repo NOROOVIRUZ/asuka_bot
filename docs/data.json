@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-09-13T00:01:02.675Z",
+  "updated_at": "2026-09-13T22:05:25.271Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "totec448-spec/chat-on-steroids",
+      "owner": "totec448-spec",
+      "name": "chat-on-steroids",
+      "url": "https://github.com/totec448-spec/chat-on-steroids",
+      "description": "Cross-platform local MCP capabilities for ChatGPT with Chrome integration, Goal, Compact & Resume, and durable multi-agent workflows.",
+      "language": "TypeScript",
+      "stars": 2202,
+      "topics": [
+        "automation",
+        "chatgpt",
+        "chrome-extension",
+        "electron",
+        "linux",
+        "local-first",
+        "macos",
+        "mcp",
+        "multi-agent",
+        "windows"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.25,
+      "classified_by": "rule",
+      "saved_at": "2026-09-13T22:05:25.271Z",
+      "stars_updated_at": "2026-09-13T22:05:25.271Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 채팅 프로그램인 ChatGPT를 더 강력하게 만들어 주는 도구로, 여러 작업을 자동화하고 여러 대화 상대와의 대화를 효율적으로 관리할 수 있도록 해줍니다. 이 도구는 크롬 브라우저와 연동되어 사용할 수 있습니다."
+    },
     {
       "id": "monglong0214/commitlore",
       "owner": "MongLong0214",

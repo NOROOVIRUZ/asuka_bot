@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-09-13T22:05:25.271Z",
+  "updated_at": "2026-09-13T22:06:07.126Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "pgrundev/pgterm",
+      "owner": "pgrundev",
+      "name": "pgterm",
+      "url": "https://github.com/pgrundev/pgterm",
+      "description": "Modern Postgres Terminal",
+      "language": "Rust",
+      "stars": 251,
+      "topics": [
+        "postgres",
+        "postgresql",
+        "postgresql-database",
+        "terminal",
+        "tui"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.95,
+      "classified_by": "rule",
+      "saved_at": "2026-09-13T22:06:07.126Z",
+      "stars_updated_at": "2026-09-13T22:06:07.126Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 포스트그레스(Postgres)라는 데이터베이스를 관리하기 위한 최신 터미널을 제공한다. 데이터베이스를 쉽게 관리하고 조회할 수 있는 사용자 인터페이스를 제공하여 개발자와 데이터베이스 관리자가 작업을 효율적으로 수행할 수 있도록 도와준다."
+    },
     {
       "id": "totec448-spec/chat-on-steroids",
       "owner": "totec448-spec",

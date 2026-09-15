@@ -1,8 +1,33 @@
 {
   "version": 1,
-  "updated_at": "2026-09-14T22:53:28.583Z",
+  "updated_at": "2026-09-15T09:35:50.447Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "nationalsecurityagency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "language": "Java",
+      "stars": 76161,
+      "topics": [
+        "disassembler",
+        "reverse-engineering",
+        "software-analysis"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "기타",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-09-15T09:35:50.447Z",
+      "stars_updated_at": "2026-09-15T09:35:50.447Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "ghidra는 컴퓨터 프로그램을 분석하고 이해하기 위한 도구로, 이미 만들어진 프로그램을 분해하여 어떻게 만들어졌는지 알아보는 데 사용된다. 주로 프로그램의 오류를 찾거나, 프로그램이 어떻게 동작하는지研究하는 데 사용된다."
+    },
     {
       "id": "prekuter/dryforge",
       "owner": "prekuter",

@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-09-15T09:35:50.447Z",
+  "updated_at": "2026-09-15T14:09:20.982Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "viettranx/3dviz-pro-max",
+      "owner": "viettranx",
+      "name": "3dviz-pro-max",
+      "url": "https://github.com/viettranx/3dviz-pro-max",
+      "description": "Agent skill for creative 3D visualization: turn an idea into a Three.js/Blender scene worth exploring. Claude Code + Codex plugin, 223 recipes, 440 knowledge records, 22 proved kits, 37 runnable studies.",
+      "language": "JavaScript",
+      "stars": 375,
+      "topics": [
+        "3d",
+        "agent-skill",
+        "blender",
+        "claude-code",
+        "codex",
+        "gltf",
+        "threejs",
+        "visualization"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-09-15T14:09:20.982Z",
+      "stars_updated_at": "2026-09-15T14:09:20.982Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 3D 시각화를 위한 아이디어를 실제로 볼 수 있는 3D 장면으로 만들어주는 도구입니다. 블렌더나 Three.js와 같은 3D 소프트웨어에서 사용할 수 있습니다."
+    },
     {
       "id": "nationalsecurityagency/ghidra",
       "owner": "NationalSecurityAgency",

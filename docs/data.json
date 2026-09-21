@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-09-21T14:13:06.857Z",
+  "updated_at": "2026-09-21T14:37:29.366Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "antvis/infographic",
+      "owner": "antvis",
+      "name": "Infographic",
+      "url": "https://github.com/antvis/Infographic",
+      "description": "🦋 An Infographic Generation and Rendering Framework, bring words to life with AI!",
+      "language": "TypeScript",
+      "stars": 6784,
+      "topics": [
+        "ai",
+        "antv",
+        "infographic",
+        "llm",
+        "visualization"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.05,
+      "classified_by": "rule",
+      "saved_at": "2026-09-21T14:37:29.366Z",
+      "stars_updated_at": "2026-09-21T14:37:29.366Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공 지능을 이용해 정보를 그래픽 형태로 쉽게 표현해주는 프레임워크로, 복잡한 데이터를 시각화하여 이해하기 쉽게 만들어줍니다. 특히 데이터 시각화나 인포그래픽을 만들 때 유용하게 사용할 수 있습니다."
+    },
     {
       "id": "ferdinandobons/startup-skill",
       "owner": "ferdinandobons",

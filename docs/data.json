@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-09-21T13:56:30.481Z",
+  "updated_at": "2026-09-21T14:13:06.857Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "ferdinandobons/startup-skill",
+      "owner": "ferdinandobons",
+      "name": "startup-skill",
+      "url": "https://github.com/ferdinandobons/startup-skill",
+      "description": "AI agent skills for startup validation, competitive intelligence, and planning",
+      "language": null,
+      "stars": 979,
+      "topics": [
+        "ai-agents",
+        "battle-cards",
+        "claude-code",
+        "claude-skills",
+        "competitive-analysis",
+        "competitive-intelligence",
+        "market-research",
+        "pricing-analysis",
+        "startup",
+        "startup-validation"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-스킬",
+      "tags": [],
+      "confidence": 0.55,
+      "classified_by": "rule",
+      "saved_at": "2026-09-21T14:13:06.857Z",
+      "stars_updated_at": "2026-09-21T14:13:06.857Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 새로운 비즈니스를 시작할 때, 경쟁사를 분석하고 계획을 세우는 데 도움을 주는 인공지능 기술을 제공한다. 새로운 비즈니스를 시작하거나 기존 비즈니스를 성장시키는 데 유용하다."
+    },
     {
       "id": "stablyai/orca",
       "owner": "stablyai",

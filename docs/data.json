@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-23T14:03:17.539Z",
+  "updated_at": "2026-09-25T12:56:48.036Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "devdotfast/whiteboard",
+      "owner": "devdotfast",
+      "name": "whiteboard",
+      "url": "https://github.com/devdotfast/whiteboard",
+      "description": "open-source canvas for thoughtful software design",
+      "language": "TypeScript",
+      "stars": 972,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인",
+      "tags": [],
+      "confidence": 0.35,
+      "classified_by": "rule",
+      "saved_at": "2026-09-25T12:56:48.036Z",
+      "stars_updated_at": "2026-09-25T12:56:48.036Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 소프트웨어 설계를 위한 오픈 소스 캔버스입니다. 이는 소프트웨어 개발자들이 협업하여 생각을 시각화하고, 아이디어를 공유하며, 설계를 논의할 수 있는 도구를 제공합니다."
+    },
     {
       "id": "awdr74100/figwright",
       "owner": "awdr74100",

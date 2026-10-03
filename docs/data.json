@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T22:12:36.536Z",
+  "updated_at": "2026-10-03T13:43:09.104Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "edenfunf/reelmimic",
+      "owner": "edenfunf",
+      "name": "reelmimic",
+      "url": "https://github.com/edenfunf/reelmimic",
+      "description": "Show it a video you love. Get a new video in the same style. An AI crew (Claude Code or Codex) plans, builds and reviews it with you.",
+      "language": "JavaScript",
+      "stars": 1023,
+      "topics": [
+        "2d-animation",
+        "ai-agents",
+        "ai-video",
+        "animation",
+        "claude-code",
+        "codex",
+        "multi-agent",
+        "style-transfer",
+        "video-generation"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "cc-저장소",
+      "tags": [],
+      "confidence": 1,
+      "classified_by": "rule",
+      "saved_at": "2026-10-03T13:43:09.104Z",
+      "stars_updated_at": "2026-10-03T13:43:09.104Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 사용자가 좋아하는 영상을 입력하면, 똑같은 스타일의 새로운 영상을 만들어주는 인공지능입니다. 사용자와 함께 인공지능이 영상을 계획, 제작, 검토하는 과정을 함께합니다."
+    },
     {
       "id": "codingnoye/gksdud",
       "owner": "codingnoye",

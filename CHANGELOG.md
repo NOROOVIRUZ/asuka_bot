@@ -1,6 +1,15 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.6 — 2026-10-04
+
+- **분류기 폴백 버그 근본 수정**: 봇 워커는 `CATEGORIES_PATH = data/categories.json`을 읽는데, 이 파일이 v3.3(07-30) 이후에도 구 19종(v1) 그대로였다 → 신규 북마크가 `cc-저장소`·`기타ai`·`mcp` 같은 구 카테고리로 저장돼 왔음. `data/categories.json`을 `docs/categories.json`(용도 중심 8종)과 동일하게 맞춤. 봇은 런타임에 GitHub에서 읽으므로 재배포 불필요
+- 분류기가 읽는 키 `name_patterns`를 8종 각 카테고리에 추가(기존 `name_pattern`과 같은 값) — 이름 패턴 가산점이 다시 동작
+- 08-14 이후 텔레그램으로 저장된 신규 51개 포함, 구 카테고리에 머물던 **52개를 8종으로 수동 재분류**(`classified_by: asuka-recls-v2`, 구 값은 `category_v1`에 백업), Claude Code에 붙여 쓰는 것은 태그 `cc`, MCP 서버는 태그 `mcp`
+- 결과 분포(181개): 미디어 생성 38 · 에이전트·자동화 30 · 개발도구 29 · 디자인·UI 25 · 클로드코드 운영 21 · 문서·데이터 21 · 리서치·수집 10 · 글쓰기·카피 7
+- 남은 흠: 키워드 점수가 전부 0이면 분류기가 여전히 `기타`를 돌려준다(8종에 없는 값) — 그런 항목은 주기 재분류 때 정리
+- 검색 키워드: 분류기 폴백 버그, data/categories.json, CATEGORIES_PATH, 재분류, category_v1, 181개
+
 ## v3.5 — 2026-08-14
 
 - 봇 워커에 `POST /api/notify?secret=<WEBHOOK_SECRET>` 신설 — 로컬 잡이 @asuka_noroobot 명의로 임의 텍스트를 보낼 수 있는 입구. body 원문이 곧 메시지, 수신자는 ALLOWED_USER_IDS 첫 번째(노루군), `alarm_muted` KV 스위치 존중, parseMode 없이 전송(임의 텍스트 마크다운 파싱 실패 방지), 4000자 컷

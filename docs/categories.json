@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-30",
+  "updated": "2026-10-04",
   "model": {
     "category": "단일 카테고리 (필수) — 용도 중심 8종",
     "tags": "보조 태그 배열. \"cc\" = Claude Code에 설치해 쓰는 것(구 cc-스킬/cc-저장소 축은 태그로 보존)"

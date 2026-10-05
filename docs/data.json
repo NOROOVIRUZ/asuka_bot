@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-04T00:00:18.728Z",
+  "updated_at": "2026-10-05T02:46:57.862Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "sojuhub/aside-free-llm-autopilot",
+      "owner": "sojuhub",
+      "name": "aside-free-llm-autopilot",
+      "url": "https://github.com/sojuhub/aside-free-llm-autopilot",
+      "description": "Put free LLMs to work in Aside. An agent skill for provider onboarding, model setup, and daily maintenance. English / 한국어.",
+      "language": null,
+      "stars": 8,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-10-05T02:46:57.862Z",
+      "stars_updated_at": "2026-10-05T02:46:57.862Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 무료로 제공되는 인공지능 언어 모델을 'Aside'라는 플랫폼에서 사용할 수 있도록 해주는 도구로, 서비스 제공자 등록, 모델 설정, 일일 관리 등을 자동으로 처리해준다. 이는 인공지능 언어 모델을 쉽게 사용하고 관리할 수 있도록 도와주는 것이다."
+    },
     {
       "id": "edenfunf/reelmimic",
       "owner": "edenfunf",

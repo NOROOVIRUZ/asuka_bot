@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T02:46:57.862Z",
+  "updated_at": "2026-10-05T04:00:15.029Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "johnheibel/claudeanimationbase",
+      "owner": "JohnHeibel",
+      "name": "ClaudeAnimationBase",
+      "url": "https://github.com/JohnHeibel/ClaudeAnimationBase",
+      "description": "A starter kit for animating hand-painted cartoons with Claude: p5.js + p5.brush, the Clawd character, 31 acted emotions and a guide for the model",
+      "language": "JavaScript",
+      "stars": 767,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-10-05T04:00:15.029Z",
+      "stars_updated_at": "2026-10-05T04:00:15.029Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 손으로 그린 만화를 움직이는 애니메이션을 만들기 위한 기본 도구입니다. Claude라는 캐릭터와 감정 표현을 위한 가이드가 포함되어 있어 애니메이션 제작을 쉽게 시작할 수 있습니다."
+    },
     {
       "id": "sojuhub/aside-free-llm-autopilot",
       "owner": "sojuhub",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T04:00:15.029Z",
+  "updated_at": "2026-10-08T14:52:22.459Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "jinho-von-choi/anti-samcheonpo",
+      "owner": "JinHo-von-Choi",
+      "name": "anti-samcheonpo",
+      "url": "https://github.com/JinHo-von-Choi/anti-samcheonpo",
+      "description": "AI 코딩 에이전트의 헛짓(과잉 검증·맥락 이탈·무한 루프·허위 완료)을 감지·경고·차단하는 하네스 / A harness that catches AI coding agents wasting time and money",
+      "language": "Go",
+      "stars": 75,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-10-08T14:52:22.459Z",
+      "stars_updated_at": "2026-10-08T14:52:22.459Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 인공지능 코딩 에이전트가 쓸데없는 작업을 하는 것을 막는 도구로, 예를 들어 너무 많은 검증을 하거나 무의미한 작업을 하는 경우를 감지하여 경고하거나 차단합니다. 이는 인공지능 코딩 에이전트가 효율적으로 작업할 수 있도록 도와주는 것입니다."
+    },
     {
       "id": "johnheibel/claudeanimationbase",
       "owner": "JohnHeibel",

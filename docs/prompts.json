@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T14:50:13.879Z",
+  "updated_at": "2026-10-16T12:48:28.236Z",
   "prompts": [
+    {
+      "id": "p_1792154908236",
+      "title": "https://l.threads.com/?u=https%3A%2F%2Fg",
+      "description": null,
+      "content": "https://l.threads.com/?u=https%3A%2F%2Fgithub.com%2Fblack-forest-labs%2Fflux-3-image-klein&e=AUAvjC706E2sdL-bC6E8wPlYbYY4pvTHl9qDpv2IDSdZKQd9TcZ68BWJz7Qqiq4R8IPZYWULdGcFfl9ZCffIizWlIdvsSqJumoExhb0UV8a9WbZpyChj23RRZ1PXg2fnOw&s=1",
+      "category": "기타",
+      "saved_at": "2026-10-16T12:48:28.236Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1788187813879",
       "title": "https://flowbite.com/",

@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T12:48:28.236Z",
+  "updated_at": "2026-10-18T15:57:13.221Z",
   "prompts": [
+    {
+      "id": "p_1792339033221",
+      "title": "https://l.threads.com/?u=https%3A%2F%2Fg",
+      "description": null,
+      "content": "https://l.threads.com/?u=https%3A%2F%2Fgithub.com%2FHybirdss%2FHycli&e=AUBygbgDwcpI0fEHgYtNN5RaC5fjGwYnlDGMzmHyalehg50AuvAdOvo4swyVeAX6KG4OmfAnPRWfV6gpdIqDfShnj0uws0-HtSxjm69Z0K86fY1T03DVrcm8n3F-8qeC0A&s=1",
+      "category": "기타",
+      "saved_at": "2026-10-18T15:57:13.221Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1792154908236",
       "title": "https://l.threads.com/?u=https%3A%2F%2Fg",

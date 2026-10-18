@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T00:23:31.840Z",
+  "updated_at": "2026-10-18T16:05:45.125Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yazzang-homelab/wb-openai-gateway",
+      "owner": "yazzang-homelab",
+      "name": "wb-openai-gateway",
+      "url": "https://github.com/yazzang-homelab/wb-openai-gateway",
+      "description": "WorkBuddy/CodeBuddy 에이전트를 OAuth 보호 OpenAI 호환 API(/v1)로 — GJC 연결 별첨, 한/영 가이드 사이트",
+      "language": "JavaScript",
+      "stars": 5,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-10-18T16:05:45.125Z",
+      "stars_updated_at": "2026-10-18T16:05:45.125Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 WorkBuddy나 CodeBuddy 에이전트를 안전하게 보호하는 OpenAI와 호환되는 API 게이트웨이입니다. 이 게이트웨이를 통해 사용자는 보안이 강화된 상태에서 인공지능 서비스를 이용할 수 있습니다."
+    },
     {
       "id": "qingyuna/answer-me-with-html",
       "owner": "QingYunA",

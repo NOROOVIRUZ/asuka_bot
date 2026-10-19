@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T16:05:45.125Z",
+  "updated_at": "2026-10-19T11:25:05.994Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "ahujasid/mcp-for-blender",
+      "owner": "ahujasid",
+      "name": "mcp-for-blender",
+      "url": "https://github.com/ahujasid/mcp-for-blender",
+      "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
+      "language": "Python",
+      "stars": 31635,
+      "topics": [
+        "3d-modeling",
+        "ai",
+        "blender",
+        "blender-addon",
+        "blender-mcp",
+        "claude",
+        "generative-ai",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "python"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "클로드코드 운영",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-10-19T11:25:05.994Z",
+      "stars_updated_at": "2026-10-19T11:25:05.994Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    },
     {
       "id": "yazzang-homelab/wb-openai-gateway",
       "owner": "yazzang-homelab",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T11:25:05.994Z",
+  "updated_at": "2026-10-20T14:55:27.628Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "tencent-hunyuan/hy-memory",
+      "owner": "Tencent-Hunyuan",
+      "name": "Hy-Memory",
+      "url": "https://github.com/Tencent-Hunyuan/Hy-Memory",
+      "description": "",
+      "language": "Python",
+      "stars": 1039,
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "기타",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-10-20T14:55:27.628Z",
+      "stars_updated_at": "2026-10-20T14:55:27.628Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 텐센트가 개발한 메모리 관리 라이브러리로서, 메모리 할당 및 관리를 효율적으로 처리하는 것을 목표로 합니다. 주로 대규모 데이터 처리나 메모리 집중적인 작업이 필요한 프로젝트에서 유용하게 사용될 수 있습니다."
+    },
     {
       "id": "ahujasid/mcp-for-blender",
       "owner": "ahujasid",

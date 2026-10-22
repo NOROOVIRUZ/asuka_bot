@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T14:55:27.628Z",
+  "updated_at": "2026-10-22T14:03:35.973Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "jakeschincariol/replica-skill",
+      "owner": "Jakeschincariol",
+      "name": "replica-skill",
+      "url": "https://github.com/Jakeschincariol/replica-skill",
+      "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+      "language": "Python",
+      "stars": 4399,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "app-clone",
+        "claude",
+        "claude-code",
+        "claude-skills",
+        "indie-hacker",
+        "reverse-engineering",
+        "saas"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "클로드코드 운영",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-10-22T14:03:35.973Z",
+      "stars_updated_at": "2026-10-22T14:03:35.973Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 다른 앱을 똑같이 복사해 만드는 11가지 무료 기술을 제공하며, 앱을 역공학으로 분석하고 재구축하여 버그를 테스트하고 사용자들이 싫어하는 부분을 고치는 과정을 자동화한다."
+    },
     {
       "id": "tencent-hunyuan/hy-memory",
       "owner": "Tencent-Hunyuan",

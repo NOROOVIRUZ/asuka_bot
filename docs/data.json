@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T15:08:57.746Z",
+  "updated_at": "2026-10-23T15:11:28.015Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "maxliu22/motion2mixamorig",
+      "owner": "MaxLiu22",
+      "name": "Motion2MixamoRig",
+      "url": "https://github.com/MaxLiu22/Motion2MixamoRig",
+      "description": "Retarget human motion from video to an Adobe Mixamo-rigged 3D character.",
+      "language": "Python",
+      "stars": 1561,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "미디어 생성",
+      "tags": [],
+      "confidence": 0.9,
+      "classified_by": "rule",
+      "saved_at": "2026-10-23T15:11:28.015Z",
+      "stars_updated_at": "2026-10-23T15:11:28.015Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 3D 캐릭터에 실제 사람의 동작을 적용할 수 있게 해주는데, 예를 들어 영상 속 사람의 춤을 3D 캐릭터가 따라 추는 것과 같이 활용할 수 있다."
+    },
     {
       "id": "blendi-remade/prompt2rig",
       "owner": "blendi-remade",

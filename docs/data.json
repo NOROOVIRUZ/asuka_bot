@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T15:08:05.674Z",
+  "updated_at": "2026-10-23T15:08:57.746Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "blendi-remade/prompt2rig",
+      "owner": "blendi-remade",
+      "name": "prompt2rig",
+      "url": "https://github.com/blendi-remade/prompt2rig",
+      "description": "Type a motion, watch a rigged character perform it: fast video model + GVHMR + live Mixamo retargeting",
+      "language": "JavaScript",
+      "stars": 349,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "미디어 생성",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-10-23T15:08:57.746Z",
+      "stars_updated_at": "2026-10-23T15:08:57.746Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 문자로 입력한 동작을 캐릭터가 수행하는 모습을 바로 볼 수 있게 해주는 도구로, 빠른 비디오 모델과 리타게팅 기술을 사용하여 캐릭터의 동작을 만들 수 있다. 이를 통해 애니메이터나 개발자가 캐릭터의 동작을 쉽고 빠르게 생성하고 편집할 수 있다."
+    },
     {
       "id": "shaongitbd/doory",
       "owner": "shaongitbd",

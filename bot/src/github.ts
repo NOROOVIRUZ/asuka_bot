@@ -1,4 +1,4 @@
-import type { Env, DataFile, CategoriesFile, RepoMeta, PromptsFile } from './types';
+import type { Env, DataFile, CategoriesFile, RepoMeta, HfFile } from './types';
 
 const GH_API = 'https://api.github.com';
 
@@ -95,8 +95,9 @@ export async function putDataFile(
   }
 }
 
-export async function getPromptsFile(env: Env): Promise<{ data: PromptsFile; sha: string }> {
-  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.PROMPTS_PATH}`;
+// v3.7 — 허깅페이스 저장 파일 (없으면 빈 파일로 시작, 첫 저장 때 생성)
+export async function getHfFile(env: Env): Promise<{ data: HfFile; sha: string }> {
+  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.HF_PATH || 'docs/hf.json'}`;
   const res = await fetch(url, {
     headers: {
       Authorization: `Bearer ${env.GITHUB_TOKEN}`,
@@ -105,28 +106,18 @@ export async function getPromptsFile(env: Env): Promise<{ data: PromptsFile; sha
     },
   });
   if (res.status === 404) {
-    return {
-      data: { version: 1, updated_at: new Date().toISOString(), prompts: [] },
-      sha: '',
-    };
+    return { data: { version: 1, updated_at: new Date().toISOString(), items: [] }, sha: '' };
   }
-  if (!res.ok) throw new Error(`prompts fetch failed: ${res.status}`);
+  if (!res.ok) throw new Error(`hf file fetch failed: ${res.status}`);
   const r = (await res.json()) as { content: string; sha: string };
-  const decoded = decodeBase64(r.content);
-  return { data: JSON.parse(decoded) as PromptsFile, sha: r.sha };
+  return { data: JSON.parse(decodeBase64(r.content)) as HfFile, sha: r.sha };
 }
 
-export async function putPromptsFile(
-  env: Env,
-  data: PromptsFile,
-  sha: string,
-  message: string
-): Promise<void> {
-  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.PROMPTS_PATH}`;
-  const content = encodeBase64(JSON.stringify(data, null, 2) + '\n');
+export async function putHfFile(env: Env, data: HfFile, sha: string, message: string): Promise<void> {
+  const url = `${GH_API}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${env.HF_PATH || 'docs/hf.json'}`;
   const body: Record<string, unknown> = {
     message,
-    content,
+    content: encodeBase64(JSON.stringify(data, null, 2) + '\n'),
     branch: 'main',
     committer: { name: 'asuka-bot', email: 'bot@asuka.local' },
   };
@@ -143,7 +134,7 @@ export async function putPromptsFile(
   });
   if (!res.ok) {
     const errText = await res.text();
-    throw new Error(`prompts commit failed: ${res.status} ${errText}`);
+    throw new Error(`hf commit failed: ${res.status} ${errText}`);
   }
 }
 

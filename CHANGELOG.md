@@ -1,6 +1,19 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.7 — 2026-10-24
+
+- **프롬프트 탭 폐지**: 대시보드 탭·카드·삭제 API(`/api/prompts`, `/api/prompt/delete`), 봇 명령(`/prompt` `/p` `/plist` `/pdelete`), "링크 아닌 글은 프롬프트로 저장" 동작 전부 제거. `docs/prompts.json`(25개) 삭제 — 원본은 깃 기록(v3.6 커밋 54406fc)에 남음
+- 프롬프트 25개 중 허깅페이스 링크는 0개. Threads 공유 링크(`l.threads.com/?u=`)에 감싸여 봇이 놓친 깃허브 저장소 2개를 저장소 탭으로 이관: `hybirdss/hycli`(에이전트·자동화), `black-forest-labs/flux-3-image-klein`(미디어 생성, 분류기가 기타를 줘서 수동 지정). notes에 이관 표시, saved_at은 원래 프롬프트 저장 시각
+- **허깅페이스 탭 신설**: 텔레그램에 `huggingface.co`(또는 `hf.co`) 모델·데이터셋·스페이스 링크를 보내면 깃허브와 같은 흐름으로 저장 → `docs/hf.json` (공개 API, 키 불필요). 아이디 형식 `hf:owner/name`, `hf:datasets/owner/name`, `hf:spaces/owner/name`
+- 분류는 용도 중심 8종 그대로: 작업 종류(pipeline_tag) 표 → 키워드 분류기 → 종류별 기본값(기타 저장 방지). 데이터셋은 항상 문서·데이터, 스페이스는 사용 모델의 작업 종류로 보충
+- 대시보드: 상단 탭 "📦 저장소 / 🤗 허깅페이스", 허깅페이스 모드에서는 워크스페이스 탭 자리에 종류 탭(모델·데이터셋·스페이스), 카드에 좋아요·다운로드·작업 종류 표시, 검색·카테고리 칩·설치상태·즐겨찾기·정렬(별↔좋아요) 공용
+- 봇: `/add` `/retag` `/delete`가 허깅페이스도 처리, 링크가 아닌 글에는 안내 메시지. Threads 등 `?u=` 래퍼 링크를 풀어서 인식
+- **주간 보고(월 09:00)에만 허깅페이스 추가** (`/찾아`·`/list`·`/search`는 저장소 전용 유지): 저장한 자료 중 파일 업데이트·좋아요 급등(+10), 지금 뜨는 모델 2·스페이스 2 추천(➕ 🤗 저장 버튼). 주당 오래된 순 10개씩 갱신(Workers subrequest 50 제한). 추천에서 성인물·도박·딥페이크·크랙 의심 이름과 좋아요 적은 것은 제외
+- wrangler.toml: `PROMPTS_PATH` → `HF_PATH = "docs/hf.json"`. **봇 재배포 필요**(`cd bot && npx wrangler deploy`)
+- 버전 표기·캐시 버스터 v3.4 → v3.7
+- 검색 키워드: 허깅페이스, huggingface, hf.json, 프롬프트 폐지, Threads 래퍼, 주간 보고 허깅페이스
+
 ## v3.6 — 2026-10-04
 
 - **분류기 폴백 버그 근본 수정**: 봇 워커는 `CATEGORIES_PATH = data/categories.json`을 읽는데, 이 파일이 v3.3(07-30) 이후에도 구 19종(v1) 그대로였다 → 신규 북마크가 `cc-저장소`·`기타ai`·`mcp` 같은 구 카테고리로 저장돼 왔음. `data/categories.json`을 `docs/categories.json`(용도 중심 8종)과 동일하게 맞춤. 봇은 런타임에 GitHub에서 읽으므로 재배포 불필요

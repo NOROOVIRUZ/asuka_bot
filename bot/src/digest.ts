@@ -1,11 +1,13 @@
-import type { Env, DataFile, RepoEntry } from './types';
+import type { Env, DataFile, RepoEntry, HfEntry } from './types';
 import { TelegramAPI } from './telegram';
-import { getDataFile, putDataFile, getCategories, fetchReleasesBatch, searchNewRepos, type RepoSnapshot, type SearchHit } from './github';
+import { getDataFile, putDataFile, getCategories, fetchReleasesBatch, searchNewRepos, getHfFile, putHfFile, type RepoSnapshot, type SearchHit } from './github';
+import { fetchHfMeta, fetchHfTrending, classifyHf, HF_KIND_LABEL, type HfTrendHit } from './hf';
 
 export interface DigestSummary {
   releases: number;
   starMovers: number;
   recs: number;
+  hf?: { updates: number; movers: number; recs: number };
   errors: string[];
   report?: string; // dry-run일 때만 — 발송 없이 내용 검수용
 }
@@ -83,6 +85,9 @@ export async function runDigest(env: Env, chatId: number, dry = false): Promise<
     }
   }
 
+  // 2.5) v3.7 허깅페이스 — 저장한 자료 업데이트·좋아요 급등 + 지금 뜨는 모델·스페이스 추천
+  const hf = await collectHf(env, now, errors);
+
   // 3) 상태 저장 (last_release / stars 갱신)
   if (!dry) {
     try {
@@ -91,7 +96,16 @@ export async function runDigest(env: Env, chatId: number, dry = false): Promise<
     } catch (e: any) {
       errors.push(`commit: ${e?.message || e}`);
     }
+    if (hf.dirty) {
+      try {
+        hf.file.updated_at = now;
+        await putHfFile(env, hf.file, hf.sha, 'weekly digest refresh (huggingface)');
+      } catch (e: any) {
+        errors.push(`hf commit: ${e?.message || e}`);
+      }
+    }
   }
+  const hfCounts = { updates: hf.updates.length, movers: hf.movers.length, recs: hf.recs.length };
 
   // 4) 텔레그램 보고
   const date = now.slice(0, 10);
@@ -100,14 +114,20 @@ export async function runDigest(env: Env, chatId: number, dry = false): Promise<
       releases: releases.length,
       starMovers: movers.length,
       recs: recs.length,
+      hf: hfCounts,
       errors,
-      report: renderReportTxt(date, releases, movers, recs),
+      report: renderReportTxt(date, releases, movers, recs, hf),
     };
   }
-  const text = renderDigest(releases, movers, recs, errors);
+  const text = renderDigest(releases, movers, recs, errors, hf);
   const keyboard = recs
     .filter((r) => `add:${r.id}`.length <= 64) // Telegram callback_data 64byte 제한
     .map((r) => [{ text: `➕ ${r.name} 저장`, callback_data: `add:${r.id}` }]);
+  for (const h of hf.recs) {
+    const cb = `hfadd:${hfPath(h)}`;
+    if (new TextEncoder().encode(cb).length > 64) continue;
+    keyboard.push([{ text: `➕ 🤗 ${h.repoId.split('/').pop()} 저장`, callback_data: cb }]);
+  }
   const replyMarkup = keyboard.length ? { inline_keyboard: keyboard } : undefined;
   const res = await tg.sendMessage(chatId, text, { replyMarkup });
   if (!res.ok) {
@@ -117,20 +137,103 @@ export async function runDigest(env: Env, chatId: number, dry = false): Promise<
   }
 
   // 5) 상세 보고서 — txt 첨부는 수신측 뷰어가 인코딩을 깨뜨려서 폐기(v3), 메시지 본문으로 나눠 보낸다
-  const report = renderReportTxt(date, releases, movers, recs);
+  const report = renderReportTxt(date, releases, movers, recs, hf);
   for (const chunk of chunkText(report, 3900)) {
     const r = await tg.sendMessage(chatId, chunk, { parseMode: null });
     if (!r.ok) errors.push(`report send: ${r.status}`);
   }
 
-  return { releases: releases.length, starMovers: movers.length, recs: recs.length, errors };
+  return { releases: releases.length, starMovers: movers.length, recs: recs.length, hf: hfCounts, errors };
+}
+
+// ===== v3.7 허깅페이스 주간 보고 =====
+
+interface HfDigest {
+  file: { version: number; updated_at: string; items: HfEntry[] };
+  sha: string;
+  dirty: boolean;
+  updates: HfEntry[]; // 저장한 것 중 이번 주 파일이 바뀐 것
+  movers: { item: HfEntry; delta: number }[];
+  recs: (HfTrendHit & { descKo: string })[];
+}
+
+const HF_REFRESH_MAX = 10; // Workers 무료 플랜 subrequest 50개 제한 — 한 주에 오래된 순 10개씩 돌아가며 갱신
+const HF_MOVER_MIN = 10;
+
+function hfPath(h: { kind: string; repoId: string }): string {
+  return `${h.kind === 'dataset' ? 'datasets/' : h.kind === 'space' ? 'spaces/' : ''}${h.repoId}`;
+}
+
+async function collectHf(env: Env, now: string, errors: string[]): Promise<HfDigest> {
+  const out: HfDigest = { file: { version: 1, updated_at: now, items: [] }, sha: '', dirty: false, updates: [], movers: [], recs: [] };
+  try {
+    const { data, sha } = await getHfFile(env);
+    out.file = data;
+    out.sha = sha;
+  } catch (e: any) {
+    errors.push(`hf load: ${e?.message || e}`);
+    return out;
+  }
+
+  // 1) 저장한 자료 갱신 (오래된 순)
+  const targets = [...out.file.items]
+    .sort((a, b) => (a.stats_updated_at || '').localeCompare(b.stats_updated_at || ''))
+    .slice(0, HF_REFRESH_MAX);
+  for (const item of targets) {
+    try {
+      const meta = await fetchHfMeta(item.kind, item.repo_id, env);
+      if (!meta) continue;
+      const delta = meta.likes - (item.likes || 0);
+      if (delta >= HF_MOVER_MIN) out.movers.push({ item, delta });
+      // 첫 기록은 보고 안 함 (전부 "업데이트"로 뜨는 것 방지)
+      if (item.last_modified && meta.last_modified && meta.last_modified !== item.last_modified) out.updates.push(item);
+      item.likes = meta.likes;
+      item.downloads = meta.downloads;
+      item.last_modified = meta.last_modified;
+      item.stats_updated_at = now;
+      out.dirty = true;
+    } catch (e: any) {
+      errors.push(`hf refresh ${item.id}: ${e?.message || e}`);
+      break; // 허깅페이스 쪽 장애면 나머지도 실패할 테니 중단
+    }
+  }
+  out.movers.sort((a, b) => b.delta - a.delta);
+  out.movers = out.movers.slice(0, 3);
+
+  // 2) 지금 뜨는 모델·스페이스 추천 — 내가 많이 저장한 카테고리 우선, 각 2개
+  try {
+    const saved = new Set(out.file.items.map((i) => i.id));
+    const cats = await getCategories(env);
+    const counts: Record<string, number> = {};
+    for (const i of out.file.items) counts[i.category] = (counts[i.category] || 0) + 1;
+    const favCats = new Set(Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([c]) => c));
+    const pick: HfTrendHit[] = [];
+    for (const kind of ['model', 'space'] as const) {
+      const hits = (await fetchHfTrending(kind, 30, env)).filter((h) => !saved.has(h.id));
+      const catOf = (h: HfTrendHit) =>
+        classifyHf(
+          { kind: h.kind, repoId: h.repoId, owner: h.repoId.split('/')[0], name: h.repoId.split('/')[1] || h.repoId, description: h.description, likes: h.likes, downloads: null, pipeline_tag: h.pipeline_tag, library: null, sdk: null, tags: [], license: null, gated: false, last_modified: null },
+          cats
+        ).category;
+      const preferred = favCats.size ? hits.filter((h) => favCats.has(catOf(h))) : [];
+      const chosen = [...preferred, ...hits.filter((h) => !preferred.includes(h))].slice(0, 2);
+      pick.push(...chosen);
+    }
+    for (const h of pick) {
+      out.recs.push({ ...h, descKo: await explainKo(env, `허깅페이스 ${h.kind} ${h.repoId}`, h.description, h.pipeline_tag ? [h.pipeline_tag] : []) });
+    }
+  } catch (e: any) {
+    errors.push(`hf radar: ${e?.message || e}`);
+  }
+  return out;
 }
 
 function renderReportTxt(
   date: string,
   releases: { repo: RepoEntry; tag: string; name: string | null; url: string }[],
   movers: { repo: RepoEntry; delta: number }[],
-  recs: { id: string; stars: number; descKo: string; url: string }[]
+  recs: { id: string; stars: number; descKo: string; url: string }[],
+  hf?: HfDigest
 ): string {
   const L: string[] = [];
   L.push(`🔴 asuka 주간 보고서 — ${date}`);
@@ -167,7 +270,36 @@ function renderReportTxt(
     L.push(`   구경하기: ${r.url}`);
   });
   L.push('');
-  L.push('— asuka 🔴 · asuka_bot v3.1');
+
+  if (hf) {
+    L.push(`■ 허깅페이스 — 저장한 것 중 이번 주 업데이트 (${hf.updates.length}개)`);
+    if (hf.updates.length === 0) L.push('  이번 주는 없음.');
+    hf.updates.forEach((u, i) => {
+      L.push('');
+      L.push(`${i + 1}. ${u.repo_id} (${HF_KIND_LABEL[u.kind]})  →  파일 업데이트됨`);
+      L.push(`   뭐 하는 물건: ${u.desc_ko || u.description || '설명 없음'}`);
+      L.push(`   카테고리: ${u.category} / 좋아요: ♥${u.likes.toLocaleString()}`);
+      L.push(`   보기: ${u.url}`);
+    });
+    L.push('');
+    if (hf.movers.length) {
+      L.push('■ 허깅페이스 좋아요 급등 — 이번 주 인기 오른 저장 자료');
+      hf.movers.forEach((m) => {
+        L.push(`  • ${m.item.repo_id}  ♥+${m.delta.toLocaleString()} (총 ${m.item.likes.toLocaleString()})${m.item.desc_ko ? ` — ${m.item.desc_ko}` : ''}`);
+      });
+      L.push('');
+    }
+    L.push(`■ 허깅페이스 지금 뜨는 모델·스페이스 (${hf.recs.length}개)`);
+    L.push('  마음에 드는 건 텔레그램 메시지의 ➕ 🤗 버튼으로 저장하면 돼.');
+    hf.recs.forEach((r, i) => {
+      L.push('');
+      L.push(`${i + 1}. ${r.repoId} (${HF_KIND_LABEL[r.kind]})  ♥${r.likes.toLocaleString()}`);
+      L.push(`   ${r.descKo || '설명 없음'}`);
+      L.push(`   구경하기: ${r.url}`);
+    });
+    L.push('');
+  }
+  L.push('— asuka 🔴 · asuka_bot v3.7');
   return L.join('\n');
 }
 
@@ -206,9 +338,9 @@ export async function explainKo(
   description: string,
   topics: string[]
 ): Promise<string> {
-  const prompt = `GitHub repo 이름: ${name}\n영어 설명: ${(description || '').slice(0, 300)}\n토픽: ${topics.slice(0, 6).join(', ') || '없음'}`;
+  const prompt = `이름: ${name}\n영어 설명: ${(description || '').slice(0, 300)}\n토픽: ${topics.slice(0, 6).join(', ') || '없음'}`;
   const system =
-    '너는 개발 지식이 없는 사람에게 GitHub 프로젝트를 설명하는 도우미다. 이 repo가 뭐 하는 물건인지, 어디에 쓰면 좋은지를 쉬운 한국어 1~2문장으로 설명해라. 전문용어를 쓰면 바로 쉬운 말로 풀어라. 인사말·서론 없이 설명 문장만 출력해라.';
+    '너는 개발 지식이 없는 사람에게 GitHub 저장소나 허깅페이스 자료(AI 모델·데이터셋·데모 스페이스)를 설명하는 도우미다. 이것이 뭐 하는 물건인지, 어디에 쓰면 좋은지를 쉬운 한국어 1~2문장으로 설명해라. 전문용어를 쓰면 바로 쉬운 말로 풀어라. 인사말·서론 없이 설명 문장만 출력해라.';
   for (const model of ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/meta/llama-3.1-8b-instruct']) {
     try {
       const aiRes = (await (env.AI as any).run(model, {
@@ -230,7 +362,8 @@ function renderDigest(
   releases: { repo: RepoEntry; tag: string; name: string | null; url: string }[],
   movers: { repo: RepoEntry; delta: number }[],
   recs: { id: string; stars: number; descKo: string; url: string }[],
-  errors: string[]
+  errors: string[],
+  hf?: HfDigest
 ): string {
   const parts: string[] = ['🔴 *asuka 주간 보고*'];
 
@@ -256,6 +389,21 @@ function renderDigest(
     parts.push(
       `🛰 *새로 뜨는 repo* — 맘에 드는 것만 아래 버튼으로 저장해\n\n${lines.join('\n')}`
     );
+  }
+
+  if (hf) {
+    const hl: string[] = [];
+    if (hf.updates.length) {
+      hl.push(...hf.updates.slice(0, 8).map((u) => `• \`${u.repo_id}\` 업데이트됨 [열기](${u.url})`));
+    } else {
+      hl.push('저장한 것 중 이번 주 업데이트 없음.');
+    }
+    if (hf.movers.length) hl.push(...hf.movers.map((m) => `• \`${m.item.repo_id}\` ♥ +${m.delta.toLocaleString()}`));
+    if (hf.recs.length) {
+      hl.push('', '*지금 뜨는 모델·스페이스*');
+      hf.recs.forEach((r, i) => hl.push(`${i + 1}. \`${r.repoId}\` (${HF_KIND_LABEL[r.kind]}) ♥${r.likes.toLocaleString()} [열기](${r.url})\n   ${r.descKo || '설명 없음'}`));
+    }
+    parts.push(`🤗 *허깅페이스*\n${hl.join('\n')}`);
   }
 
   if (errors.length) {

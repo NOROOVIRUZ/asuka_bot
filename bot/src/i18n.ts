@@ -1,4 +1,5 @@
-import type { RepoEntry, PromptEntry } from './types';
+import type { RepoEntry, HfEntry } from './types';
+import { HF_KIND_LABEL } from './hf';
 
 const fmtStars = (n: number) => n.toLocaleString();
 const fmtConf = (c: number) => `${(c * 100).toFixed(0)}%`;
@@ -7,22 +8,17 @@ export const msg = {
   help: () =>
     `🔴 *asuka 봇* — 사용법
 
-GitHub URL 아니면 프롬프트로 저장해. GitHub URL 그냥 던지면 알아서 저장해줘.
+GitHub 저장소 링크나 허깅페이스(모델·데이터셋·스페이스) 링크를 그냥 던지면 알아서 분류해서 저장해줘.
 
 *저장소 명령어:*
-\`/add <url>\` — URL 명시적 추가
+\`/add <url>\` — URL 명시적 추가 (깃허브·허깅페이스)
 \`/list [카테고리]\` — 저장 목록
 \`/search <키워드>\` — 검색
-\`/retag <repo> <카테고리>\` — 분류 변경
-\`/delete <repo>\` — 삭제
+\`/retag <repo> <카테고리>\` — 분류 변경 (허깅페이스는 \`hf:owner/name\`)
+\`/delete <repo>\` — 삭제 (허깅페이스는 \`hf:owner/name\`)
 \`/dashboard\` \`/대쉬보드\` — 대시보드 URL
 \`/find 질문\` \`/찾아 질문\` — 저장한 것 중 AI로 찾기
-\`/digest\` \`/보고\` — 주간 보고 지금 받기 (매주 월 09:00 자동)
-
-*프롬프트 명령어:*
-\`/prompt 내용\` — 프롬프트 저장
-\`/plist\` — 프롬프트 목록
-\`/pdelete <id>\` — 프롬프트 삭제
+\`/digest\` \`/보고\` — 주간 보고 지금 받기 (매주 월 09:00 자동, 허깅페이스 포함)
 
 \`/알람끔\` \`/알람켬\` — 모든 봇 알람 스위치
 \`/help\` — 이 메시지
@@ -121,29 +117,44 @@ ${oldCat} → *${newCat}*`,
   addUsage: () =>
     `사용법: \`/add https://github.com/owner/repo\``,
 
-  promptSaved: (title: string, category: string) =>
-    `✅ *프롬프트 저장 완료*\n\n📝 ${title}\n📂 *${category}*\n\n— asuka 🔴`,
+  notALink: () =>
+    `흥, 깃허브나 허깅페이스 링크만 저장해.
 
-  promptAlreadyHint: () =>
-    `흥, 이미 GitHub URL이면 저장소로, 아니면 프롬프트로 저장돼. 그게 다야.`,
+예: \`https://github.com/microsoft/markitdown\`
+예: \`https://huggingface.co/openai/gpt-oss-20b\``,
 
-  promptList: (items: PromptEntry[]) => {
-    const lines = items.slice(0, 10).map((p, i) =>
-      `${i + 1}. \`${p.id}\` *${p.title}* _[${p.category}]_`
-    );
-    return `📝 *최근 프롬프트* (${items.length}개)\n\n${lines.join('\n')}`;
-  },
+  hfSaved: (r: HfEntry) =>
+    `✅ *허깅페이스 저장 완료*
 
-  promptListEmpty: () => `📭 저장된 프롬프트 없어.`,
+\`${r.repo_id}\` (${HF_KIND_LABEL[r.kind]})
+${r.desc_ko || r.description || '_설명 없음_'}
 
-  promptDeleted: (id: string) => `🗑 \`${id}\` 삭제했어.`,
+📂 *${r.category}*  ♥ ${fmtStars(r.likes)}${r.downloads != null ? `  ⬇ ${fmtStars(r.downloads)}` : ''}  ${r.pipeline_tag || r.sdk || '—'}
+신뢰도: ${fmtConf(r.confidence)}
 
-  promptNotFound: (id: string) => `\`${id}\` 못 찾았어.`,
+— asuka 🔴`,
 
-  promptDeleteUsage: () => `사용법: \`/pdelete p_<id>\``,
+  hfLowConfidence: (r: HfEntry) =>
+    `⚠️ 분류 좀 애매해서 일단 *${r.category}* 에 박아뒀어 (신뢰도 ${fmtConf(r.confidence)}).
 
-  promptDuplicate: (title: string) =>
-    `흥, 이미 저장된 프롬프트야.\n\n📝 *${title}*\n\n똑같은 거 두 번 넣지 마.`,
+\`${r.repo_id}\` (${HF_KIND_LABEL[r.kind]})
+${r.desc_ko || r.description || '_설명 없음_'}
+
+맘에 안 들면 \`/retag ${r.id} <카테고리>\` 로 바꿔.`,
+
+  hfAlreadySaved: (r: HfEntry) =>
+    `흥, 이미 저장돼있어.
+
+\`${r.id}\` → *${r.category}*
+
+바꾸고 싶으면 \`/retag ${r.id} <카테고리>\` 써.`,
+
+  hfNotFound: (url: string) =>
+    `🤔 그런 허깅페이스 자료 없어 (비공개일 수도 있어).
+
+${url}
+
+링크 다시 확인해줘.`,
 
   findUsage: () =>
     `뭘 찾는지 말해줘. 예: \`/find PDF 표 뽑는 거\``,

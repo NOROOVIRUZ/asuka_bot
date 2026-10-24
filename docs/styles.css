@@ -742,39 +742,12 @@ a {
   color: var(--color-accent);
 }
 
-/* ===== Prompt Card ===== */
-.prompt-card {
-  cursor: pointer;
+/* ===== v3.7 허깅페이스 카드 ===== */
+.card-kind {
+  font-weight: 700;
 }
-
-.prompt-card:hover .card-copy-btn {
-  background: var(--color-accent) !important;
-  color: #fff !important;
-}
-
-.prompt-delete-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  opacity: 0.3;
-  transition: opacity var(--dur-quick) var(--ease-standard);
-  padding: 0 0.2rem;
-  line-height: 1;
-}
-
-.prompt-delete-btn:hover {
-  opacity: 1;
-}
-
-.prompt-preview {
-  font-family: 'Pretendard', monospace;
-  font-size: 0.78rem;
-  line-height: 1.55;
-  white-space: pre-wrap;
-  word-break: break-all;
-  max-height: 4.8rem;
-  overflow: hidden;
+.card-task {
+  white-space: nowrap;
 }
 
 /* ===== Reduced Motion ===== */

@@ -1,5 +1,6 @@
-// asuka 봇 · GitHub 저장소 대시보드
-// data.json + categories.json + teams.json → 팀 섹션 렌더 → 필터/정렬
+// asuka 봇 · GitHub 저장소 + 허깅페이스 대시보드
+// data.json + hf.json + categories.json + teams.json → 섹션 렌더 → 필터/정렬
+// v3.7: 프롬프트 탭 폐지, 허깅페이스 탭 신설 (저장소 탭과 같은 카드·필터·즐겨찾기·설치상태)
 
 const CATEGORY_EMOJI = {
   // v2 체계 (2026-07-30 용도 중심 8종)
@@ -40,16 +41,38 @@ const STATUS_META = {
   '탈락': { emoji: '🚫', label: '탈락' },
 };
 
+// v3.7: 허깅페이스 종류 — 저장소 탭의 워크스페이스 탭 자리에 종류 탭으로 표시
+const HF_KINDS = {
+  model: { label: '모델', emoji: '🧠' },
+  dataset: { label: '데이터셋', emoji: '🗂️' },
+  space: { label: '스페이스', emoji: '🚀' },
+};
+
+// 허깅페이스 작업 종류(pipeline_tag) 한글 표시
+const PIPELINE_KO = {
+  'text-generation': '텍스트 생성', 'image-text-to-text': '이미지 이해', 'text-to-image': '이미지 생성',
+  'image-to-image': '이미지 편집', 'text-to-video': '영상 생성', 'image-to-video': '이미지→영상',
+  'text-to-speech': '음성 합성', 'automatic-speech-recognition': '음성 인식', 'text-to-audio': '오디오 생성',
+  'image-to-3d': '이미지→3D', 'text-to-3d': '텍스트→3D', 'feature-extraction': '임베딩',
+  'sentence-similarity': '문장 유사도', 'translation': '번역', 'summarization': '요약',
+  'image-segmentation': '이미지 분할', 'depth-estimation': '깊이 추정', 'object-detection': '물체 인식',
+  'image-to-text': '이미지→텍스트', 'any-to-any': '멀티모달', 'text-classification': '텍스트 분류',
+  'image-classification': '이미지 분류', 'mask-generation': '마스크 생성', 'text-ranking': '검색 순위',
+};
+
+const isHf = () => state.mode === 'hf';
+const items = () => (isHf() ? state.hf : state.repos);
+const pop = (r) => (r.stars ?? r.likes ?? 0); // 저장소=별, 허깅페이스=좋아요
+
 const state = {
   repos: [],
+  hf: [],
   categories: {},
   teams: { workspaces: {} },
-  filter: { search: '', category: 'all', workspace: 'all', favOnly: false, status: 'all' },
+  filter: { search: '', category: 'all', workspace: 'all', kind: 'all', favOnly: false, status: 'all' },
   sort: 'saved_desc',
   collapsed: {},
-  mode: 'repos',
-  prompts: [],
-  promptFilter: { search: '', category: 'all' },
+  mode: 'repos', // 'repos' | 'hf'
 };
 
 // ===== Favorites (localStorage — 이 브라우저에만 저장) =====
@@ -102,27 +125,12 @@ function escapeHtml(s) {
 
 async function loadData() {
   try {
-    const wurl = localStorage.getItem('asuka_workers_url');
-    const [dataRes, catRes, teamsRes] = await Promise.all([
+    const [dataRes, catRes, teamsRes, hfRes] = await Promise.all([
       fetch(`./data.json?v=${Date.now()}`),
       fetch(`./categories.json?v=${Date.now()}`),
       fetch(`./teams.json?v=${Date.now()}`),
+      fetch(`./hf.json?v=${Date.now()}`).catch(() => null),
     ]);
-
-    // Workers URL이 있으면 실시간 API, 없으면 정적 파일 fallback
-    let promptsData = { prompts: [] };
-    if (wurl) {
-      try {
-        const res = await fetch(`${wurl}/api/prompts`);
-        if (res.ok) promptsData = await res.json();
-      } catch (_) {}
-    }
-    if (!promptsData.prompts?.length) {
-      try {
-        const res = await fetch(`./prompts.json?v=${Date.now()}`);
-        if (res.ok) promptsData = await res.json();
-      } catch (_) {}
-    }
 
     const data = await dataRes.json();
     const cats = await catRes.json();
@@ -130,160 +138,13 @@ async function loadData() {
     state.repos = data.repos || [];
     state.categories = cats.categories || {};
     state.teams = teams || { workspaces: {} };
-    state.prompts = promptsData.prompts || [];
+    // hf.json은 첫 허깅페이스 저장 때 봇이 만든다 — 없으면 빈 목록
+    state.hf = hfRes && hfRes.ok ? ((await hfRes.json()).items || []) : [];
   } catch (e) {
     console.error('데이터 로드 실패', e);
     document.getElementById('mainContent').innerHTML =
       '<div class="empty-state"><div class="empty-emoji">⚠️</div><div class="empty-title">데이터를 불러올 수 없어</div><div class="empty-sub">data.json 경로를 확인해줘</div></div>';
   }
-}
-
-// ===== Prompt Category Emoji =====
-
-const PROMPT_CATEGORY_EMOJI = {
-  '글쓰기': '✍️', '코딩': '💻', '분석': '🔍',
-  '이미지': '🖼️', '번역': '🌐', '요약': '📄',
-  '아이디어': '💡', '기타': '📦',
-};
-
-// ===== Prompt Delete API =====
-
-async function deletePrompt(id) {
-  let wurl = localStorage.getItem('asuka_workers_url');
-  let secret = localStorage.getItem('asuka_workers_secret');
-  if (!wurl || !secret) {
-    wurl = window.prompt('Workers URL 입력\n예: https://asuka-bot.xxx.workers.dev');
-    if (!wurl) return;
-    secret = window.prompt('WEBHOOK_SECRET 입력');
-    if (!secret) return;
-    localStorage.setItem('asuka_workers_url', wurl.replace(/\/$/, ''));
-    localStorage.setItem('asuka_workers_secret', secret);
-  }
-  try {
-    const res = await fetch(`${wurl}/api/prompt/delete?id=${encodeURIComponent(id)}&secret=${encodeURIComponent(secret)}`);
-    const json = await res.json();
-    if (json.ok) {
-      state.prompts = state.prompts.filter(p => p.id !== id);
-      renderPromptSections();
-    } else if (json.error === 'forbidden') {
-      // 시크릿 틀렸으면 초기화 후 재시도 유도
-      localStorage.removeItem('asuka_workers_secret');
-      alert('시크릿이 틀렸어. 다시 시도해줘.');
-    } else {
-      alert('삭제 실패: ' + (json.error || '알 수 없는 오류'));
-    }
-  } catch (e) {
-    alert('삭제 실패: ' + e.message);
-  }
-}
-
-// ===== Prompt Card HTML =====
-
-function renderPromptCardHtml(p) {
-  const emoji = PROMPT_CATEGORY_EMOJI[p.category] || '📦';
-  const preview = escapeHtml((p.content || '').slice(0, 120)) + (p.content?.length > 120 ? '…' : '');
-  return `
-    <article class="card prompt-card" data-content="${escapeHtml(p.content)}" data-id="${escapeHtml(p.id)}">
-      <div class="card-top">
-        <span class="card-category">${emoji} ${escapeHtml(p.category)}</span>
-        <span class="card-stars" style="font-size:0.75rem;opacity:0.6">${formatRelativeKo(p.saved_at)}</span>
-      </div>
-      <div class="card-name">${escapeHtml(p.title)}</div>
-      ${p.description ? `<div class="card-desc" style="color:#e03131;font-size:0.78rem;font-weight:600;margin-bottom:2px">${escapeHtml(p.description)}</div>` : ''}
-      <div class="card-desc prompt-preview">${preview}</div>
-      <div class="card-meta">
-        <span class="card-copy-btn" style="background:#f1f3f5;color:#6b7684;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;cursor:pointer">복사하기</span>
-        <button class="prompt-delete-btn" data-id="${escapeHtml(p.id)}" title="삭제">🗑</button>
-      </div>
-    </article>
-  `;
-}
-
-// ===== Prompt Sections Render =====
-
-function renderPromptSections() {
-  const main = document.getElementById('mainContent');
-  const empty = document.getElementById('emptyState');
-  const countEl = document.getElementById('resultCount');
-  const chipRow = document.getElementById('categoryChips');
-
-  const q = state.promptFilter.search.trim().toLowerCase();
-  const cat = state.promptFilter.category;
-
-  const filtered = state.prompts.filter(p => {
-    if (cat !== 'all' && p.category !== cat) return false;
-    if (!q) return true;
-    return [p.title, p.content, p.category].join(' ').toLowerCase().includes(q);
-  });
-
-  // 카테고리 칩
-  const counts = {};
-  state.prompts.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
-  const chips = [
-    { key: 'all', label: '전체', emoji: '✨', count: state.prompts.length },
-    ...Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k, v]) => ({
-      key: k, label: k, emoji: PROMPT_CATEGORY_EMOJI[k] || '📦', count: v,
-    })),
-  ];
-  chipRow.innerHTML = chips.map(c => `
-    <button class="chip ${state.promptFilter.category === c.key ? 'active' : ''}" data-key="${escapeHtml(c.key)}">
-      <span class="chip-emoji">${c.emoji}</span>
-      <span>${escapeHtml(c.label)}</span>
-      <span class="chip-count">${c.count}</span>
-    </button>
-  `).join('');
-  chipRow.querySelectorAll('.chip').forEach(el => {
-    el.addEventListener('click', () => {
-      state.promptFilter.category = el.dataset.key;
-      renderPromptSections();
-    });
-  });
-
-  countEl.textContent = `${filtered.length}개`;
-
-  if (filtered.length === 0) {
-    main.innerHTML = '';
-    empty.hidden = false;
-    return;
-  }
-  empty.hidden = true;
-  main.innerHTML = `<div class="card-grid">${filtered.map(renderPromptCardHtml).join('')}</div>`;
-
-  // 복사 버튼
-  main.querySelectorAll('.card-copy-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.prompt-card');
-      navigator.clipboard.writeText(card.dataset.content).then(() => {
-        btn.textContent = '복사됨 ✓';
-        setTimeout(() => { btn.textContent = '복사하기'; }, 1500);
-      });
-    });
-  });
-
-  // 삭제 버튼
-  main.querySelectorAll('.prompt-delete-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const title = btn.closest('.prompt-card').querySelector('.card-name').textContent;
-      if (!confirm(`"${title}" 삭제할까?`)) return;
-      deletePrompt(btn.dataset.id);
-    });
-  });
-
-  // 카드 클릭 → 전체 내용 복사 + 진입 스태거
-  main.querySelectorAll('.prompt-card').forEach((card, i) => {
-    card.style.setProperty('--i', Math.min(i, 12));
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('.prompt-delete-btn, .card-copy-btn')) return;
-      navigator.clipboard.writeText(card.dataset.content).then(() => {
-        const nameEl = card.querySelector('.card-name');
-        const orig = nameEl.textContent;
-        nameEl.textContent = '✓ 복사됨!';
-        setTimeout(() => { nameEl.textContent = orig; }, 1500);
-      }).catch(() => {});
-    });
-  });
 }
 
 // ===== Filter & Sort =====
@@ -292,10 +153,13 @@ function applyFilter(repos, ignoreCategory = false) {
   const q = state.filter.search.trim().toLowerCase();
   const cat = state.filter.category;
   const ws = state.filter.workspace;
+  const kind = state.filter.kind;
 
   let result = repos.filter(r => {
     if (state.filter.favOnly && !favs.has(r.id)) return false;
-    if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
+    if (isHf()) {
+      if (kind !== 'all' && r.kind !== kind) return false;
+    } else if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
     if (!ignoreCategory && cat !== 'all' && r.category !== cat) return false;
     if (state.filter.status !== 'all' && r.status !== state.filter.status) return false;
     if (!q) return true;
@@ -310,16 +174,23 @@ function applyFilter(repos, ignoreCategory = false) {
       ...(r.tags || []),
       r.language || '',
       r.status || '',
+      r.repo_id || '',
+      r.pipeline_tag || '',
+      PIPELINE_KO[r.pipeline_tag] || '',
+      r.kind ? HF_KINDS[r.kind]?.label || '' : '',
+      r.library || '',
+      r.sdk || '',
+      ...(r.hf_tags || []),
     ].join(' ').toLowerCase();
     return hay.includes(q);
   });
 
   switch (state.sort) {
     case 'stars_desc':
-      result.sort((a, b) => b.stars - a.stars);
+      result.sort((a, b) => pop(b) - pop(a));
       break;
     case 'stars_asc':
-      result.sort((a, b) => a.stars - b.stars);
+      result.sort((a, b) => pop(a) - pop(b));
       break;
     case 'name_asc':
       result.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
@@ -347,6 +218,7 @@ function renderCardHtml(r) {
   const conf = r.confidence < 0.7
     ? `<span class="card-confidence low">신뢰도 ${(r.confidence * 100).toFixed(0)}%</span>`
     : '';
+  if (r.kind) return renderHfCardHtml(r, emoji, statusBadge, tags, conf);
   return `
     <article class="card" data-url="${escapeHtml(r.url)}">
       <div class="card-top">
@@ -369,6 +241,59 @@ function renderCardHtml(r) {
       ${conf}
     </article>
   `;
+}
+
+// v3.7: 허깅페이스 카드 — 별 자리에 좋아요, 언어 자리에 작업 종류, 다운로드 수 추가
+function renderHfCardHtml(r, emoji, statusBadge, tags, conf) {
+  const k = HF_KINDS[r.kind] || { label: r.kind, emoji: '🤗' };
+  const task = PIPELINE_KO[r.pipeline_tag] || r.pipeline_tag || r.sdk || '';
+  return `
+    <article class="card card-hf" data-url="${escapeHtml(r.url)}">
+      <div class="card-top">
+        <span class="card-category">${emoji} ${escapeHtml(r.category)}${statusBadge}</span>
+        <span class="card-top-right">
+          <span class="card-stars">♥ ${formatStars(r.likes || 0)}</span>
+          <button class="card-fav ${favs.has(r.id) ? 'active' : ''}" data-id="${escapeHtml(r.id)}" aria-label="즐겨찾기" aria-pressed="${favs.has(r.id)}">${favs.has(r.id) ? '★' : '☆'}</button>
+        </span>
+      </div>
+      <div>
+        <div class="card-name">${escapeHtml(r.name)}</div>
+        <div class="card-owner">${escapeHtml(r.owner)} · <span class="card-kind kind-${escapeHtml(r.kind)}">${k.emoji} ${escapeHtml(k.label)}</span>${r.gated ? ' · 🔒 승인 필요' : ''}</div>
+      </div>
+      <div class="card-desc">${escapeHtml(r.desc_ko || r.description) || '설명 없음'}</div>
+      ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+      <div class="card-meta">
+        ${task ? `<span class="card-language card-task">${escapeHtml(task)}</span>` : '<span></span>'}
+        <span>${r.downloads != null ? `⬇ ${formatStars(r.downloads)} · ` : ''}${formatRelativeKo(r.saved_at)}</span>
+      </div>
+      ${conf}
+    </article>
+  `;
+}
+
+// v3.7: 허깅페이스 모드의 종류 탭 (워크스페이스 탭 자리 재사용)
+function renderKindTabs() {
+  const tabBar = document.getElementById('workspaceTabs');
+  const filtered = applyFilter(state.hf);
+  const counts = {};
+  filtered.forEach(r => { counts[r.kind] = (counts[r.kind] || 0) + 1; });
+  const tabs = [
+    { key: 'all', label: '전체', emoji: '✨', count: filtered.length },
+    ...Object.keys(HF_KINDS).filter(k => counts[k]).map(k => ({ key: k, label: HF_KINDS[k].label, emoji: HF_KINDS[k].emoji, count: counts[k] })),
+  ];
+  tabBar.innerHTML = tabs.map(t => `
+      <button class="ws-tab ${state.filter.kind === t.key ? 'active' : ''}" data-kind="${escapeHtml(t.key)}">
+        <span>${t.emoji}</span>
+        <span class="ws-tab-label">${escapeHtml(t.label)}</span>
+        <span class="ws-tab-count">${t.count}</span>
+      </button>
+    `).join('');
+  tabBar.querySelectorAll('.ws-tab').forEach(el => {
+    el.addEventListener('click', () => {
+      state.filter.kind = el.dataset.kind;
+      render();
+    });
+  });
 }
 
 // ===== Workspace Tabs =====
@@ -460,7 +385,7 @@ function renderStatusChips() {
   const chipRow = document.getElementById('statusChips');
   if (!chipRow) return;
   const counts = {};
-  state.repos.forEach(r => {
+  items().forEach(r => {
     if (r.status) counts[r.status] = (counts[r.status] || 0) + 1;
   });
   chipRow.innerHTML = Object.keys(STATUS_META)
@@ -497,12 +422,14 @@ function renderSections(filtered) {
   }
   empty.hidden = true;
 
-  // 전체 뷰: 워크스페이스 섹션으로 분리
-  if (state.filter.workspace === 'all') {
-    const wsOrder = Object.keys(state.teams.workspaces);
+  // 전체 뷰: 섹션으로 분리 (저장소=워크스페이스, 허깅페이스=종류)
+  const groupAll = isHf() ? state.filter.kind === 'all' : state.filter.workspace === 'all';
+  if (groupAll) {
+    const groupDefs = isHf() ? HF_KINDS : state.teams.workspaces;
+    const wsOrder = Object.keys(groupDefs);
     const grouped = {};
     filtered.forEach(r => {
-      const ws = r.workspace || 'tools';
+      const ws = isHf() ? r.kind : (r.workspace || 'tools');
       if (!grouped[ws]) grouped[ws] = [];
       grouped[ws].push(r);
     });
@@ -510,7 +437,7 @@ function renderSections(filtered) {
     main.innerHTML = wsOrder
       .filter(k => grouped[k]?.length > 0)
       .map(k => {
-        const def = state.teams.workspaces[k];
+        const def = groupDefs[k];
         const repos = grouped[k];
         const isCollapsed = state.collapsed[k] || false;
         return `
@@ -576,26 +503,15 @@ function renderSections(filtered) {
 // ===== Master Render =====
 
 function render() {
-  if (state.mode === 'prompts') {
-    document.getElementById('workspaceTabs').hidden = true;
-    document.getElementById('sortSelect').closest('.sort-box').hidden = true;
-    document.getElementById('statusChips').hidden = true;
-    renderPromptSections();
-    return;
-  }
+  const wsFiltered = applyFilter(items());
 
-  document.getElementById('workspaceTabs').hidden = false;
-  document.getElementById('sortSelect').closest('.sort-box').hidden = false;
-  document.getElementById('statusChips').hidden = false;
-
-  const wsFiltered = applyFilter(state.repos);
-
-  // 워크스페이스 탭 (전체 기준 카운트)
-  renderWorkspaceTabs();
+  // 워크스페이스 탭 / 허깅페이스 종류 탭 (전체 기준 카운트)
+  if (isHf()) renderKindTabs();
+  else renderWorkspaceTabs();
 
   // 카테고리 칩 — 카테고리 필터는 무시하고 그린다 (v3.32: 칩은 항상 전 카테고리 유지,
   // 선택은 하이라이트만 → '전체' 안 거치고 칩끼리 바로바로 이동)
-  renderChips(applyFilter(state.repos, true));
+  renderChips(applyFilter(items(), true));
 
   // 설치상태 칩 (v3.4)
   renderStatusChips();
@@ -607,9 +523,9 @@ function render() {
 function renderHeaderStats() {
   const total = state.repos.length;
   const totalStars = state.repos.reduce((s, r) => s + (r.stars || 0), 0);
-  const promptCount = state.prompts.length;
+  const hfCount = state.hf.length;
   document.getElementById('brandStats').textContent =
-    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)}${promptCount > 0 ? ` · 프롬프트 ${promptCount}개` : ''}`;
+    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)} · 허깅페이스 ${hfCount}개`;
 }
 
 // ===== Init =====
@@ -619,25 +535,24 @@ function bindEvents() {
   const clearBtn = document.getElementById('clearSearch');
   const sort = document.getElementById('sortSelect');
 
-  // 모드 탭 (저장소 / 프롬프트)
+  // 모드 탭 (저장소 / 허깅페이스) — 바꾸면 검색·카테고리·상태 필터 초기화
   document.getElementById('modeTabs').querySelectorAll('.mode-tab').forEach(el => {
     el.addEventListener('click', () => {
+      if (state.mode === el.dataset.mode) return;
       state.mode = el.dataset.mode;
       document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t === el));
       input.value = '';
       state.filter.search = '';
-      state.promptFilter.search = '';
+      state.filter.category = 'all';
+      state.filter.status = 'all';
       clearBtn.hidden = true;
+      applyModeLabels();
       render();
     });
   });
 
   input.addEventListener('input', () => {
-    if (state.mode === 'prompts') {
-      state.promptFilter.search = input.value;
-    } else {
-      state.filter.search = input.value;
-    }
+    state.filter.search = input.value;
     clearBtn.hidden = !input.value;
     render();
   });
@@ -645,7 +560,6 @@ function bindEvents() {
   clearBtn.addEventListener('click', () => {
     input.value = '';
     state.filter.search = '';
-    state.promptFilter.search = '';
     clearBtn.hidden = true;
     input.focus();
     render();
@@ -664,6 +578,15 @@ function bindEvents() {
     favBtn.textContent = state.filter.favOnly ? '★ 즐겨찾기' : '☆ 즐겨찾기';
     render();
   });
+}
+
+// v3.7: 모드별 검색창 안내·정렬 이름 (별 ↔ 좋아요)
+function applyModeLabels() {
+  const hf = isHf();
+  document.getElementById('searchInput').placeholder = hf ? '모델 · 데이터셋 · 스페이스 검색' : '저장소 · 설명 · 태그 검색';
+  const sel = document.getElementById('sortSelect');
+  sel.querySelector('option[value="stars_desc"]').textContent = hf ? '♥ 좋아요 많은순' : '⭐ 별 많은순';
+  sel.querySelector('option[value="stars_asc"]').textContent = hf ? '♥ 좋아요 적은순' : '⭐ 별 적은순';
 }
 
 (async function init() {

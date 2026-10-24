@@ -7,7 +7,7 @@ GITHUB_OWNER = "NOROOVIRUZ"
 GITHUB_REPO = "asuka_bot"
 DATA_PATH = "docs/data.json"
 CATEGORIES_PATH = "data/categories.json"
-PROMPTS_PATH = "docs/prompts.json"
+HF_PATH = "docs/hf.json"
 
 [ai]
 binding = "AI"

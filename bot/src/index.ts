@@ -1,6 +1,7 @@
-import type { Env, RepoEntry, PromptEntry } from './types';
+import type { Env, RepoEntry } from './types';
 import { TelegramAPI } from './telegram';
-import { fetchRepoMeta, getDataFile, putDataFile, getCategories, parseGithubUrl, getPromptsFile, putPromptsFile } from './github';
+import { fetchRepoMeta, getDataFile, putDataFile, getCategories, parseGithubUrl, getHfFile, putHfFile } from './github';
+import { parseHfUrl, extractHfUrls, fetchHfMeta, classifyHf, buildHfEntry, hfEntryId } from './hf';
 import { classify } from './classifier';
 import { msg } from './i18n';
 import { runDigest, explainKo } from './digest';
@@ -16,12 +17,6 @@ export default {
 
     // 헬스체크 / 루트 / API
     if (req.method === 'GET') {
-      if (url.pathname === '/api/prompt/delete') {
-        return handlePromptDeleteApi(url, env);
-      }
-      if (url.pathname === '/api/prompts') {
-        return handlePromptsApi(env);
-      }
       if (url.pathname === '/api/mindmap/summarize') {
         return handleMindmapSummarize(url, env);
       }
@@ -113,46 +108,20 @@ async function handleUpdate(update: any, env: Env): Promise<void> {
     return;
   }
 
-  const urls = extractGithubUrls(text);
-  if (urls.length === 0) {
-    await addPromptFlow(text, chatId, userId, tg, env);
+  // v3.7: 프롬프트 저장 폐지 — 깃허브·허깅페이스 링크만 저장. Threads 등이 감싼 링크(?u=)도 풀어서 찾는다
+  const expanded = expandWrappedLinks(text);
+  const urls = extractGithubUrls(expanded);
+  const hfUrls = extractHfUrls(expanded);
+  if (urls.length === 0 && hfUrls.length === 0) {
+    await tg.sendMessage(chatId, msg.notALink());
     return;
   }
 
   for (const u of urls) {
     await addRepoFlow(u, chatId, userId, tg, env);
   }
-}
-
-async function handlePromptsApi(env: Env): Promise<Response> {
-  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
-  try {
-    const { data } = await getPromptsFile(env);
-    return new Response(JSON.stringify(data), { headers: cors });
-  } catch (e: any) {
-    return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: cors });
-  }
-}
-
-async function handlePromptDeleteApi(url: URL, env: Env): Promise<Response> {
-  const cors = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' };
-  const secret = url.searchParams.get('secret');
-  const id = url.searchParams.get('id');
-  if (!secret || secret !== env.WEBHOOK_SECRET || !id) {
-    return new Response(JSON.stringify({ ok: false, error: 'forbidden' }), { status: 401, headers: cors });
-  }
-  try {
-    const { data, sha } = await getPromptsFile(env);
-    const idx = data.prompts.findIndex((p) => p.id === id);
-    if (idx < 0) {
-      return new Response(JSON.stringify({ ok: false, error: 'not found' }), { status: 404, headers: cors });
-    }
-    data.prompts.splice(idx, 1);
-    data.updated_at = new Date().toISOString();
-    await putPromptsFile(env, data, sha, `delete prompt ${id}`);
-    return new Response(JSON.stringify({ ok: true }), { headers: cors });
-  } catch (e: any) {
-    return new Response(JSON.stringify({ ok: false, error: e.message }), { status: 500, headers: cors });
+  for (const u of hfUrls) {
+    await addHfFlow(u, chatId, userId, tg, env);
   }
 }
 
@@ -199,6 +168,13 @@ async function handleCallback(cq: any, tg: TelegramAPI, env: Env): Promise<void>
       const id = data.slice(4);
       await tg.answerCallbackQuery(cq.id, `${id} 저장 중...`);
       await addRepoFlow(`https://github.com/${id}`, chatId, cq.from.id, tg, env);
+      return;
+    }
+    // v3.7 주간 보고의 허깅페이스 추천 저장 버튼 — callback_data = hfadd:<허깅페이스 경로>
+    if (data.startsWith('hfadd:')) {
+      const path = data.slice(6);
+      await tg.answerCallbackQuery(cq.id, `${path} 저장 중...`);
+      await addHfFlow(`https://huggingface.co/${path}`, chatId, cq.from.id, tg, env);
       return;
     }
     await tg.answerCallbackQuery(cq.id);
@@ -302,6 +278,17 @@ async function findFlow(question: string, chatId: number, tg: TelegramAPI, env: 
   }
 }
 
+// l.threads.com/?u=<인코딩된 링크> 같은 리다이렉트 래퍼를 풀어서 원문 뒤에 붙인다
+function expandWrappedLinks(text: string): string {
+  const extra: string[] = [];
+  for (const m of text.matchAll(/[?&]u=(https?(?:%3A|:)[^&\s]+)/gi)) {
+    try {
+      extra.push(decodeURIComponent(m[1]));
+    } catch { /* 깨진 인코딩은 무시 */ }
+  }
+  return extra.length ? `${text}\n${extra.join('\n')}` : text;
+}
+
 function extractGithubUrls(text: string): string[] {
   const re = /https?:\/\/github\.com\/([\w.-]+)\/([\w.-]+)/g;
   return [...text.matchAll(re)].map((m) => `https://github.com/${m[1]}/${m[2]}`);
@@ -373,84 +360,60 @@ async function addRepoFlow(
   }
 }
 
-async function addPromptFlow(
-  content: string,
+// v3.7 — 허깅페이스 링크 저장 (addRepoFlow와 같은 흐름, 저장 파일만 docs/hf.json)
+async function addHfFlow(
+  url: string,
   chatId: number,
   userId: number,
   tg: TelegramAPI,
   env: Env
 ): Promise<void> {
   try {
-    // Workers AI로 한글 제목 + 카테고리 생성
-    const firstLine = content.split('\n').find((l) => l.trim()) || '';
-    let title = firstLine.slice(0, 40) || content.slice(0, 40);
-    let category = '기타';
-    let description: string | null = null;
-    try {
-      const aiRes = await (env.AI as any).run('@cf/meta/llama-3.1-8b-instruct', {
-        messages: [
-          {
-            role: 'system',
-            content: 'Respond with ONLY valid JSON, no other text:\n{"title":"<Korean title max 20 chars>","description":"<Korean one-sentence description of what image/result this prompt creates, max 40 chars>","category":"글쓰기|코딩|분석|이미지|번역|요약|아이디어|기타"}',
-          },
-          { role: 'user', content: `Classify this prompt:\n${content.slice(0, 500)}` },
-        ],
-      }) as { response: string };
-      const raw = aiRes.response || '';
-      const jsonStr = raw.match(/\{[\s\S]*?\}/)?.[0] ?? raw.trim();
-      const parsed = JSON.parse(jsonStr);
-      if (parsed.title) title = String(parsed.title).slice(0, 40);
-      if (parsed.category) category = String(parsed.category);
-      if (parsed.description) description = String(parsed.description).slice(0, 60);
-    } catch (aiErr: any) {
-      console.error('AI classify failed:', aiErr?.message || aiErr);
+    const parsed = parseHfUrl(url);
+    if (!parsed) {
+      await tg.sendMessage(chatId, msg.hfNotFound(url));
+      return;
     }
-
-    const { data, sha } = await getPromptsFile(env);
-
-    // 중복 체크 — content.trim() 완전 일치
-    const trimmed = content.trim();
-    const dup = data.prompts.find((p) => p.content.trim() === trimmed);
-    if (dup) {
-      await tg.sendMessage(chatId, msg.promptDuplicate(dup.title));
+    const id = hfEntryId(parsed.kind, parsed.repoId);
+    const { data, sha } = await getHfFile(env);
+    const exists = data.items.find((r) => r.id === id);
+    if (exists) {
+      await tg.sendMessage(chatId, msg.hfAlreadySaved(exists));
       return;
     }
 
-    const now = new Date().toISOString();
-    const id = `p_${Date.now()}`;
+    const meta = await fetchHfMeta(parsed.kind, parsed.repoId, env);
+    if (!meta) {
+      await tg.sendMessage(chatId, msg.hfNotFound(url));
+      return;
+    }
+    const cats = await getCategories(env);
+    const result = classifyHf(meta, cats);
+    const topics = [meta.pipeline_tag || '', meta.library || '', ...meta.tags].filter(Boolean);
+    const descKo = await explainKo(env, `허깅페이스 ${meta.kind} ${meta.repoId}`, meta.description, topics);
+    const entry = buildHfEntry(meta, result, `telegram:${userId}`, descKo);
 
-    const entry: PromptEntry = {
-      id,
-      title,
-      description,
-      content,
-      category,
-      saved_at: now,
-      added_by: `telegram:${userId}`,
-      notes: null,
-    };
-
-    data.prompts.unshift(entry);
-    data.updated_at = now;
+    data.items.unshift(entry);
+    data.updated_at = entry.saved_at;
     try {
-      await putPromptsFile(env, data, sha, `add prompt ${id}`);
+      await putHfFile(env, data, sha, `add ${id} (${entry.category})`);
     } catch (putErr: any) {
-      // sha 충돌(race condition) → 최신 파일 다시 읽어서 재시도
-      if (putErr.message.includes('422') || putErr.message.includes('409')) {
-        const { data: fresh, sha: freshSha } = await getPromptsFile(env);
-        if (!fresh.prompts.find((p) => p.id === id)) {
-          fresh.prompts.unshift(entry);
-          fresh.updated_at = now;
-          await putPromptsFile(env, fresh, freshSha, `add prompt ${id}`);
+      // sha 충돌(동시 저장) → 최신 파일 다시 읽어서 한 번 재시도
+      if (/\b(409|422)\b/.test(putErr?.message || '')) {
+        const { data: fresh, sha: freshSha } = await getHfFile(env);
+        if (!fresh.items.find((r) => r.id === id)) {
+          fresh.items.unshift(entry);
+          fresh.updated_at = entry.saved_at;
+          await putHfFile(env, fresh, freshSha, `add ${id} (${entry.category})`);
         }
       } else {
         throw putErr;
       }
     }
 
-    await tg.sendMessage(chatId, msg.promptSaved(title, category));
+    await tg.sendMessage(chatId, entry.confidence < 0.7 ? msg.hfLowConfidence(entry) : msg.hfSaved(entry));
   } catch (e: any) {
-    console.error('addPromptFlow error', e?.message || e);
+    console.error('addHfFlow error', e?.message || e);
     await tg.sendMessage(chatId, msg.error());
   }
 }
@@ -493,6 +456,10 @@ async function handleCommand(
 
       case '/add': {
         const url = args[0];
+        if (url && parseHfUrl(url)) {
+          await addHfFlow(url, chatId, userId, tg, env);
+          return;
+        }
         if (!url || !parseGithubUrl(url)) {
           await tg.sendMessage(chatId, msg.addUsage());
           return;
@@ -565,6 +532,22 @@ async function handleCommand(
           return;
         }
         const id = rawId.toLowerCase();
+        if (id.startsWith('hf:')) {
+          const { data: hf, sha: hfSha } = await getHfFile(env);
+          const item = hf.items.find((r) => r.id === id);
+          if (!item) {
+            await tg.sendMessage(chatId, msg.notFoundInData(rawId));
+            return;
+          }
+          const prev = item.category;
+          item.category = newCat;
+          item.confidence = 1.0;
+          item.classified_by = 'user';
+          hf.updated_at = new Date().toISOString();
+          await putHfFile(env, hf, hfSha, `retag ${id} (${prev} → ${newCat})`);
+          await tg.sendMessage(chatId, msg.retagged(id, prev, newCat));
+          return;
+        }
         const { data, sha } = await getDataFile(env);
         const repo = data.repos.find((r) => r.id === id);
         if (!repo) {
@@ -588,6 +571,19 @@ async function handleCommand(
           return;
         }
         const id = rawId.toLowerCase();
+        if (id.startsWith('hf:')) {
+          const { data: hf, sha: hfSha } = await getHfFile(env);
+          const i = hf.items.findIndex((r) => r.id === id);
+          if (i < 0) {
+            await tg.sendMessage(chatId, msg.notFoundInData(rawId));
+            return;
+          }
+          hf.items.splice(i, 1);
+          hf.updated_at = new Date().toISOString();
+          await putHfFile(env, hf, hfSha, `delete ${id}`);
+          await tg.sendMessage(chatId, msg.deleted(id));
+          return;
+        }
         const { data, sha } = await getDataFile(env);
         const idx = data.repos.findIndex((r) => r.id === id);
         if (idx < 0) {
@@ -616,46 +612,6 @@ async function handleCommand(
       case '/보고': {
         await tg.sendMessage(chatId, msg.digestStarting());
         await runDigest(env, chatId);
-        return;
-      }
-
-      case '/prompt':
-      case '/p': {
-        const promptText = args.join(' ').trim();
-        if (!promptText) {
-          await tg.sendMessage(chatId, `사용법: \`/prompt 내용\``);
-          return;
-        }
-        await addPromptFlow(promptText, chatId, userId, tg, env);
-        return;
-      }
-
-      case '/plist': {
-        const { data } = await getPromptsFile(env);
-        if (data.prompts.length === 0) {
-          await tg.sendMessage(chatId, msg.promptListEmpty());
-          return;
-        }
-        await tg.sendMessage(chatId, msg.promptList(data.prompts));
-        return;
-      }
-
-      case '/pdelete': {
-        const pid = args[0];
-        if (!pid) {
-          await tg.sendMessage(chatId, msg.promptDeleteUsage());
-          return;
-        }
-        const { data, sha } = await getPromptsFile(env);
-        const idx = data.prompts.findIndex((p) => p.id === pid);
-        if (idx < 0) {
-          await tg.sendMessage(chatId, msg.promptNotFound(pid));
-          return;
-        }
-        data.prompts.splice(idx, 1);
-        data.updated_at = new Date().toISOString();
-        await putPromptsFile(env, data, sha, `delete prompt ${pid}`);
-        await tg.sendMessage(chatId, msg.promptDeleted(pid));
         return;
       }
 

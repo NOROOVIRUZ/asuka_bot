@@ -341,7 +341,8 @@ export async function explainKo(
   const prompt = `이름: ${name}\n영어 설명: ${(description || '').slice(0, 300)}\n토픽: ${topics.slice(0, 6).join(', ') || '없음'}`;
   const system =
     '너는 개발 지식이 없는 사람에게 GitHub 저장소나 허깅페이스 자료(AI 모델·데이터셋·데모 스페이스)를 설명하는 도우미다. 이것이 뭐 하는 물건인지, 어디에 쓰면 좋은지를 쉬운 한국어 1~2문장으로 설명해라. 전문용어를 쓰면 바로 쉬운 말로 풀어라. 인사말·서론 없이 설명 문장만 출력해라.';
-  for (const model of ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/meta/llama-3.1-8b-instruct']) {
+  const models = ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/meta/llama-3.1-8b-instruct'];
+  for (const model of models) {
     try {
       const aiRes = (await (env.AI as any).run(model, {
         messages: [
@@ -350,6 +351,13 @@ export async function explainKo(
         ],
       })) as { response: string };
       const text = (aiRes.response || '').trim().replace(/^["'\s]+|["'\s]+$/g, '');
+      // v3.7: 중국어·일본어 한자가 섞이면 다음 모델로 다시 (마지막 모델이면 한자만 지우고 사용)
+      if (text && /[\u3040-\u30ff\u4e00-\u9fff]/.test(text)) {
+        if (model !== models[models.length - 1]) continue;
+        const cleaned = text.replace(/[\u3040-\u30ff\u4e00-\u9fff]+/g, '').replace(/\s{2,}/g, ' ').trim();
+        if (cleaned) return cleaned.slice(0, 300);
+        continue;
+      }
       if (text) return text.slice(0, 300);
     } catch (e: any) {
       console.error(`explainKo ${model} failed`, e?.message || e);

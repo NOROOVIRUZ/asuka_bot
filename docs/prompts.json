@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T15:57:13.221Z",
+  "updated_at": "2026-10-24T05:46:18.642Z",
   "prompts": [
+    {
+      "id": "p_1792820778642",
+      "title": "https://giting.kr/skills/ui-menu",
+      "description": null,
+      "content": "https://giting.kr/skills/ui-menu",
+      "category": "기타",
+      "saved_at": "2026-10-24T05:46:18.642Z",
+      "added_by": "telegram:8176674830",
+      "notes": null
+    },
     {
       "id": "p_1792339033221",
       "title": "https://l.threads.com/?u=https%3A%2F%2Fg",

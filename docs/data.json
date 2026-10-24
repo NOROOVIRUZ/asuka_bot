@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T09:14:23.075Z",
+  "updated_at": "2026-10-24T10:21:06.537Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "jay-hyun/claramuz",
+      "owner": "Jay-Hyun",
+      "name": "ClaraMuz",
+      "url": "https://github.com/Jay-Hyun/ClaraMuz",
+      "description": "backchat between Claude and ChatGPT",
+      "language": "JavaScript",
+      "stars": 3,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "클로드코드 운영",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-10-24T10:21:06.537Z",
+      "stars_updated_at": "2026-10-24T10:21:06.537Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "클라라뮤즈는 클라우드와 채팅지피티가 대화하는 내용을 담은 저장소로, 두 인공지능이 서로 대화하는 방식을 보여준다. 이는 인공지능의 대화 능력과 상호작용을 이해하는 데 도움이 될 수 있다."
+    },
     {
       "id": "black-forest-labs/flux-3-image-klein",
       "owner": "black-forest-labs",

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T22:23:13.338Z",
+  "updated_at": "2026-10-26T22:25:20.433Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "expo/skills",
+      "owner": "expo",
+      "name": "skills",
+      "url": "https://github.com/expo/skills",
+      "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "language": "Shell",
+      "stars": 3114,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-10-26T22:25:20.433Z",
+      "stars_updated_at": "2026-10-26T22:25:20.433Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "Expo라는 플랫폼에서 인공지능을 활용할 수 있는 기능들을 모아둔 곳으로, 이 기능들을 이용하면 Expo 프로젝트와 애플리케이션 서비스를 더 쉽게 만들고 관리할 수 있다."
+    },
     {
       "id": "lightningpixel/modly",
       "owner": "lightningpixel",

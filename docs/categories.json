@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "updated": "2026-10-04",
+  "updated": "2026-10-26",
   "model": {
-    "category": "단일 카테고리 (필수) — 용도 중심 8종",
+    "category": "단일 카테고리 (필수) — 용도 중심 9종 (v3.8: 3D·렌더 분리)",
     "tags": "보조 태그 배열. \"cc\" = Claude Code에 설치해 쓰는 것(구 cc-스킬/cc-저장소 축은 태그로 보존)"
   },
   "rules": {
@@ -73,7 +73,7 @@
     },
     "미디어 생성": {
       "label": "미디어 생성",
-      "description": "이미지·영상·음성·3D 생성과 편집(업스케일·스프라이트·TTS·STT 포함)",
+      "description": "이미지·영상·음성 생성과 편집(업스케일·스프라이트·TTS·STT 포함)",
       "keywords": {
         "strong": [
           "image generation",
@@ -81,14 +81,12 @@
           "voice",
           "tts",
           "speech",
-          "3d",
           "sprite",
           "diffusion",
           "upscale"
         ],
         "medium": [
           "animation",
-          "render",
           "pixel"
         ],
         "name_pattern": [
@@ -212,6 +210,44 @@
           "build"
         ]
       }
+    },
+    "3D·렌더": {
+      "label": "3D·렌더",
+      "description": "블렌더·Three.js·3D 모델 생성·리깅·모션·3D 장면 렌더 (ORU 프로젝트 착수 때 이 칸 먼저 검토)",
+      "keywords": {
+        "strong": [
+          "3d",
+          "blender",
+          "three.js",
+          "threejs",
+          "mesh",
+          "gaussian splat",
+          "nerf",
+          "rigging",
+          "mocap",
+          "stl file"
+        ],
+        "medium": [
+          "3d render",
+          "webgl",
+          "sculpt",
+          "point cloud",
+          "geometry",
+          "mixamo"
+        ],
+        "name_pattern": [
+          "3d",
+          "three",
+          "blender",
+          "mesh"
+        ]
+      },
+      "name_patterns": [
+        "3d",
+        "three",
+        "blender",
+        "mesh"
+      ]
     }
   }
 }

@@ -113,7 +113,7 @@ const PIPELINE_CATEGORY: Record<string, string> = {
   'text-to-image': '미디어 생성', 'image-to-image': '미디어 생성', 'unconditional-image-generation': '미디어 생성',
   'text-to-video': '미디어 생성', 'image-to-video': '미디어 생성', 'video-to-video': '미디어 생성',
   'text-to-speech': '미디어 생성', 'text-to-audio': '미디어 생성', 'audio-to-audio': '미디어 생성',
-  'image-to-3d': '미디어 생성', 'text-to-3d': '미디어 생성', 'image-segmentation': '미디어 생성',
+  'image-to-3d': '3D·렌더', 'text-to-3d': '3D·렌더', 'image-segmentation': '미디어 생성',
   'mask-generation': '미디어 생성', 'depth-estimation': '미디어 생성', 'keypoint-detection': '미디어 생성',
   'image-feature-extraction': '미디어 생성',
   'text-generation': '에이전트·자동화', 'image-text-to-text': '에이전트·자동화', 'any-to-any': '에이전트·자동화',

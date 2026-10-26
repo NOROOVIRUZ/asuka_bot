@@ -1,6 +1,16 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.8 — 2026-10-26
+
+- **🧊 3D·렌더 카테고리 신설** (용도 중심 8종 → 9종): 블렌더·Three.js·3D 모델 생성·리깅·모션·3D 장면 렌더 도구를 한 칸에 모음. 미디어 생성·클로드코드 운영·개발도구·디자인·UI에 흩어져 있던 15개 이동 (mcp-for-blender·img2threejs·trellis.2·zero123plus·hi3dv1.0·3dviz-pro-max·hy-motion-1.0·motion2mixamorig·prompt2rig·cozyclay 2종·scroll-world·lingbot-map·opengeometry·gods-eye-view). 이전 값은 `category_prev`에 보관, `classified_by: asuka-3d-v38`
+- **ORU 프로젝트 착수 때 이 칸을 먼저 검토**하는 규칙을 위키 oru 라우터·ORU 페이지에 기록
+- 분류기(`categories.json` 두 곳): 3D·렌더 키워드 추가, 미디어 생성에서 `3d`·`render` 키워드 제거 → 앞으로 텔레그램으로 저장하는 3D 저장소는 자동으로 이 칸에 들어감. 허깅페이스 `image-to-3d`·`text-to-3d`도 3D·렌더로 (봇 재배포)
+- 노루군 공유 "디자인·영상 AI 도구 10선" 반영: 없던 4개 추가 — ui-ux-pro-max-skill·penpot(디자인·UI), remotion·lemo-opuscar(미디어 생성). 이미 있던 6개(impeccable·mcp-for-blender·img2threejs·video-shotcraft·hyperframes·diagram-design)는 별 수 갱신
+- `ahujasid/blender-mcp`는 `mcp-for-blender`로 이름만 바뀐 같은 저장소라 중복 카드 하나로 합침 (태그 mcp 유지, 깨진 설명 "!!!!" 교체)
+- 버전 표기·캐시 버스터 v3.7 → v3.8
+- 검색 키워드: 3D·렌더, 3D 카테고리, ORU 검토, blender-mcp 중복, remotion, penpot, ui-ux-pro-max
+
 ## v3.7 — 2026-10-24
 
 - **프롬프트 탭 폐지**: 대시보드 탭·카드·삭제 API(`/api/prompts`, `/api/prompt/delete`), 봇 명령(`/prompt` `/p` `/plist` `/pdelete`), "링크 아닌 글은 프롬프트로 저장" 동작 전부 제거. `docs/prompts.json`(25개) 삭제 — 원본은 깃 기록(v3.6 커밋 54406fc)에 남음

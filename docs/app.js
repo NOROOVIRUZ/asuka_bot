@@ -1,5 +1,6 @@
 // asuka 봇 · GitHub 저장소 + 허깅페이스 대시보드
 // data.json + hf.json + categories.json + teams.json → 섹션 렌더 → 필터/정렬
+// v3.8: 3D·렌더 카테고리 분리
 // v3.7: 프롬프트 탭 폐지, 허깅페이스 탭 신설 (저장소 탭과 같은 카드·필터·즐겨찾기·설치상태)
 
 const CATEGORY_EMOJI = {
@@ -12,6 +13,7 @@ const CATEGORY_EMOJI = {
   '에이전트·자동화': '🤖',
   '클로드코드 운영': '🧩',
   '개발도구': '🛠️',
+  '3D·렌더': '🧊', // v3.8: ORU 프로젝트 착수 때 검토하는 칸
   // v1 잔존 키 (category_v1 표시 대비)
   '디자인': '🎨',
   'ai-이미지': '🖼️',

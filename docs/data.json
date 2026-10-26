@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T01:00:38.000Z",
+  "updated_at": "2026-10-26T22:23:13.338Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lightningpixel/modly",
+      "owner": "lightningpixel",
+      "name": "modly",
+      "url": "https://github.com/lightningpixel/modly",
+      "description": "Desktop app to generate 3D models from images or prompt using local AI — runs entirely on your GPU",
+      "language": "TypeScript",
+      "stars": 8409,
+      "topics": [
+        "3d",
+        "ai-local",
+        "ai-tools",
+        "desktop-app",
+        "modly",
+        "open-source",
+        "self-hosted"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "3D·렌더",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-10-26T22:23:13.338Z",
+      "stars_updated_at": "2026-10-26T22:23:13.338Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 컴퓨터의 그래픽 카드를 이용하여 이미지나 설명을 통해 3D 모델을 생성해주는 데스크탑 프로그램이다. 로컬에서 작동하는 인공지능을 사용하기 때문에 인터넷에 연결할 필요가 없다."
+    },
     {
       "id": "lemomo-ai/lemo-opuscar",
       "owner": "lemomo-ai",

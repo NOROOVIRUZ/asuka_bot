@@ -412,9 +412,10 @@
       "saved_at": "2026-08-18T14:07:15.798Z",
       "stars_updated_at": "2026-10-26T01:00:38.000Z",
       "added_by": "telegram:8176674830",
-      "notes": "blender-mcp(구 이름)와 중복 항목 합침 v3.8",
+      "notes": "blender-mcp(구 이름)와 중복 항목 합침 v3.8 · 2026-10-26 설치(Claude Code user 스코프, 텔레메트리 OFF·SAFE_MODE ON, 애드온 Blender 5.2 자동시작 127.0.0.1:9876) — ORU 3D 작업용",
       "desc_ko": "블렌더(무료 3D 프로그램)를 클로드코드·코덱스 같은 AI에 연결해서, 말로 3D 모델을 만들고 장면을 고치게 해주는 플러그인이에요. 블렌더 공식 제작물은 아니에요.",
-      "category_prev": "클로드코드 운영"
+      "category_prev": "클로드코드 운영",
+      "status": "설치"
     },
     {
       "id": "yazzang-homelab/wb-openai-gateway",

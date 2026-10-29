@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29T00:07:07.695Z",
+  "updated_at": "2026-10-29T15:01:00.400Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "baidu/unlimited-ocr",
+      "owner": "baidu",
+      "name": "Unlimited-OCR",
+      "url": "https://github.com/baidu/Unlimited-OCR",
+      "description": "Unlimited OCR Works: Welcome the Era of One-shot Long-horizon Parsing.",
+      "language": "Python",
+      "stars": 29694,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "문서·데이터",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-10-29T15:01:00.400Z",
+      "stars_updated_at": "2026-10-29T15:01:00.400Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 한 번에 긴 시간 동안의 글자 인식이 가능한 인공지능 모델로, 문서나 이미지 속의 글자를 자동으로 읽고 이해하는 데 사용된다. 문서 작업 자동화나 이미지 속 글자 인식과 같은 작업에 유용하다."
+    },
     {
       "id": "vecszn/polystrata",
       "owner": "VecSzn",

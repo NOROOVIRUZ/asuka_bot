@@ -7,6 +7,7 @@
 - `vercel.json`: 빌드 없이 `docs/` 그대로 서빙, 전 응답 `X-Robots-Tag: noindex, nofollow`(검색엔진 색인 차단). `.vercelignore`로 bot/·graphify-out/ 제외
 - 위키 "해본 기록"은 비공개라 Vercel에도 안 올림(공개 주소엔 효과·도구만). 로컬 런처 `asuka 서재.command` 삭제 → 바탕화면 `asuka 서재.webloc`(Vercel 주소)로 교체
 - **회사 흔적 제거**: 이 저장소 커밋 작성자가 맥 전역 설정 탓에 회사 메일(oa-world)로 찍히던 문제 → 저장소 전용 작성자를 NOROOVIRUZ 깃허브 noreply 주소로 고정. 커밋에 Co-Authored-By도 넣지 않음(Vercel Hobby가 외부 기여자로 보고 배포를 막는 문제 예방)
+- **과거 커밋 작성자 정리(노루군 승인)**: 회사 메일로 찍힌 과거 커밋을 전부 NOROOVIRUZ로 재작성 후 강제 push(파일 내용 동일, 트리 해시 일치 확인) — asuka_bot·noroo-archive·asuka-wiki 3곳, 회사 메일 0개. 맥 전역 git 작성자도 NOROOVIRUZ noreply로 교체. 백업: ~/projects/_git-backup-2026-10-30/
 - 검색 키워드: Vercel, asuka-library, 자동 배포, vercel.json, noindex, 로컬 서버 폐지, 커밋 작성자, oa-world 제거
 
 ## v3.92 — 2026-10-30

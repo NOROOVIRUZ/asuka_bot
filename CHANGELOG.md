@@ -1,6 +1,14 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.93 — 2026-10-30
+
+- **Vercel 배포 추가**: 로컬 서버 없이 주소 하나로 서재를 본다 — https://asuka-library.vercel.app (깃허브 저장소 연결, push할 때마다 자동 재배포 → 봇이 북마크를 저장해도 자동 반영)
+- `vercel.json`: 빌드 없이 `docs/` 그대로 서빙, 전 응답 `X-Robots-Tag: noindex, nofollow`(검색엔진 색인 차단). `.vercelignore`로 bot/·graphify-out/ 제외
+- 위키 "해본 기록"은 비공개라 Vercel에도 안 올림(공개 주소엔 효과·도구만). 로컬 런처 `asuka 서재.command` 삭제 → 바탕화면 `asuka 서재.webloc`(Vercel 주소)로 교체
+- **회사 흔적 제거**: 이 저장소 커밋 작성자가 맥 전역 설정 탓에 회사 메일(oa-world)로 찍히던 문제 → 저장소 전용 작성자를 NOROOVIRUZ 깃허브 noreply 주소로 고정. 커밋에 Co-Authored-By도 넣지 않음(Vercel Hobby가 외부 기여자로 보고 배포를 막는 문제 예방)
+- 검색 키워드: Vercel, asuka-library, 자동 배포, vercel.json, noindex, 로컬 서버 폐지, 커밋 작성자, oa-world 제거
+
 ## v3.92 — 2026-10-30
 
 - **서재를 주제 카드로 묶음 (위키 방식)**: 낱장 104개 → 주제 카드 13장. 카드에는 세부 항목 이름이 칩으로 보이고, 누르면 세부 창(dialog)에서 항목별 설명·영어 이름·AI 프롬프트(복사 버튼)·도구·예시 링크를 본다

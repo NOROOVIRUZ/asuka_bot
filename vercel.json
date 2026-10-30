@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "echo static",
+  "outputDirectory": "docs",
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}

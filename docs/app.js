@@ -17,7 +17,7 @@ const CATEGORY_EMOJI = {
   '3D·렌더': '🧊', // v3.8: ORU 프로젝트 착수 때 검토하는 칸
   // v3.9 서재 효과 종류
   '트랜지션': '🔀', '자막·타이포': '🔤', '색감·필름룩': '🎞️', '카메라·움직임': '🎥',
-  '속도·리듬': '⏱️', '합성·VFX': '✨', '화풍 스타일': '🖌️', 'AI 편집·생성': '🤖',
+  '촬영 언어': '📽️', '속도·리듬': '⏱️', '합성·VFX': '✨', '화풍 스타일': '🖌️', 'AI 편집·생성': '🤖',
   // v1 잔존 키 (category_v1 표시 대비)
   '디자인': '🎨',
   'ai-이미지': '🖼️',
@@ -85,7 +85,7 @@ const state = {
   filter: { search: '', category: 'all', workspace: 'all', kind: 'all', favOnly: false, status: 'all' },
   sort: 'saved_desc',
   collapsed: {},
-  mode: 'repos', // 'repos' | 'hf' | 'lib'
+  mode: 'lib', // 'lib'(v3.91 기본 첫 탭) | 'repos' | 'hf'
 };
 
 // ===== Favorites (localStorage — 이 브라우저에만 저장) =====
@@ -692,6 +692,7 @@ function applyModeLabels() {
 (async function init() {
   await loadData();
   bindEvents();
+  applyModeLabels();
   renderHeaderStats();
   render();
 })();

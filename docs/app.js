@@ -1,5 +1,6 @@
 // asuka 봇 · GitHub 저장소 + 허깅페이스 대시보드
 // data.json + hf.json + categories.json + teams.json → 섹션 렌더 → 필터/정렬
+// v3.92: 서재 효과를 주제 카드 13장으로 묶음 — 누르면 세부 항목 창(dialog)
 // v3.9: 📚 서재 탭 — effects.json(효과 목록) + 비슷한 말 검색 + 로컬에서만 위키 기록
 // v3.8: 3D·렌더 카테고리 분리
 // v3.7: 프롬프트 탭 폐지, 허깅페이스 탭 신설 (저장소 탭과 같은 카드·필터·즐겨찾기·설치상태)
@@ -17,7 +18,7 @@ const CATEGORY_EMOJI = {
   '3D·렌더': '🧊', // v3.8: ORU 프로젝트 착수 때 검토하는 칸
   // v3.9 서재 효과 종류
   '트랜지션': '🔀', '자막·타이포': '🔤', '색감·필름룩': '🎞️', '카메라·움직임': '🎥',
-  '촬영 언어': '📽️', '속도·리듬': '⏱️', '합성·VFX': '✨', '화풍 스타일': '🖌️', 'AI 편집·생성': '🤖',
+  '촬영 언어': '📽️', '모션 효과': '✨', '속도·리듬': '⏱️', '합성·VFX': '✨', '화풍 스타일': '🖌️', 'AI 편집·생성': '🤖',
   // v1 잔존 키 (category_v1 표시 대비)
   '디자인': '🎨',
   'ai-이미지': '🖼️',
@@ -222,9 +223,14 @@ function hayOf(r) {
       ...(r.hf_tags || []),
       r.ref || '',
       ...(r.tools || []),
+      ...(r.children || []).flatMap(childHay),
       // 위키 기록 필드
       r.canonical || '', ...(r.aka || []), r.summary || '', r.topic || '',
     ].join(' ').toLowerCase();
+}
+
+function childHay(c) {
+  return [c.name, c.desc, ...(c.tags || []), c.ref || '', c.prompt || ''];
 }
 
 function sortItems(result) {
@@ -261,7 +267,7 @@ function renderCardHtml(r) {
   const conf = r.confidence < 0.7
     ? `<span class="card-confidence low">신뢰도 ${(r.confidence * 100).toFixed(0)}%</span>`
     : '';
-  if (r.tools) return renderFxCardHtml(r, tags);
+  if (r.children) return renderFxCardHtml(r);
   if (r.kind) return renderHfCardHtml(r, emoji, statusBadge, tags, conf);
   return `
     <article class="card" data-url="${escapeHtml(r.url)}">
@@ -315,29 +321,78 @@ function renderHfCardHtml(r, emoji, statusBadge, tags, conf) {
   `;
 }
 
-// v3.9: 서재 효과 카드 — "이 도구로" 칩은 대시보드 저장소로 연결, 설치된 건 ✅
-function renderFxCardHtml(r, tags) {
+// v3.92: 서재 주제 카드 — 세부 항목 이름을 칩으로 미리 보여주고, 검색어에 걸린 항목은 강조
+function toolChips(ids, limit = 99) {
   const byId = Object.fromEntries(state.repos.map(x => [x.id, x]));
-  const tools = r.tools
+  return ids
     .map(id => byId[id])
     .filter(Boolean)
+    .slice(0, limit)
     .map(t => `<a class="fx-tool" href="${escapeHtml(t.url)}" target="_blank" rel="noopener">${t.status === '설치' ? '✅ ' : ''}${escapeHtml(t.name)}</a>`)
     .join('');
+}
+
+function childMatches(r) {
+  const q = state.filter.search.trim().toLowerCase();
+  if (!q) return new Set();
+  return new Set(r.children.filter(c => matchQuery(childHay(c).join(' ').toLowerCase(), q)).map(c => c.name));
+}
+
+function renderFxCardHtml(r) {
+  const hit = childMatches(r);
+  const names = r.children
+    .map(c => `<span class="fx-child-chip ${hit.has(c.name) ? 'hit' : ''}">${escapeHtml(c.name)}</span>`)
+    .join('');
   return `
-    <article class="card card-fx" data-url="${escapeHtml(r.ref_url || '')}">
+    <article class="card card-fx" data-fx="${escapeHtml(r.id)}">
       <div class="card-top">
-        <span class="card-category">${escapeHtml(r.category)}</span>
+        <span class="card-category">${CATEGORY_EMOJI[r.category] || '📦'} ${escapeHtml(r.category)}</span>
         <span class="card-top-right">
           <button class="card-fav ${favs.has(r.id) ? 'active' : ''}" data-id="${escapeHtml(r.id)}" aria-label="즐겨찾기" aria-pressed="${favs.has(r.id)}">${favs.has(r.id) ? '★' : '☆'}</button>
         </span>
       </div>
-      <div class="card-name">${escapeHtml(r.name)}</div>
+      <div class="card-name">${escapeHtml(r.name)} <span class="fx-count">${r.children.length}</span></div>
       <div class="card-desc">${escapeHtml(r.desc_ko)}</div>
-      ${tags ? `<div class="card-tags">${tags}</div>` : ''}
-      <div class="fx-tools">${tools ? `<span class="fx-tools-label">이 도구로</span>${tools}` : ''}</div>
-      ${r.ref ? `<div class="fx-ref">${r.ref_url ? '▶ 예시 보기 · ' : ''}${escapeHtml(r.ref)}</div>` : ''}
+      <div class="fx-children">${names}</div>
+      <div class="fx-more">${hit.size ? `검색어와 맞는 항목 ${hit.size}개 · ` : ''}눌러서 세부 보기 →</div>
     </article>
   `;
+}
+
+// v3.92: 세부 창 — 항목마다 설명·영어 이름·AI 프롬프트(복사)·도구·예시
+function openFx(id) {
+  const r = state.fx.find(x => x.id === id);
+  if (!r) return;
+  const hit = childMatches(r);
+  const kids = [...r.children].sort((a, b) => hit.has(b.name) - hit.has(a.name));
+  const dlg = document.getElementById('fxDialog');
+  dlg.innerHTML = `
+    <div class="fx-dlg-head">
+      <div>
+        <div class="fx-dlg-cat">${CATEGORY_EMOJI[r.category] || '📦'} ${escapeHtml(r.category)}</div>
+        <h2 class="fx-dlg-title">${escapeHtml(r.name)} <span class="fx-count">${r.children.length}</span></h2>
+        <p class="fx-dlg-desc">${escapeHtml(r.desc_ko)}</p>
+      </div>
+      <button class="fx-dlg-close" aria-label="닫기">✕</button>
+    </div>
+    <div class="fx-dlg-list">
+      ${kids.map(c => `
+        <section class="fx-item ${hit.has(c.name) ? 'hit' : ''}">
+          <div class="fx-item-name">${escapeHtml(c.name)}${c.tags?.[0] ? ` <span class="fx-item-en">${escapeHtml(c.tags[0])}</span>` : ''}</div>
+          <p class="fx-item-desc">${escapeHtml(c.desc)}</p>
+          ${c.prompt ? `<div class="fx-prompt"><code>${escapeHtml(c.prompt)}</code><button class="fx-copy" data-pr="${escapeHtml(c.prompt)}">프롬프트 복사</button></div>` : ''}
+          ${c.tools.length ? `<div class="fx-tools"><span class="fx-tools-label">이 도구로</span>${toolChips(c.tools)}</div>` : ''}
+          ${c.ref ? `<div class="fx-ref">${c.ref_url ? `<a href="${escapeHtml(c.ref_url)}" target="_blank" rel="noopener">▶ 예시 보기</a> · ` : ''}${escapeHtml(c.ref)}</div>` : ''}
+        </section>`).join('')}
+    </div>`;
+  dlg.querySelector('.fx-dlg-close').addEventListener('click', () => dlg.close());
+  dlg.querySelectorAll('.fx-copy').forEach(b => b.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(b.dataset.pr);
+    b.textContent = '복사됨 ✓';
+    setTimeout(() => { b.textContent = '프롬프트 복사'; }, 1200);
+  }));
+  dlg.showModal();
+  dlg.scrollTop = 0;
 }
 
 // v3.9: 서재 검색 결과 아래 "관련 도구"(저장소·허깅페이스) + "해본 기록"(로컬 위키) 섹션
@@ -509,7 +564,7 @@ function renderSections(filtered) {
   const countEl = document.getElementById('resultCount');
   const extras = isLib() ? renderLibExtras(state.filter.search.trim().toLowerCase()) : { html: '', count: 0 };
 
-  countEl.textContent = isLib() && extras.count ? `효과 ${filtered.length}개 · 관련 ${extras.count}개` : `${filtered.length}개`;
+  countEl.textContent = isLib() && extras.count ? `주제 ${filtered.length}개 · 관련 ${extras.count}개` : `${filtered.length}개`;
 
   if (filtered.length === 0 && !extras.count) {
     main.innerHTML = '';
@@ -567,8 +622,9 @@ function renderSections(filtered) {
   main.querySelectorAll('.card').forEach((el, i) => {
     el.style.setProperty('--i', Math.min(i, 12));
     el.addEventListener('click', (e) => {
-      if (e.target.closest('.card-fav') || e.target.closest('a') || !el.dataset.url) return;
-      window.open(el.dataset.url, '_blank', 'noopener');
+      if (e.target.closest('.card-fav') || e.target.closest('a')) return;
+      if (el.dataset.fx) return openFx(el.dataset.fx);
+      if (el.dataset.url) window.open(el.dataset.url, '_blank', 'noopener');
     });
   });
 
@@ -624,7 +680,7 @@ function renderHeaderStats() {
   const totalStars = state.repos.reduce((s, r) => s + (r.stars || 0), 0);
   const hfCount = state.hf.length;
   document.getElementById('brandStats').textContent =
-    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)} · 허깅페이스 ${hfCount}개 · 효과 ${state.fx.length}개`;
+    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)} · 허깅페이스 ${hfCount}개 · 서재 ${state.fx.length}주제 ${state.fx.reduce((n, g) => n + g.children.length, 0)}항목`;
 }
 
 // ===== Init =====
@@ -688,6 +744,11 @@ function applyModeLabels() {
   sel.querySelector('option[value="stars_desc"]').textContent = hf ? '♥ 좋아요 많은순' : '⭐ 별 많은순';
   sel.querySelector('option[value="stars_asc"]').textContent = hf ? '♥ 좋아요 적은순' : '⭐ 별 적은순';
 }
+
+// 세부 창 바깥(배경) 클릭 시 닫기
+document.getElementById('fxDialog').addEventListener('click', (e) => {
+  if (e.target.id === 'fxDialog') e.target.close();
+});
 
 (async function init() {
   await loadData();

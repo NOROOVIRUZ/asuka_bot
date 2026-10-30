@@ -1,0 +1,1422 @@
+{
+ "version": "1",
+ "synonyms": [
+  [
+   "영상",
+   "비디오",
+   "동영상",
+   "video",
+   "movie",
+   "film"
+  ],
+  [
+   "효과",
+   "이펙트",
+   "effect",
+   "fx",
+   "vfx",
+   "모션",
+   "motion",
+   "애니메이션",
+   "animation"
+  ],
+  [
+   "전환",
+   "트랜지션",
+   "transition"
+  ],
+  [
+   "자막",
+   "캡션",
+   "subtitle",
+   "caption",
+   "타이포",
+   "typography",
+   "글자"
+  ],
+  [
+   "색감",
+   "색보정",
+   "컬러",
+   "color",
+   "grading",
+   "필름룩"
+  ],
+  [
+   "카메라",
+   "camera",
+   "촬영",
+   "무브"
+  ],
+  [
+   "3d",
+   "3D",
+   "입체",
+   "블렌더",
+   "blender"
+  ],
+  [
+   "화풍",
+   "스타일",
+   "style",
+   "룩",
+   "look"
+  ],
+  [
+   "편집",
+   "edit",
+   "컷",
+   "cut"
+  ]
+ ],
+ "kinds": {
+  "video": {
+   "label": "영상 효과",
+   "emoji": "🎬"
+  }
+ },
+ "items": [
+  {
+   "id": "fx:video/01",
+   "name": "디졸브 · 페이드",
+   "desc_ko": "앞 장면이 서서히 사라지며 다음 장면이 겹쳐 나온다. 제일 기본 전환.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "dissolve",
+    "fade",
+    "크로스페이드",
+    "페이드인",
+    "페이드아웃"
+   ],
+   "tools": [
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "browser-use/video-use",
+    "wassgha/rescript"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/02",
+   "name": "와이프 전환",
+   "desc_ko": "선이나 면이 화면을 쓸고 지나가며 다음 장면을 드러낸다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "wipe",
+    "쓸어넘기기",
+    "슬라이드 전환",
+    "push"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/wipe-transitions",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/03",
+   "name": "아이리스(원형) 전환",
+   "desc_ko": "동그라미가 줄어들거나 커지며 장면이 바뀐다. 옛날 만화 엔딩 느낌.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "iris",
+    "circle",
+    "원형 마스크",
+    "동그라미 전환",
+    "매치컷"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/circle-match-iris",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/04",
+   "name": "휩팬 · 이동 전환",
+   "desc_ko": "카메라가 휙 돌아가듯 빠르게 흐려지며 다음 장면으로 날아간다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "whip pan",
+    "모션블러",
+    "휙",
+    "travel",
+    "swish"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/transition-travel",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/05",
+   "name": "화이트 플래시 컷",
+   "desc_ko": "화면이 하얗게 번쩍인 뒤 다음 장면. 강조·로고 등장에 많이 쓴다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "flash",
+    "번쩍",
+    "섬광",
+    "white flash"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/white-flash-logo-simplify-cut",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/06",
+   "name": "히든 컷 (원테이크처럼 잇기)",
+   "desc_ko": "물체가 화면을 가리는 순간 잘라 붙여서 끊김 없는 한 컷처럼 보이게 한다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "hidden cut",
+    "원테이크",
+    "seamless",
+    "가림 전환"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/transition-hidden-cut",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/07",
+   "name": "페이지 넘김",
+   "desc_ko": "종이 페이지를 넘기듯 다음 장면이 나온다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "page turn",
+    "책장",
+    "페이지 컬"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/page-turn-transitions",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/08",
+   "name": "찢어짐 · 스트릭 전환",
+   "desc_ko": "화면이 찢어지거나 빛줄기가 긁고 지나가며 바뀐다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "tear",
+    "찢기",
+    "streak",
+    "긁힘"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/tear-streak-transitions",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/09",
+   "name": "모자이크 리프레임",
+   "desc_ko": "화면이 타일 조각으로 쪼개졌다가 새 장면으로 다시 맞춰진다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "mosaic",
+    "타일",
+    "조각",
+    "grid"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/mosaic-reframe",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/10",
+   "name": "카드 뒤집기",
+   "desc_ko": "카드가 휙 뒤집히며 뒷면에 다음 장면이 있다.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "card flip",
+    "플립",
+    "뒤집기",
+    "3D 회전"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/card-flip-reveal",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/11",
+   "name": "그라데이션 전환",
+   "desc_ko": "색 그라데이션이 화면을 덮었다 걷히며 바뀐다. 부드럽고 세련된 느낌.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "gradient",
+    "색 번짐",
+    "컬러 와이프"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/gradient-transition",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/12",
+   "name": "인쇄 질감 전환",
+   "desc_ko": "리소 인쇄·잉크 질감이 덮였다 걷히는 아날로그 전환.",
+   "kind": "video",
+   "category": "트랜지션",
+   "tags": [
+    "print texture",
+    "잉크",
+    "종이 질감",
+    "아날로그"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · transition/print-texture-transitions",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/13",
+   "name": "타자기 효과",
+   "desc_ko": "글자가 한 자씩 타닥타닥 찍혀 나온다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "typewriter",
+    "타이핑",
+    "한 글자씩",
+    "typing"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/typewriter-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/14",
+   "name": "키네틱 타이포",
+   "desc_ko": "글자가 음악·말 박자에 맞춰 날아다니고 커졌다 작아진다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "kinetic typography",
+    "움직이는 글자",
+    "flying words",
+    "리듬 자막",
+    "모션 타이포"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/type-rhythm-sync · flying-words",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/15",
+   "name": "블러 슬라이드 등장",
+   "desc_ko": "흐릿하게 미끄러지며 들어와 선명해지는 글자.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "blur",
+    "흐림",
+    "슬라이드인",
+    "등장"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/blur-slide",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/16",
+   "name": "글리치 텍스트",
+   "desc_ko": "글자가 지지직 깨지고 색이 어긋나며 바뀐다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "glitch",
+    "지지직",
+    "노이즈",
+    "색수차",
+    "RGB 분리",
+    "chromatic aberration"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/glitch-cycle",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/17",
+   "name": "외곽선 → 채움",
+   "desc_ko": "글자 테두리만 있다가 안이 차오른다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "outline",
+    "fill",
+    "스트로크",
+    "속채움"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/outline-word-fill",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/18",
+   "name": "형광펜 밑줄 제목",
+   "desc_ko": "손으로 긋듯 형광펜 밑줄이 쓱 그어지며 강조.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "marker",
+    "하이라이트",
+    "밑줄",
+    "강조"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/marker-underline-title",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/19",
+   "name": "단어 굴림(롤링)",
+   "desc_ko": "슬롯머신처럼 단어가 위아래로 굴러가며 바뀐다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "word roll",
+    "슬롯",
+    "롤링",
+    "단어 교체"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · typography/vertical-word-roll-blur-cycle",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/20",
+   "name": "쇼츠 자막 (2단어 큰 글씨)",
+   "desc_ko": "말하는 대로 2단어씩 큼직하게 박히는 쇼츠·릴스 자막.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "subtitle",
+    "burn-in",
+    "캡션",
+    "릴스 자막",
+    "쇼츠 자막"
+   ],
+   "tools": [
+    "browser-use/video-use",
+    "remotion-dev/remotion"
+   ],
+   "ref": "video-use · Burns subtitles (ElevenLabs 키 필요)",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/21",
+   "name": "손글씨 화이트보드 자막",
+   "desc_ko": "자막을 노란 종이 위에 손으로 쓰는 듯한 애니메이션으로.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "whiteboard",
+    "손글씨",
+    "핸드라이팅",
+    "srt"
+   ],
+   "tools": [
+    "geeklee/srt-whiteboard-animation"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/22",
+   "name": "텍스트 마스크",
+   "desc_ko": "큰 글자 모양 구멍 속으로 영상이 비쳐 보인다.",
+   "kind": "video",
+   "category": "자막·타이포",
+   "tags": [
+    "text mask",
+    "글자 속 영상",
+    "마스크",
+    "knockout"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · opening/text-as-mask",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/23",
+   "name": "자동 색보정 (컬러 그레이딩)",
+   "desc_ko": "장면마다 따뜻한 시네마틱·쨍한 톤 등으로 색을 맞춘다.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "color grading",
+    "LUT",
+    "색보정",
+    "시네마틱",
+    "톤"
+   ],
+   "tools": [
+    "browser-use/video-use"
+   ],
+   "ref": "video-use · Auto color grades (ffmpeg)",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/24",
+   "name": "필름 그레인 디졸브",
+   "desc_ko": "필름 입자(노이즈)가 끼며 사라지는 엔딩.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "film grain",
+    "그레인",
+    "필름룩",
+    "노이즈",
+    "아날로그"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · outro/grain-dissolve",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/25",
+   "name": "리소 인쇄 질감",
+   "desc_ko": "2~3색 인쇄가 살짝 어긋난 레트로 인쇄물 느낌.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "risograph",
+    "리소",
+    "레트로 인쇄",
+    "하프톤"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "shotcraft · effects/riso-print-hits / opuscar · risograph",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/26",
+   "name": "스캔라인 · CRT",
+   "desc_ko": "옛날 브라운관 TV 줄무늬와 번짐.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "scanline",
+    "CRT",
+    "VHS",
+    "브라운관",
+    "레트로 TV"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "shotcraft · effects/scanline-annotate-focus / opuscar · ascii-crt",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/27",
+   "name": "오로라 · 블룸 배경",
+   "desc_ko": "빛이 번지는 오로라 같은 그라데이션 배경.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "aurora",
+    "bloom",
+    "글로우",
+    "빛 번짐",
+    "배경"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · effects/aurora-bloom-bg-flip",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/28",
+   "name": "빛 놀이 · 스포트라이트",
+   "desc_ko": "조명이 훑고 지나가거나 한곳만 비춘다. 제품 강조에 좋다.",
+   "kind": "video",
+   "category": "색감·필름룩",
+   "tags": [
+    "light leak",
+    "spotlight",
+    "조명",
+    "라이트 스윕",
+    "하이라이트"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · effects/light-play-moves · spotlight-sweep-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/29",
+   "name": "크래시 줌 (펀치 줌)",
+   "desc_ko": "순간적으로 확 당겨 들어가는 줌. 예능·임팩트 강조.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "crash zoom",
+    "punch zoom",
+    "줌인",
+    "확대"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · camera/crash-zoom-punch",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/30",
+   "name": "패럴랙스 (2.5D 깊이감)",
+   "desc_ko": "앞·뒤 레이어가 다른 속도로 움직여 사진에 깊이가 생긴다.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "parallax",
+    "2.5D",
+    "레이어",
+    "깊이",
+    "켄번즈"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · camera/depth-layer-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/31",
+   "name": "크레인 상승 리빌",
+   "desc_ko": "카메라가 위로 쭉 올라가며 전체 장면을 드러낸다.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "crane",
+    "rise",
+    "리빌",
+    "오프닝",
+    "틸트업"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · opening/crane-rise-reveal",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/32",
+   "name": "3D 공간 카메라 무브",
+   "desc_ko": "3D 공간 안을 카메라가 돌고 날아다닌다.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "3D camera",
+    "orbit",
+    "궤도",
+    "공간 이동",
+    "dolly"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "nomadamas/cozyclay"
+   ],
+   "ref": "shotcraft · camera/space-camera-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/33",
+   "name": "커서 플라이오버",
+   "desc_ko": "화면 UI 위를 비행하듯 훑는 제품 소개 무브.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "cursor",
+    "flyover",
+    "UI 투어",
+    "제품 데모"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · camera/cursor-flyover",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/34",
+   "name": "촬영 용어 전체 (팬·틸트·돌리 등)",
+   "desc_ko": "팬·틸트·돌리·트래킹 같은 카메라 용어는 움직이는 그림으로 따로 정리돼 있다.",
+   "kind": "video",
+   "category": "카메라·움직임",
+   "tags": [
+    "pan",
+    "tilt",
+    "dolly",
+    "tracking",
+    "카메라 용어",
+    "촬영"
+   ],
+   "tools": [],
+   "ref": "바탕화면 AI프로젝트/기타 → 촬영 용어 치트시트",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/35",
+   "name": "스피드 램프 · 프리즈",
+   "desc_ko": "빨라졌다 느려지거나 한순간 딱 멈춘다.",
+   "kind": "video",
+   "category": "속도·리듬",
+   "tags": [
+    "speed ramp",
+    "slow motion",
+    "슬로모션",
+    "freeze frame",
+    "정지"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · rhythm/speed-ramp-freeze",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/36",
+   "name": "비트 컷",
+   "desc_ko": "음악 박자에 맞춰 컷이 바뀐다.",
+   "kind": "video",
+   "category": "속도·리듬",
+   "tags": [
+    "beat sync",
+    "박자",
+    "리듬 편집",
+    "음악 컷"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "browser-use/video-use"
+   ],
+   "ref": "shotcraft · rhythm/beat-cut-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/37",
+   "name": "분할 화면",
+   "desc_ko": "화면을 2·4칸으로 나눠 여러 장면을 동시에.",
+   "kind": "video",
+   "category": "속도·리듬",
+   "tags": [
+    "split screen",
+    "4분할",
+    "쿼드",
+    "멀티 화면"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · rhythm/quad-split-parallel-scenes",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/38",
+   "name": "사쿠가 타이밍",
+   "desc_ko": "애니메이션처럼 프레임을 일부러 끊어 툭툭 움직인다.",
+   "kind": "video",
+   "category": "속도·리듬",
+   "tags": [
+    "sakuga",
+    "애니 타이밍",
+    "stop motion",
+    "끊김"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · rhythm/sakuga-timing-shift",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/39",
+   "name": "트레일러 문법",
+   "desc_ko": "예고편처럼 짧은 컷·암전·강한 타이틀을 쌓아 긴장감.",
+   "kind": "video",
+   "category": "속도·리듬",
+   "tags": [
+    "trailer",
+    "예고편",
+    "암전",
+    "긴장감"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · rhythm/trailer-grammar-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/40",
+   "name": "HUD · 홀로그램 UI",
+   "desc_ko": "SF 영화처럼 떠 있는 정보 화면·홀로그램.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "HUD",
+    "hologram",
+    "FUI",
+    "SF",
+    "미래"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes",
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "shotcraft · effects/fui-hud-moves / opuscar · hologram-hud",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/41",
+   "name": "임팩트 · 화면 흔들림",
+   "desc_ko": "쾅 하고 꽂히며 화면이 흔들린다.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "impact",
+    "shake",
+    "쾅",
+    "slam",
+    "충격"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · effects/impact-feedback · slam-entrance-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/42",
+   "name": "글로우 라인",
+   "desc_ko": "빛나는 선이 날아가며 연결·궤적을 그린다.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "glow",
+    "라인",
+    "궤적",
+    "neon line"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · effects/glow-flyline-moves",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/43",
+   "name": "스캔 브래킷",
+   "desc_ko": "제품 위를 스캔하듯 모서리 표시가 훑는다.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "scan",
+    "스캔",
+    "브래킷",
+    "제품 분석"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "remotion-dev/remotion",
+    "heygen-com/hyperframes"
+   ],
+   "ref": "shotcraft · effects/scan-bracket-sweep",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/44",
+   "name": "분해도 (익스플로디드 뷰)",
+   "desc_ko": "제품 부품이 공중으로 분리되며 구조를 보여준다.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "exploded view",
+    "분해",
+    "teardown",
+    "부품"
+   ],
+   "tools": [
+    "vincentwei1021/video-shotcraft",
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "shotcraft · exploded-view / opuscar · teardown",
+   "ref_url": "https://vincentwei1021.github.io/video-shotcraft/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/45",
+   "name": "사람 동작 → 3D 캐릭터",
+   "desc_ko": "영상 속 사람 춤·동작을 3D 캐릭터가 따라 한다.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "motion capture",
+    "모션캡처",
+    "리깅",
+    "mixamo",
+    "캐릭터 애니"
+   ],
+   "tools": [
+    "maxliu22/motion2mixamorig",
+    "blendi-remade/prompt2rig",
+    "tencent-hunyuan/hy-motion-1.0"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/46",
+   "name": "일러스트 눈깜빡 · 입움직임",
+   "desc_ko": "정지 그림에 눈 깜빡임·입·흔들림을 넣어 살아 움직이게.",
+   "kind": "video",
+   "category": "합성·VFX",
+   "tags": [
+    "live2d",
+    "눈깜빡",
+    "립싱크",
+    "스탠딩 일러스트"
+   ],
+   "tools": [
+    "1mm-module/pngal"
+   ],
+   "ref": "윈도우 전용 툴",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/47",
+   "name": "수채화 화풍",
+   "desc_ko": "영상 전체를 수채화 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "watercolor",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/watercolor",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/48",
+   "name": "수묵화 화풍",
+   "desc_ko": "영상 전체를 수묵화 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "ink wash",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/ink-wash",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/49",
+   "name": "16비트 픽셀 RPG 화풍",
+   "desc_ko": "영상 전체를 16비트 픽셀 RPG 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "pixel art",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/pixel-rpg",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/50",
+   "name": "80년대 셀 애니 화풍",
+   "desc_ko": "영상 전체를 80년대 셀 애니 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "cel anime",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/cel-anime-80s",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/51",
+   "name": "우키요에 화풍",
+   "desc_ko": "영상 전체를 우키요에 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "ukiyo-e",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/ukiyoe",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/52",
+   "name": "1920년대 무성영화 화풍",
+   "desc_ko": "영상 전체를 1920년대 무성영화 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "silent film",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/silent-film",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/53",
+   "name": "설계도(블루프린트) 화풍",
+   "desc_ko": "영상 전체를 설계도(블루프린트) 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "blueprint",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/blueprint",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/54",
+   "name": "데이터 스토리텔링 화풍",
+   "desc_ko": "영상 전체를 데이터 스토리텔링 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "dataviz",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/dataviz",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/55",
+   "name": "아이소메트릭 인포그래픽 화풍",
+   "desc_ko": "영상 전체를 아이소메트릭 인포그래픽 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "isometric",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/iso-infographic",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/56",
+   "name": "스위스 모션그래픽 화풍",
+   "desc_ko": "영상 전체를 스위스 모션그래픽 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "swiss",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/swiss-motion",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/57",
+   "name": "빨간 종이 오리기 화풍",
+   "desc_ko": "영상 전체를 빨간 종이 오리기 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "papercut",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/papercut-red",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/58",
+   "name": "칠판 분필 화풍",
+   "desc_ko": "영상 전체를 칠판 분필 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "chalkboard",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/chalkboard",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/59",
+   "name": "크레용 그림책 화풍",
+   "desc_ko": "영상 전체를 크레용 그림책 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "crayon",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/crayon-book",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/60",
+   "name": "다크 테크 키노트 화풍",
+   "desc_ko": "영상 전체를 다크 테크 키노트 느낌으로 코드가 그려낸다. 생성 AI 없이 클로드가 만든다.",
+   "kind": "video",
+   "category": "화풍 스타일",
+   "tags": [
+    "keynote",
+    "화풍",
+    "스타일",
+    "룩"
+   ],
+   "tools": [
+    "lemomo-ai/lemo-opuscar"
+   ],
+   "ref": "opuscar · styles/dark-keynote",
+   "ref_url": "https://lemomo-ai.github.io/lemo-opuscar/",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/61",
+   "name": "레퍼런스 영상 따라 만들기",
+   "desc_ko": "좋아하는 영상을 넣으면 같은 스타일로 새 영상을 만든다.",
+   "kind": "video",
+   "category": "AI 편집·생성",
+   "tags": [
+    "reference",
+    "레퍼런스",
+    "스타일 복제",
+    "따라하기"
+   ],
+   "tools": [
+    "edenfunf/reelmimic"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/62",
+   "name": "대본으로 편집",
+   "desc_ko": "받아쓴 글에서 구간을 지우면 영상도 잘린다.",
+   "kind": "video",
+   "category": "AI 편집·생성",
+   "tags": [
+    "transcript",
+    "대본 편집",
+    "텍스트 편집",
+    "컷 편집"
+   ],
+   "tools": [
+    "wassgha/rescript",
+    "browser-use/video-use"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/63",
+   "name": "군더더기 말 자동 컷",
+   "desc_ko": "음·어 같은 말과 빈 구간을 알아서 잘라낸다.",
+   "kind": "video",
+   "category": "AI 편집·생성",
+   "tags": [
+    "filler",
+    "무음 제거",
+    "점프컷",
+    "자동 컷"
+   ],
+   "tools": [
+    "browser-use/video-use"
+   ],
+   "ref": "video-use (ElevenLabs 키 필요)",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/64",
+   "name": "쇼츠 자동 제작",
+   "desc_ko": "쇼츠·틱톡용 영상을 대본부터 편집까지 자동으로.",
+   "kind": "video",
+   "category": "AI 편집·생성",
+   "tags": [
+    "shorts",
+    "틱톡",
+    "릴스",
+    "자동 영상"
+   ],
+   "tools": [
+    "rayventura/shortgpt"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  },
+  {
+   "id": "fx:video/65",
+   "name": "HTML로 영상 만들기",
+   "desc_ko": "웹페이지 만들듯 HTML·CSS로 애니메이션을 짜서 MP4로 뽑는다.",
+   "kind": "video",
+   "category": "AI 편집·생성",
+   "tags": [
+    "html video",
+    "코드 영상",
+    "모션그래픽",
+    "motion graphics"
+   ],
+   "tools": [
+    "heygen-com/hyperframes",
+    "remotion-dev/remotion"
+   ],
+   "ref": "",
+   "ref_url": "",
+   "saved_at": "2026-10-30T00:00:00Z"
+  }
+ ]
+}

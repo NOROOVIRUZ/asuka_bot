@@ -1,5 +1,6 @@
 // asuka 봇 · GitHub 저장소 + 허깅페이스 대시보드
 // data.json + hf.json + categories.json + teams.json → 섹션 렌더 → 필터/정렬
+// v3.9: 📚 서재 탭 — effects.json(효과 목록) + 비슷한 말 검색 + 로컬에서만 위키 기록
 // v3.8: 3D·렌더 카테고리 분리
 // v3.7: 프롬프트 탭 폐지, 허깅페이스 탭 신설 (저장소 탭과 같은 카드·필터·즐겨찾기·설치상태)
 
@@ -14,6 +15,9 @@ const CATEGORY_EMOJI = {
   '클로드코드 운영': '🧩',
   '개발도구': '🛠️',
   '3D·렌더': '🧊', // v3.8: ORU 프로젝트 착수 때 검토하는 칸
+  // v3.9 서재 효과 종류
+  '트랜지션': '🔀', '자막·타이포': '🔤', '색감·필름룩': '🎞️', '카메라·움직임': '🎥',
+  '속도·리듬': '⏱️', '합성·VFX': '✨', '화풍 스타일': '🖌️', 'AI 편집·생성': '🤖',
   // v1 잔존 키 (category_v1 표시 대비)
   '디자인': '🎨',
   'ai-이미지': '🖼️',
@@ -63,18 +67,25 @@ const PIPELINE_KO = {
 };
 
 const isHf = () => state.mode === 'hf';
-const items = () => (isHf() ? state.hf : state.repos);
+const isLib = () => state.mode === 'lib';
+const hasKinds = () => state.mode !== 'repos'; // 허깅페이스·서재는 종류 탭
+const kindDefs = () => (isLib() ? state.fxKinds : HF_KINDS);
+const items = () => (isLib() ? state.fx : isHf() ? state.hf : state.repos);
 const pop = (r) => (r.stars ?? r.likes ?? 0); // 저장소=별, 허깅페이스=좋아요
 
 const state = {
   repos: [],
   hf: [],
+  fx: [], // v3.9 서재: 효과 목록
+  fxKinds: {},
+  synonyms: [], // 비슷한 말 묶음 — 한 단어를 치면 같은 묶음 전부로 찾는다
+  wiki: [], // 위키 기록 — 내 맥 로컬 서버(serve_library.py)에서만 채워짐, 공개 페이지엔 없음
   categories: {},
   teams: { workspaces: {} },
   filter: { search: '', category: 'all', workspace: 'all', kind: 'all', favOnly: false, status: 'all' },
   sort: 'saved_desc',
   collapsed: {},
-  mode: 'repos', // 'repos' | 'hf'
+  mode: 'repos', // 'repos' | 'hf' | 'lib'
 };
 
 // ===== Favorites (localStorage — 이 브라우저에만 저장) =====
@@ -133,6 +144,18 @@ async function loadData() {
       fetch(`./teams.json?v=${Date.now()}`),
       fetch(`./hf.json?v=${Date.now()}`).catch(() => null),
     ]);
+    const fxRes = await fetch(`./effects.json?v=${Date.now()}`).catch(() => null);
+    if (fxRes && fxRes.ok) {
+      const fx = await fxRes.json();
+      state.fx = fx.items || [];
+      state.fxKinds = fx.kinds || {};
+      state.synonyms = fx.synonyms || [];
+    }
+    // ponytail: 위키는 비공개라 GitHub Pages엔 안 올림 — 로컬 서버일 때만 /wiki.json 응답
+    if (['localhost', '127.0.0.1'].includes(location.hostname)) {
+      const w = await fetch('/wiki.json').catch(() => null);
+      if (w && w.ok) state.wiki = await w.json();
+    }
 
     const data = await dataRes.json();
     const cats = await catRes.json();
@@ -151,6 +174,14 @@ async function loadData() {
 
 // ===== Filter & Sort =====
 
+// v3.9: 띄어쓰기로 나눈 단어가 전부 들어가면 통과, 각 단어는 비슷한 말 묶음까지 인정
+function matchQuery(hay, q) {
+  return q.split(/\s+/).filter(Boolean).every(t => {
+    const group = state.synonyms.find(g => g.some(w => w.toLowerCase() === t));
+    return (group ? group.map(w => w.toLowerCase()) : [t]).some(w => hay.includes(w));
+  });
+}
+
 function applyFilter(repos, ignoreCategory = false) {
   const q = state.filter.search.trim().toLowerCase();
   const cat = state.filter.category;
@@ -159,13 +190,19 @@ function applyFilter(repos, ignoreCategory = false) {
 
   let result = repos.filter(r => {
     if (state.filter.favOnly && !favs.has(r.id)) return false;
-    if (isHf()) {
+    if (hasKinds()) {
       if (kind !== 'all' && r.kind !== kind) return false;
     } else if (ws !== 'all' && (r.workspace || 'tools') !== ws) return false;
     if (!ignoreCategory && cat !== 'all' && r.category !== cat) return false;
     if (state.filter.status !== 'all' && r.status !== state.filter.status) return false;
     if (!q) return true;
-    const hay = [
+    return matchQuery(hayOf(r), q);
+  });
+  return sortItems(result);
+}
+
+function hayOf(r) {
+  return [
       r.id,
       r.name,
       r.owner,
@@ -179,14 +216,18 @@ function applyFilter(repos, ignoreCategory = false) {
       r.repo_id || '',
       r.pipeline_tag || '',
       PIPELINE_KO[r.pipeline_tag] || '',
-      r.kind ? HF_KINDS[r.kind]?.label || '' : '',
+      r.kind ? (HF_KINDS[r.kind] || state.fxKinds[r.kind])?.label || '' : '',
       r.library || '',
       r.sdk || '',
       ...(r.hf_tags || []),
+      r.ref || '',
+      ...(r.tools || []),
+      // 위키 기록 필드
+      r.canonical || '', ...(r.aka || []), r.summary || '', r.topic || '',
     ].join(' ').toLowerCase();
-    return hay.includes(q);
-  });
+}
 
+function sortItems(result) {
   switch (state.sort) {
     case 'stars_desc':
       result.sort((a, b) => pop(b) - pop(a));
@@ -220,6 +261,7 @@ function renderCardHtml(r) {
   const conf = r.confidence < 0.7
     ? `<span class="card-confidence low">신뢰도 ${(r.confidence * 100).toFixed(0)}%</span>`
     : '';
+  if (r.tools) return renderFxCardHtml(r, tags);
   if (r.kind) return renderHfCardHtml(r, emoji, statusBadge, tags, conf);
   return `
     <article class="card" data-url="${escapeHtml(r.url)}">
@@ -273,15 +315,66 @@ function renderHfCardHtml(r, emoji, statusBadge, tags, conf) {
   `;
 }
 
+// v3.9: 서재 효과 카드 — "이 도구로" 칩은 대시보드 저장소로 연결, 설치된 건 ✅
+function renderFxCardHtml(r, tags) {
+  const byId = Object.fromEntries(state.repos.map(x => [x.id, x]));
+  const tools = r.tools
+    .map(id => byId[id])
+    .filter(Boolean)
+    .map(t => `<a class="fx-tool" href="${escapeHtml(t.url)}" target="_blank" rel="noopener">${t.status === '설치' ? '✅ ' : ''}${escapeHtml(t.name)}</a>`)
+    .join('');
+  return `
+    <article class="card card-fx" data-url="${escapeHtml(r.ref_url || '')}">
+      <div class="card-top">
+        <span class="card-category">${escapeHtml(r.category)}</span>
+        <span class="card-top-right">
+          <button class="card-fav ${favs.has(r.id) ? 'active' : ''}" data-id="${escapeHtml(r.id)}" aria-label="즐겨찾기" aria-pressed="${favs.has(r.id)}">${favs.has(r.id) ? '★' : '☆'}</button>
+        </span>
+      </div>
+      <div class="card-name">${escapeHtml(r.name)}</div>
+      <div class="card-desc">${escapeHtml(r.desc_ko)}</div>
+      ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+      <div class="fx-tools">${tools ? `<span class="fx-tools-label">이 도구로</span>${tools}` : ''}</div>
+      ${r.ref ? `<div class="fx-ref">${r.ref_url ? '▶ 예시 보기 · ' : ''}${escapeHtml(r.ref)}</div>` : ''}
+    </article>
+  `;
+}
+
+// v3.9: 서재 검색 결과 아래 "관련 도구"(저장소·허깅페이스) + "해본 기록"(로컬 위키) 섹션
+function renderLibExtras(q) {
+  if (!q) return { html: '', count: 0 };
+  const tools = [...state.repos, ...state.hf]
+    .filter(r => matchQuery(hayOf(r), q))
+    .sort((a, b) => pop(b) - pop(a))
+    .slice(0, 12);
+  const wiki = state.wiki.filter(r => matchQuery(hayOf(r), q)).slice(0, 20);
+  const sec = (emoji, name, n, body) => `
+    <section class="team-section">
+      <div class="team-section-header"><div class="team-section-title">
+        <span class="team-section-emoji">${emoji}</span><span class="team-section-name">${name}</span><span class="team-section-count">${n}</span>
+      </div></div>${body}
+    </section>`;
+  let html = '';
+  if (tools.length) html += sec('📦', '관련 도구', tools.length, `<div class="card-grid">${tools.map(renderCardHtml).join('')}</div>`);
+  if (wiki.length) html += sec('📓', '해본 기록 · 내 맥 전용', wiki.length, `<div class="wiki-list">${wiki.map(w => `
+      <a class="wiki-row" href="/wiki-page?p=${encodeURIComponent(w.path)}" target="_blank" rel="noopener">
+        <span class="wiki-row-title">${escapeHtml(w.canonical)}</span>
+        <span class="wiki-row-meta">${escapeHtml(w.topic)} · ${escapeHtml(w.category || w.type || '')}</span>
+        <span class="wiki-row-sum">${escapeHtml(w.summary)}</span>
+      </a>`).join('')}</div>`);
+  return { html, count: tools.length + wiki.length };
+}
+
 // v3.7: 허깅페이스 모드의 종류 탭 (워크스페이스 탭 자리 재사용)
 function renderKindTabs() {
   const tabBar = document.getElementById('workspaceTabs');
-  const filtered = applyFilter(state.hf);
+  const filtered = applyFilter(items());
+  const defs = kindDefs();
   const counts = {};
   filtered.forEach(r => { counts[r.kind] = (counts[r.kind] || 0) + 1; });
   const tabs = [
     { key: 'all', label: '전체', emoji: '✨', count: filtered.length },
-    ...Object.keys(HF_KINDS).filter(k => counts[k]).map(k => ({ key: k, label: HF_KINDS[k].label, emoji: HF_KINDS[k].emoji, count: counts[k] })),
+    ...Object.keys(defs).filter(k => counts[k]).map(k => ({ key: k, label: defs[k].label, emoji: defs[k].emoji, count: counts[k] })),
   ];
   tabBar.innerHTML = tabs.map(t => `
       <button class="ws-tab ${state.filter.kind === t.key ? 'active' : ''}" data-kind="${escapeHtml(t.key)}">
@@ -414,10 +507,11 @@ function renderSections(filtered) {
   const main = document.getElementById('mainContent');
   const empty = document.getElementById('emptyState');
   const countEl = document.getElementById('resultCount');
+  const extras = isLib() ? renderLibExtras(state.filter.search.trim().toLowerCase()) : { html: '', count: 0 };
 
-  countEl.textContent = `${filtered.length}개`;
+  countEl.textContent = isLib() && extras.count ? `효과 ${filtered.length}개 · 관련 ${extras.count}개` : `${filtered.length}개`;
 
-  if (filtered.length === 0) {
+  if (filtered.length === 0 && !extras.count) {
     main.innerHTML = '';
     empty.hidden = false;
     return;
@@ -425,13 +519,15 @@ function renderSections(filtered) {
   empty.hidden = true;
 
   // 전체 뷰: 섹션으로 분리 (저장소=워크스페이스, 허깅페이스=종류)
-  const groupAll = isHf() ? state.filter.kind === 'all' : state.filter.workspace === 'all';
-  if (groupAll) {
-    const groupDefs = isHf() ? HF_KINDS : state.teams.workspaces;
+  const groupAll = hasKinds() ? state.filter.kind === 'all' : state.filter.workspace === 'all';
+  if (filtered.length === 0) {
+    main.innerHTML = '';
+  } else if (groupAll) {
+    const groupDefs = hasKinds() ? kindDefs() : state.teams.workspaces;
     const wsOrder = Object.keys(groupDefs);
     const grouped = {};
     filtered.forEach(r => {
-      const ws = isHf() ? r.kind : (r.workspace || 'tools');
+      const ws = hasKinds() ? r.kind : (r.workspace || 'tools');
       if (!grouped[ws]) grouped[ws] = [];
       grouped[ws].push(r);
     });
@@ -465,12 +561,13 @@ function renderSections(filtered) {
     // 특정 워크스페이스 선택: 단일 그리드
     main.innerHTML = `<div class="card-grid">${filtered.map(renderCardHtml).join('')}</div>`;
   }
+  main.insertAdjacentHTML('beforeend', extras.html);
 
   // 카드 클릭 이벤트 + 진입 스태거 (상한 12 → 총 500ms 이내)
   main.querySelectorAll('.card').forEach((el, i) => {
     el.style.setProperty('--i', Math.min(i, 12));
     el.addEventListener('click', (e) => {
-      if (e.target.closest('.card-fav')) return;
+      if (e.target.closest('.card-fav') || e.target.closest('a') || !el.dataset.url) return;
       window.open(el.dataset.url, '_blank', 'noopener');
     });
   });
@@ -508,7 +605,7 @@ function render() {
   const wsFiltered = applyFilter(items());
 
   // 워크스페이스 탭 / 허깅페이스 종류 탭 (전체 기준 카운트)
-  if (isHf()) renderKindTabs();
+  if (hasKinds()) renderKindTabs();
   else renderWorkspaceTabs();
 
   // 카테고리 칩 — 카테고리 필터는 무시하고 그린다 (v3.32: 칩은 항상 전 카테고리 유지,
@@ -527,7 +624,7 @@ function renderHeaderStats() {
   const totalStars = state.repos.reduce((s, r) => s + (r.stars || 0), 0);
   const hfCount = state.hf.length;
   document.getElementById('brandStats').textContent =
-    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)} · 허깅페이스 ${hfCount}개`;
+    `저장소 ${total}개 · ⭐ ${formatStars(totalStars)} · 허깅페이스 ${hfCount}개 · 효과 ${state.fx.length}개`;
 }
 
 // ===== Init =====
@@ -547,6 +644,7 @@ function bindEvents() {
       state.filter.search = '';
       state.filter.category = 'all';
       state.filter.status = 'all';
+      state.filter.kind = 'all';
       clearBtn.hidden = true;
       applyModeLabels();
       render();
@@ -585,7 +683,7 @@ function bindEvents() {
 // v3.7: 모드별 검색창 안내·정렬 이름 (별 ↔ 좋아요)
 function applyModeLabels() {
   const hf = isHf();
-  document.getElementById('searchInput').placeholder = hf ? '모델 · 데이터셋 · 스페이스 검색' : '저장소 · 설명 · 태그 검색';
+  document.getElementById('searchInput').placeholder = isLib() ? '하고 싶은 걸 검색 — 예: 영상 효과, 글리치, 자막' : hf ? '모델 · 데이터셋 · 스페이스 검색' : '저장소 · 설명 · 태그 검색';
   const sel = document.getElementById('sortSelect');
   sel.querySelector('option[value="stars_desc"]').textContent = hf ? '♥ 좋아요 많은순' : '⭐ 별 많은순';
   sel.querySelector('option[value="stars_asc"]').textContent = hf ? '♥ 좋아요 적은순' : '⭐ 별 적은순';

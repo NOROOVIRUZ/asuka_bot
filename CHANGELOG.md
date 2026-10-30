@@ -1,6 +1,16 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.9 — 2026-10-30
+
+- **📚 서재 탭 신설**: "영상 효과", "글리치", "전환"처럼 하고 싶은 걸 검색하면 ① 효과 목록 ② 관련 도구(저장소·허깅페이스) ③ 해본 기록(위키)을 한 화면에 보여준다. 별도 툴 없이 대시보드 하나로 합침
+- `docs/effects.json` 신설 — 영상 효과 65개(트랜지션·자막·타이포·색감·필름룩·카메라·움직임·속도·리듬·합성·VFX·화풍 스타일·AI 편집). 근거는 video-shotcraft 레시피(150샷)·lemo-opuscar 화풍(66종)·video-use·remotion·hyperframes 실제 README. 카드마다 "이 도구로" 칩(설치된 건 ✅)·예시 갤러리 링크
+- **비슷한 말 검색**: effects.json `synonyms` 묶음(영상=비디오=video, 효과=모션=애니메이션 등) + 띄어쓰기 단어별 AND 검색 → 저장소 탭에서도 "영상 효과"가 0개 → 10개로 찾아짐
+- **위키 기록은 비공개라 GitHub Pages에 안 올림**: `tools/serve_library.py`(127.0.0.1:8985)로 열 때만 asuka-wiki 30-wiki 프론트매터를 실시간으로 읽어 `/wiki.json`·`/wiki-page` 제공(위키 폴더 밖 경로 차단). 바탕화면 런처 `AI프로젝트/기타/asuka 서재.command`
+- 나머지 분야(3D·UI 모션·이미지)는 effects.json `kinds`에 추가하면 탭이 자동으로 생긴다
+- 버전 표기·캐시 버스터 v3.8 → v3.9
+- 검색 키워드: 서재, effects.json, 영상 효과, 비슷한 말, synonyms, serve_library, 위키 검색, 8985
+
 ## v3.8 — 2026-10-26
 
 - **🧊 3D·렌더 카테고리 신설** (용도 중심 8종 → 9종): 블렌더·Three.js·3D 모델 생성·리깅·모션·3D 장면 렌더 도구를 한 칸에 모음. 미디어 생성·클로드코드 운영·개발도구·디자인·UI에 흩어져 있던 15개 이동 (mcp-for-blender·img2threejs·trellis.2·zero123plus·hi3dv1.0·3dviz-pro-max·hy-motion-1.0·motion2mixamorig·prompt2rig·cozyclay 2종·scroll-world·lingbot-map·opengeometry·gods-eye-view). 이전 값은 `category_prev`에 보관, `classified_by: asuka-3d-v38`

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T00:42:17.736Z",
+  "updated_at": "2026-11-01T14:29:21.504Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "hyz317/hairdeck",
+      "owner": "hyz317",
+      "name": "HairDeck",
+      "url": "https://github.com/hyz317/HairDeck",
+      "description": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
+      "language": "Python",
+      "stars": 535,
+      "topics": [],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "미디어 생성",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-01T14:29:21.504Z",
+      "stars_updated_at": "2026-11-01T14:29:21.504Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 단 하나의 이미지로부터 다양한 스타일의 애니메이션용 머리카락을 생성해주는 도구다. 이 도구를 사용하면 한장의 사진으로 여러가지 다른 머리 스타일을 만들어 볼 수 있다."
+    },
     {
       "id": "mary-jeon/realcad",
       "owner": "mary-jeon",

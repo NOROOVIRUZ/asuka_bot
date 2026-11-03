@@ -1,5 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T09:13:54.000Z",
-  "items": []
+  "updated_at": "2026-11-03T22:17:21.372Z",
+  "items": [
+    {
+      "id": "hf:speridlabs/idol",
+      "kind": "model",
+      "repo_id": "speridlabs/idol",
+      "owner": "speridlabs",
+      "name": "idol",
+      "url": "https://huggingface.co/speridlabs/idol",
+      "description": "",
+      "likes": 500,
+      "downloads": 10742,
+      "pipeline_tag": "image-to-3d",
+      "library": "idol",
+      "sdk": null,
+      "tags": [],
+      "hf_tags": [
+        "idol",
+        "gaussian-splatting",
+        "3d",
+        "image-to-3d"
+      ],
+      "license": "apache-2.0",
+      "gated": false,
+      "category": "3D·렌더",
+      "confidence": 0.85,
+      "classified_by": "rule",
+      "saved_at": "2026-11-03T22:17:21.372Z",
+      "stats_updated_at": "2026-11-03T22:17:21.372Z",
+      "last_modified": "2026-10-29T18:17:36.000Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 허깅페이스 모델은 2차원 사진을 3차원으로 변환해주는 인공지능 모델로, 특히 아이돌의 사진을 3차원 모델로 만들어주는 데 사용할 수 있습니다."
+    }
+  ]
 }

@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T14:53:53.752Z",
+  "updated_at": "2026-11-03T09:37:51.979Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "mindrlabs/image-generation-qwen-image-pruna",
+      "owner": "MindrLabs",
+      "name": "image-generation-qwen-image-pruna",
+      "url": "https://github.com/MindrLabs/image-generation-qwen-image-pruna",
+      "description": "Turn a text prompt into a 1024×1024 image in 6 steps, locally with Qwen-Image-2.1, the P-Q-Image-2.1 LoRA and model-compose.",
+      "language": null,
+      "stars": 1,
+      "topics": [
+        "diffusion",
+        "few-step",
+        "image-generation",
+        "local-ai",
+        "lora",
+        "model-compose",
+        "nf4",
+        "pruna",
+        "qwen-image",
+        "qwen-image-2",
+        "self-hosted",
+        "text-to-image"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "미디어 생성",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-11-03T09:37:51.979Z",
+      "stars_updated_at": "2026-11-03T09:37:51.979Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 텍스트를 1024×1024 크기의 이미지로 변환해 주는 도구로, 로컬 환경에서 작동하며 6단계로 이미지를 생성할 수 있다."
+    },
     {
       "id": "orkas-ai/orkas",
       "owner": "Orkas-AI",

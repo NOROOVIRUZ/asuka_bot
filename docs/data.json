@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T09:37:51.979Z",
+  "updated_at": "2026-11-04T00:00:00.000Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
     {
@@ -90,15 +90,16 @@
       "topics": [],
       "license": "Apache-2.0",
       "archived": false,
-      "category": "미디어 생성",
+      "category": "3D·렌더",
       "tags": [],
-      "confidence": 0.3,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-11-01T14:29:21.504Z",
       "stars_updated_at": "2026-11-01T14:29:21.504Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이것은 단 하나의 이미지로부터 다양한 스타일의 애니메이션용 머리카락을 생성해주는 도구다. 이 도구를 사용하면 한장의 사진으로 여러가지 다른 머리 스타일을 만들어 볼 수 있다."
+      "desc_ko": "사진 한 장으로 3D 캐릭터용 머리카락(헤어 카드)과 흔들림 뼈대를 만들어 GLB·VRM으로 내보내는 모델이에요. 애플 실리콘 맥에서도 돌아가요.",
+      "category_prev": "미디어 생성"
     },
     {
       "id": "mary-jeon/realcad",
@@ -120,15 +121,16 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "3D·렌더",
       "tags": [],
-      "confidence": 0.3,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-11-01T00:42:17.736Z",
       "stars_updated_at": "2026-11-01T00:42:17.736Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "mary-jeon/realcad는 실제로 조립할 수 있는 3D 설계 도면을 만들기 위한 도구로, 인공지능이 부품을 설계하고, OpenCascade 커널이 볼트 구멍, 간섭, 스레드 연결 및 출력 가능 여부를 측정하여 실제로 만들 수 있는지 확인하고, 실패한 경우 수정을 위한 정보를 제공한다. 3D 프린팅과 CAD 설계에 유용하다."
+      "desc_ko": "mary-jeon/realcad는 실제로 조립할 수 있는 3D 설계 도면을 만들기 위한 도구로, 인공지능이 부품을 설계하고, OpenCascade 커널이 볼트 구멍, 간섭, 스레드 연결 및 출력 가능 여부를 측정하여 실제로 만들 수 있는지 확인하고, 실패한 경우 수정을 위한 정보를 제공한다. 3D 프린팅과 CAD 설계에 유용하다.",
+      "category_prev": "개발도구"
     },
     {
       "id": "baidu/unlimited-ocr",
@@ -642,15 +644,16 @@
       "topics": [],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "기타",
+      "category": "에이전트·자동화",
       "tags": [],
-      "confidence": 0.3,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-10-20T14:55:27.628Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 텐센트가 개발한 메모리 관리 라이브러리로서, 메모리 할당 및 관리를 효율적으로 처리하는 것을 목표로 합니다. 주로 대규모 데이터 처리나 메모리 집중적인 작업이 필요한 프로젝트에서 유용하게 사용될 수 있습니다."
+      "desc_ko": "텐센트가 만든 AI 에이전트용 장기 기억 엔진이에요. 에이전트가 대화와 작업 내용을 기억하고 다시 꺼내 쓰게 해줘요.",
+      "category_prev": "기타"
     },
     {
       "id": "ahujasid/mcp-for-blender",
@@ -804,15 +807,16 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "미디어 생성",
       "tags": [],
-      "confidence": 0.45,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-10-05T04:00:15.029Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
-      "desc_ko": "이 프로젝트는 손으로 그린 만화를 움직이는 애니메이션을 만들기 위한 기본 도구입니다. Claude라는 캐릭터와 감정 표현을 위한 가이드가 포함되어 있어 애니메이션 제작을 쉽게 시작할 수 있습니다."
+      "desc_ko": "이 프로젝트는 손으로 그린 만화를 움직이는 애니메이션을 만들기 위한 기본 도구입니다. Claude라는 캐릭터와 감정 표현을 위한 가이드가 포함되어 있어 애니메이션 제작을 쉽게 시작할 수 있습니다.",
+      "category_prev": "개발도구"
     },
     {
       "id": "sojuhub/aside-free-llm-autopilot",
@@ -1573,16 +1577,17 @@
       ],
       "license": "AGPL-3.0",
       "archived": false,
-      "category": "개발도구",
+      "category": "미디어 생성",
       "tags": [],
-      "confidence": 1,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-09-04T00:35:47.221Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 무료 오픈소스 비디오 편집 도구로, CapCut와 비슷한 기능을 제공하여 영상 콘텐츠를 쉽게 만들고 편집할 수 있다. 주로 영상 제작자들이 비디오를 편집하고 자동 자막을 추가하는 데 사용할 수 있다.",
-      "last_release": "v0.2.7"
+      "last_release": "v0.2.7",
+      "category_prev": "개발도구"
     },
     {
       "id": "pytorch/executorch",
@@ -1727,10 +1732,10 @@
       ],
       "license": "NOASSERTION",
       "archived": false,
-      "category": "3D·렌더",
+      "category": "리서치·수집",
       "tags": [],
-      "confidence": 0.25,
-      "classified_by": "asuka-3d-v38",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-08-28T15:32:02.126Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
@@ -1738,7 +1743,7 @@
       "desc_ko": "이 프로젝트는 실제 데이터를 기반으로 하는 3D 지구를 보여주는 브라우저용 간첩위성 시뮬레이터로, 실시간으로 개방형 공간 지능을 제공한다. 이 프로젝트는 3D 지구 상에서 비행 경로를 추적하고 공간 정보를 시각화하는 데 사용할 수 있다.",
       "last_release": "v0.2.1",
       "category_v1": "ai-3d",
-      "category_prev": "개발도구"
+      "category_prev": "3D·렌더"
     },
     {
       "id": "0xsline/openchatcut",
@@ -1772,16 +1777,17 @@
       ],
       "license": "AGPL-3.0",
       "archived": false,
-      "category": "개발도구",
+      "category": "미디어 생성",
       "tags": [],
-      "confidence": 0.85,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-08-28T15:24:34.291Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능 기술을 이용해 비디오를 편집할 수 있는 프로그램을 만드는 곳이며, 여러 트랙을 한 번에 편집할 수 있고, 여러 가지 기능을 지원한다. 이 프로젝트는 로컬에서 돌아가기 때문에 인터넷에 연결되지 않아도 비디오를 편집할 수 있다.",
-      "last_release": "v0.2.17"
+      "last_release": "v0.2.17",
+      "category_prev": "개발도구"
     },
     {
       "id": "vincentwei1021/video-shotcraft",
@@ -2590,16 +2596,17 @@
       "topics": [],
       "license": "MIT",
       "archived": false,
-      "category": "개발도구",
+      "category": "미디어 생성",
       "tags": [],
-      "confidence": 0.3,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-08-12T10:16:38.009Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 간단하고 조용한 스타일의 포스터를 자동으로 만들어주는 도구입니다. 포스터를 디자인할 때 아이디어가 필요하거나 간단하게 포스터를 만들고 싶을 때 유용합니다.",
-      "last_release": "v0.3.1"
+      "last_release": "v0.3.1",
+      "category_prev": "개발도구"
     },
     {
       "id": "dohyun468/claw-hwp",
@@ -3540,19 +3547,20 @@
       ],
       "license": "MIT",
       "archived": false,
-      "category": "클로드코드 운영",
+      "category": "디자인·UI",
       "tags": [
         "cc"
       ],
-      "confidence": 0.8,
-      "classified_by": "rule",
+      "confidence": 1.0,
+      "classified_by": "asuka-recls-v394",
       "saved_at": "2026-07-26T16:19:32.777Z",
       "stars_updated_at": "2026-11-01T00:00:39.239Z",
       "added_by": "telegram:8176674830",
       "notes": null,
       "desc_ko": "이 프로젝트는 인공지능이 코드를 작성할 때 일관된 디자인을 유지하도록 도와주는 도구로, 인공지능이 다양한 디자인을 참조하여 적절한 코드를 생성하고 검증하는 데 사용됩니다.",
       "category_v1": "cc-저장소",
-      "last_release": "v5.0.0"
+      "last_release": "v5.0.0",
+      "category_prev": "클로드코드 운영"
     },
     {
       "id": "heygen-com/hyperframes",

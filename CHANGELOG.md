@@ -1,6 +1,16 @@
 # CHANGELOG — asuka_bot (repos-dashboard)
 
 
+## v3.94 — 2026-11-04
+
+- **북마크 재분류**: 209개 전체를 다시 훑어 9개 이동(이전 값 `category_prev`, `classified_by: asuka-recls-v394`). 🧊 3D·렌더 16 → 17, 기타 1 → 0
+  - 3D·렌더로: mary-jeon/realcad(말로 만드는 CAD·STL·3MF), hyz317/hairdeck(사진→3D 머리카락·GLB·VRM)
+  - 3D·렌더에서 뺌: bilawalsidhu/gods-eye-view → 리서치·수집(3D 제작 도구가 아니라 공개 데이터 지도)
+  - 미디어 생성으로: jub0t/concat, 0xsline/openchatcut, johnheibel/claudeanimationbase, liamgvchi/gc-minimal-zine-poster / 에이전트·자동화로: tencent-hunyuan/hy-memory / 디자인·UI로: bitjaru/styleseed
+- **분류 규칙 보강**: 3D·렌더 이름 패턴에 `cad` 추가, 설명에 CAD·3D 프린트 명시(realcad가 개발도구와 동점이라 밀리던 문제). data/·docs/ categories.json 동시 수정, 봇이 런타임에 읽어서 재배포 불필요. 209개 시험 결과 영향은 realcad 1개
+- 잘못된 한글 설명 수정: hy-memory(메모리 할당 라이브러리 → 에이전트 장기 기억 엔진), hairdeck(3D 명시)
+- 검색 키워드: 재분류, 3D·렌더, CAD, 3D 프린트, realcad, hairdeck, category_prev, name_patterns
+
 ## v3.93 — 2026-10-30
 
 - **Vercel 배포 추가**: 로컬 서버 없이 주소 하나로 서재를 본다 — https://asuka-library.vercel.app (깃허브 저장소 연결, push할 때마다 자동 재배포 → 봇이 북마크를 저장해도 자동 반영)

@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T22:41:15.970Z",
+  "updated_at": "2026-11-05T22:44:28.748Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "karpathy/nanochat",
+      "owner": "karpathy",
+      "name": "nanochat",
+      "url": "https://github.com/karpathy/nanochat",
+      "description": "The best ChatGPT that $100 can buy.",
+      "language": "Python",
+      "stars": 60310,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "기타",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-05T22:44:28.748Z",
+      "stars_updated_at": "2026-11-05T22:44:28.748Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "The best ChatGPT that $100 can buy."
+    },
     {
       "id": "ebony-vinyl/dsh-our-free-model",
       "owner": "Ebony-Vinyl",

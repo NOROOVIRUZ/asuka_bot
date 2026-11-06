@@ -1,8 +1,32 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T22:44:28.748Z",
+  "updated_at": "2026-11-06T07:52:51.262Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "omoolab/anyimage",
+      "owner": "OmooLab",
+      "name": "AnyImage",
+      "url": "https://github.com/OmooLab/AnyImage",
+      "description": "AnyImage makes images a starting point for creating in Blender. Model from references, add textures, and piece together scenes.",
+      "language": "Python",
+      "stars": 302,
+      "topics": [
+        "ai",
+        "blender"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "3D·렌더",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-11-06T07:52:51.262Z",
+      "stars_updated_at": "2026-11-06T07:52:51.262Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "블렌더라는 그래픽 편집 프로그램에서 이미지로 시작해 3D 모델링을 할 수 있게 해주는 도구로, 참고 이미지로부터 모델을 만들고, 질감을 추가하고, 장면을 조합하는 데 사용된다."
+    },
     {
       "id": "karpathy/nanochat",
       "owner": "karpathy",

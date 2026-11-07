@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T12:43:16.384Z",
+  "updated_at": "2026-11-07T14:18:45.489Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "vercel-labs/skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "description": "The open agent skills tool - npx skills",
+      "language": "TypeScript",
+      "stars": 38460,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-07T14:18:45.489Z",
+      "stars_updated_at": "2026-11-07T14:18:45.489Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 오픈 소스 인공지능 스킬 툴로, 간단하게 'npx skills'라는 명령어를 사용하여 다양한 인공지능 기능을 쉽게 사용할 수 있는 도구입니다."
+    },
     {
       "id": "superdesigndev/treg",
       "owner": "superdesigndev",

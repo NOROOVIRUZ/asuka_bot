@@ -1,8 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T08:42:45.162Z",
+  "updated_at": "2026-11-07T09:33:40.724Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "livliv-dev/player",
+      "owner": "livliv-dev",
+      "name": "player",
+      "url": "https://github.com/livliv-dev/player",
+      "description": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+      "language": "TypeScript",
+      "stars": 1030,
+      "topics": [
+        "avatar",
+        "character",
+        "face-tracking",
+        "lip-sync",
+        "pngtuber",
+        "vrm",
+        "vtuber",
+        "webgl2"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "category": "3D·렌더",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-07T09:33:40.724Z",
+      "stars_updated_at": "2026-11-07T09:33:40.724Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "웹에서 사용할 수 있는 가벼운 2.5차원 캐릭터 플레이어로, 입 모양을 자동으로 움직이는 기능과 웹캠을 이용한 얼굴 추적 기능이 있습니다. 아바타나 캐릭터를 만들 때 쓸 수 있습니다."
+    },
     {
       "id": "shinyobjectz/raea",
       "owner": "shinyobjectz",

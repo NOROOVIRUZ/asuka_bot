@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T09:33:40.724Z",
+  "updated_at": "2026-11-07T12:43:16.384Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "superdesigndev/treg",
+      "owner": "superdesigndev",
+      "name": "treg",
+      "url": "https://github.com/superdesigndev/treg",
+      "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+      "language": "Python",
+      "stars": 7469,
+      "topics": [
+        "agents",
+        "api-keys",
+        "cli",
+        "credentials",
+        "developer-tools",
+        "dsh-plugin",
+        "mcp",
+        "proxy",
+        "python",
+        "registry",
+        "secrets"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-11-07T12:43:16.384Z",
+      "stars_updated_at": "2026-11-07T12:43:16.384Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 개발자들이 다른 프로그램과 쉽게 통신할 수 있도록 해주는 툴입니다. 주로 개발자들이 프로그램을 만들 때 다른 프로그램과 데이터를 주고받을 때 사용됩니다."
+    },
     {
       "id": "livliv-dev/player",
       "owner": "livliv-dev",

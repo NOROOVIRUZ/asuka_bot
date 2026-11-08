@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T00:00:39.105Z",
+  "updated_at": "2026-11-08T14:36:04.542Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "fivetaku/pumasi",
+      "owner": "fivetaku",
+      "name": "pumasi",
+      "url": "https://github.com/fivetaku/pumasi",
+      "description": "Claude as PM + Codex CLI as parallel outsource developers — for large parallel coding tasks",
+      "language": "JavaScript",
+      "stars": 89,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "개발도구",
+      "tags": [],
+      "confidence": 0.75,
+      "classified_by": "rule",
+      "saved_at": "2026-11-08T14:36:04.542Z",
+      "stars_updated_at": "2026-11-08T14:36:04.542Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "Claude as PM + Codex CLI as parallel outsource developers — for large parallel coding tasks"
+    },
     {
       "id": "vercel-labs/skills",
       "owner": "vercel-labs",

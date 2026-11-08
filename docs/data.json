@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T14:36:04.542Z",
+  "updated_at": "2026-11-08T22:08:43.287Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "sarpstar/cinecode",
+      "owner": "sarpstar",
+      "name": "cinecode",
+      "url": "https://github.com/sarpstar/cinecode",
+      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "language": "Python",
+      "stars": 1555,
+      "topics": [],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인·UI",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-11-08T22:08:43.287Z",
+      "stars_updated_at": "2026-11-08T22:08:43.287Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 코드로 만든 영화를 뜻하며, 인공지능이 대본을 쓰고, 모든 프레임을 코드로 만들며, 사운드까지 디자인해 완성된 영상을 만들어주는 도구다."
+    },
     {
       "id": "fivetaku/pumasi",
       "owner": "fivetaku",

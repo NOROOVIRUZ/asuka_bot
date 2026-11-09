@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T08:05:15.078Z",
+  "updated_at": "2026-11-09T13:21:45.796Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "benchup3d/editor",
+      "owner": "BenchUp3D",
+      "name": "editor",
+      "url": "https://github.com/BenchUp3D/editor",
+      "description": "Free, open-source 3D woodworking and modeling software and SketchUp alternative. Built with Rust, WebAssembly and WebGPU. Runs in your browser or on desktop. 100% vibe-coded, only the finest slop, with great emphase on rendering speed and UI/UX.",
+      "language": "Rust",
+      "stars": 469,
+      "topics": [
+        "3d-modeling",
+        "cad",
+        "furniture-design",
+        "open-source",
+        "rust",
+        "sketchup",
+        "sketchup-alternative",
+        "woodwork",
+        "woodworking",
+        "woodworking-cad",
+        "woodworking-software",
+        "woodworking-tools"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "디자인·UI",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-11-09T13:21:45.796Z",
+      "stars_updated_at": "2026-11-09T13:21:45.796Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "3D 가구 디자인이나 목공예를 위한 무료 소프트웨어로, 컴퓨터나 브라우저에서 사용할 수 있고, 빠른 렌더링 속도와 편한 사용자 인터페이스를 강조했다."
+    },
     {
       "id": "yihui-dev/awesome-opus5-5-videos",
       "owner": "yihui-dev",

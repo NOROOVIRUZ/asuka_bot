@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T00:09:32.190Z",
+  "updated_at": "2026-11-09T08:05:15.078Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "yihui-dev/awesome-opus5-5-videos",
+      "owner": "yihui-dev",
+      "name": "awesome-opus5-5-videos",
+      "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+      "description": "A growing collection of viral videos made with Claude Opus 5.5 and the prompts behind them. Watch each original next to a live remake on Skillry. Updated regularly.",
+      "language": null,
+      "stars": 14432,
+      "topics": [
+        "ai-video",
+        "awesome",
+        "awesome-list",
+        "claude",
+        "claude-opus",
+        "creative-coding",
+        "motion-graphics",
+        "prompts",
+        "threejs"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "클로드코드 운영",
+      "tags": [],
+      "confidence": 0.6,
+      "classified_by": "rule",
+      "saved_at": "2026-11-09T08:05:15.078Z",
+      "stars_updated_at": "2026-11-09T08:05:15.078Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "클라우드 오퍼스 5.5로 만든 인기 있는 비디오 모음이며, 각 비디오의 원본과 실제 다시 만든 영상을 함께 볼 수 있다."
+    },
     {
       "id": "charleswei118/aliasflare",
       "owner": "charleswei118",

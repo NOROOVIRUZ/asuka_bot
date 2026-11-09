@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T22:08:43.287Z",
+  "updated_at": "2026-11-09T00:09:32.190Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "charleswei118/aliasflare",
+      "owner": "charleswei118",
+      "name": "aliasflare",
+      "url": "https://github.com/charleswei118/aliasflare",
+      "description": "Self-hosted email aliases on Cloudflare Workers + D1 + Email Routing: Deploy button plus two Email Routing settings, reply from alias, OTP extraction, MCP for AI agents. 自建永久别名邮箱",
+      "language": "JavaScript",
+      "stars": 33,
+      "topics": [
+        "addy-io",
+        "cloudflare-workers",
+        "d1",
+        "email-alias",
+        "email-routing",
+        "mcp",
+        "mcp-server",
+        "privacy",
+        "self-hosted",
+        "simplelogin-alternative"
+      ],
+      "license": "MIT",
+      "archived": false,
+      "category": "에이전트·자동화",
+      "tags": [],
+      "confidence": 0.45,
+      "classified_by": "rule",
+      "saved_at": "2026-11-09T00:09:32.190Z",
+      "stars_updated_at": "2026-11-09T00:09:32.190Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 클라우드플레어 워커와 D1, 이메일 라우팅을 사용하여 자체 호스팅 이메일 별명을 만드는 것입니다. 쉽게 말하면, 여러개의 이메일 주소를 하나의 메인 이메일로 관리할 수 있는 시스템을 구축하는 것입니다."
+    },
     {
       "id": "sarpstar/cinecode",
       "owner": "sarpstar",

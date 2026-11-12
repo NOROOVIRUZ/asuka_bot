@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T22:33:18.871Z",
+  "updated_at": "2026-11-12T08:29:58.960Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "autom8ai/open-higgsfield-ai",
+      "owner": "Autom8AI",
+      "name": "Open-Higgsfield-AI",
+      "url": "https://github.com/Autom8AI/Open-Higgsfield-AI",
+      "description": "Open-source alternative to Higgsfield AI — Free AI image generation & cinema studio with 20+ models (Flux, SDXL, Midjourney, Ideogram). Self-hosted, customizable, MIT licensed.",
+      "language": "JavaScript",
+      "stars": 2929,
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "category": "미디어 생성",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-12T08:29:58.960Z",
+      "stars_updated_at": "2026-11-12T08:29:58.960Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이 프로젝트는 무료로 이용할 수 있는 인공지능 이미지 생성 및 영상 제작 도구로, 여러 가지 인공지능 모델을 사용하여 다양한 이미지를 생성하고 영상 제작을 할 수 있는 도구입니다. 이 도구는 사용자에게 코드를 공개하여 수정이나 추가가 가능합니다."
+    },
     {
       "id": "yazzang-homelab/gamecase-ko",
       "owner": "yazzang-homelab",

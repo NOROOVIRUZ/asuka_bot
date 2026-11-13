@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T08:29:58.960Z",
+  "updated_at": "2026-11-13T22:58:32.594Z",
   "source": "migration from ~/Downloads/repos_all.txt",
   "repos": [
+    {
+      "id": "lllyasviel/fooocus",
+      "owner": "lllyasviel",
+      "name": "Fooocus",
+      "url": "https://github.com/lllyasviel/Fooocus",
+      "description": "Focus on prompting and generating",
+      "language": "Python",
+      "stars": 53913,
+      "topics": [],
+      "license": "GPL-3.0",
+      "archived": false,
+      "category": "기타",
+      "tags": [],
+      "confidence": 0.3,
+      "classified_by": "rule",
+      "saved_at": "2026-11-13T22:58:32.594Z",
+      "stars_updated_at": "2026-11-13T22:58:32.594Z",
+      "added_by": "telegram:8176674830",
+      "notes": null,
+      "desc_ko": "이것은 인공지능이 사용자와 대화할 때 더 좋은 대화를 할 수 있도록 도와주는 도구로, 사용자의 질문이나 요청에 더 잘 응대할 수 있는 방법을 연구하는 곳입니다. 이것은 인공지능과 사용자 간의 대화 Qualität을 높여주는 데 사용됩니다."
+    },
     {
       "id": "autom8ai/open-higgsfield-ai",
       "owner": "Autom8AI",
